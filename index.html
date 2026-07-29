@@ -393,8 +393,8 @@ body:not(.travado) .gate{display:none}
       <div class="sumrow" id="rowDesc" hidden><span id="descLabel">Desconto</span><span id="sumDesc">US$ 0,00</span></div>
       <div class="sumrow big"><span>Total</span><span id="sumTotal">US$ 0,00</span></div>
       <button class="btn" id="copyQuote">Copiar orçamento</button>
-      <button class="btn ghost" id="printQuote">Gerar PDF</button>
-      <p class="dica">O botão abre a janela de impressão — escolha <b>Salvar como PDF</b> no destino.</p>
+      <button class="btn ghost" id="printQuote">Enviar por WhatsApp</button>
+      <p class="dica">O botão abre o WhatsApp com o orçamento pronto para enviar.</p>
     </footer>
   </div>
 </div>
@@ -755,13 +755,10 @@ document.getElementById("cupomTira").onclick = ()=>{
 };
 
 document.getElementById("printQuote").onclick = ()=>{
-  if(!montaDocumento()){ toast("Adicione itens antes de gerar o PDF"); return; }
-  // o navegador usa o title como nome sugerido do arquivo em "Salvar como PDF"
-  const titulo = document.title;
-  document.title = "Orcamento-" + numeroOrcamento().replace(/[^A-Za-z0-9-]/g, "");
-  const restaura = ()=>{ document.title = titulo; };
-  window.addEventListener("afterprint", restaura, {once:true});
-  setTimeout(()=>{ window.print(); setTimeout(restaura, 1000); }, 50);
+  if(!resumo().linhas.length){ toast("Adicione itens antes de enviar"); return; }
+  const numero = "14077519801";
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto())}`;
+  window.open(url, "_blank", "noopener,noreferrer");
 };
 document.getElementById("copyQuote").onclick = async ()=>{
   try{ await navigator.clipboard.writeText(texto()); toast("Orçamento copiado"); }
