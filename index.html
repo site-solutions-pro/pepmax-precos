@@ -380,7 +380,8 @@ body:not(.travado) .gate{display:none}
     <footer>
       <div class="cupom" id="cupomForm">
         <input id="cupomInput" placeholder="Cupom de desconto" autocomplete="off"
-               autocapitalize="characters" spellcheck="false" aria-label="Código do cupom">
+               autocapitalize="characters" spellcheck="false" maxlength="8"
+               aria-label="Código do cupom">
         <button class="btn ghost" id="cupomBtn">Aplicar</button>
       </div>
       <div class="cupom-msg" id="cupomMsg"></div>
@@ -451,7 +452,7 @@ let filtro = "Todos", busca = "";
 /* Cupons — o código fica em minúsculo. Para criar outro, basta uma linha.
    Atenção: isto é validação no navegador, serve para o cliente montar a cotação.
    A conferência que vale é a sua, na hora de fechar o pedido. */
-const CUPONS = { "welcome5": 5 };
+const CUPOM_VALIDO = Object.freeze({ cod: "WELCOME5", pct: 5 });
 let cupom = null;
 
 const usd = n => "US$ " + n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -729,13 +730,12 @@ function montaDocumento(){
 function aplicaCupom(){
   const campo = document.getElementById("cupomInput");
   const msg   = document.getElementById("cupomMsg");
-  const cod   = campo.value.trim().toLowerCase();
+  const cod   = campo.value.trim().toUpperCase();
   if(!cod){ msg.textContent = ""; msg.className = "cupom-msg"; return; }
-  const pct = CUPONS[cod];
-  if(pct){
-    cupom = { cod: cod.toUpperCase(), pct };
+  if(cod === CUPOM_VALIDO.cod){
+    cupom = { ...CUPOM_VALIDO };
     campo.value = ""; msg.textContent = ""; msg.className = "cupom-msg";
-    toast(`Cupom aplicado — ${pct}% de desconto`);
+    toast(`Cupom aplicado — ${CUPOM_VALIDO.pct}% de desconto`);
   }else{
     cupom = null;
     msg.textContent = "Cupom inválido ou expirado.";
