@@ -35,7 +35,6 @@ Escopo obrigatório:
 Critério de aceite: o catálogo deve apresentar todos os produtos em uma listagem
 neutra, sem classificação que indique finalidade ou possível uso humano.
 
-
 ## Nova home comercial
 
 ### Objetivo
@@ -61,7 +60,7 @@ rápido ao catálogo e separação inequívoca do futuro projeto educacional.
 
 ### Arquitetura da home e do Shop
 
-- a página que atualmente funciona como home, com catálogo, busca, filtros,
+- a página que atualmente funciona como home, com catálogo, busca neutra,
   preços e orçamento, passa a ser a página principal de **Shop**;
 - a raiz do domínio recebe a nova home institucional/comercial;
 - o item **Shop** da nova home abre o catálogo completo;
