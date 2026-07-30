@@ -1,6 +1,135 @@
 # Roadmap PepMax
 
+## Nova home comercial
+
+### Objetivo
+
+Transformar a home em uma vitrine comercial completa para materiais destinados
+exclusivamente à pesquisa laboratorial, com identidade biohack premium, acesso
+rápido ao catálogo e separação inequívoca do futuro projeto educacional.
+
+### Estrutura e ordem
+
+1. nova home institucional na raiz do domínio;
+2. cabeçalho fixo com marca PepMAX e acesso ao menu;
+3. menu lateral ou suspenso com **Shop**, **Sobre nós**, **Contato** e
+   **Políticas de compra e devolução**;
+4. banner principal com proposta institucional e materiais em evidência no
+   catálogo, sem alegações terapêuticas ou de uso humano;
+5. texto curto sobre a PepMAX, padrões de identificação e finalidade de
+   pesquisa;
+6. seleção de produtos em destaque, todos com imagem e link para a página
+   individual;
+7. seção **Sobre nós**;
+8. avisos legais e política comercial no rodapé.
+
+### Arquitetura da home e do Shop
+
+- a página que atualmente funciona como home, com catálogo, busca, filtros,
+  preços e orçamento, passa a ser a página principal de **Shop**;
+- a raiz do domínio recebe a nova home institucional/comercial;
+- o item **Shop** da nova home abre o catálogo completo;
+- a nova home não deve duplicar todo o catálogo: apresenta marca, proposta
+  institucional e uma seleção de materiais em destaque;
+- os destaques da nova home abrem diretamente as páginas individuais;
+- preservar links antigos com redirecionamento ou encaminhamento equivalente,
+  quando aplicável;
+- revisar todos os caminhos relativos após a mudança, incluindo imagens,
+  páginas individuais, políticas e contato.
+
+### Shop melhorado
+
+1. cabeçalho com marca PepMAX, retorno à nova home, menu e orçamento;
+2. busca por nome, apresentação ou SKU;
+3. filtros por classe laboratorial;
+4. catálogo completo com imagens em destaque;
+5. seleção de apresentação e quantidade;
+6. ação de compra/orçamento;
+7. avisos legais e política comercial.
+
+Requisitos visuais e funcionais do Shop:
+
+- preservar busca, filtros, seleção de apresentação, preços, quantidades,
+  orçamento e envio para WhatsApp;
+- aumentar a presença visual do vial nos cards sem prejudicar a leitura do nome,
+  apresentação, SKU e preço;
+- padronizar proporção, recorte, fundo e altura das imagens;
+- manter o nome e a primeira apresentação corretos no vial de fallback;
+- substituir o fallback automaticamente quando a imagem definitiva for
+  aprovada;
+- tornar o card e o link textual **Ver produto** acessíveis no desktop e no
+  celular;
+- manter preços e apresentações sincronizados com as páginas individuais.
+
+### Imagens e identidade visual
+
+- todos os produtos exibidos na home devem aparecer com imagem;
+- usar a imagem definitiva do rótulo quando aprovada;
+- enquanto a imagem definitiva não existir, usar o vial PepMAX padronizado como
+  fallback, com nome e primeira apresentação corretos;
+- manter fundo claro nas imagens, vial frontal, enquadramento uniforme e boa
+  leitura no celular;
+- preservar a paleta biohack aprovada: ciano, verde, lilás, azul e acentos
+  quentes controlados;
+- evitar preto excessivo, salmão dominante, dourado deslocado ou cores lavadas;
+- o produto inteiro deve conduzir à página individual, com um link textual
+  **Ver produto** sempre visível no desktop e no mobile.
+
+### Conteúdo e conformidade editorial
+
+- não sugerir ingestão, aplicação, injeção, dose, protocolo ou reconstituição;
+- não fazer alegações sobre doença, tratamento, emagrecimento, apetite, libido,
+  sono, recuperação, desempenho ou qualquer benefício humano;
+- não usar essas alegações em descrições, categorias, metadados, texto oculto,
+  sinônimos de busca ou SEO;
+- apresentar os itens como materiais, compostos ou padrões de referência para
+  pesquisa laboratorial;
+- manter o aviso de que os produtos não se destinam a uso humano, veterinário
+  ou alimentício;
+- não exibir água bacteriostática, seringas ou outros materiais que possam
+  indicar preparação para administração;
+- manter protocolos, doses e reconstituição somente na branch e no futuro
+  domínio educacional, sem links a partir do site comercial;
+- revisar periodicamente home, catálogo, páginas, metadados e políticas contra
+  cartas e orientações vigentes do FDA;
+- submeter a redação final das políticas à revisão jurídica antes da operação
+  comercial.
+
+### Políticas e contato
+
+- a política comercial deve informar que não são aceitas devoluções por
+  arrependimento ou mudança de decisão;
+- preservar exceções obrigatórias para item incorreto, avariado, erro de envio
+  ou quando a legislação aplicável exigir;
+- informar condições de compra, prazo para comunicar problemas e canal de
+  contato;
+- o botão de contato deve abrir o canal oficial da PepMAX;
+- o botão principal das páginas individuais deve ser **Comprar**.
+
+### Critérios de aceite
+
+- todos os produtos da home possuem imagem e página individual válida;
+- nenhum link da home desaparece no mobile;
+- menu abre e fecha por mouse, toque e teclado;
+- busca, filtros, seleção de apresentação e orçamento continuam funcionando;
+- preços da home e das páginas individuais permanecem sincronizados;
+- não há links públicos para protocolos, doses ou reconstituição;
+- não há água bacteriostática ou termos de intenção humana no catálogo público;
+- a home funciona sem rolagem horizontal em telas pequenas;
+- textos, botões, imagens e avisos possuem contraste e rótulos acessíveis.
+
 ## Páginas de produto
+
+### Padrão visual obrigatório das imagens
+
+- usar exclusivamente o vial fotográfico PepMAX aprovado como referência;
+- manter frasco de vidro frontal, tampa metálica, fundo branco, proporção vertical e rótulo integralmente legível;
+- preservar a identidade visual aprovada: composição do rótulo, logotipo, estrutura molecular, tipografia e acabamento tecnológico;
+- dimensionar cada imagem com `object-fit: contain`, margem interna e proporção preservada em Shop, página do produto e celular;
+- nunca cortar tampa, base do vial, nome do composto, dosagem ou aviso de pesquisa;
+- não publicar ilustrações/cartuns de vial como se fossem imagens finais;
+- usar “Imagem em produção” enquanto o ativo fotográfico definitivo ainda não tiver sido aprovado;
+- gerar e aprovar os ativos em lotes, começando pelos produtos destacados na Home.
 
 ### Especificações técnicas verificadas
 
