@@ -64,14 +64,15 @@
           <div><label for="mg">Quantidade no vial (mg)</label><input id="mg" type="number" min="0" step="any" placeholder="Ex.: 10"></div>
           <div><label for="ml">Diluente adicionado (mL)</label><input id="ml" type="number" min="0" step="any" placeholder="Ex.: 2"></div>
           <div><label for="dose">Dose já prescrita (mg) — opcional</label><input id="dose" type="number" min="0" step="any" placeholder="Ex.: 1"></div>
-                  </div>
+          <div><label for="seringa">Capacidade da seringa U-100</label><select id="seringa"><option value="30">30 unidades (0,3 mL)</option><option value="50" selected>50 unidades (0,5 mL)</option><option value="100">100 unidades (1 mL)</option></select></div>
+        </div>
         <button type="button" onclick="calcular()">Calcular</button>
         <div class="result" id="resultado" aria-live="polite"></div>
-        <p class="muted">A calculadora apenas converte números e não determina qual dose é apropriada. Na escala U‑100, 100 unidades = 1 mL; a capacidade física da seringa não altera a conversão.</p>
+        <p class="muted">A calculadora apenas converte números. Ela não determina qual dose é apropriada. As seringas de 30, 50 e 100 unidades acima são todas U‑100: muda a capacidade máxima, não a conversão. Em todas elas, 100 unidades = 1 mL.</p>
       </div>
       <div class="example">
         <strong>Exemplo matemático</strong>
-        <p>Um vial de 10 mg com 2 mL resulta em 5 mg/mL. Se uma prescrição já definida fosse de 1 mg, o volume matemático seria 0,2 mL, equivalente a 20 unidades na escala U‑100. A marcação é 20 em qualquer seringa com escala U‑100 que comporte esse volume. O exemplo não recomenda 1 mg nem confirma que 2 mL seja o diluente correto para um produto específico.</p>
+        <p>Um vial de 10 mg com 2 mL resulta em 5 mg/mL. Se uma prescrição já definida fosse de 1 mg, o volume matemático seria 0,2 mL, equivalente a 20 unidades na escala U‑100. A marcação é 20 tanto na seringa U‑100 de 50 unidades (0,5 mL) quanto na de 100 unidades (1 mL). O exemplo não recomenda 1 mg nem confirma que 2 mL seja o diluente correto para um produto específico.</p>
       </div>
     </section>
 
@@ -110,10 +111,10 @@
   <script>
     function fmt(n,d=4){return Number(n.toFixed(d)).toLocaleString('pt-BR')}
     function calcular(){
-      const mg=Number(document.getElementById('mg').value),ml=Number(document.getElementById('ml').value),dose=Number(document.getElementById('dose').value),out=document.getElementById('resultado');
+      const mg=Number(document.getElementById('mg').value),ml=Number(document.getElementById('ml').value),dose=Number(document.getElementById('dose').value),cap=Number(document.getElementById('seringa').value),out=document.getElementById('resultado');
       if(!(mg>0)||!(ml>0)){out.className='result show';out.textContent='Informe valores maiores que zero para mg e mL.';return}
       const conc=mg/ml;let text='Concentração final: '+fmt(conc)+' mg/mL.';
-      if(dose>0){const volume=dose/conc,units=volume*100;text+=' Para a dose prescrita informada: '+fmt(volume)+' mL = '+fmt(units,2)+' unidades na escala U-100.'}
+      if(dose>0){const volume=dose/conc,units=volume*100;text+=' Para a dose prescrita informada: '+fmt(volume)+' mL = '+fmt(units,2)+' unidades na escala U-100.';text+=units<=cap?' Esse volume cabe na seringa escolhida de '+cap+' unidades.':' Atenção: esse volume excede a capacidade da seringa escolhida de '+cap+' unidades.'}
       out.className='result show';out.textContent=text;
     }
   </script>
