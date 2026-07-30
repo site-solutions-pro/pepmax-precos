@@ -2,38 +2,24 @@
 
 ## Status do projeto
 
-### Fase 1 — concluída em 30/07/2026
+### Fase 1 — em validação final
 
-A Fase 1 está formalmente encerrada. Foram consolidados e publicados o catálogo,
-as páginas individuais, a seleção de apresentação e quantidade, o carrinho
-global com acesso ao fechamento do pedido, a correção proporcional do vial e os
-ajustes funcionais previstos para essa etapa.
+A Fase 1 permanece aberta até a implementação, publicação e validação integral
+de todos os critérios do Item 1 — Nova home comercial. A remoção das categorias
+faz parte desta fase e não pode ser transferida para a Fase 2.
 
-A partir deste fechamento, novos requisitos e ajustes residuais passam a ser
-tratados na Fase 2, sem reabrir a Fase 1.
+Entregas implementadas para o fechamento:
 
-### Fase 2 — próxima etapa
+- home institucional, destaques com imagens e navegação comercial;
+- catálogo com busca neutra por nome, apresentação ou SKU;
+- seleção de apresentação e quantidade;
+- carrinho global, contador e acesso ao fechamento do pedido;
+- páginas individuais e imagens com proporção preservada;
+- remoção de categorias e filtros da interface, cards, páginas individuais,
+  ordenação, busca e bases públicas.
 
-#### Remover categorias e filtros categóricos
-
-Remover integralmente as categorias de produtos e qualquer filtro, agrupamento
-ou navegação baseada em finalidade, efeito, sistema corporal ou benefício, pois
-essa classificação pode sugerir uso humano.
-
-Escopo obrigatório:
-
-- remover o seletor de categorias exibido no Shop;
-- remover categorias dos cards, páginas individuais, menus e navegação;
-- remover categorias da base pública, URLs, parâmetros, atributos, dados
-  estruturados, metadados, texto oculto, busca interna e SEO;
-- não substituir as categorias atuais por sinônimos que preservem a mesma
-  associação com finalidade ou benefício humano;
-- manter somente busca neutra por nome do composto, apresentação ou SKU;
-- revisar o site publicado em desktop e celular para confirmar que nenhuma
-  categoria permanece visível ou acessível.
-
-Critério de aceite: o catálogo deve apresentar todos os produtos em uma listagem
-neutra, sem classificação que indique finalidade ou possível uso humano.
+A fase só será marcada como concluída após a validação do site publicado em
+desktop e celular.
 
 ## Nova home comercial
 
