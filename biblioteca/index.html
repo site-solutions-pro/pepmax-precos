@@ -9,7 +9,7 @@
     :root{--bg:#08090e;--card:#111320;--line:#292b3a;--text:#ece9f5;--soft:#aaa4bc;--cyan:#1fc7da;--violet:#7b3fd4;--pink:#d6379f;--amber:#f4b84a}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
     a{color:var(--cyan)}.wrap{max-width:1080px;margin:auto;padding:0 20px}.top{border-bottom:1px solid var(--line);padding:18px 0}
-    .brand{font-size:20px;font-weight:800;text-decoration:none;color:var(--text)}.brand span{color:var(--cyan)}
+    .nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.brand{font-size:20px;font-weight:800;text-decoration:none;color:var(--text);margin-right:auto}.brand span{color:var(--cyan)}.navlink{text-decoration:none;color:var(--soft)}.navlink.active,.navlink:hover{color:var(--cyan)}
     header{padding:58px 0 28px}h1{font-size:clamp(2.1rem,6vw,4rem);line-height:1.03;margin:.2em 0}.lead{color:var(--soft);max-width:760px}
     .notice{border:1px solid #6d5525;background:#211b11;border-radius:12px;padding:16px;margin:24px 0;color:#f5deb0}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:28px 0}
@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <nav class="top"><div class="wrap"><a class="brand" href="../">Pep<span>max</span></a></div></nav>
+  <nav class="top"><div class="wrap nav"><a class="brand" href="../">Pep<span>max</span></a><a class="navlink active" href="./">Biblioteca técnica</a><a class="navlink" href="../reconstituicao/">Como reconstituir</a><a class="navlink" href="../">Catálogo</a></div></nav>
   <header class="wrap">
     <p class="muted">BIBLIOTECA TÉCNICA · REVISÃO 29/07/2026 · LOTE 2</p>
     <h1>Evidência antes de protocolo.</h1>
