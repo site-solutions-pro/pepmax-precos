@@ -146,6 +146,26 @@ Requisitos visuais e funcionais do Shop:
 
 ## Páginas de produto
 
+### Fase 2 — em execução desde 30/07/2026
+
+Escopo aprovado para execução contínua:
+
+- padronização visual definitiva dos vials e páginas individuais;
+- especificações científicas verificadas, sem inferências;
+- revisão funcional e responsiva das 100 páginas;
+- auditoria de conformidade, metadados, SEO e dados públicos.
+
+Progresso:
+
+- primeiro lote científico implementado para os quatro destaques da Home:
+  Retatrutida, Tirzepatida, BPC-157 e MOTS-c;
+- seção posicionada abaixo da ação comercial, com classificação, estrutura ou
+  sequência, fórmula e massa molecular, origem, equipe e fontes externas;
+- próximos lotes seguem a ordem de visibilidade comercial e disponibilidade de
+  fontes primárias confiáveis;
+- imagens definitivas continuam condicionadas à aprovação do ativo individual;
+  até lá, o site identifica explicitamente a imagem como em produção.
+
 ### Padrão visual obrigatório das imagens
 
 - usar exclusivamente o vial fotográfico PepMAX aprovado como referência;
