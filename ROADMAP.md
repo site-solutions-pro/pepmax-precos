@@ -124,6 +124,7 @@ Requisitos visuais e funcionais do Shop:
 
 - usar exclusivamente o vial fotográfico PepMAX aprovado como referência;
 - manter frasco de vidro frontal, tampa metálica, fundo branco, proporção vertical e rótulo integralmente legível;
+- usar como referência geométrica o vial de 10 ml da Profound Aminos: corpo curto e largo, ombros naturais e tampa proporcional, sem alongamento vertical;
 - preservar a identidade visual aprovada: composição do rótulo, logotipo, estrutura molecular, tipografia e acabamento tecnológico;
 - dimensionar cada imagem com `object-fit: contain`, margem interna e proporção preservada em Shop, página do produto e celular;
 - nunca cortar tampa, base do vial, nome do composto, dosagem ou aviso de pesquisa;

@@ -16,7 +16,17 @@ function pendingProductImage(p){
 }
 const productImage=p=>p.image||pendingProductImage(p);
 const productUrl=p=>`./${p.slug}/`;
+const cartKey=(p,item)=>{
+ const sku=String(item[0]||"").trim();
+ return sku&&sku!=="—"?sku:`${p.slug}|${item[1]}`;
+};
+function updateNavCart(){
+ let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
+ const total=Object.values(cart).reduce((sum,q)=>sum+(Math.max(0,Math.floor(Number(q)))||0),0);
+ document.querySelectorAll(".nav-cart-count").forEach(el=>el.textContent=total);
+}
 function catalog(){
+ updateNavCart();
  const grid=document.querySelector("#catalogGrid"),q=document.querySelector("#search"),cat=document.querySelector("#category");
  [...new Set(PRODUCTS.map(p=>p.cat))].forEach(c=>cat.insertAdjacentHTML("beforeend",`<option>${c}</option>`));
  const draw=()=>{const term=q.value.toLowerCase();const list=PRODUCTS.filter(p=>(cat.value==="Todos"||p.cat===cat.value)&&(p.name+" "+p.cat+" "+p.desc).toLowerCase().includes(term));
@@ -24,12 +34,13 @@ function catalog(){
  q.addEventListener("input",draw);cat.addEventListener("change",draw);draw();
 }
 function detail(slug){
+ updateNavCart();
  const p=PRODUCTS.find(x=>x.slug===slug);if(!p)return;
  document.title=`${p.name} | PepMax Peptides`;
  let selected=0,qty=1;
  const draw=()=>{
   const x=p.items[selected];
-  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">${p.cat}</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual"><img src="${productImage(p)}" alt="Vial PepMax ${p.name}" width="648" height="1400" loading="eager"></figure><div class="facts"><div class="fact"><b>Pó liofilizado</b>Apresentação de pesquisa</div><div class="fact"><b>Preço por vial</b>Caixa: 10 vials</div><div class="fact"><b>Uso em pesquisa</b>Não destinado ao consumo humano</div></div></div><aside class="panel"><span class="eyebrow">Apresentações disponíveis</span><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Adicionar ao carrinho</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><p class="sku">Preços em dólar americano, por vial. Frete e impostos não incluídos.</p></aside>`;
+  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">${p.cat}</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual"><img src="${productImage(p)}" alt="Vial PepMax ${p.name}" width="648" height="1400" loading="eager"></figure><div class="facts"><div class="fact"><b>Pó liofilizado</b>Apresentação de pesquisa</div><div class="fact"><b>Preço por vial</b>Caixa: 10 vials</div><div class="fact"><b>Uso em pesquisa</b>Não destinado ao consumo humano</div></div></div><aside class="panel"><span class="eyebrow">Apresentações disponíveis</span><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Comprar</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../">Ver carrinho no Shop →</a><p class="sku">Preços em dólar americano, por vial. Frete e impostos não incluídos.</p></aside>`;
   document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);draw()});
   document.querySelector("[data-minus]").onclick=()=>{qty=Math.max(1,qty-1);draw()};
   document.querySelector("[data-plus]").onclick=()=>{qty+=1;draw()};
@@ -37,7 +48,8 @@ function detail(slug){
   document.querySelector("[data-cart-add]").onclick=()=>{
    qty=Math.max(1,Math.floor(Number(document.querySelector("#detailQty").value))||1);
    let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
-   cart[x[0]]=(Number(cart[x[0]])||0)+qty;localStorage.setItem("pepmax-cart-v1",JSON.stringify(cart));
+   const key=cartKey(p,x);
+   cart[key]=(Number(cart[key])||0)+qty;localStorage.setItem("pepmax-cart-v1",JSON.stringify(cart));updateNavCart();
    document.querySelector("#cartConfirm").textContent=`${qty} vial${qty>1?"s":""} de ${x[1]} adicionado${qty>1?"s":""} ao carrinho.`;
   };
  };
