@@ -2,11 +2,11 @@
 
 ## Status do projeto
 
-### Fase 1 — em validação final
+### Fase 1 — concluída em 30/07/2026
 
-A Fase 1 permanece aberta até a implementação, publicação e validação integral
-de todos os critérios do Item 1 — Nova home comercial. A remoção das categorias
-faz parte desta fase e não pode ser transferida para a Fase 2.
+A Fase 1 foi encerrada após a implementação, publicação e validação integral
+dos critérios do Item 1 — Nova home comercial. A remoção das categorias foi
+executada dentro desta fase.
 
 Entregas implementadas para o fechamento:
 
@@ -18,8 +18,9 @@ Entregas implementadas para o fechamento:
 - remoção de categorias e filtros da interface, cards, páginas individuais,
   ordenação, busca e bases públicas.
 
-A fase só será marcada como concluída após a validação do site publicado em
-desktop e celular.
+Validação final: site público atualizado, navegação sem rolagem horizontal,
+links comerciais válidos, catálogo e páginas individuais sincronizados, busca
+neutra funcional e nenhuma categoria ou filtro categórico exposto.
 
 ## Nova home comercial
 
