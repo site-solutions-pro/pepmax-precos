@@ -240,6 +240,18 @@ select{font:inherit;font-size:13px;background:var(--surface);color:var(--text);
 .item .s{font-size:12px;color:var(--soft);font-family:"IBM Plex Mono",monospace;margin-top:3px}
 .item .line{margin-left:auto;text-align:right;font-family:"IBM Plex Mono",monospace;font-weight:600;
   font-variant-numeric:tabular-nums;white-space:nowrap}
+.item-main{min-width:0;flex:1}
+.item-actions{display:flex;align-items:center;gap:10px;margin-top:10px}
+.item .cart-stepper{display:grid;grid-template-columns:34px 42px 34px;align-items:center;
+  border:1px solid var(--line-2);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.025)}
+.item .cart-stepper button{width:34px;height:34px;border:0;background:transparent;color:var(--text);
+  font-size:18px;line-height:1}
+.item .cart-stepper button:hover{background:rgba(255,255,255,.08)}
+.item .cart-stepper input{width:42px;height:34px;border:0;background:transparent;color:var(--text);
+  text-align:center;font:600 13px "IBM Plex Mono",monospace}
+.item .cart-stepper input::-webkit-outer-spin-button,.item .cart-stepper input::-webkit-inner-spin-button{
+  -webkit-appearance:none;margin:0}
+.item .cart-stepper input[type=number]{-moz-appearance:textfield}
 .item .rm{border:0;background:transparent;color:var(--soft);font-size:12px;text-decoration:underline;padding:4px 0}
 .item .rm:hover{color:var(--pink)}
 .sheet footer{padding:20px 24px 26px;border-top:1px solid var(--line);background:var(--surface)}
@@ -285,6 +297,9 @@ footer.legal b{color:var(--text)}
   .cart-button{min-width:0;padding:9px 12px}
   .cart-button .cart-label{display:none}
   .cart-button svg{width:21px;height:21px}
+  .sheet .items{padding:8px 18px}
+  .item{gap:10px}
+  .item .line{font-size:13px}
 }
 @media (max-width:820px){.featured{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}}
 @media (max-width:480px){.featured{grid-template-columns:1fr}.home-hero{padding-top:34px}.about{padding:24px}}
@@ -854,7 +869,7 @@ function resumo(){
 
 function pinta(){
   const {linhas,total,qtd,bruto,desconto} = resumo();
-  document.getElementById("topCount").textContent = linhas.length;
+  document.getElementById("topCount").textContent = qtd;
   document.getElementById("trayTotal").textContent = usd(total);
   document.getElementById("trayMeta").textContent =
     linhas.length ? `${linhas.length} ${linhas.length===1?"item":"itens"} · ${qtd} vials` : "nenhum item";
@@ -873,9 +888,17 @@ function pinta(){
   }
   document.getElementById("items").innerHTML = linhas.length ? linhas.map(l=>`
     <div class="item">
-      <div><div class="name">${l.p.n}</div>
-        <div class="s">${l.a.k} · ${l.a.d} · ${l.q} vials × ${usd(l.a.pr)}</div>
-        <button class="rm" data-rm="${l.a.k}">remover</button></div>
+      <div class="item-main"><div class="name">${l.p.n}</div>
+        <div class="s">${l.a.k || "—"} · ${l.a.d} · ${usd(l.a.pr)} por vial</div>
+        <div class="item-actions">
+          <div class="cart-stepper" aria-label="Quantidade de ${l.p.n} ${l.a.d}">
+            <button type="button" data-dec="${cartKey(l.p,l.a)}" aria-label="Diminuir quantidade de ${l.p.n}">−</button>
+            <input type="number" min="1" inputmode="numeric" value="${l.q}" data-qty="${cartKey(l.p,l.a)}" aria-label="Quantidade de vials de ${l.p.n}">
+            <button type="button" data-inc="${cartKey(l.p,l.a)}" aria-label="Aumentar quantidade de ${l.p.n}">+</button>
+          </div>
+          <button class="rm" type="button" data-rm="${cartKey(l.p,l.a)}">remover</button>
+        </div>
+      </div>
       <div class="line">${usd(l.sub)}</div>
     </div>`).join("")
     : `<div class="empty" style="border:0;padding:48px 0"><h3>Orçamento vazio</h3>
