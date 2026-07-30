@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Guia educacional Pepmax para reconstituição segura e cálculo de concentração de peptídeos liofilizados.">
+  <title>Como reconstituir — Pepmax</title>
+  <style>
+    :root{--bg:#08090e;--card:#111320;--line:#292b3a;--text:#ece9f5;--soft:#aaa4bc;--cyan:#1fc7da;--violet:#7b3fd4;--amber:#f4b84a;--red:#ef6f78;--green:#76ddd2}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+    a{color:var(--cyan)}.wrap{max-width:1080px;margin:auto;padding:0 20px}.top{border-bottom:1px solid var(--line);padding:15px 0;position:sticky;top:0;background:rgba(8,9,14,.95);backdrop-filter:blur(10px);z-index:5}
+    .nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.brand{font-size:20px;font-weight:800;text-decoration:none;color:var(--text);margin-right:auto}.brand span{color:var(--cyan)}.navlink{text-decoration:none;color:var(--soft)}.navlink.active,.navlink:hover{color:var(--cyan)}
+    header{padding:54px 0 24px}h1{font-size:clamp(2.1rem,6vw,4rem);line-height:1.05;margin:.2em 0}.lead{color:var(--soft);max-width:780px;font-size:17px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:800}
+    .notice{border:1px solid #6d5525;background:#211b11;border-radius:14px;padding:17px;margin:22px 0;color:#f5deb0}.danger{border-color:#713841;background:#241317;color:#ffc1c7}.success{border-color:#28766f;background:#10211f;color:#b8f1e9}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:24px 0}.card,.step,.calc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card strong{display:block;font-size:17px}.muted{color:var(--soft)}
+    main{padding-bottom:64px}.section{margin:38px 0}.section h2{font-size:28px;margin:0 0 12px}.steps{counter-reset:step;display:grid;gap:14px}.step{position:relative;padding-left:72px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--violet),var(--cyan));font-weight:800}.step h3{margin:0 0 4px;font-size:18px}.step p{margin:0;color:var(--soft)}
+    .formula{font-size:18px;border-left:3px solid var(--cyan);padding:10px 14px;background:#0b1820;border-radius:0 10px 10px 0}.example{background:#151329;border:1px solid #403267;border-radius:12px;padding:16px}.check{list-style:none;padding:0}.check li{padding:6px 0 6px 28px;position:relative}.check li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+    label{display:block;color:var(--soft);font-size:13px;margin-bottom:4px}input{width:100%;background:#090b12;border:1px solid var(--line);border-radius:9px;padding:11px;color:var(--text);font:inherit}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}button{margin-top:14px;border:0;border-radius:9px;padding:11px 17px;background:var(--cyan);color:#061014;font-weight:800;cursor:pointer}.result{margin-top:14px;padding:14px;border-radius:10px;background:#0b1820;display:none}.result.show{display:block}
+    table{width:100%;border-collapse:collapse}.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}th{color:var(--soft);font-size:12px}tr:last-child td{border-bottom:0}
+    footer{border-top:1px solid var(--line);padding:26px 0;color:var(--soft);font-size:13px}
+  </style>
+</head>
+<body>
+  <nav class="top"><div class="wrap nav"><a class="brand" href="../">Pep<span>max</span></a><a class="navlink" href="../biblioteca/">Biblioteca técnica</a><a class="navlink active" href="./">Como reconstituir</a><a class="navlink" href="../">Catálogo</a></div></nav>
+  <header class="wrap">
+    <div class="eyebrow">GUIA PARA INICIANTES</div>
+    <h1>Como reconstituir um peptídeo liofilizado</h1>
+    <p class="lead">Reconstituir significa adicionar o diluente correto ao pó seco para formar uma solução. Este guia explica o processo de forma simples, sem substituir o rótulo, a prescrição ou o treinamento de um profissional de saúde.</p>
+    <div class="notice danger"><strong>Antes de começar:</strong> só reconstitua um produto prescrito e proveniente de farmácia ou fabricante autorizado. Não use se o lacre estiver violado, o vial estiver trincado, houver partículas inesperadas ou se não estiverem claros o diluente, o volume e a conservação. Em caso de dúvida, pare e fale com o farmacêutico.</div>
+  </header>
+  <main class="wrap">
+    <section class="section">
+      <h2>O que você precisa</h2>
+      <div class="grid">
+        <div class="card"><strong>Vial liofilizado</strong><span class="muted">Confira nome, quantidade em mg, lote e validade.</span></div>
+        <div class="card"><strong>Diluente indicado</strong><span class="muted">Use exatamente o tipo e o volume informados pelo fabricante ou prescritor.</span></div>
+        <div class="card"><strong>Seringa e agulha estéreis</strong><span class="muted">Novas e de uso único para cada acesso ao vial.</span></div>
+        <div class="card"><strong>Álcool 70% e coletor</strong><span class="muted">Para limpar as borrachas e descartar perfurocortantes.</span></div>
+      </div>
+      <div class="notice"><strong>Diluente não é universal:</strong> água bacteriostática, água estéril, solução salina e outros diluentes não são automaticamente intercambiáveis. A escolha errada pode alterar estabilidade, compatibilidade ou segurança.</div>
+    </section>
+
+    <section class="section">
+      <h2>Passo a passo</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Leia as instruções específicas</h3><p>Confirme qual diluente usar, quanto adicionar, como armazenar e por quanto tempo a solução permanece válida. Se essas informações não existirem, não improvise.</p></div>
+        <div class="step"><h3>2. Prepare uma área limpa</h3><p>Lave e seque bem as mãos. Use uma bancada limpa, iluminada e sem alimentos, animais, ventilador ou objetos desnecessários.</p></div>
+        <div class="step"><h3>3. Confira os frascos</h3><p>Verifique nome, concentração, validade e integridade. O pó pode variar de aparência; use apenas o padrão descrito pelo fabricante.</p></div>
+        <div class="step"><h3>4. Limpe as borrachas</h3><p>Passe uma gaze ou swab com álcool 70% na borracha do diluente e do peptídeo. Deixe secar ao ar; não toque novamente.</p></div>
+        <div class="step"><h3>5. Aspire o volume indicado</h3><p>Com seringa e agulha novas, retire do frasco apenas o volume de diluente determinado. Leia a graduação da seringa na altura dos olhos.</p></div>
+        <div class="step"><h3>6. Adicione lentamente ao vial</h3><p>Direcione o líquido para a parede interna do frasco, evitando um jato forte diretamente sobre o pó. Trabalhe devagar para reduzir espuma.</p></div>
+        <div class="step"><h3>7. Misture com suavidade</h3><p>Faça movimentos leves de rotação até dissolver. Não agite vigorosamente. Não use a solução se persistirem partículas, turvação ou alteração de cor não prevista no rótulo.</p></div>
+        <div class="step"><h3>8. Identifique e armazene</h3><p>Anote data, hora, volume adicionado e concentração final. Guarde na temperatura e proteção contra luz especificadas. Não congele, salvo instrução expressa.</p></div>
+        <div class="step"><h3>9. Use técnica estéril em cada acesso</h3><p>Limpe a borracha e utilize agulha e seringa novas toda vez. Nunca reutilize, compartilhe ou deixe uma agulha inserida no vial.</p></div>
+        <div class="step"><h3>10. Descarte corretamente</h3><p>Coloque agulhas e seringas imediatamente em coletor para perfurocortantes. Descarte a solução na data indicada ou antes se houver suspeita de contaminação.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Como calcular a concentração</h2>
+      <div class="calc">
+        <p class="formula"><strong>Concentração (mg/mL)</strong> = quantidade do vial (mg) ÷ volume de diluente (mL)</p>
+        <div class="fields">
+          <div><label for="mg">Quantidade no vial (mg)</label><input id="mg" type="number" min="0" step="any" placeholder="Ex.: 10"></div>
+          <div><label for="ml">Diluente adicionado (mL)</label><input id="ml" type="number" min="0" step="any" placeholder="Ex.: 2"></div>
+          <div><label for="dose">Dose já prescrita (mg) — opcional</label><input id="dose" type="number" min="0" step="any" placeholder="Ex.: 1"></div>
+        </div>
+        <button type="button" onclick="calcular()">Calcular</button>
+        <div class="result" id="resultado" aria-live="polite"></div>
+        <p class="muted">A calculadora apenas converte números. Ela não determina qual dose é apropriada. “Unidades” abaixo referem-se exclusivamente a seringa U‑100, em que 100 unidades = 1 mL; confirme o tipo de seringa antes de usar qualquer conversão.</p>
+      </div>
+      <div class="example">
+        <strong>Exemplo matemático</strong>
+        <p>Um vial de 10 mg com 2 mL resulta em 5 mg/mL. Se uma prescrição já definida fosse de 1 mg, o volume matemático seria 0,2 mL, equivalente a 20 unidades em seringa U‑100. O exemplo não recomenda 1 mg nem confirma que 2 mL seja o diluente correto para um produto específico.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quando não usar</h2>
+      <ul class="check">
+        <li>O produto, o diluente ou o volume não estão claramente identificados.</li>
+        <li>O lacre está rompido, o vial está danificado ou passou da validade.</li>
+        <li>A solução apresenta partículas, fibras, turvação ou cor inesperada.</li>
+        <li>O frasco ficou fora da temperatura exigida ou você não sabe há quanto tempo foi reconstituído.</li>
+        <li>A borracha foi tocada após a limpeza ou houve qualquer quebra da técnica estéril.</li>
+      </ul>
+      <div class="notice success"><strong>Regra simples:</strong> se houver dúvida sobre esterilidade, estabilidade ou cálculo, não aplique. Separe o produto e confirme com farmacêutico ou profissional habilitado.</div>
+    </section>
+
+    <section class="section">
+      <h2>Armazenamento: siga o produto</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Situação</th><th>Conduta segura</th></tr></thead>
+        <tbody>
+          <tr><td>Antes de reconstituir</td><td>Siga a temperatura e a proteção contra luz indicadas no rótulo.</td></tr>
+          <tr><td>Depois de reconstituir</td><td>Use a temperatura e o prazo específicos do fabricante ou da farmácia.</td></tr>
+          <tr><td>Vial multidose</td><td>Registre a primeira perfuração. O prazo geral de 28 dias não substitui um prazo diferente definido no rótulo.</td></tr>
+          <tr><td>Falta de informação</td><td>Não adote automaticamente “30 dias refrigerado”; confirme a estabilidade do produto específico.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section sources">
+      <h2>Base de segurança</h2>
+      <p class="muted">As etapas de higiene e acesso ao vial seguem práticas de segurança para injetáveis do CDC. A estabilidade, o diluente e o prazo pós-reconstituição devem sempre vir da rotulagem específica do produto.</p>
+      <p><a href="https://www.cdc.gov/injection-safety/media/pdfs/Safe-Injection-Checklist-P.pdf" rel="noopener">CDC — Injection Safety Checklist</a></p>
+    </section>
+  </main>
+  <footer><div class="wrap">Conteúdo educacional. Não ensina aplicação, não define dose e não substitui orientação médica, farmacêutica ou as instruções do fabricante.</div></footer>
+  <script>
+    function fmt(n,d=4){return Number(n.toFixed(d)).toLocaleString('pt-BR')}
+    function calcular(){
+      const mg=Number(document.getElementById('mg').value),ml=Number(document.getElementById('ml').value),dose=Number(document.getElementById('dose').value),out=document.getElementById('resultado');
+      if(!(mg>0)||!(ml>0)){out.className='result show';out.textContent='Informe valores maiores que zero para mg e mL.';return}
+      const conc=mg/ml;let text='Concentração final: '+fmt(conc)+' mg/mL.';
+      if(dose>0){const volume=dose/conc,units=volume*100;text+=' Para a dose prescrita informada: '+fmt(volume)+' mL = '+fmt(units,2)+' unidades em seringa U-100.'}
+      out.className='result show';out.textContent=text;
+    }
+  </script>
+</body>
+</html>
