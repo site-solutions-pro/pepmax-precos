@@ -69,6 +69,8 @@ button{font:inherit;cursor:pointer}
 .topbar .wrap{display:flex;align-items:center;gap:12px;height:62px}
 .brand{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",sans-serif;
   font-weight:800;font-size:20px;letter-spacing:-.02em}
+.toplink{color:var(--soft);text-decoration:none;font-size:13px;white-space:nowrap}
+.toplink:hover{color:var(--cyan)}
 .brand small{font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:10px;letter-spacing:.16em;
   color:var(--soft);text-transform:uppercase;border-left:1px solid var(--line-2);padding-left:10px}
 .topbar .spacer{flex:1}
@@ -302,6 +304,7 @@ body:not(.travado) .gate{display:none}
 .gate-card.recusado .gate-corpo{display:none}
 .gate-card.recusado .gate-recusa{display:block}
 @media (max-width:520px){.gate-card{padding:26px 22px 22px}.gate-acoes .btn{width:100%;justify-content:center}}
+@media (max-width:700px){.toplink{display:none}}
 </style>
 </head>
 <body class="travado">
@@ -320,6 +323,9 @@ body:not(.travado) .gate{display:none}
       <span class="g-text">Pepmax</span> <small>Tabela de preços</small>
     </div>
     <div class="spacer"></div>
+    <a class="toplink" href="./peptides/">Páginas de produtos</a>
+    <a class="toplink" href="./biblioteca/">Biblioteca</a>
+    <a class="toplink" href="./reconstituicao/">Reconstituição</a>
     <button class="btn ghost" id="openSheet">Orçamento <span class="pill-count" id="topCount">0</span></button>
   </div>
 </div>
@@ -502,6 +508,20 @@ const cats = ["Todos", ...ORDEM.filter(c=>usadas.has(c))];
 chips.innerHTML = cats.map(c=>`<button class="chip" data-cat="${c}" aria-pressed="${c===filtro}">${c}</button>`).join("");
 
 const escolhida = p => p.p[sel.get(p.n) ?? 0];
+const PRODUCT_PAGES = Object.freeze({
+  "Retatrutida":"retatrutida",
+  "Tirzepatida":"tirzepatida",
+  "Semaglutida":"semaglutida",
+  "BPC-157":"bpc-157",
+  "GHK-Cu":"ghk-cu",
+  "Tesamorelina":"tesamorelina",
+  "Ipamorelina":"ipamorelina",
+  "MOTS-c":"mots-c",
+  "SS-31 (elamipretida)":"ss-31",
+  "TB-500":"tb-500",
+  "CJC-1295 + Ipamorelina":"cjc-1295-ipamorelina",
+  "GLOW (BPC-157 + GHK-Cu + TB-500)":"glow-70"
+});
 
 function lista(){
   let out = CAT.filter(p=> filtro==="Todos" || p.c===filtro);
@@ -581,6 +601,7 @@ function render(){
         </div>
         <button class="btn" data-add="${a.k}">Adicionar</button>
       </div>
+      ${PRODUCT_PAGES[p.n] ? `<a class="toplink" href="./peptides/${PRODUCT_PAGES[p.n]}/">Ver página e apresentações →</a>` : ""}
     </article>`;
   }).join("");
 }
@@ -787,6 +808,11 @@ document.addEventListener("keydown", e=>{
 }, true);
 document.getElementById("gateOk").focus();
 
+const initialQuery = new URLSearchParams(location.search).get("q");
+if(initialQuery){
+  busca = initialQuery.trim();
+  document.getElementById("q").value = busca;
+}
 render(); pinta();
 </script>
 </body>
