@@ -1,5 +1,41 @@
 # Roadmap PepMax
 
+## Status do projeto
+
+### Fase 1 — concluída em 30/07/2026
+
+A Fase 1 está formalmente encerrada. Foram consolidados e publicados o catálogo,
+as páginas individuais, a seleção de apresentação e quantidade, o carrinho
+global com acesso ao fechamento do pedido, a correção proporcional do vial e os
+ajustes funcionais previstos para essa etapa.
+
+A partir deste fechamento, novos requisitos e ajustes residuais passam a ser
+tratados na Fase 2, sem reabrir a Fase 1.
+
+### Fase 2 — próxima etapa
+
+#### Remover categorias e filtros categóricos
+
+Remover integralmente as categorias de produtos e qualquer filtro, agrupamento
+ou navegação baseada em finalidade, efeito, sistema corporal ou benefício, pois
+essa classificação pode sugerir uso humano.
+
+Escopo obrigatório:
+
+- remover o seletor de categorias exibido no Shop;
+- remover categorias dos cards, páginas individuais, menus e navegação;
+- remover categorias da base pública, URLs, parâmetros, atributos, dados
+  estruturados, metadados, texto oculto, busca interna e SEO;
+- não substituir as categorias atuais por sinônimos que preservem a mesma
+  associação com finalidade ou benefício humano;
+- manter somente busca neutra por nome do composto, apresentação ou SKU;
+- revisar o site publicado em desktop e celular para confirmar que nenhuma
+  categoria permanece visível ou acessível.
+
+Critério de aceite: o catálogo deve apresentar todos os produtos em uma listagem
+neutra, sem classificação que indique finalidade ou possível uso humano.
+
+
 ## Nova home comercial
 
 ### Objetivo
@@ -41,7 +77,7 @@ rápido ao catálogo e separação inequívoca do futuro projeto educacional.
 
 1. cabeçalho com marca PepMAX, retorno à nova home, menu e orçamento;
 2. busca por nome, apresentação ou SKU;
-3. filtros por classe laboratorial;
+3. listagem neutra, sem categorias ou filtros categóricos;
 4. catálogo completo com imagens em destaque;
 5. seleção de apresentação e quantidade;
 6. ação de compra/orçamento;
@@ -49,8 +85,8 @@ rápido ao catálogo e separação inequívoca do futuro projeto educacional.
 
 Requisitos visuais e funcionais do Shop:
 
-- preservar busca, filtros, seleção de apresentação, preços, quantidades,
-  orçamento e envio para WhatsApp;
+- preservar busca neutra por nome, apresentação ou SKU, seleção de apresentação,
+  preços, quantidades, orçamento e envio para WhatsApp;
 - aumentar a presença visual do vial nos cards sem prejudicar a leitura do nome,
   apresentação, SKU e preço;
 - padronizar proporção, recorte, fundo e altura das imagens;
@@ -82,6 +118,8 @@ Requisitos visuais e funcionais do Shop:
   sono, recuperação, desempenho ou qualquer benefício humano;
 - não usar essas alegações em descrições, categorias, metadados, texto oculto,
   sinônimos de busca ou SEO;
+- não usar categorias, filtros ou agrupamentos que possam sugerir finalidade,
+  benefício ou uso humano;
 - apresentar os itens como materiais, compostos ou padrões de referência para
   pesquisa laboratorial;
 - manter o aviso de que os produtos não se destinam a uso humano, veterinário
@@ -111,7 +149,9 @@ Requisitos visuais e funcionais do Shop:
 - todos os produtos da home possuem imagem e página individual válida;
 - nenhum link da home desaparece no mobile;
 - menu abre e fecha por mouse, toque e teclado;
-- busca, filtros, seleção de apresentação e orçamento continuam funcionando;
+- busca neutra, seleção de apresentação e orçamento continuam funcionando;
+- não existem categorias ou filtros categóricos na interface, dados públicos,
+  URLs, metadados, busca ou SEO;
 - preços da home e das páginas individuais permanecem sincronizados;
 - não há links públicos para protocolos, doses ou reconstituição;
 - não há água bacteriostática ou termos de intenção humana no catálogo público;
