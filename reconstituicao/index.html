@@ -15,13 +15,13 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:24px 0}.card,.step,.calc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card strong{display:block;font-size:17px}.muted{color:var(--soft)}
     main{padding-bottom:64px}.section{margin:38px 0}.section h2{font-size:28px;margin:0 0 12px}.steps{counter-reset:step;display:grid;gap:14px}.step{position:relative;padding-left:72px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--violet),var(--cyan));font-weight:800}.step h3{margin:0 0 4px;font-size:18px}.step p{margin:0;color:var(--soft)}
     .formula{font-size:18px;border-left:3px solid var(--cyan);padding:10px 14px;background:#0b1820;border-radius:0 10px 10px 0}.example{background:#151329;border:1px solid #403267;border-radius:12px;padding:16px}.check{list-style:none;padding:0}.check li{padding:6px 0 6px 28px;position:relative}.check li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
-    label{display:block;color:var(--soft);font-size:13px;margin-bottom:4px}input{width:100%;background:#090b12;border:1px solid var(--line);border-radius:9px;padding:11px;color:var(--text);font:inherit}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}button{margin-top:14px;border:0;border-radius:9px;padding:11px 17px;background:var(--cyan);color:#061014;font-weight:800;cursor:pointer}.result{margin-top:14px;padding:14px;border-radius:10px;background:#0b1820;display:none}.result.show{display:block}
+    label{display:block;color:var(--soft);font-size:13px;margin-bottom:4px}input,select{width:100%;background:#090b12;border:1px solid var(--line);border-radius:9px;padding:11px;color:var(--text);font:inherit}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}button{margin-top:14px;border:0;border-radius:9px;padding:11px 17px;background:var(--cyan);color:#061014;font-weight:800;cursor:pointer}.result{margin-top:14px;padding:14px;border-radius:10px;background:#0b1820;display:none}.result.show{display:block}
     table{width:100%;border-collapse:collapse}.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}th{color:var(--soft);font-size:12px}tr:last-child td{border-bottom:0}
     footer{border-top:1px solid var(--line);padding:26px 0;color:var(--soft);font-size:13px}
   </style>
 </head>
 <body>
-  <nav class="top"><div class="wrap nav"><a class="brand" href="../">Pep<span>max</span></a><a class="navlink" href="../biblioteca/">Biblioteca técnica</a><a class="navlink active" href="./">Como reconstituir</a><a class="navlink" href="../">Catálogo</a></div></nav>
+  <nav class="top"><div class="wrap nav"><a class="brand" href="../">Pep<span>max</span></a><a class="navlink" href="../biblioteca/">Biblioteca técnica</a><a class="navlink active" href="./">Como reconstituir</a><a class="navlink" href="../">Peptides</a></div></nav>
   <header class="wrap">
     <div class="eyebrow">GUIA PARA INICIANTES</div>
     <h1>Como reconstituir um peptídeo liofilizado</h1>
@@ -64,14 +64,15 @@
           <div><label for="mg">Quantidade no vial (mg)</label><input id="mg" type="number" min="0" step="any" placeholder="Ex.: 10"></div>
           <div><label for="ml">Diluente adicionado (mL)</label><input id="ml" type="number" min="0" step="any" placeholder="Ex.: 2"></div>
           <div><label for="dose">Dose já prescrita (mg) — opcional</label><input id="dose" type="number" min="0" step="any" placeholder="Ex.: 1"></div>
+          <div><label for="seringa">Capacidade da seringa U-100</label><select id="seringa"><option value="30">30 unidades (0,3 mL)</option><option value="50" selected>50 unidades (0,5 mL)</option><option value="100">100 unidades (1 mL)</option></select></div>
         </div>
         <button type="button" onclick="calcular()">Calcular</button>
         <div class="result" id="resultado" aria-live="polite"></div>
-        <p class="muted">A calculadora apenas converte números. Ela não determina qual dose é apropriada. “Unidades” abaixo referem-se exclusivamente a seringa U‑100, em que 100 unidades = 1 mL; confirme o tipo de seringa antes de usar qualquer conversão.</p>
+        <p class="muted">A calculadora apenas converte números. Ela não determina qual dose é apropriada. As seringas de 30, 50 e 100 unidades acima são todas U‑100: muda a capacidade máxima, não a conversão. Em todas elas, 100 unidades = 1 mL.</p>
       </div>
       <div class="example">
         <strong>Exemplo matemático</strong>
-        <p>Um vial de 10 mg com 2 mL resulta em 5 mg/mL. Se uma prescrição já definida fosse de 1 mg, o volume matemático seria 0,2 mL, equivalente a 20 unidades em seringa U‑100. O exemplo não recomenda 1 mg nem confirma que 2 mL seja o diluente correto para um produto específico.</p>
+        <p>Um vial de 10 mg com 2 mL resulta em 5 mg/mL. Se uma prescrição já definida fosse de 1 mg, o volume matemático seria 0,2 mL, equivalente a 20 unidades na escala U‑100. A marcação é 20 tanto na seringa U‑100 de 50 unidades (0,5 mL) quanto na de 100 unidades (1 mL). O exemplo não recomenda 1 mg nem confirma que 2 mL seja o diluente correto para um produto específico.</p>
       </div>
     </section>
 
@@ -110,10 +111,10 @@
   <script>
     function fmt(n,d=4){return Number(n.toFixed(d)).toLocaleString('pt-BR')}
     function calcular(){
-      const mg=Number(document.getElementById('mg').value),ml=Number(document.getElementById('ml').value),dose=Number(document.getElementById('dose').value),out=document.getElementById('resultado');
+      const mg=Number(document.getElementById('mg').value),ml=Number(document.getElementById('ml').value),dose=Number(document.getElementById('dose').value),cap=Number(document.getElementById('seringa').value),out=document.getElementById('resultado');
       if(!(mg>0)||!(ml>0)){out.className='result show';out.textContent='Informe valores maiores que zero para mg e mL.';return}
       const conc=mg/ml;let text='Concentração final: '+fmt(conc)+' mg/mL.';
-      if(dose>0){const volume=dose/conc,units=volume*100;text+=' Para a dose prescrita informada: '+fmt(volume)+' mL = '+fmt(units,2)+' unidades em seringa U-100.'}
+      if(dose>0){const volume=dose/conc,units=volume*100;text+=' Para a dose prescrita informada: '+fmt(volume)+' mL = '+fmt(units,2)+' unidades na escala U-100.';text+=units<=cap?' Esse volume cabe na seringa escolhida de '+cap+' unidades.':' Atenção: esse volume excede a capacidade da seringa escolhida de '+cap+' unidades.'}
       out.className='result show';out.textContent=text;
     }
   </script>
