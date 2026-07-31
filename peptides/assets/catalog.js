@@ -553,6 +553,122 @@ const TECH_SPECS={
    ["Montecucchi et al. — composição e sequência (1981)","https://pubmed.ncbi.nlm.nih.gov/7287299/"],
    ["Farmacologia inicial das dermorfinas","https://pmc.ncbi.nlm.nih.gov/articles/PMC2071698/"]
   ]
+ },
+ "ahk-cu":{
+  classification:"Complexo de coordenação entre cobre(II) e o tripeptídeo L-alanil-L-histidil-L-lisina (AHK).",
+  sequence:"Ala–His–Lys (AHK). O cobre é coordenado pelo motivo peptídico; cloreto, hidratação, protonação e estequiometria devem ser confirmados no certificado analítico.",
+  molecular:"Ligante AHK livre: C₁₅H₂₆N₆O₄ · aproximadamente 354,45 g/mol. O registro PubChem do complexo cloridrato de cobre informa C₁₅H₂₄ClCuN₆O₄⁻ · aproximadamente 451,39 g/mol; outras formas do complexo diferem.",
+  origin:"Construído a partir do tripeptídeo AHK e cobre(II). É quimicamente distinto de GHK-Cu, que possui glicina no primeiro resíduo.",
+  discovery:"A literatura não consolida um único inventor para AHK-Cu. A caracterização química e os estudos do complexo foram publicados por equipes distintas; o estudo experimental de Pyo e colaboradores foi publicado em 2007 na Coreia do Sul.",
+  sources:[
+   ["PubChem — L-Alanyl-L-histidyl-L-lysine","https://pubchem.ncbi.nlm.nih.gov/compound/7408502"],
+   ["PubChem — complexo AHK–Cu cloridrato","https://pubchem.ncbi.nlm.nih.gov/compound/168431292"],
+   ["Pyo et al., Journal of Peptide Science (2007)","https://pubmed.ncbi.nlm.nih.gov/17703734/"]
+  ]
+ },
+ "b7-33":{
+  classification:"Peptídeo sintético linear de 27 resíduos derivado da cadeia B da relaxina-2 humana; agonista experimental seletivo de sinalização do receptor RXFP1.",
+  sequence:"Val–Ile–Lys–Leu–Ser–Gly–Arg–Glu–Leu–Val–Arg–Ala–Gln–Ile–Ala–Ile–Ser–Gly–Met–Ser–Thr–Trp–Ser–Lys–Arg–Ser–Leu–NH₂ (VIKLSGRELVRAQIAISGMSTWSKRSL–NH₂).",
+  molecular:"C₁₃₁H₂₂₉N₄₁O₃₆S · massa molecular calculada: aproximadamente 2.986,6 g/mol para a cadeia C-terminalmente amidada.",
+  origin:"Projetado como derivado de cadeia única da região B7–B33 da relaxina-2, sem a cadeia A e sem as três pontes dissulfeto do hormônio nativo.",
+  discovery:"Mohammed Akhter Hossain, Ross Bathgate, John Wade, Chrishan Samuel e colaboradores · Florey Institute, University of Melbourne e Monash University · Melbourne, Austrália · publicado em 2016.",
+  sources:[
+   ["PubChem — B7-33","https://pubchem.ncbi.nlm.nih.gov/compound/162662592"],
+   ["Hossain et al., Chemical Science (2016)","https://pmc.ncbi.nlm.nih.gov/articles/PMC6013806/"]
+  ]
+ },
+ "cjc-1295-com-dac":{
+  classification:"Análogo sintético de GHRH(1–29)-NH₂ com quatro substituições e um grupo Drug Affinity Complex (DAC) reativo com albumina.",
+  sequence:"Núcleo peptídico: Tyr–D-Ala–Asp–Ala–Ile–Phe–Thr–Gln–Ser–Tyr–Arg–Lys–Val–Leu–Ala–Gln–Leu–Ser–Ala–Arg–Lys–Leu–Leu–Gln–Asp–Ile–Leu–Ser–Arg–NH₂. A identidade completa inclui o ligante DAC; não equivale ao CJC-1295 sem DAC.",
+  molecular:"C₁₆₅H₂₆₉N₄₇O₄₆ · massa molecular calculada: aproximadamente 3.647,3 g/mol para a entidade CJC-1295 registrada; acetato, solvatos e conjugação à albumina alteram a massa observada.",
+  origin:"Desenvolvido sobre um análogo estabilizado de GHRH(1–29), incorporando um grupo maleimida para ligação covalente à albumina circulante.",
+  discovery:"Léonce Jetté e colaboradores · ConjuChem Inc. · Montreal, Canadá · caracterização publicada em 2005.",
+  sources:[
+   ["PubChem — CJC-1295","https://pubchem.ncbi.nlm.nih.gov/compound/91971820"],
+   ["Jetté et al., Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"]
+  ]
+ },
+ "epo-eritropoetina":{
+  classification:"Glicoproteína hormonal; a eritropoietina humana madura possui uma cadeia polipeptídica de 165 resíduos após processamento e múltiplos glicanos.",
+  sequence:"A sequência precursora humana possui 193 resíduos no registro UniProt P01588. A forma secretada é processada e glicosilada; a sequência integral e os sítios de modificação devem ser conferidos no registro proteico e no certificado da preparação.",
+  molecular:"A cadeia polipeptídica madura tem aproximadamente 18,4 kDa; formas naturais e recombinantes glicosiladas apresentam massa aparente próxima de 30 kDa e micro-heterogeneidade. Não existe uma fórmula molecular única para todas as glicoformas.",
+  origin:"O fator eritropoiético foi proposto no início do século XX; eritropoietina humana foi purificada de urina em 1977 e o gene humano foi clonado e expresso em 1985.",
+  discovery:"Paul Carnot e Clotilde Deflandre · Paris, França · hipótese hormonal em 1906; purificação por Takaji Miyake, Charles Kung e Eugene Goldwasser · University of Chicago · 1977; clonagem por equipes da Amgen e Genetics Institute · Estados Unidos · 1985.",
+  sources:[
+   ["UniProt — Erythropoietin humana (P01588)","https://www.uniprot.org/uniprotkb/P01588/entry"],
+   ["Miyake et al. — purificação de eritropoietina (1977)","https://pubmed.ncbi.nlm.nih.gov/270704/"],
+   ["Lin et al. — clonagem e expressão do gene humano (1985)","https://pmc.ncbi.nlm.nih.gov/articles/PMC391376/"]
+  ]
+ },
+ "gdf-8-miostatina":{
+  classification:"Proteína sinalizadora da superfamília TGF-β, também denominada miostatina; sintetizada como precursor de 375 resíduos e ativa como homodímero C-terminal.",
+  sequence:"O precursor humano possui 375 aminoácidos. O domínio maduro corresponde aos resíduos 267–375, com 109 resíduos por cadeia e ligação dissulfeto entre as duas subunidades; a sequência integral está no UniProt O14793.",
+  molecular:"Precursor não processado: aproximadamente 42,75 kDa. Cada cadeia madura possui cerca de 12,4 kDa e o homodímero dissulfeto, cerca de 25 kDa; processamento e glicosilação impedem atribuir uma fórmula única à preparação proteica.",
+  origin:"Identificada por busca de novos membros da superfamília TGF-β e denominada GDF-8; estudos genéticos posteriores confirmaram o homólogo humano MSTN.",
+  discovery:"Alexandra C. McPherron, Ann M. Lawler e Se-Jin Lee · Johns Hopkins University School of Medicine · Baltimore, Estados Unidos · descoberta publicada em 1997.",
+  sources:[
+   ["UniProt — GDF-8 / Myostatin humana (O14793)","https://www.uniprot.org/uniprotkb/O14793/entry"],
+   ["McPherron et al., Nature (1997)","https://pubmed.ncbi.nlm.nih.gov/9139826/"],
+   ["Estrutura do domínio maduro de miostatina","https://pubmed.ncbi.nlm.nih.gov/27625211/"]
+  ]
+ },
+ "hcg":{
+  classification:"Hormônio glicoproteico heterodimérico composto por uma subunidade α comum às gonadotrofinas e uma subunidade β específica da gonadotrofina coriônica.",
+  sequence:"Forma madura: 92 aminoácidos na subunidade α e 145 na subunidade β. Ambas apresentam pontes dissulfeto e glicanos; as sequências e sítios de processamento constam dos registros UniProt P01215 e P01233.",
+  molecular:"A massa do heterodímero glicosilado varia conforme a composição dos glicanos, tipicamente na faixa aproximada de 36–40 kDa. Por ser uma mistura de glicoformas, não possui fórmula molecular única.",
+  origin:"Identificada a partir da atividade gonadotrófica presente na urina durante a gestação; a composição em duas subunidades e suas sequências foram estabelecidas posteriormente.",
+  discovery:"Selmar Aschheim e Bernhard Zondek · Charité, Berlim, Alemanha · atividade hormonal associada à gestação descrita em 1927; estrutura proteica elucidada por múltiplas equipes nas décadas seguintes.",
+  sources:[
+   ["UniProt — subunidade α humana (P01215)","https://www.uniprot.org/uniprotkb/P01215/entry"],
+   ["UniProt — subunidade β de hCG (P01233)","https://www.uniprot.org/uniprotkb/P01233/entry"],
+   ["Lapthorn et al. — estrutura cristalina de hCG (1994)","https://www.nature.com/articles/369455a0"]
+  ]
+ },
+ "hgh-191aa-somatropina":{
+  classification:"Proteína recombinante de 191 aminoácidos correspondente à principal isoforma de 22 kDa da somatotropina humana madura.",
+  sequence:"Cadeia única de 191 resíduos com duas pontes dissulfeto intramoleculares. A sequência canônica completa e a numeração dos resíduos estão no registro UniProt P01241.",
+  molecular:"A cadeia madura possui massa molecular calculada de aproximadamente 22,12 kDa. Metionil-somatropina, agregados, variantes de sequência e modificações de processo são entidades analíticas distintas.",
+  origin:"A sequência primária do hormônio hipofisário foi estabelecida antes do desenvolvimento da expressão recombinante; uma sequência codificante foi expressa diretamente em Escherichia coli em 1979.",
+  discovery:"Choh Hao Li e colaboradores · University of California · estrutura primária; David Goeddel, Peter Seeburg e equipe da Genentech · South San Francisco, Estados Unidos · expressão recombinante publicada em 1979.",
+  sources:[
+   ["UniProt — Somatotropin humana (P01241)","https://www.uniprot.org/uniprotkb/P01241/entry"],
+   ["Li et al. — revisão da estrutura primária","https://pubmed.ncbi.nlm.nih.gov/5144027/"],
+   ["Goeddel et al., Nature (1979)","https://www.nature.com/articles/281544a0"]
+  ]
+ },
+ "hgh-fragmento-176-191":{
+  classification:"Peptídeo sintético correspondente ao segmento C-terminal 176–191 da somatotropina humana; 16 aminoácidos com uma ponte dissulfeto intramolecular.",
+  sequence:"Tyr–Leu–Arg–Ile–Val–Gln–Cys–Arg–Ser–Val–Glu–Gly–Ser–Cys–Gly–Phe (YLRIVQCRSVEGSCGF), com ponte dissulfeto entre Cys⁷ e Cys¹⁴. Algumas fontes descrevem a mesma construção como Tyr + hGH(177–191).",
+  molecular:"Para a cadeia YLRIVQCRSVEGSCGF oxidada: C₇₈H₁₂₃N₂₃O₂₃S₂ · massa molecular calculada: aproximadamente 1.815,1 g/mol. Formas terminais e sais diferentes devem ser identificados separadamente.",
+  origin:"Delimitado a partir do extremo C-terminal do hormônio de crescimento em estudos de relação entre estrutura e atividade; a convenção de numeração deve acompanhar a sequência declarada.",
+  discovery:"Frank M. Ng e colaboradores · Monash University · Melbourne, Austrália · estudos do domínio C-terminal publicados a partir da década de 1980 e avaliação do peptídeo sintético publicada em 1994.",
+  sources:[
+   ["PubChem — HGH Fragment 176–191","https://pubchem.ncbi.nlm.nih.gov/compound/172966176"],
+   ["Ng et al. — domínio C-terminal de hGH","https://pubmed.ncbi.nlm.nih.gov/6137122/"],
+   ["Estudo do peptídeo sintético hGH 177–191 (1994)","https://pubmed.ncbi.nlm.nih.gov/7987248/"]
+  ]
+ },
+ "igf-1-lr3":{
+  classification:"Análogo recombinante de cadeia única do IGF-1 humano com 83 aminoácidos, extensão N-terminal de 13 resíduos e substituição Glu³→Arg.",
+  sequence:"Met–Phe–Pro–Ala–Met–Pro–Leu–Ser–Ser–Leu–Phe–Val–Asn–Gly–Pro–Arg–Thr–Leu–Cys–Gly–Ala–Glu–Leu–Val–Asp–Ala–Leu–Gln–Phe–Val–Cys–Gly–Asp–Arg–Gly–Phe–Tyr–Phe–Asn–Lys–Pro–Thr–Gly–Tyr–Gly–Ser–Ser–Ser–Arg–Arg–Ala–Pro–Gln–Thr–Gly–Ile–Val–Asp–Glu–Cys–Cys–Phe–Arg–Ser–Cys–Asp–Leu–Arg–Arg–Leu–Glu–Met–Tyr–Cys–Ala–Pro–Leu–Lys–Pro–Ala–Lys–Ser–Ala.",
+  molecular:"Polipeptídeo de 83 resíduos com três pontes dissulfeto e massa calculada próxima de 9,11 kDa. Fórmulas publicadas variam conforme representam a cadeia reduzida ou as pontes dissulfeto; a massa intacta deve ser confirmada analiticamente.",
+  origin:"Desenvolvido como variante longa de [Arg³]IGF-I para reduzir a afinidade por proteínas ligantes de IGF, preservando o núcleo estrutural de IGF-1.",
+  discovery:"Geoffrey Francis e colaboradores · GroPep e University of Adelaide · Adelaide, Austrália · desenvolvido no início da década de 1990; estrutura investigada por NMR e espectrometria de massa em trabalhos posteriores.",
+  sources:[
+   ["Estrutura de Long-[Arg³]-IGF-I por NMR","https://pubmed.ncbi.nlm.nih.gov/9450557/"],
+   ["Intermediários de pontes dissulfeto em LR3IGF-I","https://pubmed.ncbi.nlm.nih.gov/10608814/"]
+  ]
+ },
+ "triptorrelina-acetato":{
+  classification:"Decapeptídeo sintético agonista de GnRH, também denominado [D-Trp⁶]GnRH; a apresentação em acetato contém contraíon adicional.",
+  sequence:"pGlu–His–Trp–Ser–Tyr–D-Trp–Leu–Arg–Pro–Gly–NH₂. A D-triptofana na posição 6 e as terminações piroglutamil/amidada integram a identidade molecular.",
+  molecular:"Triptorelin acetato: C₆₆H₈₆N₁₈O₁₅ · massa molecular calculada: aproximadamente 1.371,5 g/mol. A base livre possui composição e massa diferentes.",
+  origin:"Projetada por substituição de Gly⁶ do GnRH natural por D-triptofana, dentro da série de análogos sintéticos de LH-RH desenvolvida na década de 1970.",
+  discovery:"Andrew V. Schally e colaboradores · Veterans Administration Hospital e Tulane University · New Orleans, Estados Unidos · estudos clínicos iniciais publicados em 1977.",
+  sources:[
+   ["PubChem — Triptorelin acetate","https://pubchem.ncbi.nlm.nih.gov/compound/25080282"],
+   ["Estudo inicial de [D-Trp⁶]-LH-RH (1977)","https://pubmed.ncbi.nlm.nih.gov/20415/"]
+  ]
  }
 };
 function techSpecs(slug){
