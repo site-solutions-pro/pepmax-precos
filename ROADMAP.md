@@ -161,7 +161,8 @@ Progresso:
   Retatrutida, Tirzepatida, BPC-157 e MOTS-c;
 - segundo lote científico implementado para Semaglutida, Cagrilintida,
   Tesamorelina e GHK-Cu;
-- total atual: 8 de 100 páginas com especificações científicas verificadas;
+- terceiro lote científico implementado para SS-31, AOD-9604, ARA-290 e KPV;
+- total atual: 12 de 100 páginas com especificações científicas verificadas;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
 - próximos lotes seguem a ordem de visibilidade comercial e disponibilidade de
