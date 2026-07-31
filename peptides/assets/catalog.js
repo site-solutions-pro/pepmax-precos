@@ -345,7 +345,7 @@ const TECH_SPECS={
   sequence:"A estrutura completa contém duas cadeias idênticas unidas por dissulfetos. Cada cadeia combina um análogo de GLP-1(7–37), um linker rico em glicina/serina e uma região Fc de IgG4; não deve ser descrita como um peptídeo linear simples.",
   molecular:"Fórmula polipeptídica teórica registrada: C₂₆₄₆H₄₀₄₄N₇₀₄O₈₃₆S₁₉ · massa calculada aproximada: 59,67 kDa. Glicosilação e heterogeneidade da proteína recombinante alteram a massa observada.",
   origin:"Desenvolvida como LY2189265 por engenharia de um análogo de GLP-1 resistente a DPP-4 e sua fusão a Fc, com caracterização publicada em 2010.",
-  discovery:"Thomas Glaesner e equipe · Eli Lilly and Company · Indianapolis, Estados Unidos.",
+  discovery:"W. Glaesner e colaboradores · Eli Lilly and Company · Indianapolis, Estados Unidos.",
   sources:[
    ["PubChem — Dulaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Dulaglutide"],
    ["Glaesner et al. — engenharia de LY2189265 (2010)","https://pubmed.ncbi.nlm.nih.gov/20503261/"]
@@ -392,7 +392,7 @@ const TECH_SPECS={
   sequence:"Tyr–Asn–Trp–Asn–Ser–Phe–Gly–Leu–Arg–Phe–NH₂ (YNWNSFGLRF–NH₂). Sais como TFA ou acetato devem ser tratados como formas distintas.",
   molecular:"C₆₃H₈₃N₁₇O₁₄ · massa molecular calculada: aproximadamente 1.302,5 g/mol para o peptídeo amidado sem contraíon.",
   origin:"A família KISS1 foi ligada ao receptor GPR54 em 2001; kisspeptina-10 é o núcleo C-terminal comum às formas humanas mais longas.",
-  discovery:"Equipes de Yoshihiro Ohtaki, Masahiko Kotani e colaboradores · Takeda Chemical Industries · Osaka, Japão.",
+  discovery:"Tetsuya Ohtaki, Masahiko Fujino, Masahiko Kotani e colaboradores · Takeda Chemical Industries · Japão.",
   sources:[
    ["PubChem — Kisspeptin-10","https://pubchem.ncbi.nlm.nih.gov/compound/25240297"],
    ["Kotani et al. — KISS1 e GPR54 (2001)","https://pubmed.ncbi.nlm.nih.gov/11457843/"],
