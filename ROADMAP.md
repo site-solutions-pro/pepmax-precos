@@ -186,16 +186,22 @@ Progresso:
 - décimo terceiro lote científico implementado para Epitalon N-acetil amidato,
   Fragmento 17-23, FTPP Adipotide, P21, PE-22-28, Pinealon, PNC-27, PTD-DBM,
   Timalina e toxina botulínica;
+- décimo quarto lote científico implementado para Adamax, Cardiogen, Cartalax,
+  Cortagen, Crystagen, Lemon Bottle, Livagen, Ovagen, Pancragen e Testagen;
+- lote final de fechamento implementado para Vesugen e Vilon;
 - a partir do oitavo lote, o padrão de execução é de 10 páginas por publicação,
   sempre com validação científica, estrutural e de conformidade;
-- total atual: 88 de 100 páginas com especificações científicas verificadas;
+- total atual: 100 de 100 páginas com especificações científicas verificadas;
+- enriquecimento científico das páginas concluído; nomes comerciais ambíguos,
+  misturas e divergências de sequência permanecem explicitamente identificados
+  e condicionados à confirmação analítica do lote;
 - auditoria visual-base concluída: Tesamorelina é o único produto com ativo
   fotográfico definitivo aprovado; os outros 99 permanecem identificados como
   **Imagem em produção**, sem uso indevido de placeholders como imagem final;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
-- próximos lotes seguem a ordem de visibilidade comercial e disponibilidade de
-  fontes primárias confiáveis;
+- a próxima frente é a padronização dos ativos fotográficos e a auditoria final
+  responsiva, funcional, editorial, de metadados e SEO;
 - imagens definitivas continuam condicionadas à aprovação do ativo individual;
   até lá, o site identifica explicitamente a imagem como em produção.
 

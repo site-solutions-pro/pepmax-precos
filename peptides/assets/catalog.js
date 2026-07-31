@@ -1013,6 +1013,145 @@ const TECH_SPECS={
    ["Lacy et al. — estrutura cristalográfica da BoNT/A","https://pubmed.ncbi.nlm.nih.gov/9783750/"],
    ["Blasi et al. — clivagem de SNAP-25 por BoNT/A","https://pubmed.ncbi.nlm.nih.gov/8103915/"]
   ]
+ },
+ "adamax":{
+  classification:"Designação comercial usada para um candidato derivado de Semax com grupo adamantano; não foi localizado registro químico oficial nem publicação primária que defina uma estrutura única sob o nome Adamax.",
+  sequence:"Descrições públicas partem da cadeia de Semax, Met–Glu–His–Phe–Pro–Gly–Pro, mas divergem quanto ao grupo adamantano e ao ponto de conjugação. A identidade do lote deve ser estabelecida por COA, espectrometria de massas e documentação estrutural do fabricante.",
+  molecular:"Não consolidada para o nome Adamax. Sem a posição de conjugação, o ligante e os contraíons, não existe fórmula ou massa molecular única defensável; os dados de Semax não podem ser transferidos automaticamente ao derivado.",
+  origin:"Nome recente de catálogo de pesquisa, apresentado como derivado lipofílico de Semax. A literatura primária recuperada caracteriza Semax, mas não valida de forma independente a identidade específica denominada Adamax.",
+  discovery:"A autoria e a primeira síntese de Adamax não estão consolidadas em fonte primária indexada. O composto parental Semax foi desenvolvido por Nikolay Myasoedov, Igor Ashmarin e colaboradores na Academia Russa de Ciências.",
+  sources:[
+   ["PubChem — Semax, composto parental","https://pubchem.ncbi.nlm.nih.gov/compound/Semax"],
+   ["Dolotov et al. — caracterização experimental de Semax","https://pubmed.ncbi.nlm.nih.gov/11457573/"]
+  ]
+ },
+ "cardiogen":{
+  classification:"Tetrapeptídeo bioregulador associado na literatura de catálogo à sigla AEDR; o nome Cardiogen aparece em estudos indexados, mas a ligação nome–sequência requer confirmação analítica do lote.",
+  sequence:"Ala–Glu–Asp–Arg (AEDR) é a identidade química de referência mais usada. Como os resumos primários específicos de Cardiogen não explicitam a sequência, a página não presume que toda apresentação comercial tenha exatamente essa cadeia ou a mesma forma salina.",
+  molecular:"Para a cadeia livre AEDR registrada no PubChem: C₁₈H₃₁N₇O₉ · aproximadamente 489,48 g/mol. Sais, hidratos e modificações alteram esses valores; aplicar somente quando o COA confirmar AEDR.",
+  origin:"Integrante do programa de peptídeos bioreguladores estudado em modelos de cultura de tecido cardíaco por grupos de São Petersburgo.",
+  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo e instituições associadas.",
+  sources:[
+   ["PubChem — H-Ala-Glu-Asp-Arg-OH (CID 11583989)","https://pubchem.ncbi.nlm.nih.gov/compound/11583989"],
+   ["Linkova et al. — Cardiogen em cultura de miocárdio","https://pubmed.ncbi.nlm.nih.gov/20210190/"],
+   ["Anisimov et al. — estudo experimental com Cardiogen","https://pubmed.ncbi.nlm.nih.gov/20396706/"]
+  ]
+ },
+ "cartalax":{
+  classification:"Designação de peptídeo bioregulador curto cuja sequência é apresentada de modo divergente nas fontes públicas; a identidade do material deve ser resolvida antes de atribuir especificações únicas.",
+  sequence:"Catálogos associam Cartalax a Ala–Glu–Asp–Leu (AEDL), enquanto publicação primária da mesma linha de pesquisa descreve Ala–Asp–Glu–Leu (ADEL). São isômeros de sequência distintos; o COA e a espectrometria do lote devem definir qual está presente.",
+  molecular:"AEDL e ADEL têm a mesma composição elementar, C₁₈H₃₀N₄O₉, e massa aproximada de 470,48 g/mol na forma livre, mas não são estruturalmente equivalentes. Sais e modificações devem ser informados separadamente.",
+  origin:"Relacionado ao programa de peptídeos bioreguladores de São Petersburgo e a estudos de peptídeos curtos em modelos de cartilagem e cromatina.",
+  discovery:"Vladimir Khavinson e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo; a atribuição comercial exata permanece dependente da documentação do lote.",
+  sources:[
+   ["PubChem — H-Ala-Glu-Asp-Leu-OH (CID 11690869)","https://pubchem.ncbi.nlm.nih.gov/compound/11690869"],
+   ["Monaselidze et al. — Ala-Asp-Glu-Leu em cromatina","https://pubmed.ncbi.nlm.nih.gov/21685526/"],
+   ["Khavinson et al. — diferenciação celular por peptídeos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"]
+  ]
+ },
+ "cortagen":{
+  classification:"Tetrapeptídeo sintético de quatro aminoácidos, identificado em publicação primária como AEDP.",
+  sequence:"Ala–Glu–Asp–Pro (AEDP), com terminais livres na forma de referência. Acetatos, outros sais ou derivações terminais têm composição distinta.",
+  molecular:"C₁₇H₂₆N₄O₉ · massa molecular aproximada: 454,43 g/mol para H-Ala-Glu-Asp-Pro-OH.",
+  origin:"Peptídeo curto desenvolvido e estudado no programa russo de bioregulação peptídica, com trabalhos experimentais em modelos celulares e teciduais.",
+  discovery:"Vladimir Khavinson, Vladimir Malinin e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  sources:[
+   ["PubChem — H-Ala-Glu-Asp-Pro-OH (CID 18439621)","https://pubchem.ncbi.nlm.nih.gov/compound/18439621"],
+   ["Khavinson et al. — sequência AEDP explicitada em estudo primário","https://pubmed.ncbi.nlm.nih.gov/12420072/"],
+   ["Estudo experimental indexado de Cortagen","https://pubmed.ncbi.nlm.nih.gov/15159690/"]
+  ]
+ },
+ "crystagen":{
+  classification:"Designação de peptídeo bioregulador curto associada a estudos do timo; a estrutura comercialmente divulgada não está consolidada em registro primário inequívoco sob esse nome.",
+  sequence:"Fontes secundárias atribuem Glu–Trp–Asp–Arg (EWDR), mas a publicação indexada específica de Crystagen recuperada não explicita essa sequência. O lote precisa de COA e identificação por espectrometria antes da atribuição definitiva.",
+  molecular:"Não atribuída como especificação definitiva. Valores públicos para EWDR são inconsistentes entre si; fórmula e massa devem ser derivadas da estrutura efetivamente confirmada, incluindo terminais e forma salina.",
+  origin:"Relacionado ao programa de peptídeos bioreguladores de São Petersburgo e estudado em modelos experimentais de tecido esplênico e envelhecimento.",
+  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores de instituições russas de bioregulação e gerontologia.",
+  sources:[
+   ["Linkova et al. — estudo indexado específico de Crystagen","https://pubmed.ncbi.nlm.nih.gov/28976144/"],
+   ["Khavinson et al. — diferenciação celular por peptídeos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"]
+  ]
+ },
+ "lemon-bottle":{
+  classification:"Nome comercial de uma solução multicomponente; não é um peptídeo isolado nem uma substância química única.",
+  sequence:"Não aplicável. A formulação oficial lista água, extrato de abacaxi, bromelaína, lecitina, extratos botânicos, riboflavina e excipientes. Cada componente possui identidade própria e a composição deve corresponder ao lote e à versão do fabricante.",
+  molecular:"Não existe fórmula ou massa molecular única para a mistura. A ficha técnica, o lote e a análise de composição são necessários; valores de bromelaína, lecitina ou riboflavina isoladas não descrevem a solução completa.",
+  origin:"Formulação comercial da SID Medicos. O nome Lemon Bottle também é usado em linhas diferentes, por isso a variante Ampoule Solution deve ser distinguida de Skin Booster, Reboot e outras apresentações.",
+  discovery:"Desenvolvimento comercial atribuído à SID Medicos; não corresponde à descoberta de uma molécula única por um grupo acadêmico.",
+  sources:[
+   ["SID Medicos — composição oficial da Lemon Bottle Ampoule Solution","https://www.lemonbottle.net/products/lemon-bottle-fat-dissolver"]
+  ]
+ },
+ "livagen":{
+  classification:"Tetrapeptídeo sintético de quatro aminoácidos, registrado como KEDA.",
+  sequence:"Lys–Glu–Asp–Ala (KEDA), na forma de cadeia livre de referência. Contraíons, hidratos e modificações terminais devem ser tratados como formas distintas.",
+  molecular:"C₁₈H₃₁N₅O₉ · massa molecular aproximada: 461,47 g/mol para H-Lys-Glu-Asp-Ala-OH (PubChem CID 87919683).",
+  origin:"Desenvolvido no programa de peptídeos bioreguladores de São Petersburgo e investigado em culturas de hepatócitos e tecidos hepáticos.",
+  discovery:"Vladimir Khavinson, Vladimir Malinin e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  sources:[
+   ["PubChem — H-Lys-Glu-Asp-Ala-OH (CID 87919683)","https://pubchem.ncbi.nlm.nih.gov/compound/87919683"],
+   ["Khavinson et al. — Livagen em culturas de hepatócitos","https://pubmed.ncbi.nlm.nih.gov/15926314/"],
+   ["Khavinson et al. — morfologia de cultura hepática com Livagen","https://pubmed.ncbi.nlm.nih.gov/12577697/"]
+  ]
+ },
+ "ovagen":{
+  classification:"Designação comercial ambígua: aparece tanto para um peptídeo bioregulador curto quanto para preparações veterinárias de FSH. A página trata somente a hipótese peptídica, condicionada à confirmação do lote.",
+  sequence:"A identidade peptídica divulgada é Glu–Asp–Leu (EDL). O nome isolado não basta para distingui-la de produtos homônimos; COA, fabricante e método analítico devem confirmar a cadeia e a forma química.",
+  molecular:"Para H-Glu-Asp-Leu-OH: C₁₅H₂₅N₃O₈ · aproximadamente 375,38 g/mol (PubChem CID 444128). Esse valor não se aplica a preparações homônimas de FSH nem a sais não especificados.",
+  origin:"A atribuição EDL integra catálogos de peptídeos bioreguladores de origem russa; o homônimo veterinário possui origem e composição completamente diferentes.",
+  discovery:"A atribuição peptídica é associada ao programa de Vladimir Khavinson em São Petersburgo, mas a identidade comercial do lote deve ser documentada separadamente.",
+  sources:[
+   ["PubChem — glutamil-aspartil-leucina (CID 444128)","https://pubchem.ncbi.nlm.nih.gov/compound/444128"],
+   ["PubMed — exemplo do homônimo Ovagen como preparação de FSH","https://pubmed.ncbi.nlm.nih.gov/8234893/"]
+  ]
+ },
+ "pancragen":{
+  classification:"Tetrapeptídeo sintético de quatro aminoácidos, identificado como KEDW.",
+  sequence:"Lys–Glu–Asp–Trp (KEDW), com terminais livres na forma de referência. Sais e derivados devem ser diferenciados.",
+  molecular:"C₂₆H₃₆N₆O₉ · massa molecular aproximada: 600,63 g/mol para H-Lys-Glu-Asp-Trp-OH (PubChem CID 68452877).",
+  origin:"Peptídeo curto do programa de bioregulação de São Petersburgo, estudado em modelos experimentais de células endócrinas pancreáticas e interação com DNA.",
+  discovery:"Vladimir Khavinson, Svetlana Tarnovskaya, Pavel Yakutseni e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  sources:[
+   ["PubChem — H-Lys-Glu-Asp-Trp-OH (CID 68452877)","https://pubchem.ncbi.nlm.nih.gov/compound/68452877"],
+   ["Tarnovskaya et al. — sequência KEDW e interação com DNA","https://pubmed.ncbi.nlm.nih.gov/24770759/"],
+   ["Estudo experimental do tetrapeptídeo em biossíntese de insulina","https://pubmed.ncbi.nlm.nih.gov/16671579/"]
+  ]
+ },
+ "testagen":{
+  classification:"Tetrapeptídeo sintético de quatro aminoácidos, identificado como KEDG.",
+  sequence:"Lys–Glu–Asp–Gly (KEDG), na forma livre de referência. Formas salinas ou modificadas exigem especificação própria.",
+  molecular:"C₁₇H₂₉N₅O₉ · massa molecular aproximada: 447,44 g/mol para H-Lys-Glu-Asp-Gly-OH (PubChem CID 123863700).",
+  origin:"Relacionado ao programa russo de peptídeos bioreguladores e investigado em modelos experimentais de tecido endócrino e diferenciação celular.",
+  discovery:"Vladimir Khavinson, Boris Kuznik e colaboradores de instituições russas de bioregulação, gerontologia e pesquisa médica.",
+  sources:[
+   ["PubChem — H-Lys-Glu-Asp-Gly-OH (CID 123863700)","https://pubchem.ncbi.nlm.nih.gov/compound/123863700"],
+   ["Kuznik et al. — estudo experimental de KEDG","https://pubmed.ncbi.nlm.nih.gov/22268052/"],
+   ["Fedoreyeva et al. — interação de peptídeos curtos com histonas e DNA","https://pubmed.ncbi.nlm.nih.gov/23581987/"]
+  ]
+ },
+ "vesugen":{
+  classification:"Tripeptídeo sintético de três aminoácidos, associado à sequência KED.",
+  sequence:"Lys–Glu–Asp (KED), com terminais livres na forma de referência. A associação ao nome Vesugen e a forma salina devem ser confirmadas no COA do lote.",
+  molecular:"C₁₅H₂₆N₄O₈ · massa molecular aproximada: 390,39 g/mol para a cadeia livre KED (PubChem CID 87571363).",
+  origin:"Peptídeo curto relacionado ao programa de bioregulação de São Petersburgo e a pesquisas com diferenciação celular e modelos vasculares.",
+  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  sources:[
+   ["PubChem — Lys-Glu-Asp (CID 87571363)","https://pubchem.ncbi.nlm.nih.gov/compound/87571363"],
+   ["Khavinson et al. — diferenciação celular por peptídeos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"],
+   ["Estudo clínico indexado com peptídeo vasoativo","https://pubmed.ncbi.nlm.nih.gov/28976154/"]
+  ]
+ },
+ "vilon":{
+  classification:"Dipeptídeo sintético identificado em publicação primária como KE.",
+  sequence:"Lys–Glu (KE), na forma de cadeia livre de referência. Sais, hidratos e proteções terminais modificam a composição.",
+  molecular:"C₁₁H₂₁N₃O₅ · massa molecular aproximada: 275,30 g/mol para lisil-glutamato (PubChem CID 7010502).",
+  origin:"Peptídeo curto do programa de bioregulação de São Petersburgo, investigado em modelos celulares e de sinalização tímica.",
+  discovery:"Vladimir Khavinson, Elena Rybakina, Vladimir Malinin e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  sources:[
+   ["PubChem — lisil-glutamato (CID 7010502)","https://pubchem.ncbi.nlm.nih.gov/compound/7010502"],
+   ["Khavinson et al. — sequência KE explicitada para Vilon","https://pubmed.ncbi.nlm.nih.gov/12420072/"],
+   ["Khavinson et al. — estudo de expressão gênica com KE","https://pubmed.ncbi.nlm.nih.gov/37782636/"]
+  ]
  }
 };
 function techSpecs(slug){
