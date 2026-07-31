@@ -315,6 +315,120 @@ const TECH_SPECS={
    ["du Vigneaud et al. — síntese de oxitocina","https://pubmed.ncbi.nlm.nih.gov/14391383/"],
    ["Synthetic oxytocin — registro histórico","https://pubmed.ncbi.nlm.nih.gov/13316092/"]
   ]
+ },
+ "acth-1-39":{
+  classification:"Hormônio peptídico endógeno de 39 aminoácidos, correspondente à corticotropina humana processada a partir da proopiomelanocortina (POMC).",
+  sequence:"Ser–Tyr–Ser–Met–Glu–His–Phe–Arg–Trp–Gly–Lys–Pro–Val–Gly–Lys–Lys–Arg–Arg–Pro–Val–Lys–Val–Tyr–Pro–Asn–Gly–Ala–Glu–Asp–Glu–Ser–Ala–Glu–Ala–Phe–Pro–Leu–Glu–Phe (SYSMEHFRWGKPVGKKRRPVKVYPNGAEDESAEAFPLEF).",
+  molecular:"C₂₀₇H₃₀₈N₅₆O₅₈S · massa molecular calculada: aproximadamente 4.541,1 g/mol para a cadeia humana livre.",
+  origin:"Gerada por clivagem proteolítica do precursor POMC; a cadeia ACTH(1–39) está contida na região N-terminal do precursor.",
+  discovery:"A purificação e a elucidação estrutural da corticotropina foram conduzidas por Choh Hao Li e colaboradores na década de 1950; a relação com o precursor comum POMC foi demonstrada por Roberts e Herbert em 1977.",
+  sources:[
+   ["PubChem — ACTH(1–39) humana","https://pubchem.ncbi.nlm.nih.gov/compound/175647749"],
+   ["Roberts e Herbert, PNAS (1977)","https://pubmed.ncbi.nlm.nih.gov/200934/"]
+  ]
+ },
+ "dulaglutida":{
+  classification:"Proteína de fusão recombinante homodimérica formada por duas cópias de um análogo de GLP-1 ligadas a um fragmento Fc modificado de IgG4 humana.",
+  sequence:"Cada monômero contém um análogo de GLP-1 unido por linker peptídico ao domínio Fc. Não é um peptídeo linear simples; a sequência integral, as pontes dissulfeto e o arranjo dimérico constam da publicação de engenharia.",
+  molecular:"Massa molecular aproximada: 59,7 kDa para o homodímero. Glicosilação e pontes dissulfeto tornam inadequada a apresentação de uma fórmula molecular única para todas as formas analíticas.",
+  origin:"Projetada por engenharia de proteína para combinar um domínio derivado de GLP-1 com um Fc humano modificado, formando uma construção dimérica de longa duração experimental.",
+  discovery:"William Glaesner e colaboradores · Eli Lilly and Company · Indianapolis, Estados Unidos · engenharia e caracterização publicadas em 2010 sob o código LY2189265.",
+  sources:[
+   ["PubChem — Dulaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Dulaglutide"],
+   ["Glaesner et al., Diabetes/Metabolism Research and Reviews (2010)","https://pubmed.ncbi.nlm.nih.gov/20503261/"]
+  ]
+ },
+ "mazdutida":{
+  classification:"Peptídeo sintético acilado análogo da oxintomodulina, desenvolvido como agonista duplo experimental dos receptores de GLP-1 e glucagon.",
+  sequence:"Construção peptídica modificada e acilada derivada da oxintomodulina. A representação integral do conjugado, incluindo resíduo não natural e linker lipídico, deve ser consultada no registro químico primário.",
+  molecular:"C₂₀₇H₃₁₇N₄₅O₆₅ · massa molecular calculada a partir do registro PubChem: aproximadamente 4.476,1 g/mol; sais e representações alternativas do conjugado podem diferir.",
+  origin:"Desenvolvida inicialmente como LY3305677 e posteriormente identificada como IBI362/mazdutida em colaboração entre Eli Lilly and Company e Innovent Biologics.",
+  discovery:"Equipes de pesquisa da Eli Lilly e da Innovent Biologics · Estados Unidos e China · primeiros estudos clínicos publicados em 2021 sob os códigos LY3305677 e IBI362.",
+  sources:[
+   ["PubChem — Mazdutide","https://pubchem.ncbi.nlm.nih.gov/compound/167312357"],
+   ["Ji et al., eClinicalMedicine (2021)","https://pmc.ncbi.nlm.nih.gov/articles/PMC8374649/"]
+  ]
+ },
+ "survodutida":{
+  classification:"Peptídeo sintético acilado, conhecido como BI 456906, desenvolvido como agonista duplo experimental dos receptores de glucagon e GLP-1.",
+  sequence:"Análogo peptídico do glucagon com modificações de sequência e conjugação lipídica. A estrutura completa do conjugado deve ser interpretada a partir do registro químico e da publicação de descoberta.",
+  molecular:"C₁₉₂H₂₈₉N₄₇O₆₁ · massa molecular calculada: aproximadamente 4.231,7 g/mol para a entidade registrada no PubChem; sais e solvatos apresentam composição distinta.",
+  origin:"Criada por otimização de análogos do glucagon para atividade combinada em GCGR e GLP-1R, com modificação lipídica destinada a aumentar a associação com albumina.",
+  discovery:"Jörg Zimmermann e colaboradores · Boehringer Ingelheim, em colaboração com Zealand Pharma · Alemanha e Dinamarca · descoberta e farmacologia pré-clínica publicadas em 2022.",
+  sources:[
+   ["PubChem — Survodutide","https://pubchem.ncbi.nlm.nih.gov/compound/168429725"],
+   ["Zimmermann et al., Molecular Metabolism (2022)","https://pubmed.ncbi.nlm.nih.gov/36356832/"]
+  ]
+ },
+ "teriparatida":{
+  classification:"Peptídeo de 34 aminoácidos idêntico à região N-terminal PTH(1–34) do hormônio da paratireoide humano.",
+  sequence:"Ser–Val–Ser–Glu–Ile–Gln–Leu–Met–His–Asn–Leu–Gly–Lys–His–Leu–Asn–Ser–Met–Glu–Arg–Val–Glu–Trp–Leu–Arg–Lys–Lys–Leu–Gln–Asp–Val–His–Asn–Phe (SVSEIQLMHNLGKHLNSMERVEWLRKKLQDVHNF).",
+  molecular:"C₁₈₁H₂₉₁N₅₅O₅₁S₂ · massa molecular calculada: aproximadamente 4.117,8 g/mol para a cadeia livre.",
+  origin:"Corresponde aos 34 resíduos N-terminais do PTH humano, região cuja sequência foi estabelecida por análise química do hormônio isolado.",
+  discovery:"Howard Niall, John T. Potts Jr. e colaboradores · Massachusetts General Hospital/Harvard Medical School · Boston, Estados Unidos · sequência humana PTH(1–34) publicada em 1974.",
+  sources:[
+   ["PubChem — Teriparatide","https://pubchem.ncbi.nlm.nih.gov/compound/16133850"],
+   ["Niall et al., PNAS (1974)","https://pubmed.ncbi.nlm.nih.gov/4509319/"]
+  ]
+ },
+ "orexina-a":{
+  classification:"Neuropeptídeo endógeno de 33 aminoácidos, também denominado hipocretina-1, com duas pontes dissulfeto intramoleculares.",
+  sequence:"pGlu–Pro–Leu–Pro–Asp–Cys–Cys–Arg–Gln–Lys–Thr–Cys–Ser–Cys–Arg–Leu–Tyr–Glu–Leu–Leu–His–Gly–Ala–Gly–Asn–His–Ala–Ala–Gly–Ile–Leu–Thr–Leu–NH₂; Cys⁶–Cys¹² e Cys⁷–Cys¹⁴ formam as pontes dissulfeto.",
+  molecular:"C₁₅₂H₂₄₃N₄₇O₄₄S₄ · massa molecular calculada: aproximadamente 3.561,1 g/mol para a forma ciclizada e amidada registrada.",
+  origin:"Processada proteoliticamente do precursor prepro-orexina; contém piroglutamato N-terminal, amidação C-terminal e duas pontes dissulfeto.",
+  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores · University of Texas Southwestern Medical Center · Dallas, Estados Unidos · descoberta publicada em 1998; o grupo de Luis de Lecea identificou paralelamente as hipocretinas.",
+  sources:[
+   ["PubChem — Orexin A","https://pubchem.ncbi.nlm.nih.gov/compound/56842143"],
+   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
+   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
+  ]
+ },
+ "orexina-b":{
+  classification:"Neuropeptídeo endógeno linear de 28 aminoácidos, também denominado hipocretina-2, com terminação C-terminal amidada.",
+  sequence:"Arg–Ser–Gly–Pro–Pro–Gly–Leu–Gln–Gly–Arg–Leu–Gln–Arg–Leu–Leu–Gln–Ala–Ser–Gly–Asn–His–Ala–Ala–Gly–Ile–Leu–Thr–Met–NH₂ (RSGPPGLQGRLQRLLQASGNHAAGILTM–NH₂).",
+  molecular:"C₁₂₃H₂₁₂N₄₄O₃₅S · massa molecular calculada: aproximadamente 2.899,4 g/mol para a forma amidada.",
+  origin:"Gerada a partir do mesmo precursor prepro-orexina que origina a orexina A, mas sem as pontes dissulfeto presentes na isoforma A.",
+  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores · University of Texas Southwestern Medical Center · Dallas, Estados Unidos · descoberta publicada em 1998; identificada em paralelo como hipocretina-2 pelo grupo de Luis de Lecea.",
+  sources:[
+   ["PubChem — Orexin B","https://pubchem.ncbi.nlm.nih.gov/compound/44404987"],
+   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
+   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
+  ]
+ },
+ "kisspeptina-10":{
+  classification:"Decapeptídeo C-terminal amidado derivado do precursor KISS1; corresponde ao núcleo ativo comum das kisspeptinas.",
+  sequence:"Tyr–Asn–Trp–Asn–Ser–Phe–Gly–Leu–Arg–Phe–NH₂ (YNWNSFGLRF–NH₂).",
+  molecular:"C₆₃H₈₃N₁₇O₁₄ · massa molecular calculada: aproximadamente 1.302,5 g/mol para a forma amidada; sais como TFA apresentam composição adicional.",
+  origin:"Corresponde aos dez resíduos C-terminais conservados da kisspeptina-54/metastina processada a partir da proteína precursora KISS1.",
+  discovery:"Tetsuya Ohtaki, Yasushi Shintani e colaboradores · Takeda Chemical Industries · Tsukuba, Japão · isolamento da metastina e identificação do receptor publicados em 2001.",
+  sources:[
+   ["PubChem — Kisspeptin-10","https://pubchem.ncbi.nlm.nih.gov/compound/25240297"],
+   ["Ohtaki et al., Nature (2001)","https://doi.org/10.1038/35079135"],
+   ["Kotani et al., Journal of Biological Chemistry (2001)","https://pubmed.ncbi.nlm.nih.gov/11457843/"]
+  ]
+ },
+ "vip-aviptadil":{
+  classification:"Neuropeptídeo linear de 28 aminoácidos conhecido como peptídeo intestinal vasoativo (VIP); aviptadil é a forma sintética correspondente.",
+  sequence:"His–Ser–Asp–Ala–Val–Phe–Thr–Asp–Asn–Tyr–Thr–Arg–Leu–Arg–Lys–Gln–Met–Ala–Val–Lys–Lys–Tyr–Leu–Asn–Ser–Ile–Leu–Asn–NH₂ (HSDAVFTDNYTRLRKQMAVKKYLNSILN–NH₂).",
+  molecular:"C₁₄₇H₂₃₇N₄₃O₄₃S · massa molecular calculada: aproximadamente 3.326,8 g/mol para o peptídeo amidado.",
+  origin:"Isolado inicialmente de tecido intestinal e posteriormente identificado como um peptídeo de 28 resíduos com terminação amidada.",
+  discovery:"Sami I. Said e Viktor Mutt · Medical College of Virginia e Karolinska Institutet · Estados Unidos e Suécia · isolamento descrito em 1970.",
+  sources:[
+   ["PubChem — Aviptadil","https://pubchem.ncbi.nlm.nih.gov/compound/16132300"],
+   ["Said e Mutt, Science (1970)","https://pubmed.ncbi.nlm.nih.gov/5450698/"]
+  ]
+ },
+ "glutationa":{
+  classification:"Tripeptídeo tiol de baixa massa molecular, também denominado γ-L-glutamil-L-cisteinilglicina.",
+  sequence:"γ-Glu–Cys–Gly. A ligação entre glutamato e cisteína utiliza o grupo γ-carboxila do glutamato, diferindo de uma ligação peptídica α convencional.",
+  molecular:"C₁₀H₁₇N₃O₆S · massa molecular calculada: aproximadamente 307,3 g/mol para a forma reduzida.",
+  origin:"Molécula endógena formada sequencialmente a partir de glutamato, cisteína e glicina; a forma reduzida é abreviada como GSH.",
+  discovery:"Frederick Gowland Hopkins · University of Cambridge · Reino Unido · identificação e caracterização progressivas entre 1921 e 1929; a designação glutationa foi consolidada na década de 1920.",
+  sources:[
+   ["PubChem — Glutathione","https://pubchem.ncbi.nlm.nih.gov/compound/124886"],
+   ["Forman et al., Molecular Aspects of Medicine (2009)","https://pubmed.ncbi.nlm.nih.gov/18796312/"],
+   ["Nature — registro histórico Glutathione (1925)","https://doi.org/10.1038/116412a0"]
+  ]
  }
 };
 function techSpecs(slug){
