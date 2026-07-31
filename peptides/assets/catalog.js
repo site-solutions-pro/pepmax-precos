@@ -43,6 +43,51 @@ const TECH_SPECS={
    ["PubChem — MOTS-c","https://pubchem.ncbi.nlm.nih.gov/compound/Mots-c"],
    ["Lee et al., Cell Metabolism (2015)","https://pubmed.ncbi.nlm.nih.gov/25738459/"]
   ]
+ },
+ "semaglutida":{
+  classification:"Análogo sintético e acilado do GLP-1 humano; peptídeo de 31 resíduos com duas substituições de aminoácidos e derivatização lipídica.",
+  sequence:"Derivada de GLP-1(7–37), com Aib na posição 8, Arg na posição 34 e uma cadeia de diácido graxo C18 ligada à Lys26 por espaçadores hidrofílicos.",
+  molecular:"C₁₈₇H₂₉₁N₄₅O₅₉ · massa molecular calculada: aproximadamente 4.113,6 g/mol.",
+  origin:"Selecionada na Novo Nordisk durante o desenvolvimento de um análogo de GLP-1 de ação prolongada; a descoberta química foi publicada em 2015.",
+  discovery:"Jesper Lau, Lotte Bjerre Knudsen e colaboradores · Novo Nordisk A/S · Måløv, Dinamarca.",
+  sources:[
+   ["PubChem — Semaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Semaglutide"],
+   ["Lau et al., Journal of Medicinal Chemistry (2015)","https://pubmed.ncbi.nlm.nih.gov/26308095/"]
+  ]
+ },
+ "cagrilintida":{
+  classification:"Análogo sintético, acilado e de ação prolongada da amilina; peptídeo experimental de 37 resíduos.",
+  sequence:"Estrutura derivada de amilina com múltiplas substituições, ponte dissulfeto intramolecular e conjugação lipídica. A sequência linear isolada não descreve integralmente o composto modificado.",
+  molecular:"C₁₉₄H₃₁₂N₅₄O₅₉S₂ · massa molecular calculada: aproximadamente 4.410 g/mol.",
+  origin:"Desenvolvida pela Novo Nordisk como AM833 para combinar estabilidade prolongada com atividade nos receptores de amilina e calcitonina.",
+  discovery:"Equipe de pesquisa da Novo Nordisk A/S · Dinamarca; primeiros resultados clínicos publicados a partir de 2021.",
+  sources:[
+   ["PubChem — Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"],
+   ["Lau et al., The Lancet (2021)","https://pubmed.ncbi.nlm.nih.gov/34798059/"]
+  ]
+ },
+ "tesamorelina":{
+  classification:"Análogo sintético do fator liberador do hormônio do crescimento humano, correspondente ao hGRF(1–44) com modificação N-terminal.",
+  sequence:"Trans-3-hexenoil–Tyr–Ala–Asp–Ala–Ile–Phe–Thr–Asn–Ser–Tyr–Arg–Lys–Val–Leu–Gly–Gln–Leu–Ser–Ala–Arg–Lys–Leu–Leu–Gln–Asp–Ile–Met–Ser–Arg–Gln–Gln–Gly–Glu–Ser–Asn–Gln–Glu–Arg–Gly–Ala–Arg–Ala–Arg–Leu–NH₂.",
+  molecular:"C₂₂₁H₃₆₆N₇₂O₆₇S · massa molecular calculada: aproximadamente 5.135,9 g/mol.",
+  origin:"Desenvolvida como TH9507, um análogo estabilizado de hGRF(1–44), pela Theratechnologies em Montreal, Canadá.",
+  discovery:"Equipe de pesquisa da Theratechnologies · Montreal, Canadá; estudos pré-clínicos com TH9507 publicados em 2004.",
+  sources:[
+   ["PubChem — Tesamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Tesamorelin"],
+   ["Patou et al., Journal of Controlled Release (2004)","https://pubmed.ncbi.nlm.nih.gov/15113616/"]
+  ]
+ },
+ "ghk-cu":{
+  classification:"Complexo de coordenação entre cobre(II) e o tripeptídeo glicil-L-histidil-L-lisina (GHK).",
+  sequence:"Gly–His–Lys (GHK). O cobre(II) é coordenado principalmente pelos átomos de nitrogênio do tripeptídeo; a estequiometria e a fórmula reportada podem variar conforme o complexo isolado e seu estado de hidratação.",
+  molecular:"Para o complexo Cu–GHK 1:1 anidro: C₁₄H₂₄CuN₆O₄ · massa molecular aproximada: 403,9 g/mol.",
+  origin:"O tripeptídeo GHK foi isolado do plasma humano em pesquisas sobre fatores moduladores de crescimento; sua interação com cobre(II) foi caracterizada posteriormente.",
+  discovery:"Loren Pickart e colaboradores · University of California, San Francisco, Estados Unidos · trabalhos fundamentais publicados na década de 1970.",
+  sources:[
+   ["PubChem — Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
+   ["Pickart e Thaler, FEBS Letters (1979)","https://pubmed.ncbi.nlm.nih.gov/556547/"],
+   ["Freedman et al., Biochemical Journal (1982)","https://pubmed.ncbi.nlm.nih.gov/7340824/"]
+  ]
  }
 };
 function techSpecs(slug){
