@@ -183,9 +183,12 @@ Progresso:
 - décimo segundo lote científico implementado para Cerebrolisina, GLOW, HMG,
   KLOW, MGF, PEG-MGF, Retatrutida + Cagrilintida, Retatrutida + Tirzepatida,
   TB-500 e TB-500 (fragmento);
+- décimo terceiro lote científico implementado para Epitalon N-acetil amidato,
+  Fragmento 17-23, FTPP Adipotide, P21, PE-22-28, Pinealon, PNC-27, PTD-DBM,
+  Timalina e toxina botulínica;
 - a partir do oitavo lote, o padrão de execução é de 10 páginas por publicação,
   sempre com validação científica, estrutural e de conformidade;
-- total atual: 78 de 100 páginas com especificações científicas verificadas;
+- total atual: 88 de 100 páginas com especificações científicas verificadas;
 - auditoria visual-base concluída: Tesamorelina é o único produto com ativo
   fotográfico definitivo aprovado; os outros 99 permanecem identificados como
   **Imagem em produção**, sem uso indevido de placeholders como imagem final;
