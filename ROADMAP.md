@@ -169,7 +169,12 @@ Progresso:
 - sexto lote científico implementado para GHRP-2, GHRP-6, Hexarelina e LL-37;
 - sétimo lote científico implementado para Melanotan II, PT-141,
   Liraglutida e Ocitocina;
-- total atual: 28 de 100 páginas com especificações científicas verificadas;
+- oitavo lote científico — primeiro no padrão de 10 páginas — implementado para
+  ACTH 1-39, Dulaglutida, Mazdutida, Survodutida, Teriparatida, Orexina A,
+  Orexina B, Kisspeptina-10, VIP/Aviptadil e Glutationa;
+- a partir do oitavo lote, o padrão de execução passa a ser de 10 páginas por
+  publicação, sempre com validação científica, estrutural e de conformidade;
+- total atual: 38 de 100 páginas com especificações científicas verificadas;
 - auditoria visual-base concluída: Tesamorelina é o único produto com ativo
   fotográfico definitivo aprovado; os outros 99 permanecem identificados como
   **Imagem em produção**, sem uso indevido de placeholders como imagem final;
