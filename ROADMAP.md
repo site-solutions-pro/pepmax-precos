@@ -177,9 +177,12 @@ Progresso:
 - décimo lote científico implementado para AHK-Cu, B7-33, CJC-1295 com DAC,
   eritropoietina, GDF-8/miostatina, HCG, somatropina, HGH Fragmento 176-191,
   IGF-1 LR3 e triptorrelina;
+- décimo primeiro lote científico implementado para ACE-031, Adipotide,
+  BPC-157 + TB-500, Cagrilintida + Semaglutida, CJC-1295 + Ipamorelina,
+  FOXO4-DRI, IGF-1 DES, Matrixyl, SLU-PP-332 e SNAP-8;
 - a partir do oitavo lote, o padrão de execução é de 10 páginas por publicação,
   sempre com validação científica, estrutural e de conformidade;
-- total atual: 58 de 100 páginas com especificações científicas verificadas;
+- total atual: 68 de 100 páginas com especificações científicas verificadas;
 - auditoria visual-base concluída: Tesamorelina é o único produto com ativo
   fotográfico definitivo aprovado; os outros 99 permanecem identificados como
   **Imagem em produção**, sem uso indevido de placeholders como imagem final;
