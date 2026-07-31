@@ -167,7 +167,9 @@ Progresso:
 - quinto lote científico implementado para Selank, Sermorelina, CJC-1295 sem
   DAC e Melanotan I;
 - sexto lote científico implementado para GHRP-2, GHRP-6, Hexarelina e LL-37;
-- total atual: 24 de 100 páginas com especificações científicas verificadas;
+- sétimo lote científico implementado para Melanotan II, PT-141,
+  Liraglutida e Ocitocina;
+- total atual: 28 de 100 páginas com especificações científicas verificadas;
 - auditoria visual-base concluída: Tesamorelina é o único produto com ativo
   fotográfico definitivo aprovado; os outros 99 permanecem identificados como
   **Imagem em produção**, sem uso indevido de placeholders como imagem final;
