@@ -360,8 +360,11 @@ body:not(.travado) .gate{display:none}
 .gate-card.recusado .gate-recusa{display:block}
 @media (max-width:520px){.gate-card{padding:26px 22px 22px}.gate-acoes .btn{width:100%;justify-content:center}}
 @media (max-width:700px){.topbar .toplink{display:none}}
-.featured img,.product-thumb img.final-vial{transform:scale(.93,1.07)}
-.featured img,.product-thumb{scale:.85}
+.featured img{transform:scale(.93,1.07)}
+.vial-visual{position:relative;display:block;height:100%;max-width:100%;aspect-ratio:1047/1502;transform:scale(.93,1.07);transform-origin:center}
+.vial-visual img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;transform:none!important}
+.vial-dose{position:absolute;left:33%;right:33%;top:71.6%;height:6.2%;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--dose-color,#174d9a);font:900 18px/1 Arial,sans-serif;letter-spacing:-.045em;white-space:nowrap}
+.vial-dose.dose-long{font-size:14px}.vial-dose.dose-xlong{font-size:12px}
 </style>
 </head>
 <body class="travado">
@@ -574,7 +577,10 @@ const PRODUCT_IMAGES = Object.freeze({
   "Tesamorelina": "../peptides/assets/images/tesamorelina-approved-v2.webp",
   "Tirzepatida": "../peptides/assets/images/tirzepatida-approved.webp"
 });
-function vialPlaceholder(name,dose){
+const DOSE_COLORS=Object.freeze({"5 mg":"#1556a3","10 mg":"#6f42c1","15 mg":"#b32975","20 mg":"#16805d","30 mg":"#b85c00","40 mg":"#b12e3b","50 mg":"#00788a","60 mg":"#4f46b5","80 mg":"#8a4b12","100 mg":"#233f7a"});
+const DOSE_PALETTE=Object.freeze(["#1556a3","#6f42c1","#b32975","#16805d","#b85c00","#b12e3b","#00788a","#4f46b5","#8a4b12","#233f7a","#7b4a00","#355f2e"]);
+const doseColor=(dose,index=0)=>DOSE_COLORS[dose]||DOSE_PALETTE[index%DOSE_PALETTE.length];
+function vialPlaceholder(name,dose,index=0){
   const safe = String(name).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
   const short = safe.length>25 ? safe.slice(0,24)+"…" : safe;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520">
@@ -587,7 +593,7 @@ function vialPlaceholder(name,dose){
     <rect x="130" y="204" width="160" height="18" fill="url(#g)"/><rect x="130" y="278" width="160" height="76" fill="url(#g)"/>
     <text x="210" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="26" fill="#173b68">PepMAX</text>
     <text x="210" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${short.length>18?16:19}" fill="#fff">${short}</text>
-    <text x="210" y="387" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#334c9b">${dose}</text>
+    <text x="210" y="387" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${dose.length>7?18:dose.length>5?21:24}" fill="${doseColor(dose,index)}">${dose}</text>
     <text x="210" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#41536a">FOR RESEARCH USE ONLY</text>
   </svg>`;
   return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
@@ -597,8 +603,14 @@ function pendingProductImage(name){
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".5" stop-color="#7b3fd4"/><stop offset="1" stop-color="#d6379f"/></linearGradient></defs><rect width="420" height="520" rx="24" fill="#fff"/><rect x="35" y="35" width="350" height="450" rx="20" fill="none" stroke="url(#g)" stroke-width="3"/><text x="210" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#173b68">PepMAX</text><text x="210" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#334c9b">${safe}</text><text x="210" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#64748b">IMAGEM EM PRODUÇÃO</text></svg>`;
   return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
 }
-const productImage = p => PRODUCT_IMAGES[p.n] || pendingProductImage(p.n);
-const productImageAlt = p => PRODUCT_IMAGES[p.n] ? `Vial PepMax ${p.n}` : `Imagem em produção para ${p.n}`;
+const productImage = (p,a=p.p[0],index=0) => PRODUCT_IMAGES[p.n] || vialPlaceholder(p.n,a.d,index);
+const productImageAlt = (p,a=p.p[0]) => `Vial PepMax ${p.n}, ${a.d}`;
+const productImageMarkup = (p,a=p.p[0],index=0) => {
+  const final=Boolean(PRODUCT_IMAGES[p.n]);
+  const color=doseColor(a.d,index);
+  const lengthClass=a.d.length>7?" dose-xlong":a.d.length>5?" dose-long":"";
+  return `<span class="vial-visual ${final?"has-final-vial":"has-generated-vial"}" style="--dose-color:${color}"><img class="${final?"final-vial":"generated-vial"}" src="${productImage(p,a,index)}" alt="${productImageAlt(p,a)}" width="1047" height="1502" loading="lazy">${final?`<span class="vial-dose${lengthClass}" aria-hidden="true">${a.d}</span>`:""}</span>`;
+};
 document.querySelectorAll("[data-feature]").forEach(img=>{
   const product = CAT.find(p=>p.n===img.dataset.feature);
   if(product){img.src = productImage(product);img.classList.add("final-vial")}
@@ -813,7 +825,7 @@ function render(){
       : `<span class="solo">${p.p[0].d} · caixa com ${p.p[0].v} vials</span>`;
     return `<article class="card">
       <a class="product-thumb" href="../peptides/${PRODUCT_PAGES[p.n]}/" aria-label="Ver ${p.n}">
-        <img class="${PRODUCT_IMAGES[p.n] ? "final-vial" : "pending-image"}" src="${productImage(p)}" alt="${productImageAlt(p)}" width="420" height="520" loading="lazy">
+        ${productImageMarkup(p,a,i)}
       </a>
       <div class="card-top">
         <div><div class="sku">${a.k || "—"}</div><h3>${p.n}</h3></div>
