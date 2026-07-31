@@ -195,9 +195,16 @@ Progresso:
 - enriquecimento científico das páginas concluído; nomes comerciais ambíguos,
   misturas e divergências de sequência permanecem explicitamente identificados
   e condicionados à confirmação analítica do lote;
-- auditoria visual-base concluída: Tesamorelina é o único produto com ativo
-  fotográfico definitivo aprovado; os outros 99 permanecem identificados como
-  **Imagem em produção**, sem uso indevido de placeholders como imagem final;
+- auditoria visual-base anterior registrava Tesamorelina como único ativo
+  fotográfico definitivo; após o primeiro lote visual, os outros 95 produtos
+  permanecem identificados como **Imagem em produção**, sem uso indevido de
+  placeholders como imagem final;
+- primeiro lote visual definitivo implementado para Retatrutida, Tirzepatida,
+  BPC-157 e MOTS-c; os quatro destaques da Home agora usam vials fotográficos
+  individuais, com fundo branco normalizado e a mesma geometria aprovada;
+- Tesamorelina recebeu uma versão técnica normalizada, com canvas, proporção e
+  fundo alinhados ao novo lote; total atual: 5 de 100 produtos com ativo
+  fotográfico definitivo integrado;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
 - a próxima frente é a padronização dos ativos fotográficos e a auditoria final

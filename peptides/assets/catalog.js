@@ -1,1223 +1,2 @@
-const PRODUCTS=[{"slug":"5-amino-1mq","name":"5-Amino-1MQ","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["5AM","5 mg",25],["10AM","10 mg",38],["50AM","50 mg",48]]},{"slug":"ace-031","name":"ACE-031","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["AE1","1 mg",28]]},{"slug":"acth-1-39","name":"ACTH 1-39","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",35]]},{"slug":"adamax","name":"Adamax","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["AD5","5 mg",43]]},{"slug":"adipotide","name":"Adipotide","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["AP2","2 mg",34],["AP5","5 mg",47],["AP10","10 mg",79]]},{"slug":"ahk-cu","name":"AHK-Cu","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["AU50","50 mg",30],["AU100","100 mg",55]]},{"slug":"aicar","name":"AICAR","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["AR50","50 mg",29],["AR100","100 mg",39]]},{"slug":"alprostadil","name":"Alprostadil","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["PRO20","20 mcg",66]]},{"slug":"aod-9604","name":"AOD-9604","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["5AD","5 mg",39],["10AD","10 mg",50]]},{"slug":"ara-290","name":"Ara-290","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["RA10","10 mg",31]]},{"slug":"b7-33","name":"B7-33","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","2 mg",34],["â€”","10 mg",58]]},{"slug":"bpc-157","name":"BPC-157","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["BC5","5 mg",25],["BC10","10 mg",32],["BC20","20 mg",42]]},{"slug":"bpc-157-plus-tb-500","name":"BPC-157 + TB-500","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["BB10","10 mg",36],["BB20","20 mg",41]]},{"slug":"cagrilintida","name":"Cagrilintida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CGL5","5 mg",37],["CGL10","10 mg",44]]},{"slug":"cagrilintida-plus-semaglutida","name":"Cagrilintida + Semaglutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CS5","5 mg",37],["CS10","10 mg",44]]},{"slug":"cardiogen","name":"Cardiogen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",37]]},{"slug":"cartalax","name":"Cartalax","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",37]]},{"slug":"cerebrolisina","name":"Cerebrolisina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CBL60","60 mg",31]]},{"slug":"cjc-1295-ipamorelina","name":"CJC-1295 + Ipamorelina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CP10","10 mg",37]]},{"slug":"cjc-1295-com-dac","name":"CJC-1295 com DAC","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CD5","5 mg",40]]},{"slug":"cjc-1295-sem-dac","name":"CJC-1295 sem DAC","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CND5","5 mg",33],["CND10","10 mg",43]]},{"slug":"cortagen","name":"Cortagen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",40]]},{"slug":"crystagen","name":"Crystagen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",40]]},{"slug":"dermorfina","name":"Dermorfina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["DR5","5 mg",25]]},{"slug":"dsip","name":"DSIP","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["DS5","5 mg",25],["DS10","10 mg",33],["DS15","15 mg",37]]},{"slug":"dulaglutida","name":"Dulaglutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",44],["â€”","10 mg",87]]},{"slug":"epitalon","name":"Epitalon","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["ET10","10 mg",28],["ET50","50 mg",44]]},{"slug":"epitalon-n-acetil-amidato","name":"Epitalon N-acetil amidato","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["NET5","5 mg",41]]},{"slug":"epo-eritropoetina","name":"EPO (eritropoetina)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["E3K","3000 iu",54]]},{"slug":"foxo4-dri","name":"FOXO4-DRI","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",94]]},{"slug":"fragmento-17-23","name":"Fragmento 17-23","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",37]]},{"slug":"ftpp-adipotide","name":"FTPP Adipotide","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",40]]},{"slug":"gdf-8-miostatina","name":"GDF-8 (miostatina)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","1 mg",54]]},{"slug":"ghk-cu","name":"GHK-Cu","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["CU50","50 mg",30],["CU100","100 mg",55]]},{"slug":"ghrp-2-acetato","name":"GHRP-2 (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["G25","5 mg",25],["G210","10 mg",29]]},{"slug":"ghrp-6-acetato","name":"GHRP-6 (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["G65","5 mg",25],["G610","10 mg",28]]},{"slug":"glow-70","name":"GLOW (BPC-157 + GHK-Cu + TB-500)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["BBG70","70 mg",47]]},{"slug":"glutationa","name":"Glutationa","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["GTT","1500 mg",32]]},{"slug":"hcg","name":"HCG","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["G5K","5000 iu",34],["G10K","10000 iu",48]]},{"slug":"hexarelina-acetato","name":"Hexarelina (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["HX2","2 mg",28],["HX5","5 mg",34]]},{"slug":"hgh-191aa-somatropina","name":"HGH 191AA (somatropina)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["H10","10 iu",29],["H24","24 iu",46],["H36","36 iu",49],["H40","40 iu",58]]},{"slug":"hgh-fragmento-176-191","name":"HGH Fragmento 176-191","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["FR2","2 mg",28],["FR5","5 mg",36],["FR10","10 mg",42],["FR12","12 mg",49],["FR15","15 mg",60]]},{"slug":"hmg","name":"HMG","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["G75","75 iu",32]]},{"slug":"humanina","name":"Humanina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",81]]},{"slug":"igf-1-des","name":"IGF-1 DES","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["IGD","2 mg",30]]},{"slug":"igf-1-lr3","name":"IGF-1 LR3","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["IG01","0.1 mg",25],["IG1","1 mg",52]]},{"slug":"ipamorelina","name":"Ipamorelina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["IP5","5 mg",28],["IP10","10 mg",33]]},{"slug":"kisspeptina-10","name":"Kisspeptina-10","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["KS5","5 mg",29],["KS10","10 mg",37]]},{"slug":"klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv","name":"KLOW (BPC-157 + GHK-Cu + TB-500 + KPV)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["KL80","80 mg",49]]},{"slug":"kpv","name":"KPV","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["KPV5","5 mg",25],["KPV10","10 mg",30]]},{"slug":"l-carnitina","name":"L-carnitina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","600 mg",31],["â€”","1200 mg",34]]},{"slug":"lemon-bottle","name":"Lemon Bottle","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["æŸ æª¬ç“¶","10 ml",32]]},{"slug":"liraglutida","name":"Liraglutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",36],["â€”","10 mg",43],["â€”","30 mg",120]]},{"slug":"livagen","name":"Livagen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",41]]},{"slug":"ll-37","name":"LL-37","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["375","5 mg",35]]},{"slug":"matrixyl","name":"Matrixyl","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",30]]},{"slug":"mazdutida","name":"Mazdutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["MDT5","5 mg",39],["MDT","10 mg",47]]},{"slug":"melanotan-i-mt-1","name":"Melanotan I (MT-1)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["MT1","10 mg",28]]},{"slug":"melanotan-ii-mt-2","name":"Melanotan II (MT-2)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["ML10","10 mg",28]]},{"slug":"melatonina","name":"Melatonina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["MT10","10 mg",32]]},{"slug":"mgf","name":"MGF","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["FM2","2 mg",25]]},{"slug":"mots-c","name":"MOTS-c","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["MS10","10 mg",31],["MS40","40 mg",47]]},{"slug":"nad-plus","name":"NAD+","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["NJ100","100 mg",25],["NJ500","500 mg",32],["NJ1000","1000 mg",35]]},{"slug":"ocitocina-acetato","name":"Ocitocina (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["OT2","2 mg",25],["OT5","5 mg",25],["OT10","10 mg",32]]},{"slug":"orexina-a","name":"Orexina A","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",167]]},{"slug":"orexina-b","name":"Orexina B","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",48],["â€”","10 mg",73]]},{"slug":"ovagen","name":"Ovagen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["OV20","20 mg",42]]},{"slug":"p21","name":"P21","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["P210","10 mg",34]]},{"slug":"pancragen","name":"Pancragen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","20 mg",41]]},{"slug":"pe-22-28","name":"PE-22-28","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["PE5","5 mg",25],["PE10","10 mg",33]]},{"slug":"peg-mgf","name":"PEG-MGF","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["FMP2","2 mg",41]]},{"slug":"pinealon","name":"Pinealon","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["PI5","5 mg",25],["PI10","10 mg",31],["PI20","20 mg",37]]},{"slug":"pnc-27","name":"PNC-27","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["PN5","5 mg",37],["PN10","10 mg",40]]},{"slug":"pt-141-bremelanotida","name":"PT-141 (bremelanotida)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["P41","10 mg",30]]},{"slug":"ptd-dbm","name":"PTD-DBM","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","5 mg",68]]},{"slug":"retatrutida","name":"Retatrutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["RT5","5 mg",30],["RT10","10 mg",37],["RT15","15 mg",43],["RT20","20 mg",48],["RT30","30 mg",54],["RT40","40 mg",66],["RT50","50 mg",79],["RT60","60 mg",90]]},{"slug":"retatrutida-plus-cagrilintida","name":"Retatrutida + Cagrilintida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["RC10","10 mg",47]]},{"slug":"retatrutida-plus-tirzepatida","name":"Retatrutida + Tirzepatida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","60 mg",96]]},{"slug":"selank","name":"Selank","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["SK5","5 mg",28],["SK11","11 mg",31],["SK30","30 mg",43]]},{"slug":"semaglutida","name":"Semaglutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["SM5","5 mg",25],["SM10","10 mg",28],["SM15","15 mg",31],["SM20","20 mg",33],["SM30","30 mg",38]]},{"slug":"semax","name":"Semax","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["XA5","5 mg",25],["XA11","11 mg",29],["XA30","30 mg",43]]},{"slug":"sermorelina-acetato","name":"Sermorelina (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["SMO5","5 mg",30],["SMO10","10 mg",39]]},{"slug":"slu-pp-332","name":"SLU-PP-332","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["322","5 mg",42]]},{"slug":"snap-8","name":"SNAP-8","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["NP810","10 mg",25]]},{"slug":"ss-31","name":"SS-31 (elamipretida)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["2S10","10 mg",34],["2S50","50 mg",80]]},{"slug":"survodutida","name":"Survodutida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["SUR10","10 mg",91]]},{"slug":"tb-500","name":"TB-500","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["TB5","5 mg",33],["TB10","10 mg",42]]},{"slug":"tb-500-fragmento","name":"TB-500 (fragmento)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["B10F","10 mg",34]]},{"slug":"teriparatida","name":"Teriparatida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",51]]},{"slug":"tesamorelina","name":"Tesamorelina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","image":"../assets/images/tesamorelina-approved.webp","items":[["TSM5","5 mg",30],["TSM10","10 mg",48],["TSM20","20 mg",77]]},{"slug":"testagen","name":"Testagen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["TG20","20 mg",47]]},{"slug":"timalina","name":"Timalina","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["TY10","10 mg",30]]},{"slug":"timosina-alfa-1","name":"Timosina alfa-1","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["TA5","5 mg",35],["TA10","10 mg",40]]},{"slug":"tirzepatida","name":"Tirzepatida","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["TR5","5 mg",25],["TR10","10 mg",28],["TR15","15 mg",31],["TR20","20 mg",33],["TR30","30 mg",38],["TR40","40 mg",44],["TR50","50 mg",49],["TR60","60 mg",45],["TR80","80 mg",84],["TR100","100 mg",94]]},{"slug":"toxina-botulinica","name":"Toxina botulÃ­nica","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["XT100","100 iu",40]]},{"slug":"triptorrelina-acetato","name":"Triptorrelina (acetato)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","2 mg",33]]},{"slug":"vesugen","name":"Vesugen","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["â€”","10 mg",33]]},{"slug":"vilon","name":"Vilon","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["VI20","20 mg",42]]},{"slug":"vip-aviptadil","name":"VIP (aviptadil)","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["VIP5","5 mg",34],["VIP10","10 mg",47]]},{"slug":"acido-hialuronico","name":"Ãcido hialurÃ´nico","desc":"Material de referÃªncia catalogado para pesquisa laboratorial.","items":[["HA5","5 mg",50]]}];
-const TECH_SPECS={
- "retatrutida":{
-  classification:"PeptÃ­deo sintÃ©tico acilado de 39 resÃ­duos; agonista triplo experimental de GIP, GLP-1 e glucagon.",
-  sequence:"Estrutura modificada e acilada. A sequÃªncia linear completa nÃ£o Ã© reproduzida aqui atÃ© haver consolidaÃ§Ã£o entre fonte primÃ¡ria e registro quÃ­mico.",
-  molecular:"Câ‚‚â‚‚â‚Hâ‚ƒâ‚„â‚‚Nâ‚„â‚†Oâ‚†â‚ˆ Â· massa molecular calculada: aproximadamente 4.731 g/mol.",
-  origin:"Desenvolvida pela Eli Lilly and Company como LY3437943 e descrita em publicaÃ§Ã£o prÃ©-clÃ­nica em 2022.",
-  discovery:"Equipe liderada por Tamer Coskun Â· Eli Lilly and Company Â· Indianapolis, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Retatrutide","https://pubchem.ncbi.nlm.nih.gov/compound/Retatrutide"],
-   ["Coskun et al., Cell Metabolism (2022)","https://pubmed.ncbi.nlm.nih.gov/35985340/"]
-  ]
- },
- "tirzepatida":{
-  classification:"PeptÃ­deo sintÃ©tico acilado de 39 resÃ­duos, derivado de uma sequÃªncia de GIP; agonista duplo de GIP e GLP-1.",
-  sequence:"Cadeia de 39 resÃ­duos com aminoÃ¡cidos nÃ£o codificados e conjugaÃ§Ã£o a um diÃ¡cido graxo C20. A representaÃ§Ã£o quÃ­mica integral estÃ¡ disponÃ­vel na fonte estrutural.",
-  molecular:"Câ‚‚â‚‚â‚…Hâ‚ƒâ‚„â‚ˆNâ‚„â‚ˆOâ‚†â‚ˆ Â· massa molecular calculada: aproximadamente 4.813 g/mol.",
-  origin:"Desenvolvida como LY3298176 pela Eli Lilly and Company; resultados clÃ­nicos de fase 2 publicados em 2018.",
-  discovery:"Equipe de pesquisa da Eli Lilly and Company Â· Indianapolis, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Tirzepatide","https://pubchem.ncbi.nlm.nih.gov/compound/156588324"],
-   ["Frias et al., The Lancet (2018)","https://pubmed.ncbi.nlm.nih.gov/30293770/"]
-  ]
- },
- "bpc-157":{
-  classification:"PentadecapeptÃ­deo sintÃ©tico experimental, composto por 15 aminoÃ¡cidos.",
-  sequence:"Glyâ€“Gluâ€“Proâ€“Proâ€“Proâ€“Glyâ€“Lysâ€“Proâ€“Alaâ€“Aspâ€“Aspâ€“Alaâ€“Glyâ€“Leuâ€“Val (GEPPPGKPADDAGLV).",
-  molecular:"Câ‚†â‚‚Hâ‚‰â‚ˆNâ‚â‚†Oâ‚‚â‚‚ Â· massa molecular calculada: 1.419,5 g/mol.",
-  origin:"SequÃªncia descrita a partir de pesquisas com uma fraÃ§Ã£o denominada body protection compound, associada a estudos de suco gÃ¡strico humano.",
-  discovery:"Grupo de Predrag Sikiric Â· Universidade de Zagreb Â· Zagreb, CroÃ¡cia Â· descrito a partir de 1993.",
-  sources:[
-   ["PubChem â€” BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
-   ["RevisÃ£o indexada no PubMed sobre a literatura inicial","https://pubmed.ncbi.nlm.nih.gov/30915550/"]
-  ]
- },
- "mots-c":{
-  classification:"PeptÃ­deo derivado da mitocÃ´ndria, codificado por uma pequena ORF no RNA ribossÃ´mico mitocondrial 12S; 16 aminoÃ¡cidos.",
-  sequence:"Metâ€“Argâ€“Trpâ€“Glnâ€“Gluâ€“Metâ€“Glyâ€“Tyrâ€“Ileâ€“Pheâ€“Tyrâ€“Proâ€“Argâ€“Lysâ€“Leuâ€“Arg (MRWQEMGYIFYPRKLR).",
-  molecular:"Câ‚â‚€â‚Hâ‚â‚…â‚‚Nâ‚‚â‚ˆOâ‚‚â‚‚Sâ‚‚ Â· massa molecular calculada: aproximadamente 2.174,6 g/mol.",
-  origin:"Identificado em 2015 por anÃ¡lise de uma pequena regiÃ£o codificante do genoma mitocondrial humano.",
-  discovery:"Changhan Lee, Pinchas Cohen e colaboradores Â· University of Southern California Â· Los Angeles, Estados Unidos.",
-  sources:[
-   ["PubChem â€” MOTS-c","https://pubchem.ncbi.nlm.nih.gov/compound/Mots-c"],
-   ["Lee et al., Cell Metabolism (2015)","https://pubmed.ncbi.nlm.nih.gov/25738459/"]
-  ]
- },
- "semaglutida":{
-  classification:"AnÃ¡logo sintÃ©tico e acilado do GLP-1 humano; peptÃ­deo de 31 resÃ­duos com duas substituiÃ§Ãµes de aminoÃ¡cidos e derivatizaÃ§Ã£o lipÃ­dica.",
-  sequence:"Derivada de GLP-1(7â€“37), com Aib na posiÃ§Ã£o 8, Arg na posiÃ§Ã£o 34 e uma cadeia de diÃ¡cido graxo C18 ligada Ã  Lys26 por espaÃ§adores hidrofÃ­licos.",
-  molecular:"Câ‚â‚ˆâ‚‡Hâ‚‚â‚‰â‚Nâ‚„â‚…Oâ‚…â‚‰ Â· massa molecular calculada: aproximadamente 4.113,6 g/mol.",
-  origin:"Selecionada na Novo Nordisk durante o desenvolvimento de um anÃ¡logo de GLP-1 de aÃ§Ã£o prolongada; a descoberta quÃ­mica foi publicada em 2015.",
-  discovery:"Jesper Lau, Lotte Bjerre Knudsen e colaboradores Â· Novo Nordisk A/S Â· MÃ¥lÃ¸v, Dinamarca.",
-  sources:[
-   ["PubChem â€” Semaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Semaglutide"],
-   ["Lau et al., Journal of Medicinal Chemistry (2015)","https://pubmed.ncbi.nlm.nih.gov/26308095/"]
-  ]
- },
- "cagrilintida":{
-  classification:"AnÃ¡logo sintÃ©tico, acilado e de aÃ§Ã£o prolongada da amilina; peptÃ­deo experimental de 37 resÃ­duos.",
-  sequence:"Estrutura derivada de amilina com mÃºltiplas substituiÃ§Ãµes, ponte dissulfeto intramolecular e conjugaÃ§Ã£o lipÃ­dica. A sequÃªncia linear isolada nÃ£o descreve integralmente o composto modificado.",
-  molecular:"Câ‚â‚‰â‚„Hâ‚ƒâ‚â‚‚Nâ‚…â‚„Oâ‚…â‚‰Sâ‚‚ Â· massa molecular calculada: aproximadamente 4.410 g/mol.",
-  origin:"Desenvolvida pela Novo Nordisk como AM833 para combinar estabilidade prolongada com atividade nos receptores de amilina e calcitonina.",
-  discovery:"Equipe de pesquisa da Novo Nordisk A/S Â· Dinamarca; primeiros resultados clÃ­nicos publicados a partir de 2021.",
-  sources:[
-   ["PubChem â€” Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"],
-   ["Lau et al., The Lancet (2021)","https://pubmed.ncbi.nlm.nih.gov/34798059/"]
-  ]
- },
- "tesamorelina":{
-  classification:"AnÃ¡logo sintÃ©tico do fator liberador do hormÃ´nio do crescimento humano, correspondente ao hGRF(1â€“44) com modificaÃ§Ã£o N-terminal.",
-  sequence:"Trans-3-hexenoilâ€“Tyrâ€“Alaâ€“Aspâ€“Alaâ€“Ileâ€“Pheâ€“Thrâ€“Asnâ€“Serâ€“Tyrâ€“Argâ€“Lysâ€“Valâ€“Leuâ€“Glyâ€“Glnâ€“Leuâ€“Serâ€“Alaâ€“Argâ€“Lysâ€“Leuâ€“Leuâ€“Glnâ€“Aspâ€“Ileâ€“Metâ€“Serâ€“Argâ€“Glnâ€“Glnâ€“Glyâ€“Gluâ€“Serâ€“Asnâ€“Glnâ€“Gluâ€“Argâ€“Glyâ€“Alaâ€“Argâ€“Alaâ€“Argâ€“Leuâ€“NHâ‚‚.",
-  molecular:"Câ‚‚â‚‚â‚Hâ‚ƒâ‚†â‚†Nâ‚‡â‚‚Oâ‚†â‚‡S Â· massa molecular calculada: aproximadamente 5.135,9 g/mol.",
-  origin:"Desenvolvida como TH9507, um anÃ¡logo estabilizado de hGRF(1â€“44), pela Theratechnologies em Montreal, CanadÃ¡.",
-  discovery:"Equipe de pesquisa da Theratechnologies Â· Montreal, CanadÃ¡; estudos prÃ©-clÃ­nicos com TH9507 publicados em 2004.",
-  sources:[
-   ["PubChem â€” Tesamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Tesamorelin"],
-   ["Patou et al., Journal of Controlled Release (2004)","https://pubmed.ncbi.nlm.nih.gov/15113616/"]
-  ]
- },
- "ghk-cu":{
-  classification:"Complexo de coordenaÃ§Ã£o entre cobre(II) e o tripeptÃ­deo glicil-L-histidil-L-lisina (GHK).",
-  sequence:"Glyâ€“Hisâ€“Lys (GHK). O cobre(II) Ã© coordenado principalmente pelos Ã¡tomos de nitrogÃªnio do tripeptÃ­deo; a estequiometria e a fÃ³rmula reportada podem variar conforme o complexo isolado e seu estado de hidrataÃ§Ã£o.",
-  molecular:"Para o complexo Cuâ€“GHK 1:1 anidro: Câ‚â‚„Hâ‚‚â‚„CuNâ‚†Oâ‚„ Â· massa molecular aproximada: 403,9 g/mol.",
-  origin:"O tripeptÃ­deo GHK foi isolado do plasma humano em pesquisas sobre fatores moduladores de crescimento; sua interaÃ§Ã£o com cobre(II) foi caracterizada posteriormente.",
-  discovery:"Loren Pickart e colaboradores Â· University of California, San Francisco, Estados Unidos Â· trabalhos fundamentais publicados na dÃ©cada de 1970.",
-  sources:[
-   ["PubChem â€” Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
-   ["Pickart e Thaler, FEBS Letters (1979)","https://pubmed.ncbi.nlm.nih.gov/556547/"],
-   ["Freedman et al., Biochemical Journal (1982)","https://pubmed.ncbi.nlm.nih.gov/7340824/"]
-  ]
- },
- "ss-31":{
-  classification:"TetrapeptÃ­deo sintÃ©tico aromÃ¡tico-catiÃ³nico direcionado Ã  membrana mitocondrial interna; tambÃ©m denominado elamipretida.",
-  sequence:"D-Argâ€“2â€²,6â€²-dimetil-Tyrâ€“Lysâ€“Pheâ€“NHâ‚‚.",
-  molecular:"Câ‚ƒâ‚‚Hâ‚„â‚‰Nâ‚‰Oâ‚… Â· massa molecular calculada: aproximadamente 639,8 g/mol para a base livre; sais apresentam massa distinta.",
-  origin:"Identificado na famÃ­lia de peptÃ­deos Szetoâ€“Schiller durante pesquisas sobre tetrapeptÃ­deos aromÃ¡tico-catiÃ³nicos permeÃ¡veis Ã  cÃ©lula.",
-  discovery:"Hazel H. Szeto, Peter W. Schiller e colaboradores Â· Weill Cornell Medical College e Clinical Research Institute of Montreal Â· Estados Unidos/CanadÃ¡ Â· inÃ­cio dos anos 2000.",
-  sources:[
-   ["PubChem â€” Elamipretide","https://pubchem.ncbi.nlm.nih.gov/compound/Elamipretide"],
-   ["Szeto, British Journal of Pharmacology (2014)","https://pubmed.ncbi.nlm.nih.gov/24117165/"]
-  ]
- },
- "aod-9604":{
-  classification:"PeptÃ­deo sintÃ©tico de 16 resÃ­duos derivado do domÃ­nio C-terminal do hormÃ´nio do crescimento humano; inclui Tyr seguido por hGH(177â€“191).",
-  sequence:"Tyrâ€“Leuâ€“Argâ€“Ileâ€“Valâ€“Glnâ€“Cysâ€“Argâ€“Serâ€“Valâ€“Gluâ€“Glyâ€“Serâ€“Cysâ€“Glyâ€“Phe (YLRIVQCRSVEGSCGF), com ponte dissulfeto entre as duas cisteÃ­nas.",
-  molecular:"Câ‚‡â‚ˆHâ‚â‚‚â‚ƒNâ‚‚â‚ƒOâ‚‚â‚ƒSâ‚‚ Â· massa molecular calculada: aproximadamente 1.815,1 g/mol.",
-  origin:"Desenvolvido a partir de estudos que delimitaram um domÃ­nio C-terminal sintÃ©tico do hormÃ´nio do crescimento humano.",
-  discovery:"Frank M. Ng e colaboradores Â· Monash University Â· Melbourne, AustrÃ¡lia; estudos metabÃ³licos publicados em 2000â€“2001.",
-  sources:[
-   ["PubChem â€” AOD-9604","https://pubchem.ncbi.nlm.nih.gov/compound/Aod-9604"],
-   ["Heffernan et al., Endocrinology (2001)","https://pubmed.ncbi.nlm.nih.gov/11146367/"]
-  ]
- },
- "ara-290":{
-  classification:"PeptÃ­deo sintÃ©tico de 11 resÃ­duos derivado da superfÃ­cie da hÃ©lice B da eritropoietina; tambÃ©m denominado cibinetida.",
-  sequence:"pGluâ€“Gluâ€“Glnâ€“Leuâ€“Gluâ€“Argâ€“Alaâ€“Leuâ€“Asnâ€“Serâ€“Ser.",
-  molecular:"Câ‚…â‚Hâ‚ˆâ‚„Nâ‚â‚†Oâ‚‚â‚ Â· massa molecular calculada: aproximadamente 1.257,4 g/mol para a base livre.",
-  origin:"Projetado para reproduzir a face da hÃ©lice B da eritropoietina associada Ã  sinalizaÃ§Ã£o de proteÃ§Ã£o tecidual, sem reproduzir a estrutura completa da proteÃ­na.",
-  discovery:"Michael Brines, Anthony Cerami e colaboradores Â· The Kenneth S. Warren Institute Â· Estados Unidos; descrito como peptÃ­deo derivado da eritropoietina em 2008.",
-  sources:[
-   ["PubChem â€” Cibinetide","https://pubchem.ncbi.nlm.nih.gov/compound/Cibinetide"],
-   ["Brines et al., PNAS (2008)","https://pubmed.ncbi.nlm.nih.gov/18426196/"]
-  ]
- },
- "kpv":{
-  classification:"TripeptÃ­deo sintÃ©tico correspondente aos trÃªs resÃ­duos C-terminais da Î±-melanotropina (Î±-MSH).",
-  sequence:"Lysâ€“Proâ€“Val (KPV).",
-  molecular:"Câ‚â‚†Hâ‚ƒâ‚€Nâ‚„Oâ‚„ Â· massa molecular calculada: aproximadamente 342,4 g/mol para o tripeptÃ­deo livre.",
-  origin:"Definido por estudos de relaÃ§Ã£o estruturaâ€“atividade da Î±-MSH que separaram regiÃµes funcionais da sequÃªncia hormonal.",
-  discovery:"Victor J. Hruby e colaboradores Â· University of Arizona Â· Tucson, Estados Unidos; regiÃ£o mensageira C-terminal caracterizada na dÃ©cada de 1970.",
-  sources:[
-   ["PubChem â€” MSH(11â€“13) / KPV","https://pubchem.ncbi.nlm.nih.gov/compound/L-Lysyl-L-prolyl-L-valine"],
-   ["Hruby et al., Journal of Medicinal Chemistry (1978)","https://pubmed.ncbi.nlm.nih.gov/212233/"]
-  ]
- },
- "ipamorelina":{
-  classification:"PentapeptÃ­deo sintÃ©tico peptidomimÃ©tico, descrito como secretagogo seletivo do hormÃ´nio do crescimento.",
-  sequence:"Aibâ€“Hisâ€“D-2-Nalâ€“D-Pheâ€“Lysâ€“NHâ‚‚. A estrutura inclui Ã¡cido Î±-aminoisobutÃ­rico (Aib), 2-naftilalanina (2-Nal) e dois resÃ­duos em configuraÃ§Ã£o D.",
-  molecular:"Câ‚ƒâ‚ˆHâ‚„â‚‰Nâ‚‰Oâ‚… Â· massa molecular calculada: aproximadamente 711,9 g/mol para a base livre; sais e solvatos apresentam valores diferentes.",
-  origin:"Identificada durante pesquisas com secretagogos peptÃ­dicos seletivos e apresentada na literatura cientÃ­fica no final da dÃ©cada de 1990.",
-  discovery:"Equipe de Kirsten Raun e colaboradores Â· Novo Nordisk A/S Â· MÃ¥lÃ¸v, Dinamarca Â· publicaÃ§Ã£o de caracterizaÃ§Ã£o em 1998.",
-  sources:[
-   ["PubChem â€” Ipamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Ipamorelin"],
-   ["Raun et al., European Journal of Endocrinology (1998)","https://pubmed.ncbi.nlm.nih.gov/9849822/"]
-  ]
- },
- "semax":{
-  classification:"HeptapeptÃ­deo sintÃ©tico derivado do fragmento ACTH(4â€“7), prolongado pelo tripeptÃ­deo Proâ€“Glyâ€“Pro.",
-  sequence:"Metâ€“Gluâ€“Hisâ€“Pheâ€“Proâ€“Glyâ€“Pro (MEHFPGP). Formas N-acetiladas ou apresentadas como sais devem ser distinguidas da cadeia livre.",
-  molecular:"Para a cadeia livre MEHFPGP: Câ‚ƒâ‚‡Hâ‚…â‚Nâ‚‰Oâ‚â‚€S Â· massa molecular calculada: aproximadamente 813,9 g/mol; derivados e sais tÃªm composiÃ§Ã£o distinta.",
-  origin:"Projetado a partir do fragmento ACTH(4â€“7), com extensÃ£o Proâ€“Glyâ€“Pro para aumentar a estabilidade da sequÃªncia em estudos experimentais.",
-  discovery:"Nikolay F. Myasoedov, Igor P. Ashmarin e colaboradores Â· instituiÃ§Ãµes da Academia Russa de CiÃªncias Â· Moscou, RÃºssia Â· desenvolvido e estudado a partir da dÃ©cada de 1980.",
-  sources:[
-   ["PubChem â€” Semax / ACTH(4â€“7)-PGP","https://pubchem.ncbi.nlm.nih.gov/compound/Semax"],
-   ["Dolotov et al., Neuroscience Letters (2001)","https://pubmed.ncbi.nlm.nih.gov/11457573/"]
-  ]
- },
- "epitalon":{
-  classification:"TetrapeptÃ­deo sintÃ©tico de quatro aminoÃ¡cidos, tambÃ©m identificado pela sigla AEDG.",
-  sequence:"Alaâ€“Gluâ€“Aspâ€“Gly (AEDG). A forma trifluoroacetato possui composiÃ§Ã£o e massa diferentes da cadeia livre.",
-  molecular:"Câ‚â‚„Hâ‚‚â‚‚Nâ‚„Oâ‚‰ Â· massa molecular calculada: aproximadamente 390,35 g/mol para o tetrapeptÃ­deo livre.",
-  origin:"ConstruÃ­do a partir da anÃ¡lise de aminoÃ¡cidos de um complexo polipeptÃ­dico da glÃ¢ndula pineal; AEDG foi posteriormente identificado nesse complexo por espectrometria de massa e HPLC.",
-  discovery:"Vladimir Khavinson e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo Â· SÃ£o Petersburgo, RÃºssia.",
-  sources:[
-   ["PubChem â€” Epitalon","https://pubchem.ncbi.nlm.nih.gov/compound/Epitalon"],
-   ["Khavinson et al., Bulletin of Experimental Biology and Medicine (2017)","https://pubmed.ncbi.nlm.nih.gov/29124531/"]
-  ]
- },
- "timosina-alfa-1":{
-  classification:"PeptÃ­deo sintÃ©tico de 28 aminoÃ¡cidos correspondente Ã  sequÃªncia N-terminal acetilada da prothymosin alpha; tambÃ©m denominado thymalfasin.",
-  sequence:"Acâ€“Serâ€“Aspâ€“Alaâ€“Alaâ€“Valâ€“Aspâ€“Thrâ€“Serâ€“Serâ€“Gluâ€“Ileâ€“Thrâ€“Thrâ€“Lysâ€“Aspâ€“Leuâ€“Lysâ€“Gluâ€“Lysâ€“Lysâ€“Gluâ€“Valâ€“Valâ€“Gluâ€“Gluâ€“Alaâ€“Gluâ€“Asn.",
-  molecular:"Câ‚â‚‚â‚‰Hâ‚‚â‚â‚…Nâ‚ƒâ‚ƒOâ‚…â‚… Â· massa molecular calculada: aproximadamente 3.108,3 g/mol.",
-  origin:"Isolada originalmente de preparaÃ§Ãµes de timo e caracterizada como uma fraÃ§Ã£o peptÃ­dica definida na dÃ©cada de 1970.",
-  discovery:"Allan L. Goldstein e colaboradores Â· George Washington University Â· Washington, D.C., Estados Unidos Â· caracterizaÃ§Ã£o reportada em 1977.",
-  sources:[
-   ["PubChem â€” Thymalfasin","https://pubchem.ncbi.nlm.nih.gov/compound/Thymalfasin"],
-   ["Garaci, Annals of the New York Academy of Sciences (2007)","https://pubmed.ncbi.nlm.nih.gov/17567941/"],
-   ["Birr et al., International Journal of Peptide and Protein Research (1985)","https://pubmed.ncbi.nlm.nih.gov/4066151/"]
-  ]
- },
- "selank":{
-  classification:"HeptapeptÃ­deo sintÃ©tico derivado da sequÃªncia do imunomodulador endÃ³geno tuftsin.",
-  sequence:"Thrâ€“Lysâ€“Proâ€“Argâ€“Proâ€“Glyâ€“Pro (TKPRPGP). A forma diacetato deve ser distinguida da cadeia livre.",
-  molecular:"Câ‚ƒâ‚ƒHâ‚…â‚‡Nâ‚â‚Oâ‚‰ Â· massa molecular calculada: aproximadamente 751,9 g/mol para o heptapeptÃ­deo livre; sais apresentam composiÃ§Ã£o diferente.",
-  origin:"Projetado a partir do tetrapeptÃ­deo tuftsin (Thrâ€“Lysâ€“Proâ€“Arg), prolongado pela sequÃªncia Proâ€“Glyâ€“Pro.",
-  discovery:"Nikolay F. Myasoedov e colaboradores Â· Instituto de GenÃ©tica Molecular da Academia Russa de CiÃªncias Â· Moscou, RÃºssia Â· desenvolvido na dÃ©cada de 1990.",
-  sources:[
-   ["PubChem â€” Selank","https://pubchem.ncbi.nlm.nih.gov/compound/Selank"],
-   ["Shevchenko et al., Radiochemistry (2006)","https://doi.org/10.1134/S1066362206030167"]
-  ]
- },
- "sermorelina-acetato":{
-  classification:"PeptÃ­deo sintÃ©tico de 29 aminoÃ¡cidos correspondente ao fragmento biologicamente ativo GHRH(1â€“29)-NHâ‚‚ humano.",
-  sequence:"Tyrâ€“Alaâ€“Aspâ€“Alaâ€“Ileâ€“Pheâ€“Thrâ€“Asnâ€“Serâ€“Tyrâ€“Argâ€“Lysâ€“Valâ€“Leuâ€“Glyâ€“Glnâ€“Leuâ€“Serâ€“Alaâ€“Argâ€“Lysâ€“Leuâ€“Leuâ€“Glnâ€“Aspâ€“Ileâ€“Metâ€“Serâ€“Argâ€“NHâ‚‚.",
-  molecular:"Câ‚â‚„â‚‰Hâ‚‚â‚„â‚†Nâ‚„â‚„Oâ‚„â‚‚S Â· massa molecular calculada: aproximadamente 3.357,9 g/mol para a base livre; o acetato acrescenta contraÃ­ons de composiÃ§Ã£o variÃ¡vel.",
-  origin:"Derivada dos 29 resÃ­duos N-terminais do fator liberador de hormÃ´nio do crescimento humano, regiÃ£o mÃ­nima que preserva atividade do peptÃ­deo nativo.",
-  discovery:"A sequÃªncia de GRF humano foi isolada e caracterizada por equipes de Roger Guillemin e Wylie Vale no inÃ­cio da dÃ©cada de 1980; o fragmento 1â€“29 foi entÃ£o desenvolvido como anÃ¡logo sintÃ©tico.",
-  sources:[
-   ["PubChem â€” Sermorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Sermorelin"],
-   ["Guillemin et al., Science (1982)","https://pubmed.ncbi.nlm.nih.gov/6130528/"],
-   ["Grossman et al., Pediatric Research (1984)","https://doi.org/10.1203/00006450-198411000-00250"]
-  ]
- },
- "cjc-1295-sem-dac":{
-  classification:"AnÃ¡logo sintÃ©tico de GHRH(1â€“29)-NHâ‚‚ com quatro substituiÃ§Ãµes de aminoÃ¡cidos e sem o grupo Drug Affinity Complex (DAC).",
-  sequence:"Tyrâ€“D-Alaâ€“Aspâ€“Alaâ€“Ileâ€“Pheâ€“Thrâ€“Glnâ€“Serâ€“Tyrâ€“Argâ€“Lysâ€“Valâ€“Leuâ€“Alaâ€“Glnâ€“Leuâ€“Serâ€“Alaâ€“Argâ€“Lysâ€“Leuâ€“Leuâ€“Glnâ€“Aspâ€“Ileâ€“Leuâ€“Serâ€“Argâ€“NHâ‚‚.",
-  molecular:"Câ‚â‚…â‚‚Hâ‚‚â‚…â‚‚Nâ‚„â‚„Oâ‚„â‚‚ Â· massa molecular calculada: aproximadamente 3.367,9 g/mol para o peptÃ­deo sem DAC; sais e solvatos diferem.",
-  origin:"ConstruÃ­do sobre o nÃºcleo GHRH(1â€“29), com substituiÃ§Ãµes D-AlaÂ², Glnâ¸, AlaÂ¹âµ e LeuÂ²â·. NÃ£o contÃ©m o ligante maleimida de afinidade por albumina do CJC-1295 com DAC.",
-  discovery:"A famÃ­lia de anÃ¡logos CJC-1295 foi caracterizada por LÃ©once JettÃ© e colaboradores Â· ConjuChem Inc. Â· Montreal, CanadÃ¡ Â· publicaÃ§Ã£o de 2005; a denominaÃ§Ã£o â€œsem DACâ€ descreve o nÃºcleo peptÃ­dico nÃ£o conjugado.",
-  sources:[
-   ["PubChem â€” CJC-1295 without DAC","https://pubchem.ncbi.nlm.nih.gov/compound/CJC1295-Without-DAC"],
-   ["JettÃ© et al., Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"]
-  ]
- },
- "melanotan-i-mt-1":{
-  classification:"TridecapeptÃ­deo sintÃ©tico anÃ¡logo da Î±-melanotropina (Î±-MSH), tambÃ©m denominado afamelanotida ou [Nleâ´,D-Pheâ·]-Î±-MSH.",
-  sequence:"Acâ€“Serâ€“Tyrâ€“Serâ€“Nleâ€“Gluâ€“Hisâ€“D-Pheâ€“Argâ€“Trpâ€“Glyâ€“Lysâ€“Proâ€“Valâ€“NHâ‚‚; Nle indica norleucina e D-Phe, D-fenilalanina.",
-  molecular:"Câ‚‡â‚ˆHâ‚â‚â‚Nâ‚‚â‚Oâ‚â‚‰ Â· massa molecular calculada: aproximadamente 1.646,9 g/mol para o peptÃ­deo livre.",
-  origin:"Projetada por substituiÃ§Ã£o de Metâ´ por norleucina e Pheâ· por D-fenilalanina na Î±-MSH, preservando as terminaÃ§Ãµes N-acetilada e C-amidada.",
-  discovery:"Victor J. Hruby, Mac E. Hadley, Thomas K. Sawyer e colaboradores Â· University of Arizona Â· Tucson, Estados Unidos Â· sÃ©rie de anÃ¡logos desenvolvida nas dÃ©cadas de 1980 e 1990.",
-  sources:[
-   ["PubChem â€” Melanotan-I","https://pubchem.ncbi.nlm.nih.gov/compound/Melanotan-I"],
-   ["Sawyer et al., PNAS (1980s): atividade de anÃ¡logos Î±-MSH","https://pubmed.ncbi.nlm.nih.gov/3926559/"],
-   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
-  ]
- },
- "ghrp-2-acetato":{
-  classification:"HexapeptÃ­deo sintÃ©tico peptidomimÃ©tico da famÃ­lia dos peptÃ­deos liberadores de hormÃ´nio do crescimento; tambÃ©m denominado pralmorelina.",
-  sequence:"D-Alaâ€“D-2-Nalâ€“Alaâ€“Trpâ€“D-Pheâ€“Lysâ€“NHâ‚‚; 2-Nal representa 2-naftilalanina. A forma acetato deve ser distinguida da base livre e de outros sais.",
-  molecular:"Câ‚„â‚…Hâ‚…â‚…Nâ‚‰Oâ‚† Â· massa molecular calculada: aproximadamente 817,99 g/mol para a base livre; acetato, cloridratos e solvatos apresentam composiÃ§Ã£o distinta.",
-  origin:"Desenvolvido na sÃ©rie de secretagogos sintÃ©ticos derivada dos primeiros pentapeptÃ­deos e hexapeptÃ­deos estudados por Cyril Y. Bowers e colaboradores.",
-  discovery:"Cyril Y. Bowers e colaboradores Â· Tulane University School of Medicine Â· Nova Orleans, Estados Unidos Â· sÃ©rie caracterizada ao longo das dÃ©cadas de 1970 e 1980.",
-  sources:[
-   ["PubChem â€” Pralmorelin / GHRP-2","https://pubchem.ncbi.nlm.nih.gov/compound/GHRP-2"],
-   ["Bowers et al., Endocrinology (1984)","https://pubmed.ncbi.nlm.nih.gov/6714155/"]
-  ]
- },
- "ghrp-6-acetato":{
-  classification:"HexapeptÃ­deo sintÃ©tico peptidomimÃ©tico, conhecido como growth hormone-releasing peptide-6 (GHRP-6).",
-  sequence:"Hisâ€“D-Trpâ€“Alaâ€“Trpâ€“D-Pheâ€“Lysâ€“NHâ‚‚. A designaÃ§Ã£o acetato identifica o sal e nÃ£o altera a ordem dos seis resÃ­duos da cadeia.",
-  molecular:"Câ‚„â‚†Hâ‚…â‚†Nâ‚â‚‚Oâ‚† Â· massa molecular calculada: aproximadamente 873,0 g/mol para a base livre; o sal acetato possui composiÃ§Ã£o e massa dependentes da estequiometria.",
-  origin:"Resultou da otimizaÃ§Ã£o de uma sÃ©rie de peptÃ­deos sintÃ©ticos curtos, com aminoÃ¡cidos em configuraÃ§Ã£o D, investigados como secretagogos hipofisÃ¡rios.",
-  discovery:"Cyril Y. Bowers, Frank A. Momany e colaboradores Â· Tulane University School of Medicine Â· Nova Orleans, Estados Unidos Â· caracterizaÃ§Ã£o publicada na dÃ©cada de 1980.",
-  sources:[
-   ["PubChem â€” GHRP-6","https://pubchem.ncbi.nlm.nih.gov/compound/4345065"],
-   ["Bowers et al., Endocrinology (1984)","https://pubmed.ncbi.nlm.nih.gov/6714155/"],
-   ["Badger et al., Endocrinology (1985)","https://pubmed.ncbi.nlm.nih.gov/3918849/"]
-  ]
- },
- "hexarelina-acetato":{
-  classification:"HexapeptÃ­deo sintÃ©tico peptidomimÃ©tico; a molÃ©cula-base Ã© tambÃ©m denominada examorelina ou hexarelina.",
-  sequence:"Hisâ€“D-2-Me-Trpâ€“Alaâ€“Trpâ€“D-Pheâ€“Lysâ€“NHâ‚‚; D-2-Me-Trp representa D-2-metiltriptofano. Acetato e outros sais devem ser tratados separadamente.",
-  molecular:"Câ‚„â‚‡Hâ‚…â‚ˆNâ‚â‚‚Oâ‚† Â· massa molecular calculada: aproximadamente 887,0 g/mol para a base livre; a forma acetato apresenta massa adicional conforme a proporÃ§Ã£o de contraÃ­ons.",
-  origin:"Criada por modificaÃ§Ã£o estrutural da famÃ­lia GHRP, introduzindo D-2-metiltriptofano na cadeia hexapeptÃ­dica.",
-  discovery:"Equipe de Renzo Deghenghi e colaboradores Â· Europeptides/Europa Â· desenvolvimento reportado no inÃ­cio da dÃ©cada de 1990; estudos humanos publicados em 1994.",
-  sources:[
-   ["PubChem â€” Examorelin / Hexarelin","https://pubchem.ncbi.nlm.nih.gov/compound/Hexarelin"],
-   ["Ghigo et al., Journal of Clinical Endocrinology & Metabolism (1994)","https://pubmed.ncbi.nlm.nih.gov/7957536/"]
-  ]
- },
- "ll-37":{
-  classification:"PeptÃ­deo catiÃ´nico humano de 37 aminoÃ¡cidos, correspondente ao fragmento C-terminal processado da proteÃ­na catelicidina hCAP18.",
-  sequence:"Leuâ€“Leuâ€“Glyâ€“Aspâ€“Pheâ€“Pheâ€“Argâ€“Lysâ€“Serâ€“Lysâ€“Gluâ€“Lysâ€“Ileâ€“Glyâ€“Lysâ€“Gluâ€“Pheâ€“Lysâ€“Argâ€“Ileâ€“Valâ€“Glnâ€“Argâ€“Ileâ€“Lysâ€“Aspâ€“Pheâ€“Leuâ€“Argâ€“Asnâ€“Leuâ€“Valâ€“Proâ€“Argâ€“Thrâ€“Gluâ€“Ser (LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES).",
-  molecular:"Câ‚‚â‚€â‚…Hâ‚ƒâ‚„â‚€Nâ‚†â‚€Oâ‚…â‚ƒ Â· massa molecular calculada: aproximadamente 4.493,3 g/mol para a cadeia livre nÃ£o modificada; sais e formas marcadas diferem.",
-  origin:"Gerado por processamento proteolÃ­tico do precursor humano hCAP18; o nome LL-37 deriva dos dois resÃ­duos iniciais de leucina e do comprimento de 37 aminoÃ¡cidos.",
-  discovery:"Birgitta Agerberth e colaboradores Â· Karolinska Institute Â· Estocolmo, SuÃ©cia Â· identificaÃ§Ã£o do peptÃ­deo humano na dÃ©cada de 1990.",
-  sources:[
-   ["PubChem â€” LL-37","https://pubchem.ncbi.nlm.nih.gov/compound/ll-37"],
-   ["Agerberth et al., Proceedings of the National Academy of Sciences (1995)","https://pubmed.ncbi.nlm.nih.gov/7629169/"],
-   ["Yang et al., Journal of Experimental Medicine (2000)","https://pubmed.ncbi.nlm.nih.gov/11015447/"]
-  ]
- },
- "melanotan-ii-mt-2":{
-  classification:"HeptapeptÃ­deo cÃ­clico sintÃ©tico anÃ¡logo da Î±-melanotropina (Î±-MSH), conhecido como Melanotan II.",
-  sequence:"Acâ€“Nleâ€“ciclo[Aspâ€“Hisâ€“D-Pheâ€“Argâ€“Trpâ€“Lys]â€“NHâ‚‚. Nle representa norleucina; a ligaÃ§Ã£o entre Asp e Lys fecha o anel lactÃ¢mico.",
-  molecular:"Câ‚…â‚€Hâ‚†â‚‰Nâ‚â‚…Oâ‚‰ Â· massa molecular calculada: aproximadamente 1.024,2 g/mol para a molÃ©cula-base; sais e solvatos apresentam composiÃ§Ã£o distinta.",
-  origin:"Projetado como anÃ¡logo cÃ­clico compacto da Î±-MSH a partir do nÃºcleo melanocortÃ­nico Hisâ€“Pheâ€“Argâ€“Trp, incorporando D-Phe e um anel lactÃ¢mico.",
-  discovery:"Victor J. Hruby, Mac E. Hadley e colaboradores Â· University of Arizona Â· Tucson, Estados Unidos Â· sÃ©rie de melanotropinas cÃ­clicas desenvolvida no fim da dÃ©cada de 1980 e inÃ­cio da dÃ©cada de 1990.",
-  sources:[
-   ["PubChem â€” Melanotan II","https://pubchem.ncbi.nlm.nih.gov/compound/92432"],
-   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
-  ]
- },
- "pt-141-bremelanotida":{
-  classification:"HeptapeptÃ­deo cÃ­clico sintÃ©tico da famÃ­lia dos anÃ¡logos de Î±-MSH; tambÃ©m denominado bremelanotida ou PT-141.",
-  sequence:"Acâ€“Nleâ€“ciclo[Aspâ€“Hisâ€“D-Pheâ€“Argâ€“Trpâ€“Lys]â€“OH. A cadeia possui anel lactÃ¢mico entre Asp e Lys e difere do Melanotan II na terminaÃ§Ã£o C-terminal.",
-  molecular:"Câ‚…â‚€Hâ‚†â‚ˆNâ‚â‚„Oâ‚â‚€ Â· massa molecular calculada: aproximadamente 1.025,2 g/mol para a molÃ©cula-base; a forma acetato possui composiÃ§Ã£o adicional variÃ¡vel.",
-  origin:"Derivada da famÃ­lia de melanotropinas cÃ­clicas desenvolvida a partir do nÃºcleo farmacofÃ³rico da Î±-MSH; estruturalmente relacionada ao Melanotan II.",
-  discovery:"Mac E. Hadley, Victor J. Hruby e colaboradores Â· University of Arizona Â· Tucson, Estados Unidos; o desenvolvimento farmacÃªutico posterior foi conduzido pela Palatin Technologies.",
-  sources:[
-   ["PubChem â€” Bremelanotide","https://pubchem.ncbi.nlm.nih.gov/compound/9941379"],
-   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
-  ]
- },
- "liraglutida":{
-  classification:"AnÃ¡logo sintÃ©tico acilado do GLP-1 humano, com 31 aminoÃ¡cidos e uma cadeia de Ã¡cido palmÃ­tico ligada por espaÃ§ador de glutamato.",
-  sequence:"Derivada de GLP-1(7â€“37): Hisâ€“Alaâ€“Gluâ€“Glyâ€“Thrâ€“Pheâ€“Thrâ€“Serâ€“Aspâ€“Valâ€“Serâ€“Serâ€“Tyrâ€“Leuâ€“Gluâ€“Glyâ€“Glnâ€“Alaâ€“Alaâ€“Lysâ€“Gluâ€“Pheâ€“Ileâ€“Alaâ€“Trpâ€“Leuâ€“Valâ€“Argâ€“Glyâ€“Argâ€“Gly, com LysÂ³â´ substituÃ­da por Arg e acilaÃ§Ã£o em LysÂ²â¶ por Î³-Gluâ€“C16.",
-  molecular:"Câ‚â‚‡â‚‚Hâ‚‚â‚†â‚…Nâ‚„â‚ƒOâ‚…â‚ Â· massa molecular calculada: aproximadamente 3.751,2 g/mol para a molÃ©cula-base.",
-  origin:"Criada por engenharia do GLP-1 humano para associaÃ§Ã£o reversÃ­vel Ã  albumina, usando uma cadeia de Ã¡cido palmÃ­tico e substituiÃ§Ã£o de lisina para direcionar a acilaÃ§Ã£o.",
-  discovery:"Lotte Bjerre Knudsen e colaboradores Â· Novo Nordisk Â· MÃ¥lÃ¸v, Dinamarca Â· seleÃ§Ã£o e caracterizaÃ§Ã£o publicadas no fim da dÃ©cada de 1990 e em 2000.",
-  sources:[
-   ["PubChem â€” Liraglutide","https://pubchem.ncbi.nlm.nih.gov/compound/16134956"],
-   ["Knudsen et al., Journal of Medicinal Chemistry (2000)","https://pubmed.ncbi.nlm.nih.gov/10794683/"],
-   ["Knudsen, ACS Pharmacology & Translational Science (2019)","https://pubmed.ncbi.nlm.nih.gov/32259078/"]
-  ]
- },
- "ocitocina-acetato":{
-  classification:"NonapeptÃ­deo cÃ­clico natural da famÃ­lia oxitocina/vasopressina; a apresentaÃ§Ã£o acetato corresponde a um sal da molÃ©cula peptÃ­dica.",
-  sequence:"Cysâ€“Tyrâ€“Ileâ€“Glnâ€“Asnâ€“Cysâ€“Proâ€“Leuâ€“Glyâ€“NHâ‚‚, com ponte dissulfeto entre CysÂ¹ e Cysâ¶.",
-  molecular:"Câ‚„â‚ƒHâ‚†â‚†Nâ‚â‚‚Oâ‚â‚‚Sâ‚‚ Â· massa molecular calculada: aproximadamente 1.007,2 g/mol para a oxitocina; acetato, hidrataÃ§Ã£o e outros contraÃ­ons alteram a composiÃ§Ã£o da apresentaÃ§Ã£o.",
-  origin:"HormÃ´nio peptÃ­dico isolado da neuro-hipÃ³fise; sua estrutura foi elucidada e depois reproduzida por sÃ­ntese quÃ­mica total.",
-  discovery:"Vincent du Vigneaud e colaboradores Â· Cornell University Medical College Â· Nova York, Estados Unidos Â· estrutura e primeira sÃ­ntese total concluÃ­das na dÃ©cada de 1950.",
-  sources:[
-   ["PubChem â€” Oxytocin","https://pubchem.ncbi.nlm.nih.gov/compound/439302"],
-   ["du Vigneaud et al. â€” sÃ­ntese de oxitocina","https://pubmed.ncbi.nlm.nih.gov/14391383/"],
-   ["Synthetic oxytocin â€” registro histÃ³rico","https://pubmed.ncbi.nlm.nih.gov/13316092/"]
-  ]
- },
- "5-amino-1mq":{
-  classification:"Pequena molÃ©cula sintÃ©tica da famÃ­lia dos quinolÃ­nios; inibidor experimental de nicotinamida N-metiltransferase (NNMT). NÃ£o Ã© peptÃ­deo.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. O registro quÃ­mico mais associado ao nome 5-Amino-1MQ corresponde ao cÃ¡tion 5-amino-1-metilquinolÃ­nio apresentado como iodeto; outros contraÃ­ons devem ser identificados separadamente no certificado analÃ­tico.",
-  molecular:"Forma iodeto registrada: Câ‚â‚€Hâ‚â‚INâ‚‚ Â· massa molecular calculada: aproximadamente 286,12 g/mol. O cÃ¡tion e outros sais possuem composiÃ§Ã£o diferente.",
-  origin:"Identificada em uma sÃ©rie de pequenas molÃ©culas desenhadas para inibir NNMT; a relaÃ§Ã£o estrutura-atividade foi publicada em 2017 e a caracterizaÃ§Ã£o experimental ampliada em 2018.",
-  discovery:"Harshini Neelakantan, Stanley J. Watowich e colaboradores Â· University of Texas Medical Branch e parceiros Â· Estados Unidos.",
-  sources:[
-   ["PubChem â€” 5-Amino-1MQ / NNMTi","https://pubchem.ncbi.nlm.nih.gov/compound/66522933"],
-   ["Neelakantan et al. â€” relaÃ§Ã£o estrutura-atividade (2017)","https://pubmed.ncbi.nlm.nih.gov/28548833/"],
-   ["Neelakantan et al., Biochemical Pharmacology (2018)","https://pubmed.ncbi.nlm.nih.gov/29155147/"]
-  ]
- },
- "aicar":{
-  classification:"NucleosÃ­deo sintÃ©tico conhecido como acadesina ou AICA-ribosÃ­deo; precursor celular do ribotÃ­deo ZMP. NÃ£o Ã© peptÃ­deo.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. O termo AICAR Ã© usado de forma ambÃ­gua para o ribosÃ­deo e para seu monofosfato; esta identificaÃ§Ã£o corresponde Ã  acadesina, e a presenÃ§a de fosfato deve ser confirmada separadamente.",
-  molecular:"Acadesina: Câ‚‰Hâ‚â‚„Nâ‚„Oâ‚… Â· massa molecular calculada: aproximadamente 258,23 g/mol. AICA-ribotÃ­deo/ZMP contÃ©m fÃ³sforo e possui fÃ³rmula e massa distintas.",
-  origin:"Relacionada aos intermediÃ¡rios AICA da biossÃ­ntese de purinas caracterizados na dÃ©cada de 1950; o uso do ribosÃ­deo como ferramenta de ativaÃ§Ã£o celular de AMPK foi consolidado em 1995.",
-  discovery:"CaracterizaÃ§Ã£o bioquÃ­mica inicial por B. Levenberg e John M. Buchanan Â· Massachusetts Institute of Technology Â· Estados Unidos; aplicaÃ§Ã£o em AMPK por Corton, Hardie e colaboradores Â· Reino Unido.",
-  sources:[
-   ["PubChem â€” Acadesine","https://pubchem.ncbi.nlm.nih.gov/compound/17513"],
-   ["Levenberg & Buchanan, Journal of Biological Chemistry (1957)","https://pubmed.ncbi.nlm.nih.gov/13405929/"],
-   ["Corton et al. â€” AICAR e AMPK (1995)","https://pubmed.ncbi.nlm.nih.gov/7744080/"]
-  ]
- },
- "dulaglutida":{
-  classification:"ProteÃ­na de fusÃ£o dimÃ©rica recombinante: dois anÃ¡logos de GLP-1 ligados por peptÃ­deos espaÃ§adores ao fragmento Fc modificado de IgG4 humana.",
-  sequence:"A estrutura completa contÃ©m duas cadeias idÃªnticas unidas por dissulfetos. Cada cadeia combina um anÃ¡logo de GLP-1(7â€“37), um linker rico em glicina/serina e uma regiÃ£o Fc de IgG4; nÃ£o deve ser descrita como um peptÃ­deo linear simples.",
-  molecular:"FÃ³rmula polipeptÃ­dica teÃ³rica registrada: Câ‚‚â‚†â‚„â‚†Hâ‚„â‚€â‚„â‚„Nâ‚‡â‚€â‚„Oâ‚ˆâ‚ƒâ‚†Sâ‚â‚‰ Â· massa calculada aproximada: 59,67 kDa. GlicosilaÃ§Ã£o e heterogeneidade da proteÃ­na recombinante alteram a massa observada.",
-  origin:"Desenvolvida como LY2189265 por engenharia de um anÃ¡logo de GLP-1 resistente a DPP-4 e sua fusÃ£o a Fc, com caracterizaÃ§Ã£o publicada em 2010.",
-  discovery:"Thomas Glaesner e equipe Â· Eli Lilly and Company Â· Indianapolis, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Dulaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Dulaglutide"],
-   ["Glaesner et al. â€” engenharia de LY2189265 (2010)","https://pubmed.ncbi.nlm.nih.gov/20503261/"]
-  ]
- },
- "mazdutida":{
-  classification:"PeptÃ­deo sintÃ©tico acilado, anÃ¡logo de oxintomodulina e agonista duplo experimental dos receptores de GLP-1 e glucagon; tambÃ©m denominado IBI362 ou LY3305677.",
-  sequence:"Estrutura peptÃ­dica modificada com resÃ­duos nÃ£o canÃ´nicos, espaÃ§ador hidrofÃ­lico e cadeia lipÃ­dica C20. A representaÃ§Ã£o estrutural integral deve seguir o registro quÃ­mico, nÃ£o uma sequÃªncia linear presumida.",
-  molecular:"Câ‚‚â‚€â‚‡Hâ‚ƒâ‚â‚‡Nâ‚„â‚…Oâ‚†â‚… Â· massa molecular mÃ©dia calculada: aproximadamente 4.476,1 g/mol; massa monoisotÃ³pica aproximada: 4.473,29 Da.",
-  origin:"Originada do programa de coagonistas GLP-1/glucagon da Eli Lilly e desenvolvida na China pela Innovent Biologics como IBI362.",
-  discovery:"Equipes de Eli Lilly and Company e Innovent Biologics Â· Estados Unidos e China; primeiros estudos clÃ­nicos publicados no inÃ­cio da dÃ©cada de 2020.",
-  sources:[
-   ["PubChem â€” Mazdutide","https://pubchem.ncbi.nlm.nih.gov/compound/167312357"],
-   ["Ji et al. â€” estudo clÃ­nico fase 1b (2022)","https://pubmed.ncbi.nlm.nih.gov/36247927/"],
-   ["Mazdutide: First Approval (2025)","https://pubmed.ncbi.nlm.nih.gov/41028652/"]
-  ]
- },
- "survodutida":{
-  classification:"PeptÃ­deo sintÃ©tico acilado derivado de glucagon, agonista duplo experimental dos receptores de glucagon e GLP-1; tambÃ©m denominado BI 456906.",
-  sequence:"AnÃ¡logo peptÃ­dico modificado com aminoÃ¡cidos nÃ£o canÃ´nicos e conjugaÃ§Ã£o lipÃ­dica. A estrutura integral registrada inclui cadeia peptÃ­dica, espaÃ§ador e Ã¡cido graxo; sais e formas analÃ­ticas devem ser distinguidos.",
-  molecular:"Câ‚â‚‰â‚‚Hâ‚‚â‚ˆâ‚‰Nâ‚„â‚‡Oâ‚†â‚ Â· massa molecular mÃ©dia calculada: aproximadamente 4.231,7 g/mol; massa monoisotÃ³pica aproximada: 4.229,10 Da.",
-  origin:"Descoberta no programa de coagonistas de Boehringer Ingelheim em colaboraÃ§Ã£o com Zealand Pharma; a farmacologia prÃ©-clÃ­nica de BI 456906 foi publicada em 2022.",
-  discovery:"Equipes de Boehringer Ingelheim e Zealand Pharma Â· Alemanha e Dinamarca.",
-  sources:[
-   ["PubChem â€” Survodutide","https://pubchem.ncbi.nlm.nih.gov/compound/168429725"],
-   ["Zimmermann et al. â€” descoberta e farmacologia de BI 456906 (2022)","https://pubmed.ncbi.nlm.nih.gov/36356832/"],
-   ["Perfil farmacolÃ³gico para seleÃ§Ã£o do candidato (2024)","https://pubmed.ncbi.nlm.nih.gov/38560764/"]
-  ]
- },
- "teriparatida":{
-  classification:"PolipeptÃ­deo recombinante de 34 aminoÃ¡cidos idÃªntico ao fragmento N-terminal biologicamente ativo do hormÃ´nio paratireoideano humano, hPTH(1â€“34).",
-  sequence:"Serâ€“Valâ€“Serâ€“Gluâ€“Ileâ€“Glnâ€“Leuâ€“Metâ€“Hisâ€“Asnâ€“Leuâ€“Glyâ€“Lysâ€“Hisâ€“Leuâ€“Asnâ€“Serâ€“Metâ€“Gluâ€“Argâ€“Valâ€“Gluâ€“Trpâ€“Leuâ€“Argâ€“Lysâ€“Lysâ€“Leuâ€“Glnâ€“Aspâ€“Valâ€“Hisâ€“Asnâ€“Phe (SVSEIQLMHNLGKHLNSMERVEWLRKKLQDVHNF).",
-  molecular:"Câ‚â‚ˆâ‚Hâ‚‚â‚‰â‚Nâ‚…â‚…Oâ‚…â‚Sâ‚‚ Â· massa molecular calculada: aproximadamente 4.117,8 g/mol para a cadeia livre; acetato e outras apresentaÃ§Ãµes possuem composiÃ§Ã£o adicional.",
-  origin:"Corresponde aos resÃ­duos 1â€“34 da PTH humana. A sequÃªncia e a sÃ­ntese desse fragmento foram estabelecidas por trabalhos independentes no inÃ­cio da dÃ©cada de 1970.",
-  discovery:"Equipes de pesquisa em hormÃ´nio paratireoideano, incluindo John T. Potts Jr. e colaboradores Â· Massachusetts General Hospital/Harvard Â· Estados Unidos.",
-  sources:[
-   ["PubChem â€” Teriparatide","https://pubchem.ncbi.nlm.nih.gov/compound/16133850"],
-   ["SÃ­ntese de hPTH(1â€“34) (1973)","https://pubmed.ncbi.nlm.nih.gov/4721748/"],
-   ["SÃ­ntese em soluÃ§Ã£o de hPTH(1â€“34)","https://pubmed.ncbi.nlm.nih.gov/7116508/"]
-  ]
- },
- "kisspeptina-10":{
-  classification:"DecapeptÃ­deo amidado correspondente ao segmento C-terminal bioativo das kisspeptinas humanas derivadas de KISS1.",
-  sequence:"Tyrâ€“Asnâ€“Trpâ€“Asnâ€“Serâ€“Pheâ€“Glyâ€“Leuâ€“Argâ€“Pheâ€“NHâ‚‚ (YNWNSFGLRFâ€“NHâ‚‚). Sais como TFA ou acetato devem ser tratados como formas distintas.",
-  molecular:"Câ‚†â‚ƒHâ‚ˆâ‚ƒNâ‚â‚‡Oâ‚â‚„ Â· massa molecular calculada: aproximadamente 1.302,5 g/mol para o peptÃ­deo amidado sem contraÃ­on.",
-  origin:"A famÃ­lia KISS1 foi ligada ao receptor GPR54 em 2001; kisspeptina-10 Ã© o nÃºcleo C-terminal comum Ã s formas humanas mais longas.",
-  discovery:"Equipes de Yoshihiro Ohtaki, Masahiko Kotani e colaboradores Â· Takeda Chemical Industries Â· Osaka, JapÃ£o.",
-  sources:[
-   ["PubChem â€” Kisspeptin-10","https://pubchem.ncbi.nlm.nih.gov/compound/25240297"],
-   ["Kotani et al. â€” KISS1 e GPR54 (2001)","https://pubmed.ncbi.nlm.nih.gov/11457843/"],
-   ["Ohtaki et al. â€” metastina (2001)","https://pubmed.ncbi.nlm.nih.gov/11527393/"]
-  ]
- },
- "nad-plus":{
-  classification:"DinucleotÃ­deo piridÃ­nico oxidado e coenzima celular; nicotinamida adenina dinucleotÃ­deo na forma NADâº. NÃ£o Ã© peptÃ­deo.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. A molÃ©cula reÃºne nicotinamida-ribose e adenina-ribose ligadas por uma ponte pirofosfato; protonaÃ§Ã£o, hidrataÃ§Ã£o e sais alteram a fÃ³rmula da apresentaÃ§Ã£o.",
-  molecular:"Forma oxidada registrada como nadida: Câ‚‚â‚Hâ‚‚â‚ˆNâ‚‡Oâ‚â‚„Pâ‚‚âº Â· massa molecular calculada: aproximadamente 664,4 g/mol. A forma anidra e sais de sÃ³dio possuem massas distintas.",
-  origin:"O cofator de fermentaÃ§Ã£o historicamente denominado cozimase foi observado por Arthur Harden e William John Young em 1906; sua identidade quÃ­mica foi esclarecida em etapas posteriores.",
-  discovery:"Arthur Harden e William John Young Â· Lister Institute of Preventive Medicine Â· Londres, Reino Unido; caracterizaÃ§Ã£o estrutural posterior por mÃºltiplas equipes europeias.",
-  sources:[
-   ["PubChem â€” Nadide / NADâº","https://pubchem.ncbi.nlm.nih.gov/compound/5893"],
-   ["Contexto histÃ³rico da descoberta da cozimase","https://pubmed.ncbi.nlm.nih.gov/4370723/"],
-   ["NADâº homeostasis in health and disease","https://pubmed.ncbi.nlm.nih.gov/32694684/"]
-  ]
- },
- "glutationa":{
-  classification:"TripeptÃ­deo tiol natural, Î³-L-glutamil-L-cisteinilglicina; a entrada corresponde Ã  forma reduzida GSH.",
-  sequence:"Î³-Gluâ€“Cysâ€“Gly. A ligaÃ§Ã£o entre glutamato e cisteÃ­na utiliza o grupo Î³-carboxila; a forma oxidada GSSG contÃ©m duas unidades ligadas por dissulfeto e Ã© quimicamente distinta.",
-  molecular:"Câ‚â‚€Hâ‚â‚‡Nâ‚ƒOâ‚†S Â· massa molecular calculada: aproximadamente 307,32 g/mol para a glutationa reduzida sem sal.",
-  origin:"Isolada e nomeada em estudos bioquÃ­micos conduzidos por Frederick Gowland Hopkins; sua natureza de tripeptÃ­deo foi consolidada na primeira metade do sÃ©culo XX.",
-  discovery:"Frederick Gowland Hopkins Â· University of Cambridge Â· Cambridge, Reino Unido Â· trabalhos fundamentais publicados em 1921.",
-  sources:[
-   ["PubChem â€” Glutathione","https://pubchem.ncbi.nlm.nih.gov/compound/124886"],
-   ["Forman et al. â€” estrutura e biossÃ­ntese de GSH","https://pubmed.ncbi.nlm.nih.gov/18796312/"],
-   ["HistÃ³rico cientÃ­fico da glutationa","https://pubmed.ncbi.nlm.nih.gov/1852785/"]
-  ]
- },
- "acth-1-39":{
-  classification:"HormÃ´nio polipeptÃ­dico humano de 39 aminoÃ¡cidos, tambÃ©m denominado corticotropina; produto do processamento da proopiomelanocortina (POMC).",
-  sequence:"Serâ€“Tyrâ€“Serâ€“Metâ€“Gluâ€“Hisâ€“Pheâ€“Argâ€“Trpâ€“Glyâ€“Lysâ€“Proâ€“Valâ€“Glyâ€“Lysâ€“Lysâ€“Argâ€“Argâ€“Proâ€“Valâ€“Lysâ€“Valâ€“Tyrâ€“Proâ€“Asnâ€“Glyâ€“Alaâ€“Gluâ€“Aspâ€“Gluâ€“Serâ€“Alaâ€“Gluâ€“Alaâ€“Pheâ€“Proâ€“Leuâ€“Gluâ€“Phe (SYSMEHFRWGKPVGKKRRPVKVYPNGAEDESAEAFPLEF).",
-  molecular:"Câ‚‚â‚€â‚‡Hâ‚ƒâ‚€â‚ˆNâ‚…â‚†Oâ‚…â‚ˆS Â· massa molecular calculada: aproximadamente 4.541,1 g/mol para ACTH humana 1â€“39 sem sal.",
-  origin:"Isolada da hipÃ³fise e posteriormente sequenciada como um peptÃ­deo de 39 resÃ­duos; sua origem no precursor POMC foi esclarecida com estudos de processamento hormonal.",
-  discovery:"Choh Hao Li e colaboradores Â· University of California, Berkeley Â· Estados Unidos Â· isolamento e estudos estruturais na dÃ©cada de 1950.",
-  sources:[
-   ["PubChem â€” ACTH(1â€“39) humana","https://pubchem.ncbi.nlm.nih.gov/compound/175647749"],
-   ["Li et al. â€” estudos estruturais de corticotropina (1956)","https://pubmed.ncbi.nlm.nih.gov/13355456/"],
-   ["Processamento humano de POMC em ACTH","https://pubmed.ncbi.nlm.nih.gov/6254067/"]
-  ]
- },
- "orexina-a":{
-  classification:"NeuropeptÃ­deo endÃ³geno de 33 aminoÃ¡cidos, tambÃ©m denominado hipocretina-1, com duas pontes dissulfeto intramoleculares.",
-  sequence:"pGluâ€“Proâ€“Leuâ€“Proâ€“Aspâ€“Cysâ€“Cysâ€“Argâ€“Glnâ€“Lysâ€“Thrâ€“Cysâ€“Serâ€“Cysâ€“Argâ€“Leuâ€“Tyrâ€“Gluâ€“Leuâ€“Leuâ€“Hisâ€“Glyâ€“Alaâ€“Glyâ€“Asnâ€“Hisâ€“Alaâ€“Alaâ€“Glyâ€“Ileâ€“Leuâ€“Thrâ€“Leuâ€“NHâ‚‚; Cysâ¶â€“CysÂ¹Â² e Cysâ·â€“CysÂ¹â´ formam as pontes dissulfeto.",
-  molecular:"Câ‚â‚…â‚‚Hâ‚‚â‚„â‚ƒNâ‚„â‚‡Oâ‚„â‚„Sâ‚„ Â· massa molecular calculada: aproximadamente 3.561,1 g/mol para a forma ciclizada e amidada registrada.",
-  origin:"Processada proteoliticamente do precursor prepro-orexina; contÃ©m piroglutamato N-terminal, amidaÃ§Ã£o C-terminal e duas pontes dissulfeto.",
-  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores Â· University of Texas Southwestern Medical Center Â· Dallas, Estados Unidos Â· descoberta publicada em 1998; o grupo de Luis de Lecea identificou paralelamente as hipocretinas.",
-  sources:[
-   ["PubChem â€” Orexin A","https://pubchem.ncbi.nlm.nih.gov/compound/56842143"],
-   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
-   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
-  ]
- },
- "orexina-b":{
-  classification:"NeuropeptÃ­deo endÃ³geno linear de 28 aminoÃ¡cidos, tambÃ©m denominado hipocretina-2, com terminaÃ§Ã£o C-terminal amidada.",
-  sequence:"Argâ€“Serâ€“Glyâ€“Proâ€“Proâ€“Glyâ€“Leuâ€“Glnâ€“Glyâ€“Argâ€“Leuâ€“Glnâ€“Argâ€“Leuâ€“Leuâ€“Glnâ€“Alaâ€“Serâ€“Glyâ€“Asnâ€“Hisâ€“Alaâ€“Alaâ€“Glyâ€“Ileâ€“Leuâ€“Thrâ€“Metâ€“NHâ‚‚ (RSGPPGLQGRLQRLLQASGNHAAGILTMâ€“NHâ‚‚).",
-  molecular:"Câ‚â‚‚â‚ƒHâ‚‚â‚â‚‚Nâ‚„â‚„Oâ‚ƒâ‚…S Â· massa molecular calculada: aproximadamente 2.899,4 g/mol para a forma amidada.",
-  origin:"Gerada a partir do mesmo precursor prepro-orexina que origina a orexina A, mas sem as pontes dissulfeto presentes na isoforma A.",
-  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores Â· University of Texas Southwestern Medical Center Â· Dallas, Estados Unidos Â· descoberta publicada em 1998; identificada em paralelo como hipocretina-2 pelo grupo de Luis de Lecea.",
-  sources:[
-   ["PubChem â€” Orexin B","https://pubchem.ncbi.nlm.nih.gov/compound/44404987"],
-   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
-   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
-  ]
- },
- "vip-aviptadil":{
-  classification:"NeuropeptÃ­deo linear de 28 aminoÃ¡cidos conhecido como peptÃ­deo intestinal vasoativo (VIP); aviptadil Ã© a forma sintÃ©tica correspondente.",
-  sequence:"Hisâ€“Serâ€“Aspâ€“Alaâ€“Valâ€“Pheâ€“Thrâ€“Aspâ€“Asnâ€“Tyrâ€“Thrâ€“Argâ€“Leuâ€“Argâ€“Lysâ€“Glnâ€“Metâ€“Alaâ€“Valâ€“Lysâ€“Lysâ€“Tyrâ€“Leuâ€“Asnâ€“Serâ€“Ileâ€“Leuâ€“Asnâ€“NHâ‚‚ (HSDAVFTDNYTRLRKQMAVKKYLNSILNâ€“NHâ‚‚).",
-  molecular:"Câ‚â‚„â‚‡Hâ‚‚â‚ƒâ‚‡Nâ‚„â‚ƒOâ‚„â‚ƒS Â· massa molecular calculada: aproximadamente 3.326,8 g/mol para o peptÃ­deo amidado.",
-  origin:"Isolado inicialmente de tecido intestinal e posteriormente identificado como um peptÃ­deo de 28 resÃ­duos com terminaÃ§Ã£o amidada.",
-  discovery:"Sami I. Said e Viktor Mutt Â· Medical College of Virginia e Karolinska Institutet Â· Estados Unidos e SuÃ©cia Â· isolamento descrito em 1970.",
-  sources:[
-   ["PubChem â€” Aviptadil","https://pubchem.ncbi.nlm.nih.gov/compound/16132300"],
-   ["Said e Mutt, Science (1970)","https://pubmed.ncbi.nlm.nih.gov/5450698/"]
-  ]
- },
- "alprostadil":{
-  classification:"Eicosanoide sintÃ©tico idÃªntico Ã  prostaglandina E1 (PGE1); pequena molÃ©cula lipÃ­dica, nÃ£o peptÃ­dica.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. A estrutura contÃ©m um anel ciclopentanona, duas cadeias alifÃ¡ticas, grupos hidroxila e Ã¡cido carboxÃ­lico; sais devem ser identificados separadamente.",
-  molecular:"Câ‚‚â‚€Hâ‚ƒâ‚„Oâ‚… Â· massa molecular calculada: aproximadamente 354,49 g/mol para o Ã¡cido livre.",
-  origin:"Corresponde Ã  prostaglandina E1 isolada em trabalhos sobre prostaglandinas e posteriormente reproduzida por sÃ­ntese quÃ­mica total na dÃ©cada de 1960.",
-  discovery:"Sune BergstrÃ¶m e colaboradores Â· Karolinska Institutet Â· Estocolmo, SuÃ©cia; sÃ­ntese total por equipes de quÃ­mica orgÃ¢nica publicada em 1969.",
-  sources:[
-   ["PubChem â€” Alprostadil / PGE1","https://pubchem.ncbi.nlm.nih.gov/compound/5280723"],
-   ["SÃ­ntese de prostaglandina E1 (1969)","https://pubmed.ncbi.nlm.nih.gov/5802929/"],
-   ["BergstrÃ¶m et al. â€” estudos histÃ³ricos de PGE1","https://pubmed.ncbi.nlm.nih.gov/5853023/"]
-  ]
- },
- "melatonina":{
-  classification:"Indolamina natural, N-acetil-5-metoxitriptamina; pequena molÃ©cula derivada do triptofano, nÃ£o peptÃ­dica.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. A estrutura combina um nÃºcleo indÃ³lico 5-metoxilado com uma cadeia N-acetiletilamina.",
-  molecular:"Câ‚â‚ƒHâ‚â‚†Nâ‚‚Oâ‚‚ Â· massa molecular calculada: aproximadamente 232,28 g/mol.",
-  origin:"Isolada de glÃ¢ndulas pineais bovinas e nomeada melatonina em 1958; a estrutura quÃ­mica foi elucidada logo depois.",
-  discovery:"Aaron B. Lerner, James D. Case e colaboradores Â· Yale University School of Medicine Â· New Haven, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Melatonin","https://pubchem.ncbi.nlm.nih.gov/compound/896"],
-   ["HistÃ³rico dos 40 anos da descoberta","https://pubmed.ncbi.nlm.nih.gov/11462112/"],
-   ["Aaron Lerner e a descoberta da melatonina","https://pubmed.ncbi.nlm.nih.gov/17614843/"]
-  ]
- },
- "l-carnitina":{
-  classification:"Composto zwitteriÃ´nico quaternÃ¡rio, (R)-3-hidroxi-4-(trimetilazÃ¢nio)buta-noato; nÃ£o Ã© aminoÃ¡cido proteico nem peptÃ­deo.",
-  sequence:"NÃ£o se aplica sequÃªncia de aminoÃ¡cidos. A entrada corresponde ao enantiÃ´mero L/(R); D-carnitina, acetil-L-carnitina, tartarato e outros sais sÃ£o entidades diferentes.",
-  molecular:"Câ‚‡Hâ‚â‚…NOâ‚ƒ Â· massa molecular calculada: aproximadamente 161,20 g/mol para L-carnitina livre.",
-  origin:"Isolada de extratos musculares no inÃ­cio do sÃ©culo XX; mais tarde foi reconhecida como o fator de crescimento denominado vitamina BT em estudos com insetos.",
-  discovery:"Vladimir Gulewitsch e Roman Krimberg Â· Universidade de Moscou Â· RÃºssia Â· isolamento reportado em 1905; caracterizaÃ§Ã£o como vitamina BT por Herbert E. Carter e colaboradores em 1952.",
-  sources:[
-   ["PubChem â€” L-Carnitine","https://pubchem.ncbi.nlm.nih.gov/compound/10917"],
-   ["HistÃ³rico da identificaÃ§Ã£o de vitamina BT como carnitina","https://pubmed.ncbi.nlm.nih.gov/7031524/"],
-   ["RevisÃ£o histÃ³rica de carnitina","https://pubmed.ncbi.nlm.nih.gov/2103685/"]
-  ]
- },
- "acido-hialuronico":{
-  classification:"Glicosaminoglicano linear nÃ£o sulfatado, tambÃ©m denominado hialuronano; polÃ­mero de unidades dissacarÃ­dicas repetidas.",
-  sequence:"[â†’4)-Î²-D-GlcA-(1â†’3)-Î²-D-GlcNAc-(1â†’]â‚™. NÃ£o existe uma cadeia Ãºnica: o nÃºmero de repetiÃ§Ãµes e a distribuiÃ§Ã£o de massas devem constar do certificado analÃ­tico.",
-  molecular:"Unidade repetitiva: (Câ‚â‚„Hâ‚‚â‚NOâ‚â‚)â‚™ Â· aproximadamente 379,32 g/mol por unidade. A massa do polÃ­mero varia amplamente com n; hialuronato de sÃ³dio possui composiÃ§Ã£o distinta.",
-  origin:"Isolado do humor vÃ­treo bovino e nomeado a partir de hyaloid e Ã¡cido urÃ´nico em 1934; sua constituiÃ§Ã£o dissacarÃ­dica foi estabelecida em trabalhos posteriores.",
-  discovery:"Karl Meyer e John W. Palmer Â· Columbia University Â· Nova York, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Hyaluronic Acid","https://pubchem.ncbi.nlm.nih.gov/compound/Hyaluronic-acid"],
-   ["ConstituiÃ§Ã£o do Ã¡cido hialurÃ´nico","https://pubmed.ncbi.nlm.nih.gov/15421326/"],
-   ["Hyaluronan: fontes, estrutura e caracterÃ­sticas","https://pubmed.ncbi.nlm.nih.gov/38338483/"]
-  ]
- },
- "humanina":{
-  classification:"PeptÃ­deo de 24 aminoÃ¡cidos identificado a partir de uma ORF curta associada ao genoma mitocondrial; a origem translacional exata possui variantes na literatura.",
-  sequence:"Metâ€“Alaâ€“Proâ€“Argâ€“Glyâ€“Pheâ€“Serâ€“Cysâ€“Leuâ€“Leuâ€“Leuâ€“Leuâ€“Thrâ€“Serâ€“Gluâ€“Ileâ€“Aspâ€“Leuâ€“Proâ€“Valâ€“Lysâ€“Argâ€“Argâ€“Ala (MAPRGFSCLLLLTSEIDLPVKRRA).",
-  molecular:"Câ‚â‚â‚‰Hâ‚‚â‚€â‚„Nâ‚ƒâ‚„Oâ‚ƒâ‚‚Sâ‚‚ Â· massa molecular calculada: aproximadamente 2.687,3 g/mol para a sequÃªncia sintÃ©tica canÃ´nica; variantes e sais diferem.",
-  origin:"Identificada em 2001 por triagem de uma biblioteca de cDNA de tecido cerebral; o nome Humanin foi atribuÃ­do ao peptÃ­deo de resgate isolado.",
-  discovery:"Yasuo Hashimoto, Yuko Niikura e colaboradores Â· Keio University Â· TÃ³quio, JapÃ£o.",
-  sources:[
-   ["PubChem â€” Humanin","https://pubchem.ncbi.nlm.nih.gov/compound/16131438"],
-   ["Hashimoto et al. â€” descoberta de Humanin (2001)","https://pmc.ncbi.nlm.nih.gov/articles/PMC33469/"],
-   ["CaracterizaÃ§Ã£o mecanÃ­stica inicial","https://pubmed.ncbi.nlm.nih.gov/11327724/"]
-  ]
- },
- "dsip":{
-  classification:"NonapeptÃ­deo sintÃ©tico correspondente ao delta sleep-inducing peptide (DSIP), descrito originalmente como fator peptÃ­dico isolado em coelhos.",
-  sequence:"Trpâ€“Alaâ€“Glyâ€“Glyâ€“Aspâ€“Alaâ€“Serâ€“Glyâ€“Glu (WAGGDASGE).",
-  molecular:"Câ‚ƒâ‚…Hâ‚„â‚ˆNâ‚â‚€Oâ‚â‚… Â· massa molecular calculada: aproximadamente 848,82 g/mol para a cadeia livre.",
-  origin:"A atividade denominada fator delta foi isolada no inÃ­cio da dÃ©cada de 1970; a sequÃªncia nonapeptÃ­dica DSIP foi caracterizada e sintetizada posteriormente.",
-  discovery:"Marcel Monnier, G. A. Schoenenberger e colaboradores Â· University of Basel Â· Basileia, SuÃ­Ã§a.",
-  sources:[
-   ["PubChem â€” Delta Sleep-Inducing Peptide","https://pubchem.ncbi.nlm.nih.gov/compound/68816"],
-   ["Isolamento do fator delta (1972)","https://pubmed.ncbi.nlm.nih.gov/5076324/"],
-   ["DSIP: revisÃ£o das incertezas experimentais","https://pubmed.ncbi.nlm.nih.gov/16539679/"]
-  ]
- },
- "dermorfina":{
-  classification:"HeptapeptÃ­deo amidado natural de pele de anfÃ­bio, contendo D-alanina na segunda posiÃ§Ã£o.",
-  sequence:"Tyrâ€“D-Alaâ€“Pheâ€“Glyâ€“Tyrâ€“Proâ€“Serâ€“NHâ‚‚. A configuraÃ§Ã£o D de AlaÂ² Ã© parte essencial da identidade quÃ­mica e nÃ£o deve ser substituÃ­da por L-Ala.",
-  molecular:"Câ‚„â‚€Hâ‚…â‚€Nâ‚ˆOâ‚â‚€ Â· massa molecular calculada: aproximadamente 802,89 g/mol para o peptÃ­deo amidado sem sal.",
-  origin:"Isolada da pele da rÃ£ Phyllomedusa sauvagei e reconhecida como um dos primeiros peptÃ­deos naturais contendo D-aminoÃ¡cido.",
-  discovery:"Vittorio Erspamer, Paolo Montecucchi e colaboradores Â· Sapienza UniversitÃ  di Roma Â· Roma, ItÃ¡lia Â· sequÃªncia publicada em 1981.",
-  sources:[
-   ["PubChem â€” Dermorphin","https://pubchem.ncbi.nlm.nih.gov/compound/5485199"],
-   ["Montecucchi et al. â€” composiÃ§Ã£o e sequÃªncia (1981)","https://pubmed.ncbi.nlm.nih.gov/7287299/"],
-   ["Farmacologia inicial das dermorfinas","https://pmc.ncbi.nlm.nih.gov/articles/PMC2071698/"]
-  ]
- },
- "ahk-cu":{
-  classification:"Complexo de coordenaÃ§Ã£o entre cobre(II) e o tripeptÃ­deo L-alanil-L-histidil-L-lisina (AHK).",
-  sequence:"Alaâ€“Hisâ€“Lys (AHK). O cobre Ã© coordenado pelo motivo peptÃ­dico; cloreto, hidrataÃ§Ã£o, protonaÃ§Ã£o e estequiometria devem ser confirmados no certificado analÃ­tico.",
-  molecular:"Ligante AHK livre: Câ‚â‚…Hâ‚‚â‚†Nâ‚†Oâ‚„ Â· aproximadamente 354,45 g/mol. O registro PubChem do complexo cloridrato de cobre informa Câ‚â‚…Hâ‚‚â‚„ClCuNâ‚†Oâ‚„â» Â· aproximadamente 451,39 g/mol; outras formas do complexo diferem.",
-  origin:"ConstruÃ­do a partir do tripeptÃ­deo AHK e cobre(II). Ã‰ quimicamente distinto de GHK-Cu, que possui glicina no primeiro resÃ­duo.",
-  discovery:"A literatura nÃ£o consolida um Ãºnico inventor para AHK-Cu. A caracterizaÃ§Ã£o quÃ­mica e os estudos do complexo foram publicados por equipes distintas; o estudo experimental de Pyo e colaboradores foi publicado em 2007 na Coreia do Sul.",
-  sources:[
-   ["PubChem â€” L-Alanyl-L-histidyl-L-lysine","https://pubchem.ncbi.nlm.nih.gov/compound/7408502"],
-   ["PubChem â€” complexo AHKâ€“Cu cloridrato","https://pubchem.ncbi.nlm.nih.gov/compound/168431292"],
-   ["Pyo et al., Journal of Peptide Science (2007)","https://pubmed.ncbi.nlm.nih.gov/17703734/"]
-  ]
- },
- "b7-33":{
-  classification:"PeptÃ­deo sintÃ©tico linear de 27 resÃ­duos derivado da cadeia B da relaxina-2 humana; agonista experimental seletivo de sinalizaÃ§Ã£o do receptor RXFP1.",
-  sequence:"Valâ€“Ileâ€“Lysâ€“Leuâ€“Serâ€“Glyâ€“Argâ€“Gluâ€“Leuâ€“Valâ€“Argâ€“Alaâ€“Glnâ€“Ileâ€“Alaâ€“Ileâ€“Serâ€“Glyâ€“Metâ€“Serâ€“Thrâ€“Trpâ€“Serâ€“Lysâ€“Argâ€“Serâ€“Leuâ€“NHâ‚‚ (VIKLSGRELVRAQIAISGMSTWSKRSLâ€“NHâ‚‚).",
-  molecular:"Câ‚â‚ƒâ‚Hâ‚‚â‚‚â‚‰Nâ‚„â‚Oâ‚ƒâ‚†S Â· massa molecular calculada: aproximadamente 2.986,6 g/mol para a cadeia C-terminalmente amidada.",
-  origin:"Projetado como derivado de cadeia Ãºnica da regiÃ£o B7â€“B33 da relaxina-2, sem a cadeia A e sem as trÃªs pontes dissulfeto do hormÃ´nio nativo.",
-  discovery:"Mohammed Akhter Hossain, Ross Bathgate, John Wade, Chrishan Samuel e colaboradores Â· Florey Institute, University of Melbourne e Monash University Â· Melbourne, AustrÃ¡lia Â· publicado em 2016.",
-  sources:[
-   ["PubChem â€” B7-33","https://pubchem.ncbi.nlm.nih.gov/compound/162662592"],
-   ["Hossain et al., Chemical Science (2016)","https://pmc.ncbi.nlm.nih.gov/articles/PMC6013806/"]
-  ]
- },
- "cjc-1295-com-dac":{
-  classification:"AnÃ¡logo sintÃ©tico de GHRH(1â€“29)-NHâ‚‚ com quatro substituiÃ§Ãµes e um grupo Drug Affinity Complex (DAC) reativo com albumina.",
-  sequence:"NÃºcleo peptÃ­dico: Tyrâ€“D-Alaâ€“Aspâ€“Alaâ€“Ileâ€“Pheâ€“Thrâ€“Glnâ€“Serâ€“Tyrâ€“Argâ€“Lysâ€“Valâ€“Leuâ€“Alaâ€“Glnâ€“Leuâ€“Serâ€“Alaâ€“Argâ€“Lysâ€“Leuâ€“Leuâ€“Glnâ€“Aspâ€“Ileâ€“Leuâ€“Serâ€“Argâ€“NHâ‚‚. A identidade completa inclui o ligante DAC; nÃ£o equivale ao CJC-1295 sem DAC.",
-  molecular:"Câ‚â‚†â‚…Hâ‚‚â‚†â‚‰Nâ‚„â‚‡Oâ‚„â‚† Â· massa molecular calculada: aproximadamente 3.647,3 g/mol para a entidade CJC-1295 registrada; acetato, solvatos e conjugaÃ§Ã£o Ã  albumina alteram a massa observada.",
-  origin:"Desenvolvido sobre um anÃ¡logo estabilizado de GHRH(1â€“29), incorporando um grupo maleimida para ligaÃ§Ã£o covalente Ã  albumina circulante.",
-  discovery:"LÃ©once JettÃ© e colaboradores Â· ConjuChem Inc. Â· Montreal, CanadÃ¡ Â· caracterizaÃ§Ã£o publicada em 2005.",
-  sources:[
-   ["PubChem â€” CJC-1295","https://pubchem.ncbi.nlm.nih.gov/compound/91971820"],
-   ["JettÃ© et al., Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"]
-  ]
- },
- "epo-eritropoetina":{
-  classification:"GlicoproteÃ­na hormonal; a eritropoietina humana madura possui uma cadeia polipeptÃ­dica de 165 resÃ­duos apÃ³s processamento e mÃºltiplos glicanos.",
-  sequence:"A sequÃªncia precursora humana possui 193 resÃ­duos no registro UniProt P01588. A forma secretada Ã© processada e glicosilada; a sequÃªncia integral e os sÃ­tios de modificaÃ§Ã£o devem ser conferidos no registro proteico e no certificado da preparaÃ§Ã£o.",
-  molecular:"A cadeia polipeptÃ­dica madura tem aproximadamente 18,4 kDa; formas naturais e recombinantes glicosiladas apresentam massa aparente prÃ³xima de 30 kDa e micro-heterogeneidade. NÃ£o existe uma fÃ³rmula molecular Ãºnica para todas as glicoformas.",
-  origin:"O fator eritropoiÃ©tico foi proposto no inÃ­cio do sÃ©culo XX; eritropoietina humana foi purificada de urina em 1977 e o gene humano foi clonado e expresso em 1985.",
-  discovery:"Paul Carnot e Clotilde Deflandre Â· Paris, FranÃ§a Â· hipÃ³tese hormonal em 1906; purificaÃ§Ã£o por Takaji Miyake, Charles Kung e Eugene Goldwasser Â· University of Chicago Â· 1977; clonagem por equipes da Amgen e Genetics Institute Â· Estados Unidos Â· 1985.",
-  sources:[
-   ["UniProt â€” Erythropoietin humana (P01588)","https://www.uniprot.org/uniprotkb/P01588/entry"],
-   ["Miyake et al. â€” purificaÃ§Ã£o de eritropoietina (1977)","https://pubmed.ncbi.nlm.nih.gov/270704/"],
-   ["Lin et al. â€” clonagem e expressÃ£o do gene humano (1985)","https://pmc.ncbi.nlm.nih.gov/articles/PMC391376/"]
-  ]
- },
- "gdf-8-miostatina":{
-  classification:"ProteÃ­na sinalizadora da superfamÃ­lia TGF-Î², tambÃ©m denominada miostatina; sintetizada como precursor de 375 resÃ­duos e ativa como homodÃ­mero C-terminal.",
-  sequence:"O precursor humano possui 375 aminoÃ¡cidos. O domÃ­nio maduro corresponde aos resÃ­duos 267â€“375, com 109 resÃ­duos por cadeia e ligaÃ§Ã£o dissulfeto entre as duas subunidades; a sequÃªncia integral estÃ¡ no UniProt O14793.",
-  molecular:"Precursor nÃ£o processado: aproximadamente 42,75 kDa. Cada cadeia madura possui cerca de 12,4 kDa e o homodÃ­mero dissulfeto, cerca de 25 kDa; processamento e glicosilaÃ§Ã£o impedem atribuir uma fÃ³rmula Ãºnica Ã  preparaÃ§Ã£o proteica.",
-  origin:"Identificada por busca de novos membros da superfamÃ­lia TGF-Î² e denominada GDF-8; estudos genÃ©ticos posteriores confirmaram o homÃ³logo humano MSTN.",
-  discovery:"Alexandra C. McPherron, Ann M. Lawler e Se-Jin Lee Â· Johns Hopkins University School of Medicine Â· Baltimore, Estados Unidos Â· descoberta publicada em 1997.",
-  sources:[
-   ["UniProt â€” GDF-8 / Myostatin humana (O14793)","https://www.uniprot.org/uniprotkb/O14793/entry"],
-   ["McPherron et al., Nature (1997)","https://pubmed.ncbi.nlm.nih.gov/9139826/"],
-   ["Estrutura do domÃ­nio maduro de miostatina","https://pubmed.ncbi.nlm.nih.gov/27625211/"]
-  ]
- },
- "hcg":{
-  classification:"HormÃ´nio glicoproteico heterodimÃ©rico composto por uma subunidade Î± comum Ã s gonadotrofinas e uma subunidade Î² especÃ­fica da gonadotrofina coriÃ´nica.",
-  sequence:"Forma madura: 92 aminoÃ¡cidos na subunidade Î± e 145 na subunidade Î². Ambas apresentam pontes dissulfeto e glicanos; as sequÃªncias e sÃ­tios de processamento constam dos registros UniProt P01215 e P01233.",
-  molecular:"A massa do heterodÃ­mero glicosilado varia conforme a composiÃ§Ã£o dos glicanos, tipicamente na faixa aproximada de 36â€“40 kDa. Por ser uma mistura de glicoformas, nÃ£o possui fÃ³rmula molecular Ãºnica.",
-  origin:"Identificada a partir da atividade gonadotrÃ³fica presente na urina durante a gestaÃ§Ã£o; a composiÃ§Ã£o em duas subunidades e suas sequÃªncias foram estabelecidas posteriormente.",
-  discovery:"Selmar Aschheim e Bernhard Zondek Â· CharitÃ©, Berlim, Alemanha Â· atividade hormonal associada Ã  gestaÃ§Ã£o descrita em 1927; estrutura proteica elucidada por mÃºltiplas equipes nas dÃ©cadas seguintes.",
-  sources:[
-   ["UniProt â€” subunidade Î± humana (P01215)","https://www.uniprot.org/uniprotkb/P01215/entry"],
-   ["UniProt â€” subunidade Î² de hCG (P01233)","https://www.uniprot.org/uniprotkb/P01233/entry"],
-   ["Lapthorn et al. â€” estrutura cristalina de hCG (1994)","https://www.nature.com/articles/369455a0"]
-  ]
- },
- "hgh-191aa-somatropina":{
-  classification:"ProteÃ­na recombinante de 191 aminoÃ¡cidos correspondente Ã  principal isoforma de 22 kDa da somatotropina humana madura.",
-  sequence:"Cadeia Ãºnica de 191 resÃ­duos com duas pontes dissulfeto intramoleculares. A sequÃªncia canÃ´nica completa e a numeraÃ§Ã£o dos resÃ­duos estÃ£o no registro UniProt P01241.",
-  molecular:"A cadeia madura possui massa molecular calculada de aproximadamente 22,12 kDa. Metionil-somatropina, agregados, variantes de sequÃªncia e modificaÃ§Ãµes de processo sÃ£o entidades analÃ­ticas distintas.",
-  origin:"A sequÃªncia primÃ¡ria do hormÃ´nio hipofisÃ¡rio foi estabelecida antes do desenvolvimento da expressÃ£o recombinante; uma sequÃªncia codificante foi expressa diretamente em Escherichia coli em 1979.",
-  discovery:"Choh Hao Li e colaboradores Â· University of California Â· estrutura primÃ¡ria; David Goeddel, Peter Seeburg e equipe da Genentech Â· South San Francisco, Estados Unidos Â· expressÃ£o recombinante publicada em 1979.",
-  sources:[
-   ["UniProt â€” Somatotropin humana (P01241)","https://www.uniprot.org/uniprotkb/P01241/entry"],
-   ["Li et al. â€” revisÃ£o da estrutura primÃ¡ria","https://pubmed.ncbi.nlm.nih.gov/5144027/"],
-   ["Goeddel et al., Nature (1979)","https://www.nature.com/articles/281544a0"]
-  ]
- },
- "hgh-fragmento-176-191":{
-  classification:"PeptÃ­deo sintÃ©tico correspondente ao segmento C-terminal 176â€“191 da somatotropina humana; 16 aminoÃ¡cidos com uma ponte dissulfeto intramolecular.",
-  sequence:"Tyrâ€“Leuâ€“Argâ€“Ileâ€“Valâ€“Glnâ€“Cysâ€“Argâ€“Serâ€“Valâ€“Gluâ€“Glyâ€“Serâ€“Cysâ€“Glyâ€“Phe (YLRIVQCRSVEGSCGF), com ponte dissulfeto entre Cysâ· e CysÂ¹â´. Algumas fontes descrevem a mesma construÃ§Ã£o como Tyr + hGH(177â€“191).",
-  molecular:"Para a cadeia YLRIVQCRSVEGSCGF oxidada: Câ‚‡â‚ˆHâ‚â‚‚â‚ƒNâ‚‚â‚ƒOâ‚‚â‚ƒSâ‚‚ Â· massa molecular calculada: aproximadamente 1.815,1 g/mol. Formas terminais e sais diferentes devem ser identificados separadamente.",
-  origin:"Delimitado a partir do extremo C-terminal do hormÃ´nio de crescimento em estudos de relaÃ§Ã£o entre estrutura e atividade; a convenÃ§Ã£o de numeraÃ§Ã£o deve acompanhar a sequÃªncia declarada.",
-  discovery:"Frank M. Ng e colaboradores Â· Monash University Â· Melbourne, AustrÃ¡lia Â· estudos do domÃ­nio C-terminal publicados a partir da dÃ©cada de 1980 e avaliaÃ§Ã£o do peptÃ­deo sintÃ©tico publicada em 1994.",
-  sources:[
-   ["PubChem â€” HGH Fragment 176â€“191","https://pubchem.ncbi.nlm.nih.gov/compound/172966176"],
-   ["Ng et al. â€” domÃ­nio C-terminal de hGH","https://pubmed.ncbi.nlm.nih.gov/6137122/"],
-   ["Estudo do peptÃ­deo sintÃ©tico hGH 177â€“191 (1994)","https://pubmed.ncbi.nlm.nih.gov/7987248/"]
-  ]
- },
- "igf-1-lr3":{
-  classification:"AnÃ¡logo recombinante de cadeia Ãºnica do IGF-1 humano com 83 aminoÃ¡cidos, extensÃ£o N-terminal de 13 resÃ­duos e substituiÃ§Ã£o GluÂ³â†’Arg.",
-  sequence:"Metâ€“Pheâ€“Proâ€“Alaâ€“Metâ€“Proâ€“Leuâ€“Serâ€“Serâ€“Leuâ€“Pheâ€“Valâ€“Asnâ€“Glyâ€“Proâ€“Argâ€“Thrâ€“Leuâ€“Cysâ€“Glyâ€“Alaâ€“Gluâ€“Leuâ€“Valâ€“Aspâ€“Alaâ€“Leuâ€“Glnâ€“Pheâ€“Valâ€“Cysâ€“Glyâ€“Aspâ€“Argâ€“Glyâ€“Pheâ€“Tyrâ€“Pheâ€“Asnâ€“Lysâ€“Proâ€“Thrâ€“Glyâ€“Tyrâ€“Glyâ€“Serâ€“Serâ€“Serâ€“Argâ€“Argâ€“Alaâ€“Proâ€“Glnâ€“Thrâ€“Glyâ€“Ileâ€“Valâ€“Aspâ€“Gluâ€“Cysâ€“Cysâ€“Pheâ€“Argâ€“Serâ€“Cysâ€“Aspâ€“Leuâ€“Argâ€“Argâ€“Leuâ€“Gluâ€“Metâ€“Tyrâ€“Cysâ€“Alaâ€“Proâ€“Leuâ€“Lysâ€“Proâ€“Alaâ€“Lysâ€“Serâ€“Ala.",
-  molecular:"PolipeptÃ­deo de 83 resÃ­duos com trÃªs pontes dissulfeto e massa calculada prÃ³xima de 9,11 kDa. FÃ³rmulas publicadas variam conforme representam a cadeia reduzida ou as pontes dissulfeto; a massa intacta deve ser confirmada analiticamente.",
-  origin:"Desenvolvido como variante longa de [ArgÂ³]IGF-I para reduzir a afinidade por proteÃ­nas ligantes de IGF, preservando o nÃºcleo estrutural de IGF-1.",
-  discovery:"Geoffrey Francis e colaboradores Â· GroPep e University of Adelaide Â· Adelaide, AustrÃ¡lia Â· desenvolvido no inÃ­cio da dÃ©cada de 1990; estrutura investigada por NMR e espectrometria de massa em trabalhos posteriores.",
-  sources:[
-   ["Estrutura de Long-[ArgÂ³]-IGF-I por NMR","https://pubmed.ncbi.nlm.nih.gov/9450557/"],
-   ["IntermediÃ¡rios de pontes dissulfeto em LR3IGF-I","https://pubmed.ncbi.nlm.nih.gov/10608814/"]
-  ]
- },
- "triptorrelina-acetato":{
-  classification:"DecapeptÃ­deo sintÃ©tico agonista de GnRH, tambÃ©m denominado [D-Trpâ¶]GnRH; a apresentaÃ§Ã£o em acetato contÃ©m contraÃ­on adicional.",
-  sequence:"pGluâ€“Hisâ€“Trpâ€“Serâ€“Tyrâ€“D-Trpâ€“Leuâ€“Argâ€“Proâ€“Glyâ€“NHâ‚‚. A D-triptofana na posiÃ§Ã£o 6 e as terminaÃ§Ãµes piroglutamil/amidada integram a identidade molecular.",
-  molecular:"Triptorelin acetato: Câ‚†â‚†Hâ‚ˆâ‚†Nâ‚â‚ˆOâ‚â‚… Â· massa molecular calculada: aproximadamente 1.371,5 g/mol. A base livre possui composiÃ§Ã£o e massa diferentes.",
-  origin:"Projetada por substituiÃ§Ã£o de Glyâ¶ do GnRH natural por D-triptofana, dentro da sÃ©rie de anÃ¡logos sintÃ©ticos de LH-RH desenvolvida na dÃ©cada de 1970.",
-  discovery:"Andrew V. Schally e colaboradores Â· Veterans Administration Hospital e Tulane University Â· New Orleans, Estados Unidos Â· estudos clÃ­nicos iniciais publicados em 1977.",
-  sources:[
-   ["PubChem â€” Triptorelin acetate","https://pubchem.ncbi.nlm.nih.gov/compound/25080282"],
-   ["Estudo inicial de [D-Trpâ¶]-LH-RH (1977)","https://pubmed.ncbi.nlm.nih.gov/20415/"]
-  ]
- },
- "ace-031":{
-  classification:"ProteÃ­na de fusÃ£o recombinante experimental: domÃ­nio extracelular do receptor humano de activina tipo IIB (ActRIIB/ACVR2B) ligado Ã  regiÃ£o Fc de IgG1 humana.",
-  sequence:"ACE-031 Ã© uma glicoproteÃ­na dimÃ©rica, nÃ£o um peptÃ­deo linear curto. A identidade depende da sequÃªncia do construto ActRIIB-Fc, das pontes dissulfeto, da glicosilaÃ§Ã£o e do sistema de expressÃ£o; a sequÃªncia integral deve ser confirmada no certificado analÃ­tico da preparaÃ§Ã£o.",
-  molecular:"A massa aparente Ã© dependente da glicosilaÃ§Ã£o e do estado dimÃ©rico, aproximadamente 100â€“130 kDa segundo a preparaÃ§Ã£o. NÃ£o existe fÃ³rmula molecular Ãºnica aplicÃ¡vel a todas as glicoformas.",
-  origin:"Desenvolvida pela Acceleron Pharma como receptor-solÃºvel de captura para ligantes da superfamÃ­lia TGF-Î², incluindo miostatina e activinas; estudos prÃ©-clÃ­nicos foram publicados em 2010 e o estudo de dose Ãºnica em 2013.",
-  discovery:"Kenneth Attie, Jas Seehra, Matthew Sherman e colaboradores Â· Acceleron Pharma Â· Cambridge, Massachusetts, Estados Unidos.",
-  sources:[
-   ["Lach-Trifilieff et al. â€” caracterizaÃ§Ã£o prÃ©-clÃ­nica do ActRIIB solÃºvel (2010)","https://pubmed.ncbi.nlm.nih.gov/20466801/"],
-   ["Attie et al. â€” estudo de dose Ãºnica de ACE-031 (2013)","https://pubmed.ncbi.nlm.nih.gov/23169607/"]
-  ]
- },
- "adipotide":{
-  classification:"PeptÃ­deo quimÃ©rico experimental direcionado Ã  vasculatura do tecido adiposo, composto por um motivo de homing ligado a uma sequÃªncia prÃ³-apoptÃ³tica de D-aminoÃ¡cidos.",
-  sequence:"CKGGRAKDCâ€“GGâ€“D(KLAKLAK)â‚‚. O motivo CKGGRAKDC pode ser apresentado ciclado por ponte dissulfeto; a notaÃ§Ã£o D indica a construÃ§Ã£o prÃ³-apoptÃ³tica com aminoÃ¡cidos de configuraÃ§Ã£o D.",
-  molecular:"O registro PubChem da forma molecular informa Câ‚â‚â‚Hâ‚‚â‚€â‚†Nâ‚ƒâ‚†Oâ‚‚â‚ˆSâ‚‚, com massa aproximada de 2.557,2 g/mol. A forma oxidada/cÃ­clica, contraÃ­ons e sais apresentam composiÃ§Ã£o diferente.",
-  origin:"Derivado de seleÃ§Ã£o de peptÃ­deos que reconhecem proibitina na vasculatura do tecido adiposo, acoplados ao motivo mitocondriotÃ³xico D(KLAKLAK)â‚‚; a construÃ§Ã£o foi descrita em 2004.",
-  discovery:"Mikhail Kolonin, Renata Pasqualini, Wadih Arap e colaboradores Â· University of Texas M. D. Anderson Cancer Center Â· Houston, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Adipotide","https://pubchem.ncbi.nlm.nih.gov/compound/163360068"],
-   ["Kolonin et al., Nature Medicine (2004)","https://www.nature.com/articles/nm1048"]
-  ]
- },
- "bpc-157-plus-tb-500":{
-  classification:"Blend fÃ­sico de dois materiais de pesquisa: BPC-157 e material comercialmente denominado TB-500. NÃ£o constitui uma nova entidade molecular.",
-  sequence:"O BPC-157 possui a sequÃªncia GEPPPGKPADDAGLV. A denominaÃ§Ã£o TB-500 Ã© usada de modo inconsistente para timosina Î²4 integral e para fragmentos relacionados; a identidade do segundo componente deve ser confirmada por sequÃªncia e certificado analÃ­tico.",
-  molecular:"Misturas nÃ£o possuem fÃ³rmula ou massa molecular Ãºnica. Cada componente deve ser caracterizado separadamente; proporÃ§Ã£o, sais, hidrataÃ§Ã£o e identidade exata do material TB-500 alteram a composiÃ§Ã£o do vial.",
-  origin:"CombinaÃ§Ã£o comercial posterior de dois materiais estudados separadamente. NÃ£o hÃ¡ descoberta cientÃ­fica Ãºnica atribuÃ­vel ao blend como molÃ©cula.",
-  discovery:"BPC-157: grupo de Predrag Sikiric, Universidade de Zagreb. Timosina Î²4: isolada e caracterizada por grupos liderados por Allan Goldstein; a designaÃ§Ã£o comercial TB-500 requer confirmaÃ§Ã£o por lote.",
-  sources:[
-   ["PubChem â€” BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
-   ["UniProt â€” Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
-  ]
- },
- "cagrilintida-plus-semaglutida":{
-  classification:"Blend fÃ­sico de cagrilintida e semaglutida, dois peptÃ­deos sintÃ©ticos acilados distintos. A mistura nÃ£o forma uma entidade molecular Ãºnica.",
-  sequence:"Cada componente mantÃ©m sua prÃ³pria estrutura modificada, acilaÃ§Ã£o e perfil analÃ­tico. Uma sequÃªncia Ãºnica nÃ£o descreve o blend; identidade e proporÃ§Ã£o devem ser verificadas separadamente.",
-  molecular:"NÃ£o hÃ¡ fÃ³rmula ou massa molecular Ãºnica para a mistura. Semaglutida: aproximadamente 4.113,6 g/mol; cagrilintida: aproximadamente 4.410 g/mol, antes de considerar sais, solvatos e proporÃ§Ã£o do blend.",
-  origin:"CombinaÃ§Ã£o investigacional conhecida como CagriSema foi desenvolvida pela Novo Nordisk a partir de duas molÃ©culas previamente caracterizadas e estudadas separadamente.",
-  discovery:"Equipes de pesquisa da Novo Nordisk A/S Â· Dinamarca. A combinaÃ§Ã£o Ã© uma estratÃ©gia de coformulaÃ§Ã£o, nÃ£o a descoberta de uma nova cadeia peptÃ­dica.",
-  sources:[
-   ["PubChem â€” Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"],
-   ["PubChem â€” Semaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Semaglutide"],
-   ["Lau et al. â€” cagrilintida, The Lancet (2021)","https://pubmed.ncbi.nlm.nih.gov/34798059/"]
-  ]
- },
- "cjc-1295-ipamorelina":{
-  classification:"Blend fÃ­sico de um anÃ¡logo de GHRH da famÃ­lia CJC-1295 e ipamorelina. A mistura nÃ£o constitui uma molÃ©cula covalente nova.",
-  sequence:"A identidade do componente CJC-1295 deve especificar com ou sem DAC. Ipamorelina: Aibâ€“Hisâ€“D-2-Nalâ€“D-Pheâ€“Lysâ€“NHâ‚‚. NÃ£o existe sequÃªncia Ãºnica para o blend.",
-  molecular:"Misturas nÃ£o possuem fÃ³rmula ou massa molecular Ãºnica. O valor depende da variante de CJC-1295, da proporÃ§Ã£o entre componentes, dos sais e dos solvatos presentes.",
-  origin:"CombinaÃ§Ã£o comercial de dois secretagogos pesquisados separadamente; a famÃ­lia CJC-1295 foi desenvolvida pela ConjuChem e a ipamorelina, pela Novo Nordisk.",
-  discovery:"CJC-1295: LÃ©once JettÃ© e colaboradores Â· ConjuChem, Montreal, CanadÃ¡. Ipamorelina: Kirsten Raun e colaboradores Â· Novo Nordisk, Dinamarca.",
-  sources:[
-   ["JettÃ© et al. â€” CJC-1295, Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"],
-   ["PubChem â€” Ipamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Ipamorelin"],
-   ["Raun et al. â€” ipamorelina (1998)","https://pubmed.ncbi.nlm.nih.gov/9849822/"]
-  ]
- },
- "foxo4-dri":{
-  classification:"PeptÃ­deo experimental D-retro-inverso desenhado para interferir na interaÃ§Ã£o proteÃ­na-proteÃ­na entre FOXO4 e p53 em cÃ©lulas senescentes.",
-  sequence:"ConstruÃ§Ã£o composta por D-aminoÃ¡cidos em ordem retro-inversa em relaÃ§Ã£o a uma regiÃ£o de interaÃ§Ã£o de FOXO4. A publicaÃ§Ã£o primÃ¡ria descreve o princÃ­pio e o construto experimental, mas fontes secundÃ¡rias divergem quanto Ã  sequÃªncia comercial integral; o lote deve ser confirmado por certificado analÃ­tico.",
-  molecular:"NÃ£o foi atribuÃ­da aqui fÃ³rmula ou massa Ãºnica porque a sequÃªncia integral e as terminaÃ§Ãµes das preparaÃ§Ãµes comerciais nÃ£o estÃ£o consolidadas em registro quÃ­mico primÃ¡rio. Esses campos exigem confirmaÃ§Ã£o especÃ­fica do lote.",
-  origin:"Projetado no Erasmus University Medical Center e descrito em 2017 como ferramenta experimental para romper a interaÃ§Ã£o FOXO4â€“p53 em modelos celulares e animais de senescÃªncia.",
-  discovery:"M. P. Baar, R. M. C. Brandt, D. A. Putavet, Peter L. J. de Keizer e colaboradores Â· Erasmus MC Â· Rotterdam, PaÃ­ses Baixos.",
-  sources:[
-   ["Baar et al., Cell (2017)","https://pubmed.ncbi.nlm.nih.gov/28340339/"]
-  ]
- },
- "igf-1-des":{
-  classification:"ProteÃ­na truncada de 67 aminoÃ¡cidos derivada do IGF-1 humano, tambÃ©m denominada des(1â€“3)IGF-I, por ausÃªncia dos trÃªs resÃ­duos N-terminais da cadeia madura.",
-  sequence:"Thrâ€“Leuâ€“Cysâ€“Glyâ€“Alaâ€“Gluâ€“Leuâ€“Valâ€“Aspâ€“Alaâ€“Leuâ€“Glnâ€“Pheâ€“Valâ€“Cysâ€“Glyâ€“Aspâ€“Argâ€“Glyâ€“Pheâ€“Tyrâ€“Pheâ€“Asnâ€“Lysâ€“Proâ€“Thrâ€“Glyâ€“Tyrâ€“Glyâ€“Serâ€“Serâ€“Serâ€“Argâ€“Argâ€“Alaâ€“Proâ€“Glnâ€“Thrâ€“Glyâ€“Ileâ€“Valâ€“Aspâ€“Gluâ€“Cysâ€“Cysâ€“Pheâ€“Argâ€“Serâ€“Cysâ€“Aspâ€“Leuâ€“Argâ€“Argâ€“Leuâ€“Gluâ€“Metâ€“Tyrâ€“Cysâ€“Alaâ€“Proâ€“Leuâ€“Lysâ€“Proâ€“Alaâ€“Lysâ€“Serâ€“Ala.",
-  molecular:"PolipeptÃ­deo de 67 resÃ­duos e trÃªs pontes dissulfeto, com massa aproximada de 7,37 kDa. A massa exata depende do estado redox, das terminaÃ§Ãµes e de eventuais modificaÃ§Ãµes da preparaÃ§Ã£o.",
-  origin:"Forma truncada produzida por remoÃ§Ã£o proteolÃ­tica dos trÃªs resÃ­duos N-terminais do IGF-1; sua geraÃ§Ã£o em soro por uma protease Ã¡cida foi descrita em 1994.",
-  discovery:"Francis J. Ballard e colaboradores Â· CSIRO Division of Human Nutrition Â· Adelaide, AustrÃ¡lia Â· caracterizaÃ§Ã£o funcional publicada em 1989; a geraÃ§Ã£o proteolÃ­tica foi detalhada por grupos japoneses em 1994.",
-  sources:[
-   ["UniProt â€” IGF-1 humano (P05019)","https://www.uniprot.org/uniprotkb/P05019/entry"],
-   ["Yamamoto et al. â€” geraÃ§Ã£o de des(1â€“3)IGF-I (1994)","https://pubmed.ncbi.nlm.nih.gov/7988428/"],
-   ["Ballard et al. â€” papel do N-terminal de IGF-I (1989)","https://pubmed.ncbi.nlm.nih.gov/2730580/"]
-  ]
- },
- "matrixyl":{
-  classification:"DesignaÃ§Ã£o comercial historicamente associada ao palmitoil pentapeptÃ­deo-4 (Pal-KTTKS), um lipopeptÃ­deo cosmÃ©tico. Produtos chamados Matrixyl podem conter outros complexos e exigem confirmaÃ§Ã£o do ativo.",
-  sequence:"Palmitoilâ€“Lysâ€“Thrâ€“Thrâ€“Lysâ€“Ser (Pal-KTTKS). A cadeia C16 estÃ¡ ligada ao grupo amino N-terminal do pentapeptÃ­deo.",
-  molecular:"Palmitoil pentapeptÃ­deo-4: Câ‚ƒâ‚‰Hâ‚‡â‚…Nâ‚‡Oâ‚â‚€ Â· massa molecular calculada: aproximadamente 802,1 g/mol. Esta identificaÃ§Ã£o sÃ³ se aplica quando o certificado confirma Pal-KTTKS.",
-  origin:"O pentapeptÃ­deo KTTKS foi derivado de uma sequÃªncia de procolÃ¡geno e posteriormente palmitoilado para uso cosmÃ©tico; o ingrediente Matrixyl foi introduzido pela Sederma por volta de 2000.",
-  discovery:"Equipe de pesquisa da Sederma/Croda Â· FranÃ§a; estudos clÃ­nicos e instrumentais do palmitoil pentapeptÃ­deo foram publicados na dÃ©cada de 2000.",
-  sources:[
-   ["PubChem â€” Palmitoyl pentapeptide-4","https://pubchem.ncbi.nlm.nih.gov/compound/9897237"],
-   ["Robinson et al. â€” estudo clÃ­nico do palmitoil pentapeptÃ­deo","https://pubmed.ncbi.nlm.nih.gov/18492182/"]
-  ]
- },
- "slu-pp-332":{
-  classification:"Pequena molÃ©cula sintÃ©tica experimental; agonista pan dos receptores nucleares relacionados ao estrogÃªnio ERRÎ±, ERRÎ² e ERRÎ³, com maior potÃªncia reportada para ERRÎ±.",
-  sequence:"NÃ£o aplicÃ¡vel: SLU-PP-332 nÃ£o Ã© peptÃ­deo nem proteÃ­na, portanto nÃ£o possui sequÃªncia de aminoÃ¡cidos.",
-  molecular:"Câ‚â‚ˆHâ‚â‚„Nâ‚‚Oâ‚‚ Â· massa molecular calculada: aproximadamente 290,32 g/mol.",
-  origin:"Identificada como ferramenta quÃ­mica durante um programa de desenvolvimento de agonistas sintÃ©ticos de ERR com atividade in vivo; a caracterizaÃ§Ã£o principal foi publicada em 2023.",
-  discovery:"Cyrielle Billon, Sadichha Sitaula, Bahaa Elgendy, Thomas Burris e colaboradores Â· Saint Louis University e instituiÃ§Ãµes colaboradoras Â· Estados Unidos.",
-  sources:[
-   ["PubChem â€” SLU-PP-332","https://pubchem.ncbi.nlm.nih.gov/compound/5338394"],
-   ["Billon et al., ACS Chemical Biology (2023)","https://pubmed.ncbi.nlm.nih.gov/36988910/"]
-  ]
- },
- "snap-8":{
-  classification:"OctapeptÃ­deo sintÃ©tico acetilado, tambÃ©m denominado acetyl octapeptide-3, desenvolvido no contexto de peptÃ­deos cosmÃ©ticos derivados de regiÃµes de SNAP-25.",
-  sequence:"Acâ€“Gluâ€“Gluâ€“Metâ€“Glnâ€“Argâ€“Argâ€“Alaâ€“Aspâ€“NHâ‚‚ (Ac-EEMQRRAD-NHâ‚‚) para a forma amidada usualmente associada a SNAP-8. Registros quÃ­micos tambÃ©m incluem variantes terminais distintas.",
-  molecular:"Para o registro PubChem CID 71587832: Câ‚„â‚‚Hâ‚‡â‚‚Nâ‚â‚†Oâ‚â‚…S Â· massa monoisotÃ³pica aproximada de 1.072,51 Da e massa molecular mÃ©dia prÃ³xima de 1.073,2 g/mol. Outra terminaÃ§Ã£o gera composiÃ§Ã£o diferente.",
-  origin:"Desenvolvido como extensÃ£o do conceito de peptÃ­deos derivados de SNAP-25 investigados pela Lipotec; a literatura independente especÃ­fica de SNAP-8 Ã© limitada e a identificaÃ§Ã£o deve ser confirmada por sequÃªncia.",
-  discovery:"Equipe de pesquisa da Lipotec, Barcelona, Espanha Â· desenvolvimento comercial posterior ao trabalho com acetyl hexapeptide-8 publicado por Clara Blanes-Mira e colaboradores em 2002.",
-  sources:[
-   ["PubChem â€” Acetyl octapeptide-3","https://pubchem.ncbi.nlm.nih.gov/compound/71587832"],
-   ["Blanes-Mira et al. â€” precursor conceitual derivado de SNAP-25 (2002)","https://pubmed.ncbi.nlm.nih.gov/18498523/"]
-  ]
- },
- "cerebrolisina":{
-  classification:"FraÃ§Ã£o proteolÃ­tica complexa derivada de proteÃ­nas de cÃ©rebro suÃ­no; mistura padronizada de peptÃ­deos curtos e aminoÃ¡cidos, nÃ£o uma molÃ©cula peptÃ­dica Ãºnica.",
-  sequence:"NÃ£o aplicÃ¡vel como sequÃªncia Ãºnica. A preparaÃ§Ã£o contÃ©m mÃºltiplas espÃ©cies peptÃ­dicas de cadeia curta; a identidade analÃ­tica Ã© definida por perfil da mistura e especificaÃ§Ãµes de fabricaÃ§Ã£o.",
-  molecular:"NÃ£o possui fÃ³rmula ou massa molecular Ãºnica. A informaÃ§Ã£o oficial descreve 215,2 mg/ml de fraÃ§Ã£o peptÃ­dica proteolÃ­tica de proteÃ­na cerebral suÃ­na; cada componente da mistura possui massa prÃ³pria.",
-  origin:"PreparaÃ§Ã£o biotecnolÃ³gica desenvolvida na Ãustria e atualmente fabricada pela EVER Neuro Pharma. A autorizaÃ§Ã£o austrÃ­aca registrada para a formulaÃ§Ã£o data de 1996.",
-  discovery:"Programa industrial da EBEWE/EVER Neuro Pharma Â· Unterach, Ãustria. NÃ£o hÃ¡ um Ãºnico descobridor molecular, pois se trata de uma fraÃ§Ã£o biolÃ³gica proprietÃ¡ria.",
-  sources:[
-   ["EVER Pharma â€” resumo oficial das caracterÃ­sticas do produto","https://www.everpharma.com/aut/wp-content/uploads/sites/5/2023/01/Cere-SPC_v_ev1_AT_5.1_clean-1.pdf"],
-   ["EVER Pharma â€” pÃ¡gina oficial do produto","https://www.everpharma.com/products/cerebrolysin/"]
-  ]
- },
- "glow-70":{
-  classification:"Blend fÃ­sico de BPC-157, GHK-Cu e material comercialmente denominado TB-500. NÃ£o constitui uma nova entidade molecular.",
-  sequence:"BPC-157: GEPPPGKPADDAGLV. GHK-Cu: complexo Cu(II)â€“Glyâ€“Hisâ€“Lys. A identidade de TB-500 varia entre fornecedores e deve ser confirmada por sequÃªncia e certificado analÃ­tico.",
-  molecular:"Misturas nÃ£o possuem fÃ³rmula ou massa molecular Ãºnica. Cada componente, proporÃ§Ã£o, sal, estado de hidrataÃ§Ã£o e forma do complexo de cobre devem ser caracterizados separadamente.",
-  origin:"CombinaÃ§Ã£o comercial posterior de trÃªs materiais estudados de forma independente; nÃ£o existe descoberta cientÃ­fica Ãºnica para o blend GLOW.",
-  discovery:"BPC-157: grupo de Predrag Sikiric. GHK-Cu: Loren Pickart e colaboradores. Timosina Î²4: Allan Goldstein e colaboradores; a designaÃ§Ã£o TB-500 requer confirmaÃ§Ã£o por lote.",
-  sources:[
-   ["PubChem â€” BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
-   ["PubChem â€” Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
-   ["UniProt â€” Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
-  ]
- },
- "hmg":{
-  classification:"Menotropinas (gonadotrofina menopausal humana): preparaÃ§Ã£o biolÃ³gica urinÃ¡ria contendo atividades de FSH e LH/hCG, composta por glicoproteÃ­nas e outras proteÃ­nas residuais.",
-  sequence:"NÃ£o existe sequÃªncia Ãºnica para HMG. FSH e LH sÃ£o heterodÃ­meros glicosilados com subunidade Î± comum e subunidades Î² distintas; preparaÃ§Ãµes urinÃ¡rias tambÃ©m podem conter atividade de hCG.",
-  molecular:"NÃ£o possui fÃ³rmula ou massa molecular Ãºnica. As gonadotrofinas sÃ£o misturas de glicoformas cuja massa varia com os glicanos e com a proporÃ§Ã£o de FSH, LH/hCG e proteÃ­nas acompanhantes.",
-  origin:"Desenvolvida a partir da extraÃ§Ã£o e purificaÃ§Ã£o de gonadotrofinas presentes na urina de mulheres pÃ³s-menopÃ¡usicas; o produto histÃ³rico Pergonal foi introduzido pela Serono no inÃ­cio da dÃ©cada de 1960.",
-  discovery:"Bruno Lunenfeld, Gemzell e colaboradores Â· programa internacional de gonadotrofinas menopausais ligado Ã  Serono Â· Europa/Israel, final da dÃ©cada de 1950 e inÃ­cio da de 1960.",
-  sources:[
-   ["DailyMed â€” MENOPUR (menotropins), informaÃ§Ã£o oficial","https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=22c8db95-c3db-1770-8086-31356fbabe35"],
-   ["Lunenfeld et al. â€” resultados histÃ³ricos com HMG","https://pubmed.ncbi.nlm.nih.gov/6023499/"],
-   ["Duijkers et al. â€” caracterizaÃ§Ã£o farmacocinÃ©tica de preparaÃ§Ãµes HMG","https://pubmed.ncbi.nlm.nih.gov/7593498/"]
-  ]
- },
- "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv":{
-  classification:"Blend fÃ­sico de BPC-157, GHK-Cu, material denominado TB-500 e KPV. A mistura nÃ£o Ã© uma entidade molecular covalente nova.",
-  sequence:"BPC-157: GEPPPGKPADDAGLV. GHK-Cu: Cu(II)â€“Glyâ€“Hisâ€“Lys. KPV: Lysâ€“Proâ€“Val. TB-500 exige confirmaÃ§Ã£o independente da sequÃªncia e da forma quÃ­mica.",
-  molecular:"NÃ£o hÃ¡ fÃ³rmula ou massa molecular Ãºnica para o blend. Os quatro componentes, suas proporÃ§Ãµes, sais, complexaÃ§Ã£o do cobre e hidrataÃ§Ã£o precisam ser descritos separadamente no certificado analÃ­tico.",
-  origin:"CombinaÃ§Ã£o comercial de quatro materiais de pesquisa previamente descritos de forma independente; nÃ£o possui uma descoberta cientÃ­fica Ãºnica como blend.",
-  discovery:"BPC-157: grupo de Predrag Sikiric. GHK-Cu: Loren Pickart. KPV: trabalhos de relaÃ§Ã£o estruturaâ€“atividade de Î±-MSH por Victor Hruby e colaboradores. TB-500: identidade dependente do lote.",
-  sources:[
-   ["PubChem â€” BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
-   ["PubChem â€” Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
-   ["PubChem â€” KPV","https://pubchem.ncbi.nlm.nih.gov/compound/L-Lysyl-L-prolyl-L-valine"],
-   ["UniProt â€” Timosina beta-4 humana","https://www.uniprot.org/uniprotkb/P62328/entry"]
-  ]
- },
- "mgf":{
-  classification:"DesignaÃ§Ã£o associada ao mechano growth factor, variante de splicing IGF-1Ec e, no mercado de pesquisa, tambÃ©m a peptÃ­deos sintÃ©ticos derivados de seu domÃ­nio E. Essas entidades nÃ£o sÃ£o equivalentes.",
-  sequence:"A proteÃ­na IGF-1Ec completa deriva de splicing alternativo do gene IGF1. Materiais vendidos como MGF podem conter apenas um peptÃ­deo do domÃ­nio E; sem sequÃªncia e certificado analÃ­tico, nÃ£o Ã© possÃ­vel atribuir uma cadeia Ãºnica ao item.",
-  molecular:"NÃ£o hÃ¡ fÃ³rmula ou massa molecular Ãºnica para a denominaÃ§Ã£o MGF. A proteÃ­na precursora IGF-1Ec, peptÃ­deos do domÃ­nio E e variantes sintÃ©ticas possuem massas e terminaÃ§Ãµes diferentes.",
-  origin:"A expressÃ£o de uma variante de IGF-I sensÃ­vel a carga mecÃ¢nica foi descrita em estudos de mÃºsculo por Geoffrey Goldspink e colaboradores, e posteriormente denominada mechano growth factor.",
-  discovery:"Geoffrey Goldspink, Geoffrey F. McKoy, Simon Yang e colaboradores Â· Royal Free and University College Medical School Â· Londres, Reino Unido Â· dÃ©cada de 1990/inÃ­cio dos anos 2000.",
-  sources:[
-   ["Yang et al. â€” splicing de IGF-I e MGF em mÃºsculo (2003)","https://pubmed.ncbi.nlm.nih.gov/12692175/"],
-   ["Goldspink et al. â€” expressÃ£o de MGF e perda muscular (2006)","https://pubmed.ncbi.nlm.nih.gov/16463438/"]
-  ]
- },
- "peg-mgf":{
-  classification:"DenominaÃ§Ã£o comercial para uma forma PEGuilada de material associado a MGF. NÃ£o existe uma entidade pÃºblica Ãºnica e universalmente padronizada sob o nome PEG-MGF.",
-  sequence:"A sequÃªncia do componente peptÃ­dico, o sÃ­tio de PEGuilaÃ§Ã£o, o tamanho e a distribuiÃ§Ã£o do polÃ­mero precisam ser declarados pelo fabricante. Sem esses dados, uma sequÃªncia Ãºnica nÃ£o pode ser atribuÃ­da.",
-  molecular:"A PEGuilaÃ§Ã£o produz massa dependente do polÃ­mero e, frequentemente, uma distribuiÃ§Ã£o de massas. NÃ£o hÃ¡ fÃ³rmula ou massa molecular Ãºnica sem especificar peptÃ­deo, PEG, sÃ­tio de conjugaÃ§Ã£o e grau de substituiÃ§Ã£o.",
-  origin:"ConstruÃ§Ã£o comercial posterior aos estudos da variante IGF-1Ec/MGF, usando PEGuilaÃ§Ã£o como estratÃ©gia de modificaÃ§Ã£o farmacocinÃ©tica; nÃ£o hÃ¡ publicaÃ§Ã£o primÃ¡ria que estabeleÃ§a um padrÃ£o universal para PEG-MGF comercial.",
-  discovery:"MGF: Geoffrey Goldspink e colaboradores Â· Londres, Reino Unido. A versÃ£o PEGuilada varia por fabricante e deve ser atribuÃ­da ao construto documentado no certificado do lote.",
-  sources:[
-   ["Yang et al. â€” variante IGF-I/MGF (2003)","https://pubmed.ncbi.nlm.nih.gov/12692175/"],
-   ["Goldspink et al. â€” MGF e splicing de IGF-I (2006)","https://pubmed.ncbi.nlm.nih.gov/16463438/"]
-  ]
- },
- "retatrutida-plus-cagrilintida":{
-  classification:"Blend fÃ­sico experimental de retatrutida e cagrilintida, dois peptÃ­deos sintÃ©ticos acilados distintos. NÃ£o constitui uma nova molÃ©cula Ãºnica.",
-  sequence:"Cada componente preserva sua estrutura modificada e seu conjugado lipÃ­dico. Uma sequÃªncia Ãºnica nÃ£o descreve a mistura; identidade e proporÃ§Ã£o precisam ser verificadas separadamente.",
-  molecular:"NÃ£o hÃ¡ fÃ³rmula ou massa molecular Ãºnica para o blend. Retatrutida: aproximadamente 4.731 g/mol; cagrilintida: aproximadamente 4.410 g/mol, antes de sais, solvatos e proporÃ§Ã£o da mistura.",
-  origin:"CombinaÃ§Ã£o comercial de molÃ©culas desenvolvidas separadamente por Eli Lilly e Novo Nordisk. NÃ£o foi localizada uma designaÃ§Ã£o clÃ­nica padronizada para esse blend como nova entidade.",
-  discovery:"Retatrutida: Tamer Coskun e equipe da Eli Lilly, Estados Unidos. Cagrilintida: equipe da Novo Nordisk, Dinamarca.",
-  sources:[
-   ["PubChem â€” Retatrutide","https://pubchem.ncbi.nlm.nih.gov/compound/Retatrutide"],
-   ["Coskun et al. â€” retatrutida (2022)","https://pubmed.ncbi.nlm.nih.gov/35985340/"],
-   ["PubChem â€” Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"]
-  ]
- },
- "retatrutida-plus-tirzepatida":{
-  classification:"Blend fÃ­sico experimental de retatrutida e tirzepatida, dois peptÃ­deos sintÃ©ticos acilados distintos. NÃ£o constitui uma entidade molecular Ãºnica.",
-  sequence:"Cada componente mantÃ©m cadeia, aminoÃ¡cidos nÃ£o codificados e conjugaÃ§Ã£o lipÃ­dica prÃ³prios. NÃ£o existe sequÃªncia Ãºnica aplicÃ¡vel ao blend.",
-  molecular:"Misturas nÃ£o possuem fÃ³rmula ou massa molecular Ãºnica. Retatrutida: aproximadamente 4.731 g/mol; tirzepatida: aproximadamente 4.813 g/mol, antes de considerar sais, solvatos e proporÃ§Ã£o.",
-  origin:"CombinaÃ§Ã£o comercial de duas molÃ©culas desenvolvidas separadamente pela Eli Lilly. NÃ£o foi localizada uma coformulaÃ§Ã£o clÃ­nica padronizada sob esta denominaÃ§Ã£o.",
-  discovery:"Equipes da Eli Lilly and Company Â· Indianapolis, Estados Unidos; tirzepatida descrita clinicamente em 2018 e retatrutida caracterizada em 2022.",
-  sources:[
-   ["PubChem â€” Retatrutide","https://pubchem.ncbi.nlm.nih.gov/compound/Retatrutide"],
-   ["PubChem â€” Tirzepatide","https://pubchem.ncbi.nlm.nih.gov/compound/156588324"],
-   ["Frias et al. â€” tirzepatida (2018)","https://pubmed.ncbi.nlm.nih.gov/30293770/"]
-  ]
- },
- "tb-500":{
-  classification:"DenominaÃ§Ã£o comercial historicamente associada a material relacionado Ã  timosina Î²4; anÃ¡lises publicadas tambÃ©m identificaram sob o nome TB-500 o fragmento N-acetilado 17â€“23. A identidade nÃ£o deve ser presumida.",
-  sequence:"Timosina Î²4 humana integral possui 43 aminoÃ¡cidos. O fragmento identificado em produto TB-500 Ã© Acâ€“Leuâ€“Lysâ€“Lysâ€“Thrâ€“Gluâ€“Thrâ€“Gln (Ac-LKKTETQ). O certificado do lote deve declarar qual entidade estÃ¡ presente.",
-  molecular:"NÃ£o existe fÃ³rmula ou massa Ãºnica para o nome TB-500 sem definiÃ§Ã£o da entidade. Timosina Î²4 integral e fragmento Ac-LKKTETQ sÃ£o compostos distintos, assim como seus sais e solvatos.",
-  origin:"A timosina Î²4 foi quimicamente caracterizada por grupos de Allan Goldstein no inÃ­cio da dÃ©cada de 1980; a identificaÃ§Ã£o analÃ­tica do fragmento 17â€“23 em produto TB-500 foi publicada em 2012.",
-  discovery:"Timosina Î²4: Allan L. Goldstein e colaboradores Â· George Washington University Â· Estados Unidos. Fragmento em TB-500: Mario Thevis e colaboradores Â· German Sport University Cologne Â· Alemanha.",
-  sources:[
-   ["UniProt â€” Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"],
-   ["Hannappel et al. â€” caracterizaÃ§Ã£o quÃ­mica da timosina Î²4","https://pubmed.ncbi.nlm.nih.gov/7054160/"],
-   ["Thevis et al. â€” fragmento 17â€“23 identificado em TB-500","https://pubmed.ncbi.nlm.nih.gov/22962027/"]
-  ]
- },
- "tb-500-fragmento":{
-  classification:"PeptÃ­deo sintÃ©tico correspondente ao fragmento N-acetilado 17â€“23 da timosina Î²4, quando a identidade do lote Ã© confirmada como Ac-LKKTETQ.",
-  sequence:"Acâ€“Leuâ€“Lysâ€“Lysâ€“Thrâ€“Gluâ€“Thrâ€“Gln (Ac-LKKTETQ). TerminaÃ§Ã£o C-terminal e contraÃ­ons devem ser confirmados no certificado analÃ­tico.",
-  molecular:"A massa e a fÃ³rmula dependem de a terminaÃ§Ã£o C-terminal ser Ã¡cido ou amida e do sal presente. Por isso, o valor exato deve ser reportado pelo lote, nÃ£o inferido apenas do nome comercial.",
-  origin:"Derivado dos resÃ­duos 17â€“23 da timosina Î²4 humana; a sÃ­ntese e a caracterizaÃ§Ã£o do fragmento N-acetilado encontrado em produto TB-500 foram publicadas em 2012.",
-  discovery:"Mario Thevis, Andreas Thomas e colaboradores Â· Center for Preventive Doping Research, German Sport University Cologne Â· ColÃ´nia, Alemanha.",
-  sources:[
-   ["Thevis et al. â€” sÃ­ntese e caracterizaÃ§Ã£o de Ac-TÎ²4(17â€“23)","https://pubmed.ncbi.nlm.nih.gov/22962027/"],
-   ["UniProt â€” Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
-  ]
- },
- "epitalon-n-acetil-amidato":{
-  classification:"AnÃ¡logo sintÃ©tico do tetrapeptÃ­deo Epitalon/AEDG com modificaÃ§Ã£o N-terminal acetilada e terminaÃ§Ã£o C-terminal amidada, conforme a denominaÃ§Ã£o comercial do item.",
-  sequence:"Acâ€“Alaâ€“Gluâ€“Aspâ€“Glyâ€“NHâ‚‚ (Ac-AEDG-NHâ‚‚) Ã© a estrutura indicada pelo nome do produto. A literatura primÃ¡ria concentra-se no Epitalon nÃ£o modificado, AEDG; a forma duplamente modificada precisa ser confirmada por certificado analÃ­tico do lote.",
-  molecular:"NÃ£o foi localizado registro quÃ­mico primÃ¡rio consolidado para Ac-AEDG-NHâ‚‚. O registro oficial de N-acetil Epitalon sem amidamento informa Câ‚â‚†Hâ‚‚â‚„Nâ‚„Oâ‚â‚€ e 432,38 g/mol, mas nÃ£o Ã© equivalente Ã  forma N-acetil amidada; por isso, nenhuma massa exata Ã© atribuÃ­da aqui ao produto.",
-  origin:"Derivado comercial posterior do Epitalon, tetrapeptÃ­deo AEDG investigado pelo programa de peptÃ­deos regulatÃ³rios do Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  discovery:"Epitalon/AEDG: Vladimir Khavinson e colaboradores Â· SÃ£o Petersburgo, RÃºssia. NÃ£o foi localizada atribuiÃ§Ã£o primÃ¡ria independente para a criaÃ§Ã£o da variante N-acetil amidada.",
-  sources:[
-   ["NCATS Inxight â€” N-acetil Epitalon (sem amidamento)","https://drugs.ncats.io/substance/UXR7AF6R4F"],
-   ["Khavinson et al. â€” pesquisa com AEDG/Epitalon","https://pubmed.ncbi.nlm.nih.gov/32019204/"]
-  ]
- },
- "fragmento-17-23":{
-  classification:"DenominaÃ§Ã£o para o fragmento N-acetilado 17â€“23 da timosina Î²4 quando a identidade analÃ­tica Ã© confirmada como Ac-TÎ²4(17â€“23).",
-  sequence:"Acâ€“Leuâ€“Lysâ€“Lysâ€“Thrâ€“Gluâ€“Thrâ€“Gln (Ac-LKKTETQ). A terminaÃ§Ã£o C-terminal e os contraÃ­ons precisam constar no certificado do lote.",
-  molecular:"A fÃ³rmula e a massa dependem da terminaÃ§Ã£o C-terminal, do estado de protonaÃ§Ã£o e do sal. O nome â€œFragmento 17â€“23â€ isoladamente nÃ£o permite escolher entre Ã¡cido, amida ou outra apresentaÃ§Ã£o sem inferÃªncia.",
-  origin:"Corresponde aos resÃ­duos 17â€“23 da timosina Î²4 humana. A sÃ­ntese e a caracterizaÃ§Ã£o do fragmento N-acetilado identificado em material comercial foram publicadas em 2012.",
-  discovery:"Mario Thevis, Andreas Thomas e colaboradores Â· German Sport University Cologne Â· ColÃ´nia, Alemanha.",
-  sources:[
-   ["Thevis et al. â€” caracterizaÃ§Ã£o de Ac-TÎ²4(17â€“23)","https://pubmed.ncbi.nlm.nih.gov/22962027/"],
-   ["UniProt â€” Timosina beta-4 humana","https://www.uniprot.org/uniprotkb/P62328/entry"]
-  ]
- },
- "ftpp-adipotide":{
-  classification:"DenominaÃ§Ã£o associada ao fat-targeted proapoptotic peptide (FTPP/adipotide), construÃ§Ã£o quimÃ©rica experimental com domÃ­nio de homing e motivo de D-aminoÃ¡cidos. A equivalÃªncia deve ser confirmada por sequÃªncia.",
-  sequence:"CKGGRAKDCâ€“GGâ€“D(KLAKLAK)â‚‚ para a construÃ§Ã£o publicada; o motivo CKGGRAKDC pode estar ciclado por ponte dissulfeto. Se o lote tiver outra sequÃªncia, nÃ£o deve ser identificado como a mesma entidade.",
-  molecular:"Para a entidade registrada como adipotide, o PubChem informa Câ‚â‚â‚Hâ‚‚â‚€â‚†Nâ‚ƒâ‚†Oâ‚‚â‚ˆSâ‚‚ e massa aproximada de 2.557,2 g/mol. CiclizaÃ§Ã£o, estado redox, contraÃ­ons e sais alteram a composiÃ§Ã£o analÃ­tica.",
-  origin:"ConstruÃ§Ã£o derivada da seleÃ§Ã£o in vivo do peptÃ­deo CKGGRAKDC, direcionado Ã  proibitina, ligado ao motivo D(KLAKLAK)â‚‚; descrita pelo grupo do MD Anderson em 2004.",
-  discovery:"Mikhail Kolonin, Renata Pasqualini, Wadih Arap e colaboradores Â· University of Texas M. D. Anderson Cancer Center Â· Houston, Estados Unidos.",
-  sources:[
-   ["PubChem â€” Adipotide/FTPP","https://pubchem.ncbi.nlm.nih.gov/compound/163360068"],
-   ["Kolonin et al., Nature Medicine (2004)","https://www.nature.com/articles/nm1048"],
-   ["Barnhart et al. â€” caracterizaÃ§Ã£o em primatas (2011)","https://pubmed.ncbi.nlm.nih.gov/22072637/"]
-  ]
- },
- "p21":{
-  classification:"Nome ambÃ­guo usado para peptidomimÃ©ticos derivados de CNTF e tambÃ©m para entidades nÃ£o relacionadas, incluindo a proteÃ­na CDKN1A. A pÃ¡gina nÃ£o presume qual variante estÃ¡ no vial.",
-  sequence:"PublicaÃ§Ãµes e registros comerciais distinguem o motivo CNTF DGGL, versÃµes terminalmente modificadas e a entidade P021 com glicina adamantilada. Sem sequÃªncia integral e modificaÃ§Ãµes no certificado analÃ­tico, nÃ£o Ã© possÃ­vel atribuir uma estrutura Ãºnica ao item â€œP21â€.",
-  molecular:"NÃ£o hÃ¡ fÃ³rmula ou massa Ãºnica aplicÃ¡vel ao nome P21. O PubChem registra uma entidade Ac-DGGLâ€“glicina adamantiladaâ€“NHâ‚‚ (CID 56599151), enquanto outras fontes usam Ac-DGGL-NHâ‚‚; sÃ£o compostos diferentes e nÃ£o devem ser intercambiados.",
-  origin:"A linhagem de peptidomimÃ©ticos foi desenvolvida a partir de uma regiÃ£o ativa do fator neurotrÃ³fico ciliar (CNTF) em trabalhos conduzidos no New York State Institute for Basic Research.",
-  discovery:"Khalid Iqbal, Cheng-Xin Gong e colaboradores Â· New York State Institute for Basic Research in Developmental Disabilities Â· Estados Unidos.",
-  sources:[
-   ["PubChem â€” entidade adamantilada relacionada a P021","https://pubchem.ncbi.nlm.nih.gov/compound/56599151"],
-   ["Chohan et al. â€” peptÃ­deo derivado de CNTF (2011)","https://pubmed.ncbi.nlm.nih.gov/22000729/"],
-   ["Kazim et al. â€” estudo prÃ©-clÃ­nico de P021","https://pubmed.ncbi.nlm.nih.gov/28624409/"]
-  ]
- },
- "pe-22-28":{
-  classification:"HeptapeptÃ­deo sintÃ©tico derivado do prÃ³-peptÃ­deo da sortilina e estudado como anÃ¡logo abreviado de spadin.",
-  sequence:"Trpâ€“Argâ€“Leuâ€“Gluâ€“Glnâ€“Glyâ€“Pro (WRLEQGP), correspondente aos resÃ­duos 22â€“28 do prÃ³-peptÃ­deo descrito nas publicaÃ§Ãµes de estruturaâ€“atividade.",
-  molecular:"Para a cadeia livre WRLEQGP: Câ‚ƒâ‚‰Hâ‚…â‚ˆNâ‚â‚€Oâ‚â‚ Â· massa molecular calculada: aproximadamente 855,0 g/mol. Sais e modificaÃ§Ãµes terminais possuem composiÃ§Ã£o diferente.",
-  origin:"Desenvolvido por encurtamento sistemÃ¡tico de spadin para identificar uma sequÃªncia mÃ­nima com atividade em modelos do canal TREK-1; a sÃ©rie PE foi publicada em 2017.",
-  discovery:"Jean Mazella, Catherine Heurteaux, Mourad Borsotto e colaboradores Â· IPMC, CNRS/UniversitÃ© CÃ´te dâ€™Azur Â· Valbonne, FranÃ§a.",
-  sources:[
-   ["VeyssiÃ¨re et al. â€” anÃ¡logos abreviados de spadin (2017)","https://pubmed.ncbi.nlm.nih.gov/28955242/"],
-   ["Artigo integral â€” Frontiers in Pharmacology","https://doi.org/10.3389/fphar.2017.00643"]
-  ]
- },
- "pinealon":{
-  classification:"TripeptÃ­deo sintÃ©tico curto da classe dos peptÃ­deos regulatÃ³rios, identificado pela sequÃªncia EDR.",
-  sequence:"Gluâ€“Aspâ€“Arg (EDR). O sal acetato e outras apresentaÃ§Ãµes adicionam contraÃ­ons e nÃ£o sÃ£o quimicamente idÃªnticos Ã  cadeia livre.",
-  molecular:"Cadeia livre EDR: Câ‚â‚…Hâ‚‚â‚†Nâ‚†Oâ‚ˆ Â· massa molecular calculada: aproximadamente 418,45 g/mol. O PubChem registra separadamente Pinealon acetato como Câ‚â‚‡Hâ‚ƒâ‚€Nâ‚†Oâ‚â‚€.",
-  origin:"Integrante do programa russo de peptÃ­deos regulatÃ³rios de cadeia curta desenvolvido a partir de estudos de fraÃ§Ãµes peptÃ­dicas e regulaÃ§Ã£o de expressÃ£o gÃªnica.",
-  discovery:"Vladimir Khavinson e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo Â· RÃºssia.",
-  sources:[
-   ["PubChem â€” Glu-Asp-Arg","https://pubchem.ncbi.nlm.nih.gov/compound/10273502"],
-   ["PubChem â€” Pinealon acetato","https://pubchem.ncbi.nlm.nih.gov/compound/155977549"],
-   ["Khavinson et al. â€” pesquisa molecular com EDR","https://pubmed.ncbi.nlm.nih.gov/33396470/"]
-  ]
- },
- "pnc-27":{
-  classification:"PeptÃ­deo quimÃ©rico sintÃ©tico de 32 resÃ­duos composto por um segmento de p53 ligado a um peptÃ­deo de residÃªncia/transduÃ§Ã£o de membrana.",
-  sequence:"PPLSQETFSDLWKLLKKWKMRRNQFWVKVQRG. Os 15 resÃ­duos N-terminais correspondem a p53(12â€“26); o segmento C-terminal Ã© o domÃ­nio de residÃªncia de membrana usado na construÃ§Ã£o publicada.",
-  molecular:"Câ‚â‚ˆâ‚ˆHâ‚‚â‚‰â‚ƒNâ‚…â‚ƒOâ‚„â‚„S Â· massa molecular mÃ©dia aproximada: 4.031,7 g/mol para a cadeia livre publicada. Sais, marcaÃ§Ãµes e terminaÃ§Ãµes alternativas alteram o valor.",
-  origin:"Projetado a partir do domÃ­nio de ligaÃ§Ã£o de p53 a HDM-2 e de uma sequÃªncia de residÃªncia de membrana para estudos mecanÃ­sticos em modelos celulares.",
-  discovery:"Matthew Pincus, Josef Michl e colaboradores Â· SUNY Downstate/VA New York Harbor e instituiÃ§Ãµes colaboradoras Â· Estados Unidos.",
-  sources:[
-   ["PubChem â€” PNC-27","https://pubchem.ncbi.nlm.nih.gov/compound/16201774"],
-   ["Davitt et al. â€” caracterizaÃ§Ã£o de PNC-27","https://pubmed.ncbi.nlm.nih.gov/25117093/"],
-   ["Sookraj et al. â€” interaÃ§Ã£o PNC-27â€“HDM-2","https://pubmed.ncbi.nlm.nih.gov/20209069/"]
-  ]
- },
- "ptd-dbm":{
-  classification:"PeptÃ­deo sintÃ©tico de transduÃ§Ã£o celular fundido a um motivo de ligaÃ§Ã£o a Dishevelled, desenvolvido para competir com a interaÃ§Ã£o CXXC5â€“Dvl em modelos prÃ©-clÃ­nicos.",
-  sequence:"A literatura experimental e os registros quÃ­micos pÃºblicos nÃ£o convergem em uma Ãºnica sequÃªncia sob o nome PTD-DBM. O lote deve declarar a construÃ§Ã£o integral; variantes publicamente registradas nÃ£o podem ser tratadas como equivalentes apenas pelo nome.",
-  molecular:"O PubChem registra sob PTD-DBM a entidade Câ‚â‚‚â‚„Hâ‚‚â‚‚â‚…Nâ‚†â‚Oâ‚‚â‚ˆSâ‚‚, com massa aproximada de 3.082,6 g/mol, mas hÃ¡ outros construtos PTDâ€“DBM em registros pÃºblicos. Esse valor sÃ³ se aplica quando a sequÃªncia do lote corresponde ao registro CID 176453931.",
-  origin:"ConstruÃ§Ã£o desenvolvida no programa sul-coreano de investigaÃ§Ã£o do regulador CXXC5 e da interaÃ§Ã£o com Dishevelled; o uso do peptÃ­deo competidor em modelos de folÃ­culo e ferida foi publicado em 2017.",
-  discovery:"Seung Hyun Lee, Kang-Yell Choi e colaboradores Â· Yonsei University Â· Seul, Coreia do Sul.",
-  sources:[
-   ["PubChem â€” PTD-DBM","https://pubchem.ncbi.nlm.nih.gov/compound/176453931"],
-   ["Lee et al., Journal of Investigative Dermatology (2017)","https://pubmed.ncbi.nlm.nih.gov/28595998/"]
-  ]
- },
- "timalina":{
-  classification:"PreparaÃ§Ã£o biolÃ³gica polipeptÃ­dica obtida de tecido tÃ­mico animal; trata-se de uma mistura de componentes, nÃ£o de um peptÃ­deo com sequÃªncia Ãºnica.",
-  sequence:"NÃ£o aplicÃ¡vel como cadeia Ãºnica. A composiÃ§Ã£o histÃ³rica de Thymalin/Timalina Ã© definida por processo de extraÃ§Ã£o, fracionamento e controle da preparaÃ§Ã£o, e nÃ£o por uma Ãºnica sequÃªncia molecular.",
-  molecular:"NÃ£o possui fÃ³rmula ou massa molecular Ãºnica. Cada fraÃ§Ã£o peptÃ­dica e cada componente residual da preparaÃ§Ã£o tem composiÃ§Ã£o prÃ³pria; valores atribuÃ­dos a um tetrapeptÃ­deo isolado nÃ£o descrevem a mistura inteira.",
-  origin:"PreparaÃ§Ã£o desenvolvida na UniÃ£o SoviÃ©tica a partir de extratos do timo e estudada como parte do programa de reguladores peptÃ­dicos iniciado na dÃ©cada de 1970.",
-  discovery:"Vladimir Morozov, Vladimir Khavinson e colaboradores Â· Academia MÃ©dica Militar de Kirov/Instituto de BioregulaÃ§Ã£o e Gerontologia Â· Leningrado/SÃ£o Petersburgo, RÃºssia.",
-  sources:[
-   ["Morozov e Khavinson â€” estudo inicial de Thymalin","https://pubmed.ncbi.nlm.nih.gov/7048731/"],
-   ["Khavinson et al. â€” peptÃ­deos regulatÃ³rios e transcriÃ§Ã£o","https://pubmed.ncbi.nlm.nih.gov/14666197/"]
-  ]
- },
- "toxina-botulinica":{
-  classification:"FamÃ­lia de neurotoxinas proteicas bacterianas. O nome genÃ©rico nÃ£o identifica sorotipo, subtipo, complexo proteico nem formulaÃ§Ã£o especÃ­fica.",
-  sequence:"NÃ£o existe sequÃªncia Ãºnica para â€œtoxina botulÃ­nicaâ€. Como referÃªncia, BoNT/A1 da cepa Hall Ã© um precursor de 1.296 aminoÃ¡cidos processado em cadeias leve e pesada ligadas por dissulfeto; outros sorotipos e subtipos tÃªm sequÃªncias diferentes.",
-  molecular:"A neurotoxina isolada Ã© uma proteÃ­na de aproximadamente 150 kDa, mas complexos associados podem apresentar massas maiores e formulaÃ§Ãµes comerciais nÃ£o sÃ£o intercambiÃ¡veis por unidade. O produto precisa identificar sorotipo, subtipo e composiÃ§Ã£o antes de receber uma fÃ³rmula especÃ­fica.",
-  origin:"As toxinas botulÃ­nicas sÃ£o produzidas por linhagens de Clostridium e foram diferenciadas em sorotipos ao longo do sÃ©culo XX; a sequÃªncia e a estrutura da BoNT/A foram caracterizadas por mÃºltiplos grupos.",
-  discovery:"Ã‰mile van Ermengem descreveu o organismo associado ao botulismo em 1897; a caracterizaÃ§Ã£o molecular moderna da BoNT/A envolve grupos liderados por B. R. DasGupta, Raymond Stevens e colaboradores.",
-  sources:[
-   ["UniProt â€” neurotoxina botulÃ­nica tipo A (P0DPI1)","https://www.uniprot.org/uniprotkb/P0DPI1/entry"],
-   ["Lacy et al. â€” estrutura cristalogrÃ¡fica da BoNT/A","https://pubmed.ncbi.nlm.nih.gov/9783750/"],
-   ["Blasi et al. â€” clivagem de SNAP-25 por BoNT/A","https://pubmed.ncbi.nlm.nih.gov/8103915/"]
-  ]
- },
- "adamax":{
-  classification:"DesignaÃ§Ã£o comercial usada para um candidato derivado de Semax com grupo adamantano; nÃ£o foi localizado registro quÃ­mico oficial nem publicaÃ§Ã£o primÃ¡ria que defina uma estrutura Ãºnica sob o nome Adamax.",
-  sequence:"DescriÃ§Ãµes pÃºblicas partem da cadeia de Semax, Metâ€“Gluâ€“Hisâ€“Pheâ€“Proâ€“Glyâ€“Pro, mas divergem quanto ao grupo adamantano e ao ponto de conjugaÃ§Ã£o. A identidade do lote deve ser estabelecida por COA, espectrometria de massas e documentaÃ§Ã£o estrutural do fabricante.",
-  molecular:"NÃ£o consolidada para o nome Adamax. Sem a posiÃ§Ã£o de conjugaÃ§Ã£o, o ligante e os contraÃ­ons, nÃ£o existe fÃ³rmula ou massa molecular Ãºnica defensÃ¡vel; os dados de Semax nÃ£o podem ser transferidos automaticamente ao derivado.",
-  origin:"Nome recente de catÃ¡logo de pesquisa, apresentado como derivado lipofÃ­lico de Semax. A literatura primÃ¡ria recuperada caracteriza Semax, mas nÃ£o valida de forma independente a identidade especÃ­fica denominada Adamax.",
-  discovery:"A autoria e a primeira sÃ­ntese de Adamax nÃ£o estÃ£o consolidadas em fonte primÃ¡ria indexada. O composto parental Semax foi desenvolvido por Nikolay Myasoedov, Igor Ashmarin e colaboradores na Academia Russa de CiÃªncias.",
-  sources:[
-   ["PubChem â€” Semax, composto parental","https://pubchem.ncbi.nlm.nih.gov/compound/Semax"],
-   ["Dolotov et al. â€” caracterizaÃ§Ã£o experimental de Semax","https://pubmed.ncbi.nlm.nih.gov/11457573/"]
-  ]
- },
- "cardiogen":{
-  classification:"TetrapeptÃ­deo bioregulador associado na literatura de catÃ¡logo Ã  sigla AEDR; o nome Cardiogen aparece em estudos indexados, mas a ligaÃ§Ã£o nomeâ€“sequÃªncia requer confirmaÃ§Ã£o analÃ­tica do lote.",
-  sequence:"Alaâ€“Gluâ€“Aspâ€“Arg (AEDR) Ã© a identidade quÃ­mica de referÃªncia mais usada. Como os resumos primÃ¡rios especÃ­ficos de Cardiogen nÃ£o explicitam a sequÃªncia, a pÃ¡gina nÃ£o presume que toda apresentaÃ§Ã£o comercial tenha exatamente essa cadeia ou a mesma forma salina.",
-  molecular:"Para a cadeia livre AEDR registrada no PubChem: Câ‚â‚ˆHâ‚ƒâ‚Nâ‚‡Oâ‚‰ Â· aproximadamente 489,48 g/mol. Sais, hidratos e modificaÃ§Ãµes alteram esses valores; aplicar somente quando o COA confirmar AEDR.",
-  origin:"Integrante do programa de peptÃ­deos bioreguladores estudado em modelos de cultura de tecido cardÃ­aco por grupos de SÃ£o Petersburgo.",
-  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo e instituiÃ§Ãµes associadas.",
-  sources:[
-   ["PubChem â€” H-Ala-Glu-Asp-Arg-OH (CID 11583989)","https://pubchem.ncbi.nlm.nih.gov/compound/11583989"],
-   ["Linkova et al. â€” Cardiogen em cultura de miocÃ¡rdio","https://pubmed.ncbi.nlm.nih.gov/20210190/"],
-   ["Anisimov et al. â€” estudo experimental com Cardiogen","https://pubmed.ncbi.nlm.nih.gov/20396706/"]
-  ]
- },
- "cartalax":{
-  classification:"DesignaÃ§Ã£o de peptÃ­deo bioregulador curto cuja sequÃªncia Ã© apresentada de modo divergente nas fontes pÃºblicas; a identidade do material deve ser resolvida antes de atribuir especificaÃ§Ãµes Ãºnicas.",
-  sequence:"CatÃ¡logos associam Cartalax a Alaâ€“Gluâ€“Aspâ€“Leu (AEDL), enquanto publicaÃ§Ã£o primÃ¡ria da mesma linha de pesquisa descreve Alaâ€“Aspâ€“Gluâ€“Leu (ADEL). SÃ£o isÃ´meros de sequÃªncia distintos; o COA e a espectrometria do lote devem definir qual estÃ¡ presente.",
-  molecular:"AEDL e ADEL tÃªm a mesma composiÃ§Ã£o elementar, Câ‚â‚ˆHâ‚ƒâ‚€Nâ‚„Oâ‚‰, e massa aproximada de 470,48 g/mol na forma livre, mas nÃ£o sÃ£o estruturalmente equivalentes. Sais e modificaÃ§Ãµes devem ser informados separadamente.",
-  origin:"Relacionado ao programa de peptÃ­deos bioreguladores de SÃ£o Petersburgo e a estudos de peptÃ­deos curtos em modelos de cartilagem e cromatina.",
-  discovery:"Vladimir Khavinson e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo; a atribuiÃ§Ã£o comercial exata permanece dependente da documentaÃ§Ã£o do lote.",
-  sources:[
-   ["PubChem â€” H-Ala-Glu-Asp-Leu-OH (CID 11690869)","https://pubchem.ncbi.nlm.nih.gov/compound/11690869"],
-   ["Monaselidze et al. â€” Ala-Asp-Glu-Leu em cromatina","https://pubmed.ncbi.nlm.nih.gov/21685526/"],
-   ["Khavinson et al. â€” diferenciaÃ§Ã£o celular por peptÃ­deos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"]
-  ]
- },
- "cortagen":{
-  classification:"TetrapeptÃ­deo sintÃ©tico de quatro aminoÃ¡cidos, identificado em publicaÃ§Ã£o primÃ¡ria como AEDP.",
-  sequence:"Alaâ€“Gluâ€“Aspâ€“Pro (AEDP), com terminais livres na forma de referÃªncia. Acetatos, outros sais ou derivaÃ§Ãµes terminais tÃªm composiÃ§Ã£o distinta.",
-  molecular:"Câ‚â‚‡Hâ‚‚â‚†Nâ‚„Oâ‚‰ Â· massa molecular aproximada: 454,43 g/mol para H-Ala-Glu-Asp-Pro-OH.",
-  origin:"PeptÃ­deo curto desenvolvido e estudado no programa russo de bioregulaÃ§Ã£o peptÃ­dica, com trabalhos experimentais em modelos celulares e teciduais.",
-  discovery:"Vladimir Khavinson, Vladimir Malinin e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  sources:[
-   ["PubChem â€” H-Ala-Glu-Asp-Pro-OH (CID 18439621)","https://pubchem.ncbi.nlm.nih.gov/compound/18439621"],
-   ["Khavinson et al. â€” sequÃªncia AEDP explicitada em estudo primÃ¡rio","https://pubmed.ncbi.nlm.nih.gov/12420072/"],
-   ["Estudo experimental indexado de Cortagen","https://pubmed.ncbi.nlm.nih.gov/15159690/"]
-  ]
- },
- "crystagen":{
-  classification:"DesignaÃ§Ã£o de peptÃ­deo bioregulador curto associada a estudos do timo; a estrutura comercialmente divulgada nÃ£o estÃ¡ consolidada em registro primÃ¡rio inequÃ­voco sob esse nome.",
-  sequence:"Fontes secundÃ¡rias atribuem Gluâ€“Trpâ€“Aspâ€“Arg (EWDR), mas a publicaÃ§Ã£o indexada especÃ­fica de Crystagen recuperada nÃ£o explicita essa sequÃªncia. O lote precisa de COA e identificaÃ§Ã£o por espectrometria antes da atribuiÃ§Ã£o definitiva.",
-  molecular:"NÃ£o atribuÃ­da como especificaÃ§Ã£o definitiva. Valores pÃºblicos para EWDR sÃ£o inconsistentes entre si; fÃ³rmula e massa devem ser derivadas da estrutura efetivamente confirmada, incluindo terminais e forma salina.",
-  origin:"Relacionado ao programa de peptÃ­deos bioreguladores de SÃ£o Petersburgo e estudado em modelos experimentais de tecido esplÃªnico e envelhecimento.",
-  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores de instituiÃ§Ãµes russas de bioregulaÃ§Ã£o e gerontologia.",
-  sources:[
-   ["Linkova et al. â€” estudo indexado especÃ­fico de Crystagen","https://pubmed.ncbi.nlm.nih.gov/28976144/"],
-   ["Khavinson et al. â€” diferenciaÃ§Ã£o celular por peptÃ­deos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"]
-  ]
- },
- "lemon-bottle":{
-  classification:"Nome comercial de uma soluÃ§Ã£o multicomponente; nÃ£o Ã© um peptÃ­deo isolado nem uma substÃ¢ncia quÃ­mica Ãºnica.",
-  sequence:"NÃ£o aplicÃ¡vel. A formulaÃ§Ã£o oficial lista Ã¡gua, extrato de abacaxi, bromelaÃ­na, lecitina, extratos botÃ¢nicos, riboflavina e excipientes. Cada componente possui identidade prÃ³pria e a composiÃ§Ã£o deve corresponder ao lote e Ã  versÃ£o do fabricante.",
-  molecular:"NÃ£o existe fÃ³rmula ou massa molecular Ãºnica para a mistura. A ficha tÃ©cnica, o lote e a anÃ¡lise de composiÃ§Ã£o sÃ£o necessÃ¡rios; valores de bromelaÃ­na, lecitina ou riboflavina isoladas nÃ£o descrevem a soluÃ§Ã£o completa.",
-  origin:"FormulaÃ§Ã£o comercial da SID Medicos. O nome Lemon Bottle tambÃ©m Ã© usado em linhas diferentes, por isso a variante Ampoule Solution deve ser distinguida de Skin Booster, Reboot e outras apresentaÃ§Ãµes.",
-  discovery:"Desenvolvimento comercial atribuÃ­do Ã  SID Medicos; nÃ£o corresponde Ã  descoberta de uma molÃ©cula Ãºnica por um grupo acadÃªmico.",
-  sources:[
-   ["SID Medicos â€” composiÃ§Ã£o oficial da Lemon Bottle Ampoule Solution","https://www.lemonbottle.net/products/lemon-bottle-fat-dissolver"]
-  ]
- },
- "livagen":{
-  classification:"TetrapeptÃ­deo sintÃ©tico de quatro aminoÃ¡cidos, registrado como KEDA.",
-  sequence:"Lysâ€“Gluâ€“Aspâ€“Ala (KEDA), na forma de cadeia livre de referÃªncia. ContraÃ­ons, hidratos e modificaÃ§Ãµes terminais devem ser tratados como formas distintas.",
-  molecular:"Câ‚â‚ˆHâ‚ƒâ‚Nâ‚…Oâ‚‰ Â· massa molecular aproximada: 461,47 g/mol para H-Lys-Glu-Asp-Ala-OH (PubChem CID 87919683).",
-  origin:"Desenvolvido no programa de peptÃ­deos bioreguladores de SÃ£o Petersburgo e investigado em culturas de hepatÃ³citos e tecidos hepÃ¡ticos.",
-  discovery:"Vladimir Khavinson, Vladimir Malinin e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  sources:[
-   ["PubChem â€” H-Lys-Glu-Asp-Ala-OH (CID 87919683)","https://pubchem.ncbi.nlm.nih.gov/compound/87919683"],
-   ["Khavinson et al. â€” Livagen em culturas de hepatÃ³citos","https://pubmed.ncbi.nlm.nih.gov/15926314/"],
-   ["Khavinson et al. â€” morfologia de cultura hepÃ¡tica com Livagen","https://pubmed.ncbi.nlm.nih.gov/12577697/"]
-  ]
- },
- "ovagen":{
-  classification:"DesignaÃ§Ã£o comercial ambÃ­gua: aparece tanto para um peptÃ­deo bioregulador curto quanto para preparaÃ§Ãµes veterinÃ¡rias de FSH. A pÃ¡gina trata somente a hipÃ³tese peptÃ­dica, condicionada Ã  confirmaÃ§Ã£o do lote.",
-  sequence:"A identidade peptÃ­dica divulgada Ã© Gluâ€“Aspâ€“Leu (EDL). O nome isolado nÃ£o basta para distingui-la de produtos homÃ´nimos; COA, fabricante e mÃ©todo analÃ­tico devem confirmar a cadeia e a forma quÃ­mica.",
-  molecular:"Para H-Glu-Asp-Leu-OH: Câ‚â‚…Hâ‚‚â‚…Nâ‚ƒOâ‚ˆ Â· aproximadamente 375,38 g/mol (PubChem CID 444128). Esse valor nÃ£o se aplica a preparaÃ§Ãµes homÃ´nimas de FSH nem a sais nÃ£o especificados.",
-  origin:"A atribuiÃ§Ã£o EDL integra catÃ¡logos de peptÃ­deos bioreguladores de origem russa; o homÃ´nimo veterinÃ¡rio possui origem e composiÃ§Ã£o completamente diferentes.",
-  discovery:"A atribuiÃ§Ã£o peptÃ­dica Ã© associada ao programa de Vladimir Khavinson em SÃ£o Petersburgo, mas a identidade comercial do lote deve ser documentada separadamente.",
-  sources:[
-   ["PubChem â€” glutamil-aspartil-leucina (CID 444128)","https://pubchem.ncbi.nlm.nih.gov/compound/444128"],
-   ["PubMed â€” exemplo do homÃ´nimo Ovagen como preparaÃ§Ã£o de FSH","https://pubmed.ncbi.nlm.nih.gov/8234893/"]
-  ]
- },
- "pancragen":{
-  classification:"TetrapeptÃ­deo sintÃ©tico de quatro aminoÃ¡cidos, identificado como KEDW.",
-  sequence:"Lysâ€“Gluâ€“Aspâ€“Trp (KEDW), com terminais livres na forma de referÃªncia. Sais e derivados devem ser diferenciados.",
-  molecular:"Câ‚‚â‚†Hâ‚ƒâ‚†Nâ‚†Oâ‚‰ Â· massa molecular aproximada: 600,63 g/mol para H-Lys-Glu-Asp-Trp-OH (PubChem CID 68452877).",
-  origin:"PeptÃ­deo curto do programa de bioregulaÃ§Ã£o de SÃ£o Petersburgo, estudado em modelos experimentais de cÃ©lulas endÃ³crinas pancreÃ¡ticas e interaÃ§Ã£o com DNA.",
-  discovery:"Vladimir Khavinson, Svetlana Tarnovskaya, Pavel Yakutseni e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  sources:[
-   ["PubChem â€” H-Lys-Glu-Asp-Trp-OH (CID 68452877)","https://pubchem.ncbi.nlm.nih.gov/compound/68452877"],
-   ["Tarnovskaya et al. â€” sequÃªncia KEDW e interaÃ§Ã£o com DNA","https://pubmed.ncbi.nlm.nih.gov/24770759/"],
-   ["Estudo experimental do tetrapeptÃ­deo em biossÃ­ntese de insulina","https://pubmed.ncbi.nlm.nih.gov/16671579/"]
-  ]
- },
- "testagen":{
-  classification:"TetrapeptÃ­deo sintÃ©tico de quatro aminoÃ¡cidos, identificado como KEDG.",
-  sequence:"Lysâ€“Gluâ€“Aspâ€“Gly (KEDG), na forma livre de referÃªncia. Formas salinas ou modificadas exigem especificaÃ§Ã£o prÃ³pria.",
-  molecular:"Câ‚â‚‡Hâ‚‚â‚‰Nâ‚…Oâ‚‰ Â· massa molecular aproximada: 447,44 g/mol para H-Lys-Glu-Asp-Gly-OH (PubChem CID 123863700).",
-  origin:"Relacionado ao programa russo de peptÃ­deos bioreguladores e investigado em modelos experimentais de tecido endÃ³crino e diferenciaÃ§Ã£o celular.",
-  discovery:"Vladimir Khavinson, Boris Kuznik e colaboradores de instituiÃ§Ãµes russas de bioregulaÃ§Ã£o, gerontologia e pesquisa mÃ©dica.",
-  sources:[
-   ["PubChem â€” H-Lys-Glu-Asp-Gly-OH (CID 123863700)","https://pubchem.ncbi.nlm.nih.gov/compound/123863700"],
-   ["Kuznik et al. â€” estudo experimental de KEDG","https://pubmed.ncbi.nlm.nih.gov/22268052/"],
-   ["Fedoreyeva et al. â€” interaÃ§Ã£o de peptÃ­deos curtos com histonas e DNA","https://pubmed.ncbi.nlm.nih.gov/23581987/"]
-  ]
- },
- "vesugen":{
-  classification:"TripeptÃ­deo sintÃ©tico de trÃªs aminoÃ¡cidos, associado Ã  sequÃªncia KED.",
-  sequence:"Lysâ€“Gluâ€“Asp (KED), com terminais livres na forma de referÃªncia. A associaÃ§Ã£o ao nome Vesugen e a forma salina devem ser confirmadas no COA do lote.",
-  molecular:"Câ‚â‚…Hâ‚‚â‚†Nâ‚„Oâ‚ˆ Â· massa molecular aproximada: 390,39 g/mol para a cadeia livre KED (PubChem CID 87571363).",
-  origin:"PeptÃ­deo curto relacionado ao programa de bioregulaÃ§Ã£o de SÃ£o Petersburgo e a pesquisas com diferenciaÃ§Ã£o celular e modelos vasculares.",
-  discovery:"Vladimir Khavinson, Natalia Linkova e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  sources:[
-   ["PubChem â€” Lys-Glu-Asp (CID 87571363)","https://pubchem.ncbi.nlm.nih.gov/compound/87571363"],
-   ["Khavinson et al. â€” diferenciaÃ§Ã£o celular por peptÃ­deos curtos","https://pubmed.ncbi.nlm.nih.gov/22808515/"],
-   ["Estudo clÃ­nico indexado com peptÃ­deo vasoativo","https://pubmed.ncbi.nlm.nih.gov/28976154/"]
-  ]
- },
- "vilon":{
-  classification:"DipeptÃ­deo sintÃ©tico identificado em publicaÃ§Ã£o primÃ¡ria como KE.",
-  sequence:"Lysâ€“Glu (KE), na forma de cadeia livre de referÃªncia. Sais, hidratos e proteÃ§Ãµes terminais modificam a composiÃ§Ã£o.",
-  molecular:"Câ‚â‚Hâ‚‚â‚Nâ‚ƒOâ‚… Â· massa molecular aproximada: 275,30 g/mol para lisil-glutamato (PubChem CID 7010502).",
-  origin:"PeptÃ­deo curto do programa de bioregulaÃ§Ã£o de SÃ£o Petersburgo, investigado em modelos celulares e de sinalizaÃ§Ã£o tÃ­mica.",
-  discovery:"Vladimir Khavinson, Elena Rybakina, Vladimir Malinin e colaboradores Â· Instituto de BioregulaÃ§Ã£o e Gerontologia de SÃ£o Petersburgo.",
-  sources:[
-   ["PubChem â€” lisil-glutamato (CID 7010502)","https://pubchem.ncbi.nlm.nih.gov/compound/7010502"],
-   ["Khavinson et al. â€” sequÃªncia KE explicitada para Vilon","https://pubmed.ncbi.nlm.nih.gov/12420072/"],
-   ["Khavinson et al. â€” estudo de expressÃ£o gÃªnica com KE","https://pubmed.ncbi.nlm.nih.gov/37782636/"]
-  ]
- }
-};
-function techSpecs(slug){
- const s=TECH_SPECS[slug];
- if(!s)return "";
- const fields=[
-  ["ClassificaÃ§Ã£o",s.classification],
-  ["SequÃªncia / estrutura",s.sequence],
-  ["FÃ³rmula e massa molecular",s.molecular],
-  ["Origem cientÃ­fica",s.origin],
-  ["Descoberta / equipe",s.discovery]
- ];
- return `<section class="tech-specs" aria-labelledby="tech-title"><span class="eyebrow">Dados cientÃ­ficos verificados</span><h2 id="tech-title">EspecificaÃ§Ãµes tÃ©cnicas</h2><div class="tech-grid">${fields.map(([label,value])=>`<div class="tech-field"><h3>${label}</h3><p>${value}</p></div>`).join("")}</div><div class="tech-sources"><h3>Fontes</h3><ul>${s.sources.map(([label,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a></li>`).join("")}</ul><p>InformaÃ§Ã£o de referÃªncia para identificaÃ§Ã£o laboratorial. NÃ£o constitui orientaÃ§Ã£o de uso.</p></div></section>`;
-}
-// O domÃ­nio comercial nÃ£o expÃµe o conteÃºdo educacional. A remoÃ§Ã£o em tempo
-// de execuÃ§Ã£o tambÃ©m neutraliza links residuais em pÃ¡ginas estÃ¡ticas antigas.
-document.querySelectorAll('a[href*="biblioteca"],a[href*="reconstituicao"]').forEach(link=>link.remove());
-const money=n=>"US$ "+n.toFixed(2);
-function vialPlaceholder(p){
- const safe=String(p.name).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
- const short=safe.length>25?safe.slice(0,24)+"â€¦":safe,dose=p.items[0][1];
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".46" stop-color="#7b3fd4"/><stop offset=".76" stop-color="#d6379f"/><stop offset="1" stop-color="#35d58b"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#dce6ef"/><stop offset=".18" stop-color="#fff"/><stop offset=".82" stop-color="#fff"/><stop offset="1" stop-color="#cbd8e4"/></linearGradient></defs><ellipse cx="210" cy="474" rx="120" ry="18" fill="#64748b" opacity=".18"/><rect x="118" y="46" width="184" height="58" rx="17" fill="#c9d0d8"/><rect x="132" y="92" width="156" height="32" rx="8" fill="#202733"/><path d="M143 116h134l18 36v281c0 25-18 43-43 43h-84c-25 0-43-18-43-43V152z" fill="url(#glass)" stroke="#aebdca" stroke-width="4"/><rect x="130" y="204" width="160" height="205" rx="7" fill="#fff"/><rect x="130" y="204" width="160" height="18" fill="url(#g)"/><rect x="130" y="278" width="160" height="76" fill="url(#g)"/><text x="210" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="26" fill="#173b68">PepMAX</text><text x="210" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${short.length>18?16:19}" fill="#fff">${short}</text><text x="210" y="387" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#334c9b">${dose}</text><text x="210" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#41536a">FOR RESEARCH USE ONLY</text></svg>`;
- return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
-}
-function pendingProductImage(p){
- const safe=String(p.name).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".5" stop-color="#7b3fd4"/><stop offset="1" stop-color="#d6379f"/></linearGradient></defs><rect width="420" height="520" rx="24" fill="#f7f9fc"/><rect x="35" y="35" width="350" height="450" rx="20" fill="none" stroke="url(#g)" stroke-width="3"/><text x="210" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#173b68">PepMAX</text><text x="210" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#334c9b">${safe}</text><text x="210" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#64748b">IMAGEM EM PRODUÃ‡ÃƒO</text></svg>`;
- return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
-}
-const productImage=p=>p.image||pendingProductImage(p);
-const productUrl=p=>`./${p.slug}/`;
-const cartKey=(p,item)=>{
- const sku=String(item[0]||"").trim();
- return sku&&sku!=="â€”"?sku:`${p.slug}|${item[1]}`;
-};
-function updateNavCart(){
- let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
- const total=Object.values(cart).reduce((sum,q)=>sum+(Math.max(0,Math.floor(Number(q)))||0),0);
- document.querySelectorAll(".nav-cart-count").forEach(el=>el.textContent=total);
-}
-function catalog(){
- updateNavCart();
- const grid=document.querySelector("#catalogGrid"),q=document.querySelector("#search");
- const draw=()=>{const term=q.value.toLowerCase();const list=PRODUCTS.filter(p=>(p.name+" "+p.items.flat().join(" ")).toLowerCase().includes(term));
- grid.innerHTML=list.map(p=>`<a class="card" href="${productUrl(p)}"><h2>${p.name}</h2><p>${p.desc}</p><span class="from">A partir de <b>${money(Math.min(...p.items.map(x=>x[2])))}</b> por vial</span></a>`).join("")||`<p class="notice">Nenhum produto encontrado.</p>`};
- q.addEventListener("input",draw);draw();
-}
-function detail(slug){
- updateNavCart();
- const p=PRODUCTS.find(x=>x.slug===slug);if(!p)return;
- document.title=`${p.name} | PepMax Peptides`;
- let selected=0,qty=1;
- const draw=()=>{
-  const x=p.items[selected];
-  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">Material de pesquisa</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual"><img src="${productImage(p)}" alt="Vial PepMax ${p.name}" width="648" height="1400" loading="eager"></figure><div class="facts"><div class="fact"><b>PÃ³ liofilizado</b>ApresentaÃ§Ã£o de pesquisa</div><div class="fact"><b>PreÃ§o por vial</b>Caixa: 10 vials</div><div class="fact"><b>Uso em pesquisa</b>NÃ£o destinado ao consumo humano</div></div></div><aside class="panel"><span class="eyebrow">ApresentaÃ§Ãµes disponÃ­veis</span><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">âˆ’</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Comprar</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../">Ver carrinho no Shop â†’</a><p class="sku">PreÃ§os em dÃ³lar americano, por vial. Frete e impostos nÃ£o incluÃ­dos.</p></aside>${techSpecs(slug)}`;
-  document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);draw()});
-  document.querySelector("[data-minus]").onclick=()=>{qty=Math.max(1,qty-1);draw()};
-  document.querySelector("[data-plus]").onclick=()=>{qty+=1;draw()};
-  document.querySelector("#detailQty").onchange=e=>{qty=Math.max(1,Math.floor(Number(e.target.value))||1);e.target.value=qty};
-  document.querySelector("[data-cart-add]").onclick=()=>{
-   qty=Math.max(1,Math.floor(Number(document.querySelector("#detailQty").value))||1);
-   let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
-   const key=cartKey(p,x);
-   cart[key]=(Number(cart[key])||0)+qty;localStorage.setItem("pepmax-cart-v1",JSON.stringify(cart));updateNavCart();
-   document.querySelector("#cartConfirm").textContent=`${qty} vial${qty>1?"s":""} de ${x[1]} adicionado${qty>1?"s":""} ao carrinho.`;
-  };
- };
- draw();
-}
+YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíã½øÕ:-jZ.¶›­–)Ş³V6öç7B$ôET5E3Õ·²'6ÇVr#¢#RÖÖ–æòÓ×"Â&æÖR#¢#RÔÖ–æòÓÕ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²#TÒ"Â#RÖr"Ã#UÒÅ²#Ò"Â#Ör"Ã3…ÒÅ²#SÒ"Â#SÖr"ÃC…Õ×ÒÇ²'6ÇVr#¢&6RÓ3"Â&æÖR#¢$4RÓ3"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$S"Â#Ör"Ã#…Õ×ÒÇ²'6ÇVr#¢&7F‚ÓÓ3’"Â&æÖR#¢$5D‚Ó3’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"Ã3UÕ×ÒÇ²'6ÇVr#¢&FÖ‚"Â&æÖR#¢$FÖ‚"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$CR"Â#RÖr"ÃC5Õ×ÒÇ²'6ÇVr#¢&F—÷F–FR"Â&æÖR#¢$F—÷F–FR"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$""Â#"Ör"Ã3EÒÅ²$R"Â#RÖr"ÃCuÒÅ²$"Â#Ör"Ãs•Õ×ÒÇ²'6ÇVr#¢&†²Ö7R"Â&æÖR#¢$„²Ô7R"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$SS"Â#SÖr"Ã3ÒÅ²$S"Â#Ör"ÃSUÕ×ÒÇ²'6ÇVr#¢&–6""Â&æÖR#¢$”4""Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$#S"Â#SÖr"Ã#•ÒÅ²$#"Â#Ör"Ã3•Õ×ÒÇ²'6ÇVr#¢&Ç&÷7FF–Â"Â&æÖR#¢$Ç&÷7FF–Â"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%$ó#"Â##Ö6r"ÃceÕ×ÒÇ²'6ÇVr#¢&öBÓ“cB"Â&æÖR#¢$ôBÓ“cB"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²#TB"Â#RÖr"Ã3•ÒÅ²#B"Â#Ör"ÃSÕ×ÒÇ²'6ÇVr#¢&&Ó#“"Â&æÖR#¢$&Ó#“"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%$"Â#Ör"Ã3Õ×ÒÇ²'6ÇVr#¢&#rÓ32"Â&æÖR#¢$#rÓ32"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#"Ör"Ã3EÒÅ².(	B"Â#Ör"ÃS…Õ×ÒÇ²'6ÇVr#¢&'2ÓSr"Â&æÖR#¢$%2ÓSr"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$$3R"Â#RÖr"Ã#UÒÅ²$$3"Â#Ör"Ã3%ÒÅ²$$3#"Â##Ör"ÃC%Õ×ÒÇ²'6ÇVr#¢&'2ÓSr×ÇW2×F"ÓS"Â&æÖR#¢$%2ÓSr²D"ÓS"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$$#"Â#Ör"Ã3eÒÅ²$$##"Â##Ör"ÃCÕ×ÒÇ²'6ÇVr#¢&6w&–Æ–çF–F"Â&æÖR#¢$6w&–Æ–çF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$4tÃR"Â#RÖr"Ã3uÒÅ²$4tÃ"Â#Ör"ÃCEÕ×ÒÇ²'6ÇVr#¢&6w&–Æ–çF–F×ÇW2×6VÖvÇWF–F"Â&æÖR#¢$6w&–Æ–çF–F²6VÖvÇWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$53R"Â#RÖr"Ã3uÒÅ²$53"Â#Ör"ÃCEÕ×ÒÇ²'6ÇVr#¢&6&F–övVâ"Â&æÖR#¢$6&F–övVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢&6'FÆ‚"Â&æÖR#¢$6'FÆ‚"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢&6W&V'&öÆ—6–æ"Â&æÖR#¢$6W&V'&öÆ—6–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$4$Ãc"Â#cÖr"Ã3Õ×ÒÇ²'6ÇVr#¢&6¦2Ó#“RÖ—Ö÷&VÆ–æ"Â&æÖR#¢$4¤2Ó#“R²—Ö÷&VÆ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$5"Â#Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢&6¦2Ó#“RÖ6öÒÖF2"Â&æÖR#¢$4¤2Ó#“R6öÒD2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$4CR"Â#RÖr"ÃCÕ×ÒÇ²'6ÇVr#¢&6¦2Ó#“R×6VÒÖF2"Â&æÖR#¢$4¤2Ó#“R6VÒD2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$4äCR"Â#RÖr"Ã35ÒÅ²$4äC"Â#Ör"ÃC5Õ×ÒÇ²'6ÇVr#¢&6÷'FvVâ"Â&æÖR#¢$6÷'FvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"ÃCÕ×ÒÇ²'6ÇVr#¢&7'—7FvVâ"Â&æÖR#¢$7'—7FvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"ÃCÕ×ÒÇ²'6ÇVr#¢&FW&Ö÷&f–æ"Â&æÖR#¢$FW&Ö÷&f–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$E#R"Â#RÖr"Ã#UÕ×ÒÇ²'6ÇVr#¢&G6—"Â&æÖR#¢$E4•"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$E3R"Â#RÖr"Ã#UÒÅ²$E3"Â#Ör"Ã35ÒÅ²$E3R"Â#RÖr"Ã3uÕ×ÒÇ²'6ÇVr#¢&GVÆvÇWF–F"Â&æÖR#¢$GVÆvÇWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"ÃCEÒÅ².(	B"Â#Ör"ÃƒuÕ×ÒÇ²'6ÇVr#¢&W—FÆöâ"Â&æÖR#¢$W—FÆöâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$UC"Â#Ör"Ã#…ÒÅ²$UCS"Â#SÖr"ÃCEÕ×ÒÇ²'6ÇVr#¢&W—FÆöâÖâÖ6WF–ÂÖÖ–FFò"Â&æÖR#¢$W—FÆöââÖ6WF–ÂÖ–FFò"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$äUCR"Â#RÖr"ÃCÕ×ÒÇ²'6ÇVr#¢&WòÖW&—G&÷öWF–æ"Â&æÖR#¢$Uò†W&—G&÷öWF–æ’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$S4²"Â#3—R"ÃSEÕ×ÒÇ²'6ÇVr#¢&f÷†óBÖG&’"Â&æÖR#¢$dõ„óBÔE$’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"Ã“EÕ×ÒÇ²'6ÇVr#¢&g&vÖVçFòÓrÓ#2"Â&æÖR#¢$g&vÖVçFòrÓ#2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢&gGÖF—÷F–FR"Â&æÖR#¢$eEF—÷F–FR"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"ÃCÕ×ÒÇ²'6ÇVr#¢&vFbÓ‚ÖÖ–÷7FF–æ"Â&æÖR#¢$tDbÓ‚†Ö–÷7FF–æ’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"ÃSEÕ×ÒÇ²'6ÇVr#¢&v†²Ö7R"Â&æÖR#¢$t„²Ô7R"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$5SS"Â#SÖr"Ã3ÒÅ²$5S"Â#Ör"ÃSUÕ×ÒÇ²'6ÇVr#¢&v‡'Ó"Ö6WFFò"Â&æÖR#¢$t…%Ó"†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$s#R"Â#RÖr"Ã#UÒÅ²$s#"Â#Ör"Ã#•Õ×ÒÇ²'6ÇVr#¢&v‡'ÓbÖ6WFFò"Â&æÖR#¢$t…%Ób†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$scR"Â#RÖr"Ã#UÒÅ²$sc"Â#Ör"Ã#…Õ×ÒÇ²'6ÇVr#¢&vÆ÷rÓs"Â&æÖR#¢$tÄõr„%2ÓSr²t„²Ô7R²D"ÓS’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$$$ss"Â#sÖr"ÃCuÕ×ÒÇ²'6ÇVr#¢&vÇWFF–öæ"Â&æÖR#¢$vÇWFF–öæ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$uEB"Â#SÖr"Ã3%Õ×ÒÇ²'6ÇVr#¢&†6r"Â&æÖR#¢$„4r"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$sT²"Â#S—R"Ã3EÒÅ²$s²"Â#—R"ÃC…Õ×ÒÇ²'6ÇVr#¢&†W†&VÆ–æÖ6WFFò"Â&æÖR#¢$†W†&VÆ–æ†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$…ƒ""Â#"Ör"Ã#…ÒÅ²$…ƒR"Â#RÖr"Ã3EÕ×ÒÇ²'6ÇVr#¢&†v‚Ó“×6öÖG&÷–æ"Â&æÖR#¢$„t‚“‡6öÖG&÷–æ’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ƒ"Â#—R"Ã#•ÒÅ²$ƒ#B"Â##B—R"ÃCeÒÅ²$ƒ3b"Â#3b—R"ÃC•ÒÅ²$ƒC"Â#C—R"ÃS…Õ×ÒÇ²'6ÇVr#¢&†v‚Ög&vÖVçFòÓsbÓ“"Â&æÖR#¢$„t‚g&vÖVçFòsbÓ“"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$e#""Â#"Ör"Ã#…ÒÅ²$e#R"Â#RÖr"Ã3eÒÅ²$e#"Â#Ör"ÃC%ÒÅ²$e#""Â#"Ör"ÃC•ÒÅ²$e#R"Â#RÖr"ÃcÕ×ÒÇ²'6ÇVr#¢&†Ör"Â&æÖR#¢$„Ôr"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ssR"Â#sR—R"Ã3%Õ×ÒÇ²'6ÇVr#¢&‡VÖæ–æ"Â&æÖR#¢$‡VÖæ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"ÃƒÕ×ÒÇ²'6ÇVr#¢&–vbÓÖFW2"Â&æÖR#¢$”tbÓDU2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$”tB"Â#"Ör"Ã3Õ×ÒÇ²'6ÇVr#¢&–vbÓÖÇ#2"Â&æÖR#¢$”tbÓÅ#2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$”s"Â#ãÖr"Ã#UÒÅ²$”s"Â#Ör"ÃS%Õ×ÒÇ²'6ÇVr#¢&—Ö÷&VÆ–æ"Â&æÖR#¢$—Ö÷&VÆ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$•R"Â#RÖr"Ã#…ÒÅ²$•"Â#Ör"Ã35Õ×ÒÇ²'6ÇVr#¢&¶—77WF–æÓ"Â&æÖR#¢$¶—77WF–æÓ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$µ3R"Â#RÖr"Ã#•ÒÅ²$µ3"Â#Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢&¶Æ÷rÖ'2ÓSr×ÇW2Öv†²Ö7R×ÇW2×F"ÓS×ÇW2Ö·b"Â&æÖR#¢$´Äõr„%2ÓSr²t„²Ô7R²D"ÓS²µb’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$´Ãƒ"Â#ƒÖr"ÃC•Õ×ÒÇ²'6ÇVr#¢&·b"Â&æÖR#¢$µb"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$µcR"Â#RÖr"Ã#UÒÅ²$µc"Â#Ör"Ã3Õ×ÒÇ²'6ÇVr#¢&ÂÖ6&æ—F–æ"Â&æÖR#¢$ÂÖ6&æ—F–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#cÖr"Ã3ÒÅ².(	B"Â##Ör"Ã3EÕ×ÒÇ²'6ÇVr#¢&ÆVÖöâÖ&÷GFÆR"Â&æÖR#¢$ÆVÖöâ&÷GFÆR"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².iújªÎy;b"Â#ÖÂ"Ã3%Õ×ÒÇ²'6ÇVr#¢&Æ—&vÇWF–F"Â&æÖR#¢$Æ—&vÇWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"Ã3eÒÅ².(	B"Â#Ör"ÃC5ÒÅ².(	B"Â#3Ör"Ã#Õ×ÒÇ²'6ÇVr#¢&Æ—fvVâ"Â&æÖR#¢$Æ—fvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"ÃCÕ×ÒÇ²'6ÇVr#¢&ÆÂÓ3r"Â&æÖR#¢$ÄÂÓ3r"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²#3sR"Â#RÖr"Ã3UÕ×ÒÇ²'6ÇVr#¢&ÖG&—‡–Â"Â&æÖR#¢$ÖG&—‡–Â"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"Ã3Õ×ÒÇ²'6ÇVr#¢&Ö¦GWF–F"Â&æÖR#¢$Ö¦GWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ÔECR"Â#RÖr"Ã3•ÒÅ²$ÔEB"Â#Ör"ÃCuÕ×ÒÇ²'6ÇVr#¢&ÖVÆæ÷FâÖ’Ö×BÓ"Â&æÖR#¢$ÖVÆæ÷Fâ’„ÕBÓ’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ÕC"Â#Ör"Ã#…Õ×ÒÇ²'6ÇVr#¢&ÖVÆæ÷FâÖ–’Ö×BÓ""Â&æÖR#¢$ÖVÆæ÷Fâ”’„ÕBÓ"’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ÔÃ"Â#Ör"Ã#…Õ×ÒÇ²'6ÇVr#¢&ÖVÆFöæ–æ"Â&æÖR#¢$ÖVÆFöæ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ÕC"Â#Ör"Ã3%Õ×ÒÇ²'6ÇVr#¢&Övb"Â&æÖR#¢$Ôtb"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$dÓ""Â#"Ör"Ã#UÕ×ÒÇ²'6ÇVr#¢&Ö÷G2Ö2"Â&æÖR#¢$ÔõE2Ö2"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$Õ3"Â#Ör"Ã3ÒÅ²$Õ3C"Â#CÖr"ÃCuÕ×ÒÇ²'6ÇVr#¢&æB×ÇW2"Â&æÖR#¢$äB²"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$ä£"Â#Ör"Ã#UÒÅ²$ä£S"Â#SÖr"Ã3%ÒÅ²$ä£"Â#Ör"Ã3UÕ×ÒÇ²'6ÇVr#¢&ö6—Fö6–æÖ6WFFò"Â&æÖR#¢$ö6—Fö6–æ†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$õC""Â#"Ör"Ã#UÒÅ²$õCR"Â#RÖr"Ã#UÒÅ²$õC"Â#Ör"Ã3%Õ×ÒÇ²'6ÇVr#¢&÷&W†–æÖ"Â&æÖR#¢$÷&W†–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"ÃcuÕ×ÒÇ²'6ÇVr#¢&÷&W†–æÖ""Â&æÖR#¢$÷&W†–æ""Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"ÃC…ÒÅ².(	B"Â#Ör"Ãs5Õ×ÒÇ²'6ÇVr#¢&÷fvVâ"Â&æÖR#¢$÷fvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$õc#"Â##Ör"ÃC%Õ×ÒÇ²'6ÇVr#¢'#"Â&æÖR#¢%#"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%#"Â#Ör"Ã3EÕ×ÒÇ²'6ÇVr#¢'æ7&vVâ"Â&æÖR#¢%æ7&vVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â##Ör"ÃCÕ×ÒÇ²'6ÇVr#¢'RÓ#"Ó#‚"Â&æÖR#¢%RÓ#"Ó#‚"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%SR"Â#RÖr"Ã#UÒÅ²%S"Â#Ör"Ã35Õ×ÒÇ²'6ÇVr#¢'VrÖÖvb"Â&æÖR#¢%TrÔÔtb"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$dÕ""Â#"Ör"ÃCÕ×ÒÇ²'6ÇVr#¢'–æVÆöâ"Â&æÖR#¢%–æVÆöâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%“R"Â#RÖr"Ã#UÒÅ²%“"Â#Ör"Ã3ÒÅ²%“#"Â##Ör"Ã3uÕ×ÒÇ²'6ÇVr#¢'æ2Ó#r"Â&æÖR#¢%ä2Ó#r"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%ãR"Â#RÖr"Ã3uÒÅ²%ã"Â#Ör"ÃCÕ×ÒÇ²'6ÇVr#¢'BÓCÖ'&VÖVÆæ÷F–F"Â&æÖR#¢%BÓC†'&VÖVÆæ÷F–F’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%C"Â#Ör"Ã3Õ×ÒÇ²'6ÇVr#¢'FBÖF&Ò"Â&æÖR#¢%DBÔD$Ò"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#RÖr"Ãc…Õ×ÒÇ²'6ÇVr#¢'&WFG'WF–F"Â&æÖR#¢%&WFG'WF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%%CR"Â#RÖr"Ã3ÒÅ²%%C"Â#Ör"Ã3uÒÅ²%%CR"Â#RÖr"ÃC5ÒÅ²%%C#"Â##Ör"ÃC…ÒÅ²%%C3"Â#3Ör"ÃSEÒÅ²%%CC"Â#CÖr"ÃceÒÅ²%%CS"Â#SÖr"Ãs•ÒÅ²%%Cc"Â#cÖr"Ã“Õ×ÒÇ²'6ÇVr#¢'&WFG'WF–F×ÇW2Ö6w&–Æ–çF–F"Â&æÖR#¢%&WFG'WF–F²6w&–Æ–çF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%$3"Â#Ör"ÃCuÕ×ÒÇ²'6ÇVr#¢'&WFG'WF–F×ÇW2×F—'¦WF–F"Â&æÖR#¢%&WFG'WF–F²F—'¦WF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#cÖr"Ã“eÕ×ÒÇ²'6ÇVr#¢'6VÆæ²"Â&æÖR#¢%6VÆæ²"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%4³R"Â#RÖr"Ã#…ÒÅ²%4³"Â#Ör"Ã3ÒÅ²%4³3"Â#3Ör"ÃC5Õ×ÒÇ²'6ÇVr#¢'6VÖvÇWF–F"Â&æÖR#¢%6VÖvÇWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%4ÓR"Â#RÖr"Ã#UÒÅ²%4Ó"Â#Ör"Ã#…ÒÅ²%4ÓR"Â#RÖr"Ã3ÒÅ²%4Ó#"Â##Ör"Ã35ÒÅ²%4Ó3"Â#3Ör"Ã3…Õ×ÒÇ²'6ÇVr#¢'6VÖ‚"Â&æÖR#¢%6VÖ‚"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%„R"Â#RÖr"Ã#UÒÅ²%„"Â#Ör"Ã#•ÒÅ²%„3"Â#3Ör"ÃC5Õ×ÒÇ²'6ÇVr#¢'6W&Ö÷&VÆ–æÖ6WFFò"Â&æÖR#¢%6W&Ö÷&VÆ–æ†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%4ÔóR"Â#RÖr"Ã3ÒÅ²%4Ôó"Â#Ör"Ã3•Õ×ÒÇ²'6ÇVr#¢'6ÇR×Ó33""Â&æÖR#¢%4ÅRÕÓ33""Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²#3#""Â#RÖr"ÃC%Õ×ÒÇ²'6ÇVr#¢'6æÓ‚"Â&æÖR#¢%4äÓ‚"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$åƒ"Â#Ör"Ã#UÕ×ÒÇ²'6ÇVr#¢'72Ó3"Â&æÖR#¢%52Ó3†VÆÖ—&WF–F’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²#%3"Â#Ör"Ã3EÒÅ²#%3S"Â#SÖr"ÃƒÕ×ÒÇ²'6ÇVr#¢'7W'föGWF–F"Â&æÖR#¢%7W'föGWF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%5U#"Â#Ör"Ã“Õ×ÒÇ²'6ÇVr#¢'F"ÓS"Â&æÖR#¢%D"ÓS"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%D#R"Â#RÖr"Ã35ÒÅ²%D#"Â#Ör"ÃC%Õ×ÒÇ²'6ÇVr#¢'F"ÓSÖg&vÖVçFò"Â&æÖR#¢%D"ÓS†g&vÖVçFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$#b"Â#Ör"Ã3EÕ×ÒÇ²'6ÇVr#¢'FW&—&F–F"Â&æÖR#¢%FW&—&F–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"ÃSÕ×ÒÇ²'6ÇVr#¢'FW6Ö÷&VÆ–æ"Â&æÖR#¢%FW6Ö÷&VÆ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&–ÖvR#¢"ââö76WG2ö–ÖvW2÷FW6Ö÷&VÆ–æÖ&÷fVBçvV'"Â&—FV×2#¥µ²%E4ÓR"Â#RÖr"Ã3ÒÅ²%E4Ó"Â#Ör"ÃC…ÒÅ²%E4Ó#"Â##Ör"ÃsuÕ×ÒÇ²'6ÇVr#¢'FW7FvVâ"Â&æÖR#¢%FW7FvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%Ds#"Â##Ör"ÃCuÕ×ÒÇ²'6ÇVr#¢'F–ÖÆ–æ"Â&æÖR#¢%F–ÖÆ–æ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%E“"Â#Ör"Ã3Õ×ÒÇ²'6ÇVr#¢'F–Ö÷6–æÖÆfÓ"Â&æÖR#¢%F–Ö÷6–æÆfÓ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%DR"Â#RÖr"Ã3UÒÅ²%D"Â#Ör"ÃCÕ×ÒÇ²'6ÇVr#¢'F—'¦WF–F"Â&æÖR#¢%F—'¦WF–F"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%E#R"Â#RÖr"Ã#UÒÅ²%E#"Â#Ör"Ã#…ÒÅ²%E#R"Â#RÖr"Ã3ÒÅ²%E##"Â##Ör"Ã35ÒÅ²%E#3"Â#3Ör"Ã3…ÒÅ²%E#C"Â#CÖr"ÃCEÒÅ²%E#S"Â#SÖr"ÃC•ÒÅ²%E#c"Â#cÖr"ÃCUÒÅ²%E#ƒ"Â#ƒÖr"ÃƒEÒÅ²%E#"Â#Ör"Ã“EÕ×ÒÇ²'6ÇVr#¢'F÷†–æÖ&÷GVÆ–æ–6"Â&æÖR#¢%F÷†–æ&÷GVÌ:Öæ–6"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%…C"Â#—R"ÃCÕ×ÒÇ²'6ÇVr#¢'G&—F÷'&VÆ–æÖ6WFFò"Â&æÖR#¢%G&—F÷'&VÆ–æ†6WFFò’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#"Ör"Ã35Õ×ÒÇ²'6ÇVr#¢'fW7VvVâ"Â&æÖR#¢%fW7VvVâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ².(	B"Â#Ör"Ã35Õ×ÒÇ²'6ÇVr#¢'f–Æöâ"Â&æÖR#¢%f–Æöâ"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%d“#"Â##Ör"ÃC%Õ×ÒÇ²'6ÇVr#¢'f—Öf—FF–Â"Â&æÖR#¢%d•†f—FF–Â’"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²%d•R"Â#RÖr"Ã3EÒÅ²%d•"Â#Ör"ÃCuÕ×ÒÇ²'6ÇVr#¢&6–FòÖ†–ÇW&öæ–6ò"Â&æÖR#¢,86–Fò†–ÇW,;Fæ–6ò"Â&FW62#¢$ÖFW&–ÂFR&VfW,:¦æ6–6FÆövFò&W7V—6Æ&÷&F÷&–Ââ"Â&—FV×2#¥µ²$„R"Â#RÖr"ÃSÕ×ÕÓ°¦6öç7BDT4…õ5T53×°¢'&WFG'WF–F#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6ò6–ÆFòFR3’&W<:ÖGV÷3²vöæ—7FG&—ÆòW‡W&–ÖVçFÂFRt•ÂtÅÓRvÇV6vöââ"À¢6WVVæ6S¢$W7G'WGW&ÖöF–f–6FR6–ÆFâ6W\:¦æ6–Æ–æV"6ö×ÆWFì:6ò:’&W&öGW¦–FV’L:’†fW"6öç6öÆ–F:|:6òVçG&RföçFR&–Ü:&–R&Vv—7G&ò\:ÖÖ–6òâ"À¢ÖöÆV7VÆ#¢$>((.((.((((>((N(($î((N((dş((n((‚+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRBãs3röÖöÂâ"À¢÷&–v–ã¢$FW6VçföÇf–FVÆVÆ’Æ–ÆÇ’æB6ö×ç’6öÖòÅ“3C3s“C2RFW67&—FVÒV&Æ–6:|:6ò,:’Ö6Ì:Öæ–6VÒ##"â"À¢F—66÷fW'“¢$WV—RÆ–FW&F÷"FÖW"6÷6·Vâ+rVÆ’Æ–ÆÇ’æB6ö×ç’+r–æF–æöÆ—2ÂW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B&WFG'WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ&WFG'WF–FR%ÒÀ¢²$6÷6·VâWBÂâÂ6VÆÂÖWF&öÆ—6Òƒ##"’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3S“ƒS3Cò%Ğ¢Ğ¢ÒÀ¢'F—'¦WF–F#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6ò6–ÆFòFR3’&W<:ÖGV÷2ÂFW&—fFòFRVÖ6W\:¦æ6–FRt•²vöæ—7FGWÆòFRt•RtÅÓâ"À¢6WVVæ6S¢$6FV–FR3’&W<:ÖGV÷26öÒÖ–æü:6–F÷2ì:6ò6öF–f–6F÷2R6öæ§Vv:|:6òVÒFœ:6–Fòw&†ò3#â&W&W6VçF:|:6ò\:ÖÖ–6–çFVw&ÂW7L:F—7öì:×fVÂæföçFRW7G'WGW&Ââ"À¢ÖöÆV7VÆ#¢$>((.((.((T((>((N((„î((N((„ş((n((‚+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRBãƒ2röÖöÂâ"À¢÷&–v–ã¢$FW6VçföÇf–F6öÖòÅ“3#“ƒsbVÆVÆ’Æ–ÆÇ’æB6ö×ç“²&W7VÇFF÷26Ì:Öæ–6÷2FRf6R"V&Æ–6F÷2VÒ#‚â"À¢F—66÷fW'“¢$WV—RFRW7V—6FVÆ’Æ–ÆÇ’æB6ö×ç’+r–æF–æöÆ—2ÂW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BF—'¦WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóScSƒƒ3#B%ÒÀ¢²$g&–2WBÂâÂF†RÆæ6WBƒ#‚’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3#“3ssò%Ğ¢Ğ¢ÒÀ¢&'2ÓSr#§°¢6Æ76–f–6F–öã¢%VçFFV6WL:ÖFVò6–çL:—F–6òW‡W&–ÖVçFÂÂ6ö×÷7Fò÷"RÖ–æü:6–F÷2â"À¢6WVVæ6S¢$vÇ(	4vÇ^(	5&ş(	5&ş(	5&ş(	4vÇ(	4Ç—>(	5&ş(	4Æ(	47(	47(	4Æ(	4vÇ(	4ÆW^(	5fÂ„tUtµDDtÅb’â"À¢ÖöÆV7VÆ#¢$>((n(($((((„î((((dş((.(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢ãC’ÃRröÖöÂâ"À¢÷&–v–ã¢%6W\:¦æ6–FW67&—F'F—"FRW7V—626öÒVÖg&:|:6òFVæöÖ–æF&öG’&÷FV7F–öâ6ö×÷VæBÂ76ö6–FW7GVF÷2FR7V6ò|:7G&–6ò‡VÖæòâ"À¢F—66÷fW'“¢$w'WòFR&VG&r6–¶—&–2+rVæ—fW'6–FFRFR¦w&V"+r¦w&V"Â7&ü:6–+rFW67&—Fò'F—"FR““2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B%2ÓSr"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô'2ÓSr%ÒÀ¢²%&Wf—<:6ò–æFW†FæòV$ÖVB6ö'&RÆ—FW&GW&–æ–6–Â"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3“SSSò%Ğ¢Ğ¢ÒÀ¢&Ö÷G2Ö2#§°¢6Æ76–f–6F–öã¢%WL:ÖFVòFW&—fFòFÖ—Fö<;FæG&–Â6öF–f–6Fò÷"VÖWVVæõ$bæò$ä&–&÷7<;FÖ–6òÖ—Fö6öæG&–Â%3²bÖ–æü:6–F÷2â"À¢6WVVæ6S¢$ÖWN(	4&~(	5G'(	4vÆî(	4vÇ^(	4ÖWN(	4vÇ(	5G—.(	4–Æ^(	5†^(	5G—.(	5&ş(	4&~(	4Ç—>(	4ÆW^(	4&r„Õ%uTÔu””e•$´Å"’â"À¢ÖöÆV7VÆ#¢$>((((((((((^(($î((.((„ş((.((%>(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR"ãsBÃbröÖöÂâ"À¢÷&–v–ã¢$–FVçF–f–6FòVÒ#R÷"ì:Æ—6RFRVÖWVVæ&Vvœ:6ò6öF–f–6çFRFòvVæöÖÖ—Fö6öæG&–Â‡VÖæòâ"À¢F—66÷fW'“¢$6†æv†âÆVRÂ–æ6†26ö†VâR6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb6÷WF†W&â6Æ–f÷&æ–+rÆ÷2ævVÆW2ÂW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÔõE2Ö2"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôÖ÷G2Ö2%ÒÀ¢²$ÆVRWBÂâÂ6VÆÂÖWF&öÆ—6Òƒ#R’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#Ss3ƒCS’ò%Ğ¢Ğ¢ÒÀ¢'6VÖvÇWF–F#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6òR6–ÆFòFòtÅÓ‡VÖæó²WL:ÖFVòFR3&W<:ÖGV÷26öÒGV27V'7F—GVœ:|;VW2FRÖ–æü:6–F÷2RFW&—fF—¦:|:6òÆ—:ÖF–6â"À¢6WVVæ6S¢$FW&—fFFRtÅÓƒ~(	33r’Â6öÒ–"æ÷6œ:|:6ò‚Â&ræ÷6œ:|:6ò3BRVÖ6FV–FRFœ:6–Fòw&†ò3‚Æ–vF:Ç—3#b÷"W7:vF÷&W2†–G&öl:ÖÆ–6÷2â"À¢ÖöÆV7VÆ#¢$>((((((t((.((((î((N((Tş((^((’+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRBã2ÃbröÖöÂâ"À¢÷&–v–ã¢%6VÆV6–öæFææ÷fòæ÷&F—6²GW&çFRòFW6VçföÇf–ÖVçFòFRVÒì:ÆövòFRtÅÓFR:|:6ò&öÆöævF²FW66ö&W'F\:ÖÖ–6fö’V&Æ–6FVÒ#Râ"À¢F—66÷fW'“¢$¦W7W"ÆRÂÆ÷GFR&¦W'&R¶çVG6VâR6öÆ&÷&F÷&W2+ræ÷fòæ÷&F—6²õ2+rÜ:VÌ;‡bÂF–æÖ&6â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6VÖvÇWF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ6VÖvÇWF–FR%ÒÀ¢²$ÆRWBÂâÂ¦÷W&æÂöbÖVF–6–æÂ6†VÖ—7G'’ƒ#R’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#c3ƒ“Rò%Ğ¢Ğ¢ÒÀ¢&6w&–Æ–çF–F#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6òÂ6–ÆFòRFR:|:6ò&öÆöævFFÖ–Æ–æ²WL:ÖFVòW‡W&–ÖVçFÂFR3r&W<:ÖGV÷2â"À¢6WVVæ6S¢$W7G'WGW&FW&—fFFRÖ–Æ–æ6öÒÜ;¦ÇF—Æ27V'7F—GVœ:|;VW2ÂöçFRF—77VÆfWFò–çG&ÖöÆV7VÆ"R6öæ§Vv:|:6òÆ—:ÖF–6â6W\:¦æ6–Æ–æV"—6öÆFì:6òFW67&WfR–çFVw&ÆÖVçFRò6ö×÷7FòÖöF–f–6Fòâ"À¢ÖöÆV7VÆ#¢$>((((((D((>(((($î((^((Dş((^((•>(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRBãCröÖöÂâ"À¢÷&–v–ã¢$FW6VçföÇf–FVÆæ÷fòæ÷&F—6²6öÖòÓƒ32&6öÖ&–æ"W7F&–Æ–FFR&öÆöævF6öÒF—f–FFRæ÷2&V6WF÷&W2FRÖ–Æ–æR6Æ6—Föæ–æâ"À¢F—66÷fW'“¢$WV—RFRW7V—6Fæ÷fòæ÷&F—6²õ2+rF–æÖ&6²&–ÖV—&÷2&W7VÇFF÷26Ì:Öæ–6÷2V&Æ–6F÷2'F—"FR##â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6w&–Æ–çF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô6w&–Æ–çF–FR%ÒÀ¢²$ÆRWBÂâÂF†RÆæ6WBƒ##’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3Cs“ƒS’ò%Ğ¢Ğ¢ÒÀ¢'FW6Ö÷&VÆ–æ#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6òFòfF÷"Æ–&W&F÷"Fò†÷&Ü;Fæ–òFò7&W66–ÖVçFò‡VÖæòÂ6÷'&W7öæFVçFRò„u$bƒ(	3CB’6öÒÖöF–f–6:|:6òâ×FW&Ö–æÂâ"À¢6WVVæ6S¢%G&ç2Ó2Ö†W†Væö–Î(	5G—.(	4Æ(	47(	4Æ(	4–Æ^(	5†^(	5F‡.(	46î(	56W.(	5G—.(	4&~(	4Ç—>(	5fÎ(	4ÆW^(	4vÇ(	4vÆî(	4ÆW^(	56W.(	4Æ(	4&~(	4Ç—>(	4ÆW^(	4ÆW^(	4vÆî(	47(	4–Æ^(	4ÖWN(	56W.(	4&~(	4vÆî(	4vÆî(	4vÇ(	4vÇ^(	56W.(	46î(	4vÆî(	4vÇ^(	4&~(	4vÇ(	4Æ(	4&~(	4Æ(	4&~(	4ÆW^(	4ä(("â"À¢ÖöÆV7VÆ#¢$>((.((.((((>((n((dî((~(($ş((n((u2+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRRã3RÃ’röÖöÂâ"À¢÷&–v–ã¢$FW6VçföÇf–F6öÖòDƒ“SrÂVÒì:ÆövòW7F&–Æ—¦FòFR„u$bƒ(	3CB’ÂVÆF†W&FV6†æöÆöv–W2VÒÖöçG&VÂÂ6æL:â"À¢F—66÷fW'“¢$WV—RFRW7V—6FF†W&FV6†æöÆöv–W2+rÖöçG&VÂÂ6æL:²W7GVF÷2,:’Ö6Ì:Öæ–6÷26öÒDƒ“SrV&Æ–6F÷2VÒ#Bâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BFW6Ö÷&VÆ–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõFW6Ö÷&VÆ–â%ÒÀ¢²%F÷RWBÂâÂ¦÷W&æÂöb6öçG&öÆÆVB&VÆV6Rƒ#B’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóS3cbò%Ğ¢Ğ¢ÒÀ¢&v†²Ö7R#§°¢6Æ76–f–6F–öã¢$6ö×ÆW†òFR6ö÷&FVæ:|:6òVçG&R6ö'&R„”’’RòG&—WL:ÖFVòvÆ–6–ÂÔÂÖ†—7F–F–ÂÔÂÖÆ—6–æ„t„²’â"À¢6WVVæ6S¢$vÇ(	4†—>(	4Ç—2„t„²’âò6ö'&R„”’’:’6ö÷&FVæFò&–æ6—ÆÖVçFRVÆ÷2:FöÖ÷2FRæ—G&ö|:¦æ–òFòG&—WL:ÖFVó²W7FWV–öÖWG&–Rl;7&×VÆ&W÷'FFöFVÒf&–"6öæf÷&ÖRò6ö×ÆW†ò—6öÆFòR6WRW7FFòFR†–G&F:|:6òâ"À¢ÖöÆV7VÆ#¢%&ò6ö×ÆW†ò7^(	4t„²£æ–G&ó¢>((((D((.((D7Tî((dş((B+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢C2Ã’röÖöÂâ"À¢÷&–v–ã¢$òG&—WL:ÖFVòt„²fö’—6öÆFòFòÆ6Ö‡VÖæòVÒW7V—626ö'&RfF÷&W2ÖöGVÆF÷&W2FR7&W66–ÖVçFó²7V–çFW&:|:6ò6öÒ6ö'&R„”’’fö’6&7FW&—¦F÷7FW&–÷&ÖVçFRâ"À¢F—66÷fW'“¢$Æ÷&Vâ–6¶'BR6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb6Æ–f÷&æ–Â6âg&æ6—66òÂW7FF÷2Væ–F÷2+rG&&Æ†÷2gVæFÖVçF—2V&Æ–6F÷2æL:–6FFR“sâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B7RÔt„²"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó3sƒc%ÒÀ¢²%–6¶'BRF†ÆW"ÂdT%2ÆWGFW'2ƒ“s’’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóSScSCrò%ÒÀ¢²$g&VVFÖâWBÂâÂ&–ö6†VÖ–6Â¦÷W&æÂƒ“ƒ"’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bós3Cƒ#Bò%Ğ¢Ğ¢ÒÀ¢'72Ó3#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6ò&öÜ:F–6òÖ6Fœ;6æ–6òF—&V6–öæFò:ÖVÖ'&æÖ—Fö6öæG&–Â–çFW&æ²FÖ,:–ÒFVæöÖ–æFòVÆÖ—&WF–Fâ"À¢6WVVæ6S¢$BÔ&~(	3.("Ãn("ÖF–ÖWF–ÂÕG—.(	4Ç—>(	5†^(	4ä(("â"À¢ÖöÆV7VÆ#¢$>((>(($((N((”î((”ş((R+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRc3’Ã‚röÖöÂ&&6RÆ—g&S²6—2&W6VçFÒÖ76F—7F–çFâ"À¢÷&–v–ã¢$–FVçF–f–6FòæfÜ:ÖÆ–FRWL:ÖFV÷27¦WFş(	566†–ÆÆW"GW&çFRW7V—626ö'&RFWG&WL:ÖFV÷2&öÜ:F–6òÖ6Fœ;6æ–6÷2W&Ö\:fV—2:<:–ÇVÆâ"À¢F—66÷fW'“¢$†¦VÂ‚â7¦WFòÂWFW"râ66†–ÆÆW"R6öÆ&÷&F÷&W2+rvV–ÆÂ6÷&æVÆÂÖVF–6Â6öÆÆVvRR6Æ–æ–6Â&W6V&6‚–ç7F—GWFRöbÖöçG&VÂ+rW7FF÷2Væ–F÷2ô6æL:+r–ì:Ö6–òF÷2æ÷2#â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BVÆÖ—&WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôVÆÖ—&WF–FR%ÒÀ¢²%7¦WFòÂ'&—F—6‚¦÷W&æÂöb†&Ö6öÆöw’ƒ#B’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#CscRò%Ğ¢Ğ¢ÒÀ¢&öBÓ“cB#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6òFRb&W<:ÖGV÷2FW&—fFòFòFöÜ:Öæ–ò2×FW&Ö–æÂFò†÷&Ü;Fæ–òFò7&W66–ÖVçFò‡VÖæó²–æ6ÇV’G—"6VwV–Fò÷"„t‚ƒs~(	3“’â"À¢6WVVæ6S¢%G—.(	4ÆW^(	4&~(	4–Æ^(	5fÎ(	4vÆî(	47—>(	4&~(	56W.(	5fÎ(	4vÇ^(	4vÇ(	56W.(	47—>(	4vÇ(	5†R…”Å$•e5%5dTu44tb’Â6öÒöçFRF—77VÆfWFòVçG&R2GV26—7F\:Öæ2â"À¢ÖöÆV7VÆ#¢$>((~((„((((.((4î((.((4ş((.((5>(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRãƒRÃröÖöÂâ"À¢÷&–v–ã¢$FW6VçföÇf–Fò'F—"FRW7GVF÷2VRFVÆ–Ö—F&ÒVÒFöÜ:Öæ–ò2×FW&Ö–æÂ6–çL:—F–6òFò†÷&Ü;Fæ–òFò7&W66–ÖVçFò‡VÖæòâ"À¢F—66÷fW'“¢$g&æ²ÒâærR6öÆ&÷&F÷&W2+rÖöæ6‚Væ—fW'6—G’+rÖVÆ&÷W&æRÂW7G,:Æ–²W7GVF÷2ÖWF,;6Æ–6÷2V&Æ–6F÷2VÒ#(	3#â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BôBÓ“cB"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôöBÓ“cB%ÒÀ¢²$†VffW&æâWBÂâÂVæFö7&–æöÆöw’ƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóCc3crò%Ğ¢Ğ¢ÒÀ¢&&Ó#“#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6òFR&W<:ÖGV÷2FW&—fFòF7WW&l:Ö6–RFŒ:–Æ–6R"FW&—G&÷ö–WF–æ²FÖ,:–ÒFVæöÖ–æFò6–&–æWF–Fâ"À¢6WVVæ6S¢'vÇ^(	4vÇ^(	4vÆî(	4ÆW^(	4vÇ^(	4&~(	4Æ(	4ÆW^(	46î(	56W.(	56W"â"À¢ÖöÆV7VÆ#¢$>((^((((((Dî((((dş((.((+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRã#SrÃBröÖöÂ&&6RÆ—g&Râ"À¢÷&–v–ã¢%&ö¦WFFò&&W&öGW¦—"f6RFŒ:–Æ–6R"FW&—G&÷ö–WF–æ76ö6–F:6–æÆ—¦:|:6òFR&÷F\:|:6òFV6–GVÂÂ6VÒ&W&öGW¦—"W7G'WGW&6ö×ÆWFF&÷F\:Öæâ"À¢F—66÷fW'“¢$Ö–6†VÂ'&–æW2ÂçF†öç’6W&Ö’R6öÆ&÷&F÷&W2+rF†R¶VææWF‚2âv'&Vâ–ç7F—GWFR+rW7FF÷2Væ–F÷3²FW67&—Fò6öÖòWL:ÖFVòFW&—fFòFW&—G&÷ö–WF–æVÒ#‚â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6–&–æWF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô6–&–æWF–FR%ÒÀ¢²$'&–æW2WBÂâÂä2ƒ#‚’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒC#c“bò%Ğ¢Ğ¢ÒÀ¢&·b#§°¢6Æ76–f–6F–öã¢%G&—WL:ÖFVò6–çL:—F–6ò6÷'&W7öæFVçFR÷2G,:§2&W<:ÖGV÷22×FW&Ö–æ—2FëÖÖVÆæ÷G&÷–æŒëÔÕ4‚’â"À¢6WVVæ6S¢$Ç—>(	5&ş(	5fÂ„µb’â"À¢ÖöÆV7VÆ#¢$>((((d((>((î((Dş((B+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR3C"ÃBröÖöÂ&òG&—WL:ÖFVòÆ—g&Râ"À¢÷&–v–ã¢$FVf–æ–Fò÷"W7GVF÷2FR&VÆ:|:6òW7G'WGW&(	6F—f–FFRFëÔÕ4‚VR6W&&Ò&Vvœ;VW2gVæ6–öæ—2F6W\:¦æ6–†÷&ÖöæÂâ"À¢F—66÷fW'“¢%f–7F÷"¢â‡'V'’R6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb&—¦öæ+rGV76öâÂW7FF÷2Væ–F÷3²&Vvœ:6òÖVç6vV—&2×FW&Ö–æÂ6&7FW&—¦FæL:–6FFR“sâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÕ4‚ƒ(	32’òµb"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôÂÔÇ—7–ÂÔÂ×&öÇ–ÂÔÂ×fÆ–æR%ÒÀ¢²$‡'V'’WBÂâÂ¦÷W&æÂöbÖVF–6–æÂ6†VÖ—7G'’ƒ“s‚’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó###32ò%Ğ¢Ğ¢ÒÀ¢&—Ö÷&VÆ–æ#§°¢6Æ76–f–6F–öã¢%VçFWL:ÖFVò6–çL:—F–6òWF–FöÖ–Ü:—F–6òÂFW67&—Fò6öÖò6V7&WFvövò6VÆWF—fòFò†÷&Ü;Fæ–òFò7&W66–ÖVçFòâ"À¢6WVVæ6S¢$–.(	4†—>(	4BÓ"ÔæÎ(	4BÕ†^(	4Ç—>(	4ä(("âW7G'WGW&–æ6ÇV’:6–FòëÖÖ–æö—6ö'WL:×&–6ò„–"’Â"ÖægF–ÆÆæ–æƒ"ÔæÂ’RFö—2&W<:ÖGV÷2VÒ6öæf–wW&:|:6òBâ"À¢ÖöÆV7VÆ#¢$>((>((„((N((”î((”ş((R+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRsÃ’röÖöÂ&&6RÆ—g&S²6—2R6öÇfF÷2&W6VçFÒfÆ÷&W2F–fW&VçFW2â"À¢÷&–v–ã¢$–FVçF–f–6FGW&çFRW7V—626öÒ6V7&WFvöv÷2WL:ÖF–6÷26VÆWF—f÷2R&W6VçFFæÆ—FW&GW&6–VçL:Öf–6æòf–æÂFL:–6FFR““â"À¢F—66÷fW'“¢$WV—RFR¶—'7FVâ&VâR6öÆ&÷&F÷&W2+ræ÷fòæ÷&F—6²õ2+rÜ:VÌ;‡bÂF–æÖ&6+rV&Æ–6:|:6òFR6&7FW&—¦:|:6òVÒ““‚â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B—Ö÷&VÆ–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô—Ö÷&VÆ–â%ÒÀ¢²%&VâWBÂâÂWW&÷Vâ¦÷W&æÂöbVæFö7&–æöÆöw’ƒ““‚’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó“ƒC“ƒ#"ò%Ğ¢Ğ¢ÒÀ¢'6VÖ‚#§°¢6Æ76–f–6F–öã¢$†WFWL:ÖFVò6–çL:—F–6òFW&—fFòFòg&vÖVçFò5D‚ƒN(	3r’Â&öÆöævFòVÆòG&—WL:ÖFVò&ş(	4vÇ(	5&òâ"À¢6WVVæ6S¢$ÖWN(	4vÇ^(	4†—>(	5†^(	5&ş(	4vÇ(	5&ò„ÔT„eu’âf÷&Ö2âÖ6WF–ÆF2÷R&W6VçFF26öÖò6—2FWfVÒ6W"F—7F–æwV–F2F6FV–Æ—g&Râ"À¢ÖöÆV7VÆ#¢%&6FV–Æ—g&RÔT„eu¢>((>((t((^((î((”ş((((2+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRƒ2Ã’röÖöÃ²FW&—fF÷2R6—2L:¦Ò6ö×÷6œ:|:6òF—7F–çFâ"À¢÷&–v–ã¢%&ö¦WFFò'F—"Fòg&vÖVçFò5D‚ƒN(	3r’Â6öÒW‡FVç<:6ò&ş(	4vÇ(	5&ò&VÖVçF"W7F&–Æ–FFRF6W\:¦æ6–VÒW7GVF÷2W‡W&–ÖVçF—2â"À¢F—66÷fW'“¢$æ–¶öÆ’bâ×–6öVF÷bÂ–v÷"â6†Ö&–âR6öÆ&÷&F÷&W2+r–ç7F—GVœ:|;VW2F6FVÖ–'W76FR6œ:¦æ6–2+rÖ÷66÷RÂ,;§76–+rFW6VçföÇf–FòRW7GVFFò'F—"FL:–6FFR“ƒâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6VÖ‚ò5D‚ƒN(	3r’Õu"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ6VÖ‚%ÒÀ¢²$FöÆ÷F÷bWBÂâÂæWW&÷66–Væ6RÆWGFW'2ƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóCSsSs2ò%Ğ¢Ğ¢ÒÀ¢&W—FÆöâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6òFRVG&òÖ–æü:6–F÷2ÂFÖ,:–Ò–FVçF–f–6FòVÆ6–vÆTDrâ"À¢6WVVæ6S¢$Æ(	4vÇ^(	47(	4vÇ’„TDr’âf÷&ÖG&–fÇV÷&ö6WFFò÷77V’6ö×÷6œ:|:6òRÖ76F–fW&VçFW2F6FV–Æ—g&Râ"À¢ÖöÆV7VÆ#¢$>((((D((.(($î((Dş((’+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR3“Ã3RröÖöÂ&òFWG&WL:ÖFVòÆ—g&Râ"À¢÷&–v–ã¢$6öç7G'\:ÖFò'F—"Fì:Æ—6RFRÖ–æü:6–F÷2FRVÒ6ö×ÆW†òöÆ—WL:ÖF–6òFvÌ:&æGVÆ–æVÃ²TDrfö’÷7FW&–÷&ÖVçFR–FVçF–f–6FòæW76R6ö×ÆW†ò÷"W7V7G&öÖWG&–FRÖ76R…Ä2â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vò+r<:6òWFW'6'W&vòÂ,;§76–â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BW—FÆöâ"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôW—FÆöâ%ÒÀ¢²$¶†f–ç6öâWBÂâÂ'VÆÆWF–âöbW‡W&–ÖVçFÂ&–öÆöw’æBÖVF–6–æRƒ#r’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#“#CS3ò%Ğ¢Ğ¢ÒÀ¢'F–Ö÷6–æÖÆfÓ#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6òFR#‚Ö–æü:6–F÷26÷'&W7öæFVçFR:6W\:¦æ6–â×FW&Ö–æÂ6WF–ÆFF&÷F‡–Ö÷6–âÇ†²FÖ,:–ÒFVæöÖ–æFòF‡–ÖÆf6–ââ"À¢6WVVæ6S¢$>(	56W.(	47(	4Æ(	4Æ(	5fÎ(	47(	5F‡.(	56W.(	56W.(	4vÇ^(	4–Æ^(	5F‡.(	5F‡.(	4Ç—>(	47(	4ÆW^(	4Ç—>(	4vÇ^(	4Ç—>(	4Ç—>(	4vÇ^(	5fÎ(	5fÎ(	4vÇ^(	4vÇ^(	4Æ(	4vÇ^(	46ââ"À¢ÖöÆV7VÆ#¢$>((((.((”((.((((Tî((>((4ş((^((R+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR2ã‚Ã2röÖöÂâ"À¢÷&–v–ã¢$—6öÆF÷&–v–æÆÖVçFRFR&W&:|;VW2FRF–ÖòR6&7FW&—¦F6öÖòVÖg&:|:6òWL:ÖF–6FVf–æ–FæL:–6FFR“sâ"À¢F—66÷fW'“¢$ÆÆâÂâvöÆG7FV–âR6öÆ&÷&F÷&W2+rvV÷&vRv6†–æwFöâVæ—fW'6—G’+rv6†–æwFöâÂBä2âÂW7FF÷2Væ–F÷2+r6&7FW&—¦:|:6ò&W÷'FFVÒ“srâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BF‡–ÖÆf6–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõF‡–ÖÆf6–â%ÒÀ¢²$v&6’ÂææÇ2öbF†RæWr–÷&²6FV×’öb66–Væ6W2ƒ#r’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bósScs“Cò%ÒÀ¢²$&—'"WBÂâÂ–çFW&æF–öæÂ¦÷W&æÂöbWF–FRæB&÷FV–â&W6V&6‚ƒ“ƒR’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóCccSò%Ğ¢Ğ¢ÒÀ¢'6VÆæ²#§°¢6Æ76–f–6F–öã¢$†WFWL:ÖFVò6–çL:—F–6òFW&—fFòF6W\:¦æ6–Fò–×VæöÖöGVÆF÷"VæL;6vVæòGVgG6–ââ"À¢6WVVæ6S¢%F‡.(	4Ç—>(	5&ş(	4&~(	5&ş(	4vÇ(	5&ò…Dµ%u’âf÷&ÖF–6WFFòFWfR6W"F—7F–æwV–FF6FV–Æ—g&Râ"À¢ÖöÆV7VÆ#¢$>((>((4((^((tî((((ş((’+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRsSÃ’röÖöÂ&ò†WFWL:ÖFVòÆ—g&S²6—2&W6VçFÒ6ö×÷6œ:|:6òF–fW&VçFRâ"À¢÷&–v–ã¢%&ö¦WFFò'F—"FòFWG&WL:ÖFVòGVgG6–â…F‡.(	4Ç—>(	5&ş(	4&r’Â&öÆöævFòVÆ6W\:¦æ6–&ş(	4vÇ(	5&òâ"À¢F—66÷fW'“¢$æ–¶öÆ’bâ×–6öVF÷bR6öÆ&÷&F÷&W2+r–ç7F—GWFòFRvVì:—F–6ÖöÆV7VÆ"F6FVÖ–'W76FR6œ:¦æ6–2+rÖ÷66÷RÂ,;§76–+rFW6VçföÇf–FòæL:–6FFR““â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6VÆæ²"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ6VÆæ²%ÒÀ¢²%6†Wf6†Væ¶òWBÂâÂ&F–ö6†VÖ—7G'’ƒ#b’"Â&‡GG3¢òöFö’æ÷&róã3Bõ3cc3c##c3cr%Ğ¢Ğ¢ÒÀ¢'6W&Ö÷&VÆ–æÖ6WFFò#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6òFR#’Ö–æü:6–F÷26÷'&W7öæFVçFRòg&vÖVçFò&–öÆöv–6ÖVçFRF—fòt…$‚ƒ(	3#’’Ôä(("‡VÖæòâ"À¢6WVVæ6S¢%G—.(	4Æ(	47(	4Æ(	4–Æ^(	5†^(	5F‡.(	46î(	56W.(	5G—.(	4&~(	4Ç—>(	5fÎ(	4ÆW^(	4vÇ(	4vÆî(	4ÆW^(	56W.(	4Æ(	4&~(	4Ç—>(	4ÆW^(	4ÆW^(	4vÆî(	47(	4–Æ^(	4ÖWN(	56W.(	4&~(	4ä(("â"À¢ÖöÆV7VÆ#¢$>((((N((”((.((N((dî((N((Dş((N((%2+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR2ã3SrÃ’röÖöÂ&&6RÆ—g&S²ò6WFFò7&W66VçF6öçG&:Ööç2FR6ö×÷6œ:|:6òf&œ:fVÂâ"À¢÷&–v–ã¢$FW&—fFF÷2#’&W<:ÖGV÷2â×FW&Ö–æ—2FòfF÷"Æ–&W&F÷"FR†÷&Ü;Fæ–òFò7&W66–ÖVçFò‡VÖæòÂ&Vvœ:6òÜ:Öæ–ÖVR&W6W'fF—f–FFRFòWL:ÖFVòæF—fòâ"À¢F—66÷fW'“¢$6W\:¦æ6–FRu$b‡VÖæòfö’—6öÆFR6&7FW&—¦F÷"WV—W2FR&övW"wV–ÆÆVÖ–âRw–Æ–RfÆRæò–ì:Ö6–òFL:–6FFR“ƒ²òg&vÖVçFò(	3#’fö’VçL:6òFW6VçföÇf–Fò6öÖòì:Æövò6–çL:—F–6òâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6W&Ö÷&VÆ–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ6W&Ö÷&VÆ–â%ÒÀ¢²$wV–ÆÆVÖ–âWBÂâÂ66–Væ6Rƒ“ƒ"’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóc3S#‚ò%ÒÀ¢²$w&÷76ÖâWBÂâÂVF–G&–2&W6V&6‚ƒ“ƒB’"Â&‡GG3¢òöFö’æ÷&róã#2ócCSÓ“ƒCÓ#S%Ğ¢Ğ¢ÒÀ¢&6¦2Ó#“R×6VÒÖF2#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6òFRt…$‚ƒ(	3#’’Ôä(("6öÒVG&ò7V'7F—GVœ:|;VW2FRÖ–æü:6–F÷2R6VÒòw'WòG'Vrff–æ—G’6ö×ÆW‚„D2’â"À¢6WVVæ6S¢%G—.(	4BÔÆ(	47(	4Æ(	4–Æ^(	5†^(	5F‡.(	4vÆî(	56W.(	5G—.(	4&~(	4Ç—>(	5fÎ(	4ÆW^(	4Æ(	4vÆî(	4ÆW^(	56W.(	4Æ(	4&~(	4Ç—>(	4ÆW^(	4ÆW^(	4vÆî(	47(	4–Æ^(	4ÆW^(	56W.(	4&~(	4ä(("â"À¢ÖöÆV7VÆ#¢$>((((^(($((.((^(($î((N((Dş((N(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR2ã3crÃ’röÖöÂ&òWL:ÖFVò6VÒD3²6—2R6öÇfF÷2F–fW&VÒâ"À¢÷&–v–ã¢$6öç7G'\:ÖFò6ö'&Ròì;¦6ÆVòt…$‚ƒ(	3#’’Â6öÒ7V'7F—GVœ:|;VW2BÔÆ+"ÂvÆî(‚ÂÆ+(RRÆW\+.(râì:6ò6öçL:–ÒòÆ–vçFRÖÆV–Ö–FFRf–æ–FFR÷"Æ'VÖ–æFò4¤2Ó#“R6öÒD2â"À¢F—66÷fW'“¢$fÜ:ÖÆ–FRì:Æöv÷24¤2Ó#“Rfö’6&7FW&—¦F÷"Ì:–öæ6R¦WGL:’R6öÆ&÷&F÷&W2+r6öæ§T6†VÒ–æ2â+rÖöçG&VÂÂ6æL:+rV&Æ–6:|:6òFR#S²FVæöÖ–æ:|:6ò(	Ç6VÒD>(	ÒFW67&WfRòì;¦6ÆVòWL:ÖF–6òì:6ò6öæ§VvFòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B4¤2Ó#“Rv—F†÷WBD2"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô4¤3#“RÕv—F†÷WBÔD2%ÒÀ¢²$¦WGL:’WBÂâÂVæFö7&–æöÆöw’ƒ#R’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóS“sSƒ2ò%Ğ¢Ğ¢ÒÀ¢&ÖVÆæ÷FâÖ’Ö×BÓ#§°¢6Æ76–f–6F–öã¢%G&–FV6WL:ÖFVò6–çL:—F–6òì:ÆövòFëÖÖVÆæ÷G&÷–æŒëÔÕ4‚’ÂFÖ,:–ÒFVæöÖ–æFòfÖVÆæ÷F–F÷R´æÆ^(BÄBÕ†^(uÒÜëÔÕ4‚â"À¢6WVVæ6S¢$>(	56W.(	5G—.(	56W.(	4æÆ^(	4vÇ^(	4†—>(	4BÕ†^(	4&~(	5G'(	4vÇ(	4Ç—>(	5&ş(	5fÎ(	4ä((#²æÆR–æF–6æ÷&ÆWV6–æRBÕ†RÂBÖfVæ–ÆÆæ–æâ"À¢ÖöÆV7VÆ#¢$>((~((„((((((î((.((ş((((’+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRãcCbÃ’röÖöÂ&òWL:ÖFVòÆ—g&Râ"À¢÷&–v–ã¢%&ö¦WFF÷"7V'7F—GVœ:|:6òFRÖWN(B÷"æ÷&ÆWV6–æR†^(r÷"BÖfVæ–ÆÆæ–ææëÔÕ4‚Â&W6W'fæFò2FW&Ö–æ:|;VW2âÖ6WF–ÆFR2ÖÖ–FFâ"À¢F—66÷fW'“¢%f–7F÷"¢â‡'V'’ÂÖ2Râ†FÆW’ÂF†öÖ2²â6w–W"R6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb&—¦öæ+rGV76öâÂW7FF÷2Væ–F÷2+r<:—&–RFRì:Æöv÷2FW6VçföÇf–Fæ2L:–6F2FR“ƒR““â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÖVÆæ÷FâÔ’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôÖVÆæ÷FâÔ’%ÒÀ¢²%6w–W"WBÂâÂä2ƒ“ƒ2“¢F—f–FFRFRì:Æöv÷2ëÔÕ4‚"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3“#cSS’ò%ÒÀ¢²$‡'V'’WBÂâÂææÇ2öbF†RæWr–÷&²6FV×’öb66–Væ6W2ƒ““2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒ3“ƒò%Ğ¢Ğ¢ÒÀ¢&v‡'Ó"Ö6WFFò#§°¢6Æ76–f–6F–öã¢$†W†WL:ÖFVò6–çL:—F–6òWF–FöÖ–Ü:—F–6òFfÜ:ÖÆ–F÷2WL:ÖFV÷2Æ–&W&F÷&W2FR†÷&Ü;Fæ–òFò7&W66–ÖVçFó²FÖ,:–ÒFVæöÖ–æFò&ÆÖ÷&VÆ–æâ"À¢6WVVæ6S¢$BÔÆ(	4BÓ"ÔæÎ(	4Æ(	5G'(	4BÕ†^(	4Ç—>(	4ä((#²"ÔæÂ&W&W6VçF"ÖægF–ÆÆæ–æâf÷&Ö6WFFòFWfR6W"F—7F–æwV–FF&6RÆ—g&RRFR÷WG&÷26—2â"À¢ÖöÆV7VÆ#¢$>((N((T((^((Tî((”ş((b+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRƒrÃ“’röÖöÂ&&6RÆ—g&S²6WFFòÂ6Æ÷&–G&F÷2R6öÇfF÷2&W6VçFÒ6ö×÷6œ:|:6òF—7F–çFâ"À¢÷&–v–ã¢$FW6VçföÇf–Fòæ<:—&–RFR6V7&WFvöv÷26–çL:—F–6÷2FW&—fFF÷2&–ÖV—&÷2VçFWL:ÖFV÷2R†W†WL:ÖFV÷2W7GVFF÷2÷"7—&–Â’â&÷vW'2R6öÆ&÷&F÷&W2â"À¢F—66÷fW'“¢$7—&–Â’â&÷vW'2R6öÆ&÷&F÷&W2+rGVÆæRVæ—fW'6—G’66†ööÂöbÖVF–6–æR+ræ÷f÷&ÆVç2ÂW7FF÷2Væ–F÷2+r<:—&–R6&7FW&—¦FòÆöævòF2L:–6F2FR“sR“ƒâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B&ÆÖ÷&VÆ–âòt…%Ó""Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôt…%Ó"%ÒÀ¢²$&÷vW'2WBÂâÂVæFö7&–æöÆöw’ƒ“ƒB’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bócsCSRò%Ğ¢Ğ¢ÒÀ¢&v‡'ÓbÖ6WFFò#§°¢6Æ76–f–6F–öã¢$†W†WL:ÖFVò6–çL:—F–6òWF–FöÖ–Ü:—F–6òÂ6öæ†V6–Fò6öÖòw&÷wF‚†÷&ÖöæR×&VÆV6–ærWF–FRÓb„t…%Ób’â"À¢6WVVæ6S¢$†—>(	4BÕG'(	4Æ(	5G'(	4BÕ†^(	4Ç—>(	4ä(("âFW6–væ:|:6ò6WFFò–FVçF–f–6ò6ÂRì:6òÇFW&÷&FVÒF÷26V—2&W<:ÖGV÷2F6FV–â"À¢ÖöÆV7VÆ#¢$>((N((d((^((dî(((($ş((b+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRƒs2ÃröÖöÂ&&6RÆ—g&S²ò6Â6WFFò÷77V’6ö×÷6œ:|:6òRÖ76FWVæFVçFW2FW7FWV–öÖWG&–â"À¢÷&–v–ã¢%&W7VÇF÷RF÷F–Ö—¦:|:6òFRVÖ<:—&–RFRWL:ÖFV÷26–çL:—F–6÷27W'F÷2Â6öÒÖ–æü:6–F÷2VÒ6öæf–wW&:|:6òBÂ–çfW7F–vF÷26öÖò6V7&WFvöv÷2†—öf—<:&–÷2â"À¢F—66÷fW'“¢$7—&–Â’â&÷vW'2Âg&æ²âÖöÖç’R6öÆ&÷&F÷&W2+rGVÆæRVæ—fW'6—G’66†ööÂöbÖVF–6–æR+ræ÷f÷&ÆVç2ÂW7FF÷2Væ–F÷2+r6&7FW&—¦:|:6òV&Æ–6FæL:–6FFR“ƒâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	Bt…%Ób"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóC3CScR%ÒÀ¢²$&÷vW'2WBÂâÂVæFö7&–æöÆöw’ƒ“ƒB’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bócsCSRò%ÒÀ¢²$&FvW"WBÂâÂVæFö7&–æöÆöw’ƒ“ƒR’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3“ƒƒC’ò%Ğ¢Ğ¢ÒÀ¢&†W†&VÆ–æÖ6WFFò#§°¢6Æ76–f–6F–öã¢$†W†WL:ÖFVò6–çL:—F–6òWF–FöÖ–Ü:—F–6ó²ÖöÌ:–7VÆÖ&6R:’FÖ,:–ÒFVæöÖ–æFW†Ö÷&VÆ–æ÷R†W†&VÆ–æâ"À¢6WVVæ6S¢$†—>(	4BÓ"ÔÖRÕG'(	4Æ(	5G'(	4BÕ†^(	4Ç—>(	4ä((#²BÓ"ÔÖRÕG'&W&W6VçFBÓ"ÖÖWF–ÇG&—Föfæòâ6WFFòR÷WG&÷26—2FWfVÒ6W"G&FF÷26W&FÖVçFRâ"À¢ÖöÆV7VÆ#¢$>((N((t((^((„î(((($ş((b+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRƒƒrÃröÖöÂ&&6RÆ—g&S²f÷&Ö6WFFò&W6VçFÖ76F–6–öæÂ6öæf÷&ÖR&÷÷,:|:6òFR6öçG&:Ööç2â"À¢÷&–v–ã¢$7&–F÷"ÖöF–f–6:|:6òW7G'WGW&ÂFfÜ:ÖÆ–t…%Â–çG&öGW¦–æFòBÓ"ÖÖWF–ÇG&—Föfæòæ6FV–†W†WL:ÖF–6â"À¢F—66÷fW'“¢$WV—RFR&Vç¦òFVv†Væv†’R6öÆ&÷&F÷&W2+rWW&÷WF–FW2ôWW&÷+rFW6VçföÇf–ÖVçFò&W÷'FFòæò–ì:Ö6–òFL:–6FFR““²W7GVF÷2‡VÖæ÷2V&Æ–6F÷2VÒ““Bâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BW†Ö÷&VÆ–âò†W†&VÆ–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô†W†&VÆ–â%ÒÀ¢²$v†–vòWBÂâÂ¦÷W&æÂöb6Æ–æ–6ÂVæFö7&–æöÆöw’bÖWF&öÆ—6Òƒ““B’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bós“SsS3bò%Ğ¢Ğ¢ÒÀ¢&ÆÂÓ3r#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6Fœ;Fæ–6ò‡VÖæòFR3rÖ–æü:6–F÷2Â6÷'&W7öæFVçFRòg&vÖVçFò2×FW&Ö–æÂ&ö6W76FòF&÷F\:Öæ6FVÆ–6–F–æ„4‚â"À¢6WVVæ6S¢$ÆW^(	4ÆW^(	4vÇ(	47(	5†^(	5†^(	4&~(	4Ç—>(	56W.(	4Ç—>(	4vÇ^(	4Ç—>(	4–Æ^(	4vÇ(	4Ç—>(	4vÇ^(	5†^(	4Ç—>(	4&~(	4–Æ^(	5fÎ(	4vÆî(	4&~(	4–Æ^(	4Ç—>(	47(	5†^(	4ÆW^(	4&~(	46î(	4ÆW^(	5fÎ(	5&ş(	4&~(	5F‡.(	4vÇ^(	56W"„ÄÄtDde$µ4´T´”t´Tdµ$•e$”´DdÅ$äÅe%DU2’â"À¢ÖöÆV7VÆ#¢$>((.((((T((>((N((î((n((ş((^((2+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRBãC“2Ã2röÖöÂ&6FV–Æ—g&Rì:6òÖöF–f–6F²6—2Rf÷&Ö2Ö&6F2F–fW&VÒâ"À¢÷&–v–ã¢$vW&Fò÷"&ö6W76ÖVçFò&÷FVöÌ:×F–6òFò&V7W'6÷"‡VÖæò„4ƒ²òæöÖRÄÂÓ3rFW&—fF÷2Fö—2&W<:ÖGV÷2–æ–6–—2FRÆWV6–æRFò6ö×&–ÖVçFòFR3rÖ–æü:6–F÷2â"À¢F—66÷fW'“¢$&—&v—GFvW&&W'F‚R6öÆ&÷&F÷&W2+r¶&öÆ–ç6¶–ç7F—GWFR+rW7Fö6öÆÖòÂ7\:–6–+r–FVçF–f–6:|:6òFòWL:ÖFVò‡VÖæòæL:–6FFR““â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÄÂÓ3r"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBöÆÂÓ3r%ÒÀ¢²$vW&&W'F‚WBÂâÂ&ö6VVF–æw2öbF†RæF–öæÂ6FV×’öb66–Væ6W2ƒ““R’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bósc#“c’ò%ÒÀ¢²%–ærWBÂâÂ¦÷W&æÂöbW‡W&–ÖVçFÂÖVF–6–æRƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóSCCrò%Ğ¢Ğ¢ÒÀ¢&ÖVÆæ÷FâÖ–’Ö×BÓ"#§°¢6Æ76–f–6F–öã¢$†WFWL:ÖFVò<:Ö6Æ–6ò6–çL:—F–6òì:ÆövòFëÖÖVÆæ÷G&÷–æŒëÔÕ4‚’Â6öæ†V6–Fò6öÖòÖVÆæ÷Fâ”’â"À¢6WVVæ6S¢$>(	4æÆ^(	66–6Æõ´7(	4†—>(	4BÕ†^(	4&~(	5G'(	4Ç—5Ş(	4ä(("âæÆR&W&W6VçFæ÷&ÆWV6–æ²Æ–v:|:6òVçG&R7RÇ—2fV6†òæVÂÆ7L:&Ö–6òâ"À¢ÖöÆV7VÆ#¢$>((^((((n((”î((((Tş((’+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRã#BÃ"röÖöÂ&ÖöÌ:–7VÆÖ&6S²6—2R6öÇfF÷2&W6VçFÒ6ö×÷6œ:|:6òF—7F–çFâ"À¢÷&–v–ã¢%&ö¦WFFò6öÖòì:Æövò<:Ö6Æ–6ò6ö×7FòFëÔÕ4‚'F—"Fòì;¦6ÆVòÖVÆæö6÷'L:Öæ–6ò†—>(	5†^(	4&~(	5G'Â–æ6÷'÷&æFòBÕ†RRVÒæVÂÆ7L:&Ö–6òâ"À¢F—66÷fW'“¢%f–7F÷"¢â‡'V'’ÂÖ2Râ†FÆW’R6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb&—¦öæ+rGV76öâÂW7FF÷2Væ–F÷2+r<:—&–RFRÖVÆæ÷G&÷–æ2<:Ö6Æ–62FW6VçföÇf–Fæòf–ÒFL:–6FFR“ƒR–ì:Ö6–òFL:–6FFR““â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÖVÆæ÷Fâ”’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó“#C3"%ÒÀ¢²$‡'V'’WBÂâÂææÇ2öbF†RæWr–÷&²6FV×’öb66–Væ6W2ƒ““2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒ3“ƒò%Ğ¢Ğ¢ÒÀ¢'BÓCÖ'&VÖVÆæ÷F–F#§°¢6Æ76–f–6F–öã¢$†WFWL:ÖFVò<:Ö6Æ–6ò6–çL:—F–6òFfÜ:ÖÆ–F÷2ì:Æöv÷2FRëÔÕ4ƒ²FÖ,:–ÒFVæöÖ–æFò'&VÖVÆæ÷F–F÷RBÓCâ"À¢6WVVæ6S¢$>(	4æÆ^(	66–6Æõ´7(	4†—>(	4BÕ†^(	4&~(	5G'(	4Ç—5Ş(	4ô‚â6FV–÷77V’æVÂÆ7L:&Ö–6òVçG&R7RÇ—2RF–fW&RFòÖVÆæ÷Fâ”’æFW&Ö–æ:|:6ò2×FW&Ö–æÂâ"À¢ÖöÆV7VÆ#¢$>((^((((n((„î((((Dş((((+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRã#RÃ"röÖöÂ&ÖöÌ:–7VÆÖ&6S²f÷&Ö6WFFò÷77V’6ö×÷6œ:|:6òF–6–öæÂf&œ:fVÂâ"À¢÷&–v–ã¢$FW&—fFFfÜ:ÖÆ–FRÖVÆæ÷G&÷–æ2<:Ö6Æ–62FW6VçföÇf–F'F—"Fòì;¦6ÆVòf&Ö6öl;7&–6òFëÔÕ4ƒ²W7G'WGW&ÆÖVçFR&VÆ6–öæFòÖVÆæ÷Fâ”’â"À¢F—66÷fW'“¢$Ö2Râ†FÆW’Âf–7F÷"¢â‡'V'’R6öÆ&÷&F÷&W2+rVæ—fW'6—G’öb&—¦öæ+rGV76öâÂW7FF÷2Væ–F÷3²òFW6VçföÇf–ÖVçFòf&Ö<:§WF–6ò÷7FW&–÷"fö’6öæGW¦–FòVÆÆF–âFV6†æöÆöv–W2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B'&VÖVÆæ÷F–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó““C3s’%ÒÀ¢²$‡'V'’WBÂâÂææÇ2öbF†RæWr–÷&²6FV×’öb66–Væ6W2ƒ““2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒ3“ƒò%Ğ¢Ğ¢ÒÀ¢&Æ—&vÇWF–F#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6ò6–ÆFòFòtÅÓ‡VÖæòÂ6öÒ3Ö–æü:6–F÷2RVÖ6FV–FR:6–FòÆÜ:×F–6òÆ–vF÷"W7:vF÷"FRvÇWFÖFòâ"À¢6WVVæ6S¢$FW&—fFFRtÅÓƒ~(	33r“¢†—>(	4Æ(	4vÇ^(	4vÇ(	5F‡.(	5†^(	5F‡.(	56W.(	47(	5fÎ(	56W.(	56W.(	5G—.(	4ÆW^(	4vÇ^(	4vÇ(	4vÆî(	4Æ(	4Æ(	4Ç—>(	4vÇ^(	5†^(	4–Æ^(	4Æ(	5G'(	4ÆW^(	5fÎ(	4&~(	4vÇ(	4&~(	4vÇ’Â6öÒÇ—<+>(B7V'7F—G\:ÖF÷"&rR6–Æ:|:6òVÒÇ—<+.(b÷"ë2ÔvÇ^(	43bâ"À¢ÖöÆV7VÆ#¢$>((((~(($((.((n((Tî((N((4ş((^((+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFR2ãsSÃ"röÖöÂ&ÖöÌ:–7VÆÖ&6Râ"À¢÷&–v–ã¢$7&–F÷"VævVæ†&–FòtÅÓ‡VÖæò&76ö6–:|:6ò&WfW'<:×fVÂ:Æ'VÖ–æÂW6æFòVÖ6FV–FR:6–FòÆÜ:×F–6òR7V'7F—GVœ:|:6òFRÆ—6–æ&F—&V6–öæ"6–Æ:|:6òâ"À¢F—66÷fW'“¢$Æ÷GFR&¦W'&R¶çVG6VâR6öÆ&÷&F÷&W2+ræ÷fòæ÷&F—6²+rÜ:VÌ;‡bÂF–æÖ&6+r6VÆ\:|:6òR6&7FW&—¦:|:6òV&Æ–6F2æòf–ÒFL:–6FFR““RVÒ#â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÆ—&vÇWF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóc3C“Sb%ÒÀ¢²$¶çVG6VâWBÂâÂ¦÷W&æÂöbÖVF–6–æÂ6†VÖ—7G'’ƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bós“Ccƒ2ò%ÒÀ¢²$¶çVG6VâÂ52†&Ö6öÆöw’bG&ç6ÆF–öæÂ66–Væ6Rƒ#’’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3##S“s‚ò%Ğ¢Ğ¢ÒÀ¢&ö6—Fö6–æÖ6WFFò#§°¢6Æ76–f–6F–öã¢$æöæWL:ÖFVò<:Ö6Æ–6òæGW&ÂFfÜ:ÖÆ–÷†—Fö6–æ÷f6÷&W76–æ²&W6VçF:|:6ò6WFFò6÷'&W7öæFRVÒ6ÂFÖöÌ:–7VÆWL:ÖF–6â"À¢6WVVæ6S¢$7—>(	5G—.(	4–Æ^(	4vÆî(	46î(	47—>(	5&ş(	4ÆW^(	4vÇ(	4ä(("Â6öÒöçFRF—77VÆfWFòVçG&R7—<+’R7—>(bâ"À¢ÖöÆV7VÆ#¢$>((N((4((n((dî(((($ş((((%>(("+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRãrÃ"röÖöÂ&÷†—Fö6–æ²6WFFòÂ†–G&F:|:6òR÷WG&÷26öçG&:Ööç2ÇFW&Ò6ö×÷6œ:|:6òF&W6VçF:|:6òâ"À¢÷&–v–ã¢$†÷&Ü;Fæ–òWL:ÖF–6ò—6öÆFòFæWW&òÖ†—;6f—6S²7VW7G'WGW&fö’VÇV6–FFRFWö—2&W&öGW¦–F÷"<:ÖçFW6R\:ÖÖ–6F÷FÂâ"À¢F—66÷fW'“¢%f–æ6VçBGRf–væVVBR6öÆ&÷&F÷&W2+r6÷&æVÆÂVæ—fW'6—G’ÖVF–6Â6öÆÆVvR+ræ÷f–÷&²ÂW7FF÷2Væ–F÷2+rW7G'WGW&R&–ÖV—&<:ÖçFW6RF÷FÂ6öæ6Ç\:ÖF2æL:–6FFR“Sâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B÷‡—Fö6–â"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóC3“3"%ÒÀ¢²&GRf–væVVBWBÂâ(	B<:ÖçFW6RFR÷†—Fö6–æ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóC3“3ƒ2ò%ÒÀ¢²%7–çF†WF–2÷‡—Fö6–â(	B&Vv—7G&ò†—7L;7&–6ò"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó33c“"ò%Ğ¢Ğ¢ÒÀ¢#RÖÖ–æòÓ×#§°¢6Æ76–f–6F–öã¢%WVVæÖöÌ:–7VÆ6–çL:—F–6FfÜ:ÖÆ–F÷2V–æöÌ:Öæ–÷3²–æ–&–F÷"W‡W&–ÖVçFÂFRæ–6÷F–æÖ–FâÖÖWF–ÇG&ç6fW&6R„ääÕB’âì:6ò:’WL:ÖFVòâ"À¢6WVVæ6S¢$ì:6ò6RÍ{ßm¢G§²ÚîÆ­yÖÇFF÷2†—7L;7&–6÷26öÒ„Ôr"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóc#3C“’ò%ÒÀ¢²$GV–¦¶W'2WBÂâ(	B6&7FW&—¦:|:6òf&Ö6ö6–ì:—F–6FR&W&:|;VW2„Ôr"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bósS“3C“‚ò%Ğ¢Ğ¢ÒÀ¢&¶Æ÷rÖ'2ÓSr×ÇW2Öv†²Ö7R×ÇW2×F"ÓS×ÇW2Ö·b#§°¢6Æ76–f–6F–öã¢$&ÆVæBl:×6–6òFR%2ÓSrÂt„²Ô7RÂÖFW&–ÂFVæöÖ–æFòD"ÓSRµbâÖ—7GW&ì:6ò:’VÖVçF–FFRÖöÆV7VÆ"6÷fÆVçFRæ÷fâ"À¢6WVVæ6S¢$%2ÓSs¢tUtµDDtÅbât„²Ô7S¢7R„”’(	4vÇ(	4†—>(	4Ç—2âµc¢Ç—>(	5&ş(	5fÂâD"ÓSW†–vR6öæf—&Ö:|:6ò–æFWVæFVçFRF6W\:¦æ6–RFf÷&Ö\:ÖÖ–6â"À¢ÖöÆV7VÆ#¢$ì:6òŒ:l;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6&ò&ÆVæBâ÷2VG&ò6ö×öæVçFW2Â7V2&÷÷,:|;VW2Â6—2Â6ö×ÆW†:|:6òFò6ö'&RR†–G&F:|:6ò&V6—6Ò6W"FW67&—F÷26W&FÖVçFRæò6W'F–f–6FòæÌ:×F–6òâ"À¢÷&–v–ã¢$6öÖ&–æ:|:6ò6öÖW&6–ÂFRVG&òÖFW&–—2FRW7V—6&Wf–ÖVçFRFW67&—F÷2FRf÷&Ö–æFWVæFVçFS²ì:6ò÷77V’VÖFW66ö&W'F6–VçL:Öf–6;¦æ–66öÖò&ÆVæBâ"À¢F—66÷fW'“¢$%2ÓSs¢w'WòFR&VG&r6–¶—&–2ât„²Ô7S¢Æ÷&Vâ–6¶'Bâµc¢G&&Æ†÷2FR&VÆ:|:6òW7G'WGW&(	6F—f–FFRFRëÔÕ4‚÷"f–7F÷"‡'V'’R6öÆ&÷&F÷&W2âD"ÓS¢–FVçF–FFRFWVæFVçFRFòÆ÷FRâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B%2ÓSr"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô'2ÓSr%ÒÀ¢²%V$6†VÒ(	B7RÔt„²"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó3sƒc%ÒÀ¢²%V$6†VÒ(	Bµb"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBôÂÔÇ—7–ÂÔÂ×&öÇ–ÂÔÂ×fÆ–æR%ÒÀ¢²%Væ•&÷B(	BF–Ö÷6–æ&WFÓB‡VÖæ"Â&‡GG3¢ò÷wwrçVæ—&÷Bæ÷&r÷Væ—&÷F¶"õc#3#‚öVçG'’%Ğ¢Ğ¢ÒÀ¢&Övb#§°¢6Æ76–f–6F–öã¢$FW6–væ:|:6ò76ö6–FòÖV6†æòw&÷wF‚f7F÷"Âf&–çFRFR7Æ–6–ær”tbÓV2RÂæòÖW&6FòFRW7V—6ÂFÖ,:–ÒWL:ÖFV÷26–çL:—F–6÷2FW&—fF÷2FR6WRFöÜ:Öæ–òRâW762VçF–FFW2ì:6ò<:6òWV—fÆVçFW2â"À¢6WVVæ6S¢$&÷F\:Öæ”tbÓV26ö×ÆWFFW&—fFR7Æ–6–ærÇFW&æF—fòFòvVæR”tcâÖFW&–—2fVæF–F÷26öÖòÔtböFVÒ6öçFW"Væ2VÒWL:ÖFVòFòFöÜ:Öæ–òS²6VÒ6W\:¦æ6–R6W'F–f–6FòæÌ:×F–6òÂì:6ò:’÷7<:×fVÂG&–'V—"VÖ6FV–;¦æ–6ò—FVÒâ"À¢ÖöÆV7VÆ#¢$ì:6òŒ:l;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6&FVæöÖ–æ:|:6òÔtbâ&÷F\:Öæ&V7W'6÷&”tbÓV2ÂWL:ÖFV÷2FòFöÜ:Öæ–òRRf&–çFW26–çL:—F–62÷77VVÒÖ762RFW&Ö–æ:|;VW2F–fW&VçFW2â"À¢÷&–v–ã¢$W‡&W7<:6òFRVÖf&–çFRFR”tbÔ’6Vç<:×fVÂ6&vÖV<:&æ–6fö’FW67&—FVÒW7GVF÷2FRÜ;§67VÆò÷"vVöfg&W’vöÆG7–æ²R6öÆ&÷&F÷&W2ÂR÷7FW&–÷&ÖVçFRFVæöÖ–æFÖV6†æòw&÷wF‚f7F÷"â"À¢F—66÷fW'“¢$vVöfg&W’vöÆG7–æ²ÂvVöfg&W’bâÖ4¶÷’Â6–Ööâ–ærR6öÆ&÷&F÷&W2+r&÷–Âg&VRæBVæ—fW'6—G’6öÆÆVvRÖVF–6Â66†ööÂ+rÆöæG&W2Â&V–æòVæ–Fò+rL:–6FFR““ö–ì:Ö6–òF÷2æ÷2#â"À¢6÷W&6W3¥°¢²%–ærWBÂâ(	B7Æ–6–ærFR”tbÔ’RÔtbVÒÜ;§67VÆòƒ#2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#c“#sRò%ÒÀ¢²$vöÆG7–æ²WBÂâ(	BW‡&W7<:6òFRÔtbRW&F×W67VÆ"ƒ#b’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bócCc3C3‚ò%Ğ¢Ğ¢ÒÀ¢'VrÖÖvb#§°¢6Æ76–f–6F–öã¢$FVæöÖ–æ:|:6ò6öÖW&6–Â&VÖf÷&ÖTwV–ÆFFRÖFW&–Â76ö6–FòÔtbâì:6òW†—7FRVÖVçF–FFR;¦&Æ–6;¦æ–6RVæ—fW'6ÆÖVçFRG&öæ—¦F6ö"òæöÖRTrÔÔtbâ"À¢6WVVæ6S¢$6W\:¦æ6–Fò6ö×öæVçFRWL:ÖF–6òÂò<:×F–òFRTwV–Æ:|:6òÂòFÖæ†òRF—7G&–'Vœ:|:6òFòöÌ:ÖÖW&ò&V6—6Ò6W"FV6Æ&F÷2VÆòf'&–6çFRâ6VÒW76W2FF÷2ÂVÖ6W\:¦æ6–;¦æ–6ì:6òöFR6W"G&–'\:ÖFâ"À¢ÖöÆV7VÆ#¢$TwV–Æ:|:6ò&öGW¢Ö76FWVæFVçFRFòöÌ:ÖÖW&òRÂg&WVVçFVÖVçFRÂVÖF—7G&–'Vœ:|:6òFRÖ762âì:6òŒ:l;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–66VÒW7V6–f–6"WL:ÖFVòÂTrÂ<:×F–òFR6öæ§Vv:|:6òRw&RFR7V'7F—GVœ:|:6òâ"À¢÷&–v–ã¢$6öç7G'\:|:6ò6öÖW&6–Â÷7FW&–÷"÷2W7GVF÷2Ff&–çFR”tbÓV2ôÔtbÂW6æFòTwV–Æ:|:6ò6öÖòW7G&L:–v–FRÖöF–f–6:|:6òf&Ö6ö6–ì:—F–6²ì:6òŒ:V&Æ–6:|:6ò&–Ü:&–VRW7F&VÆ\:vVÒG,:6òVæ—fW'6Â&TrÔÔtb6öÖW&6–Ââ"À¢F—66÷fW'“¢$Ôtc¢vVöfg&W’vöÆG7–æ²R6öÆ&÷&F÷&W2+rÆöæG&W2Â&V–æòVæ–FòâfW'<:6òTwV–ÆFf&–÷"f'&–6çFRRFWfR6W"G&–'\:ÖFò6öç7G'WFòFö7VÖVçFFòæò6W'F–f–6FòFòÆ÷FRâ"À¢6÷W&6W3¥°¢²%–ærWBÂâ(	Bf&–çFR”tbÔ’ôÔtbƒ#2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#c“#sRò%ÒÀ¢²$vöÆG7–æ²WBÂâ(	BÔtbR7Æ–6–ærFR”tbÔ’ƒ#b’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bócCc3C3‚ò%Ğ¢Ğ¢ÒÀ¢'&WFG'WF–F×ÇW2Ö6w&–Æ–çF–F#§°¢6Æ76–f–6F–öã¢$&ÆVæBl:×6–6òW‡W&–ÖVçFÂFR&WFG'WF–FR6w&–Æ–çF–FÂFö—2WL:ÖFV÷26–çL:—F–6÷26–ÆF÷2F—7F–çF÷2âì:6ò6öç7F—GV’VÖæ÷fÖöÌ:–7VÆ;¦æ–6â"À¢6WVVæ6S¢$6F6ö×öæVçFR&W6W'f7VW7G'WGW&ÖöF–f–6FR6WR6öæ§VvFòÆ—:ÖF–6òâVÖ6W\:¦æ6–;¦æ–6ì:6òFW67&WfRÖ—7GW&²–FVçF–FFRR&÷÷,:|:6ò&V6—6Ò6W"fW&–f–6F26W&FÖVçFRâ"À¢ÖöÆV7VÆ#¢$ì:6òŒ:l;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6&ò&ÆVæBâ&WFG'WF–F¢&÷†–ÖFÖVçFRBãs3röÖöÃ²6w&–Æ–çF–F¢&÷†–ÖFÖVçFRBãCröÖöÂÂçFW2FR6—2Â6öÇfF÷2R&÷÷,:|:6òFÖ—7GW&â"À¢÷&–v–ã¢$6öÖ&–æ:|:6ò6öÖW&6–ÂFRÖöÌ:–7VÆ2FW6VçföÇf–F26W&FÖVçFR÷"VÆ’Æ–ÆÇ’Ræ÷fòæ÷&F—6²âì:6òfö’Æö6Æ—¦FVÖFW6–væ:|:6ò6Ì:Öæ–6G&öæ—¦F&W76R&ÆVæB6öÖòæ÷fVçF–FFRâ"À¢F—66÷fW'“¢%&WFG'WF–F¢FÖW"6÷6·VâRWV—RFVÆ’Æ–ÆÇ’ÂW7FF÷2Væ–F÷2â6w&–Æ–çF–F¢WV—RFæ÷fòæ÷&F—6²ÂF–æÖ&6â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B&WFG'WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ&WFG'WF–FR%ÒÀ¢²$6÷6·VâWBÂâ(	B&WFG'WF–Fƒ##"’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3S“ƒS3Cò%ÒÀ¢²%V$6†VÒ(	B6w&–Æ–çF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBô6w&–Æ–çF–FR%Ğ¢Ğ¢ÒÀ¢'&WFG'WF–F×ÇW2×F—'¦WF–F#§°¢6Æ76–f–6F–öã¢$&ÆVæBl:×6–6òW‡W&–ÖVçFÂFR&WFG'WF–FRF—'¦WF–FÂFö—2WL:ÖFV÷26–çL:—F–6÷26–ÆF÷2F—7F–çF÷2âì:6ò6öç7F—GV’VÖVçF–FFRÖöÆV7VÆ";¦æ–6â"À¢6WVVæ6S¢$6F6ö×öæVçFRÖçL:–Ò6FV–ÂÖ–æü:6–F÷2ì:6ò6öF–f–6F÷2R6öæ§Vv:|:6òÆ—:ÖF–6,;7&–÷2âì:6òW†—7FR6W\:¦æ6–;¦æ–6Æ–<:fVÂò&ÆVæBâ"À¢ÖöÆV7VÆ#¢$Ö—7GW&2ì:6ò÷77VVÒl;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6â&WFG'WF–F¢&÷†–ÖFÖVçFRBãs3röÖöÃ²F—'¦WF–F¢&÷†–ÖFÖVçFRBãƒ2röÖöÂÂçFW2FR6öç6–FW&"6—2Â6öÇfF÷2R&÷÷,:|:6òâ"À¢÷&–v–ã¢$6öÖ&–æ:|:6ò6öÖW&6–ÂFRGV2ÖöÌ:–7VÆ2FW6VçföÇf–F26W&FÖVçFRVÆVÆ’Æ–ÆÇ’âì:6òfö’Æö6Æ—¦FVÖ6öf÷&×VÆ:|:6ò6Ì:Öæ–6G&öæ—¦F6ö"W7FFVæöÖ–æ:|:6òâ"À¢F—66÷fW'“¢$WV—W2FVÆ’Æ–ÆÇ’æB6ö×ç’+r–æF–æöÆ—2ÂW7FF÷2Væ–F÷3²F—'¦WF–FFW67&—F6Æ–æ–6ÖVçFRVÒ#‚R&WFG'WF–F6&7FW&—¦FVÒ##"â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B&WFG'WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ&WFG'WF–FR%ÒÀ¢²%V$6†VÒ(	BF—'¦WF–FR"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóScSƒƒ3#B%ÒÀ¢²$g&–2WBÂâ(	BF—'¦WF–Fƒ#‚’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3#“3ssò%Ğ¢Ğ¢ÒÀ¢'F"ÓS#§°¢6Æ76–f–6F–öã¢$FVæöÖ–æ:|:6ò6öÖW&6–Â†—7F÷&–6ÖVçFR76ö6–FÖFW&–Â&VÆ6–öæFò:F–Ö÷6–æë#C²ì:Æ—6W2V&Æ–6F2FÖ,:–Ò–FVçF–f–6&Ò6ö"òæöÖRD"ÓSòg&vÖVçFòâÖ6WF–ÆFò~(	3#2â–FVçF–FFRì:6òFWfR6W"&W7VÖ–Fâ"À¢6WVVæ6S¢%F–Ö÷6–æë#B‡VÖæ–çFVw&Â÷77V’C2Ö–æü:6–F÷2âòg&vÖVçFò–FVçF–f–6FòVÒ&öGWFòD"ÓS:’>(	4ÆW^(	4Ç—>(	4Ç—>(	5F‡.(	4vÇ^(	5F‡.(	4vÆâ„2ÔÄ´µDUE’âò6W'F–f–6FòFòÆ÷FRFWfRFV6Æ&"VÂVçF–FFRW7L:&W6VçFRâ"À¢ÖöÆV7VÆ#¢$ì:6òW†—7FRl;7&×VÆ÷RÖ76;¦æ–6&òæöÖRD"ÓS6VÒFVf–æœ:|:6òFVçF–FFRâF–Ö÷6–æë#B–çFVw&ÂRg&vÖVçFò2ÔÄ´µDUE<:6ò6ö×÷7F÷2F—7F–çF÷2Â76–Ò6öÖò6WW26—2R6öÇfF÷2â"À¢÷&–v–ã¢$F–Ö÷6–æë#Bfö’V–Ö–6ÖVçFR6&7FW&—¦F÷"w'W÷2FRÆÆâvöÆG7FV–âæò–ì:Ö6–òFL:–6FFR“ƒ²–FVçF–f–6:|:6òæÌ:×F–6Fòg&vÖVçFò~(	3#2VÒ&öGWFòD"ÓSfö’V&Æ–6FVÒ#"â"À¢F—66÷fW'“¢%F–Ö÷6–æë#C¢ÆÆâÂâvöÆG7FV–âR6öÆ&÷&F÷&W2+rvV÷&vRv6†–æwFöâVæ—fW'6—G’+rW7FF÷2Væ–F÷2âg&vÖVçFòVÒD"ÓS¢Ö&–òF†Wf—2R6öÆ&÷&F÷&W2+rvW&Öâ7÷'BVæ—fW'6—G’6öÆövæR+rÆVÖæ†â"À¢6÷W&6W3¥°¢²%Væ•&÷B(	BF–Ö÷6–æ&WFÓB‡VÖæ…c#3#‚’"Â&‡GG3¢ò÷wwrçVæ—&÷Bæ÷&r÷Væ—&÷F¶"õc#3#‚öVçG'’%ÒÀ¢²$†ææVÂWBÂâ(	B6&7FW&—¦:|:6ò\:ÖÖ–6FF–Ö÷6–æë#B"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bósSCcò%ÒÀ¢²%F†Wf—2WBÂâ(	Bg&vÖVçFò~(	3#2–FVçF–f–6FòVÒD"ÓS"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##“c##rò%Ğ¢Ğ¢ÒÀ¢'F"ÓSÖg&vÖVçFò#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6ò6÷'&W7öæFVçFRòg&vÖVçFòâÖ6WF–ÆFò~(	3#2FF–Ö÷6–æë#BÂVæFò–FVçF–FFRFòÆ÷FR:’6öæf—&ÖF6öÖò2ÔÄ´µDUEâ"À¢6WVVæ6S¢$>(	4ÆW^(	4Ç—>(	4Ç—>(	5F‡.(	4vÇ^(	5F‡.(	4vÆâ„2ÔÄ´µDUE’âFW&Ö–æ:|:6ò2×FW&Ö–æÂR6öçG&:Ööç2FWfVÒ6W"6öæf—&ÖF÷2æò6W'F–f–6FòæÌ:×F–6òâ"À¢ÖöÆV7VÆ#¢$Ö76Rl;7&×VÆFWVæFVÒFRFW&Ö–æ:|:6ò2×FW&Ö–æÂ6W":6–Fò÷RÖ–FRFò6Â&W6VçFRâ÷"—76òÂòfÆ÷"W†FòFWfR6W"&W÷'FFòVÆòÆ÷FRÂì:6ò–æfW&–FòVæ2FòæöÖR6öÖW&6–Ââ"À¢÷&–v–ã¢$FW&—fFòF÷2&W<:ÖGV÷2~(	3#2FF–Ö÷6–æë#B‡VÖæ²<:ÖçFW6RR6&7FW&—¦:|:6òFòg&vÖVçFòâÖ6WF–ÆFòVæ6öçG&FòVÒ&öGWFòD"ÓSf÷&ÒV&Æ–6F2VÒ#"â"À¢F—66÷fW'“¢$Ö&–òF†Wf—2ÂæG&V2F†öÖ2R6öÆ&÷&F÷&W2+r6VçFW"f÷"&WfVçF—fRF÷–ær&W6V&6‚ÂvW&Öâ7÷'BVæ—fW'6—G’6öÆövæR+r6öÌ;Fæ–ÂÆVÖæ†â"À¢6÷W&6W3¥°¢²%F†Wf—2WBÂâ(	B<:ÖçFW6RR6&7FW&—¦:|:6òFR2ÕLë#Bƒ~(	3#2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##“c##rò%ÒÀ¢²%Væ•&÷B(	BF–Ö÷6–æ&WFÓB‡VÖæ…c#3#‚’"Â&‡GG3¢ò÷wwrçVæ—&÷Bæ÷&r÷Væ—&÷F¶"õc#3#‚öVçG'’%Ğ¢Ğ¢ÒÀ¢&W—FÆöâÖâÖ6WF–ÂÖÖ–FFò#§°¢6Æ76–f–6F–öã¢$ì:Æövò6–çL:—F–6òFòFWG&WL:ÖFVòW—FÆöâôTDr6öÒÖöF–f–6:|:6òâ×FW&Ö–æÂ6WF–ÆFRFW&Ö–æ:|:6ò2×FW&Ö–æÂÖ–FFÂ6öæf÷&ÖRFVæöÖ–æ:|:6ò6öÖW&6–ÂFò—FVÒâ"À¢6WVVæ6S¢$>(	4Æ(	4vÇ^(	47(	4vÇ(	4ä(("„2ÔTDrÔä(("’:’W7G'WGW&–æF–6FVÆòæöÖRFò&öGWFòâÆ—FW&GW&&–Ü:&–6öæ6VçG&×6RæòW—FÆöâì:6òÖöF–f–6FòÂTDs²f÷&ÖGWÆÖVçFRÖöF–f–6F&V6—66W"6öæf—&ÖF÷"6W'F–f–6FòæÌ:×F–6òFòÆ÷FRâ"À¢ÖöÆV7VÆ#¢$ì:6òfö’Æö6Æ—¦Fò&Vv—7G&ò\:ÖÖ–6ò&–Ü:&–ò6öç6öÆ–FFò&2ÔTDrÔä(("âò&Vv—7G&òöf–6–ÂFRâÖ6WF–ÂW—FÆöâ6VÒÖ–FÖVçFò–æf÷&Ö>((((d((.((Dî((Dş((((RC3"Ã3‚röÖöÂÂÖ2ì:6ò:’WV—fÆVçFR:f÷&ÖâÖ6WF–ÂÖ–FF²÷"—76òÂæVæ‡VÖÖ76W†F:’G&–'\:ÖFV’ò&öGWFòâ"À¢÷&–v–ã¢$FW&—fFò6öÖW&6–Â÷7FW&–÷"FòW—FÆöâÂFWG&WL:ÖFVòTDr–çfW7F–vFòVÆò&öw&ÖFRWL:ÖFV÷2&VwVÆL;7&–÷2Fò–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢F—66÷fW'“¢$W—FÆöâôTDs¢fÆF–Ö—"¶†f–ç6öâR6öÆ&÷&F÷&W2+r<:6òWFW'6'W&vòÂ,;§76–âì:6òfö’Æö6Æ—¦FG&–'Vœ:|:6ò&–Ü:&––æFWVæFVçFR&7&–:|:6òFf&–çFRâÖ6WF–ÂÖ–FFâ"À¢6÷W&6W3¥°¢²$ä4E2–ç†–v‡B(	BâÖ6WF–ÂW—FÆöâ‡6VÒÖ–FÖVçFò’"Â&‡GG3¢òöG'Vw2ææ6G2æ–ò÷7V'7Fæ6RõU…#tce#Db%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BW7V—66öÒTDrôW—FÆöâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3#“#Bò%Ğ¢Ğ¢ÒÀ¢&g&vÖVçFòÓrÓ#2#§°¢6Æ76–f–6F–öã¢$FVæöÖ–æ:|:6ò&òg&vÖVçFòâÖ6WF–ÆFò~(	3#2FF–Ö÷6–æë#BVæFò–FVçF–FFRæÌ:×F–6:’6öæf—&ÖF6öÖò2ÕLë#Bƒ~(	3#2’â"À¢6WVVæ6S¢$>(	4ÆW^(	4Ç—>(	4Ç—>(	5F‡.(	4vÇ^(	5F‡.(	4vÆâ„2ÔÄ´µDUE’âFW&Ö–æ:|:6ò2×FW&Ö–æÂR÷26öçG&:Ööç2&V6—6Ò6öç7F"æò6W'F–f–6FòFòÆ÷FRâ"À¢ÖöÆV7VÆ#¢$l;7&×VÆRÖ76FWVæFVÒFFW&Ö–æ:|:6ò2×FW&Ö–æÂÂFòW7FFòFR&÷Föæ:|:6òRFò6ÂâòæöÖR(	Äg&vÖVçFò~(	3#>(	Ò—6öÆFÖVçFRì:6òW&Ö—FRW66öÆ†W"VçG&R:6–FòÂÖ–F÷R÷WG&&W6VçF:|:6ò6VÒ–æfW,:¦æ6–â"À¢÷&–v–ã¢$6÷'&W7öæFR÷2&W<:ÖGV÷2~(	3#2FF–Ö÷6–æë#B‡VÖæâ<:ÖçFW6RR6&7FW&—¦:|:6òFòg&vÖVçFòâÖ6WF–ÆFò–FVçF–f–6FòVÒÖFW&–Â6öÖW&6–Âf÷&ÒV&Æ–6F2VÒ#"â"À¢F—66÷fW'“¢$Ö&–òF†Wf—2ÂæG&V2F†öÖ2R6öÆ&÷&F÷&W2+rvW&Öâ7÷'BVæ—fW'6—G’6öÆövæR+r6öÌ;Fæ–ÂÆVÖæ†â"À¢6÷W&6W3¥°¢²%F†Wf—2WBÂâ(	B6&7FW&—¦:|:6òFR2ÕLë#Bƒ~(	3#2’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##“c##rò%ÒÀ¢²%Væ•&÷B(	BF–Ö÷6–æ&WFÓB‡VÖæ"Â&‡GG3¢ò÷wwrçVæ—&÷Bæ÷&r÷Væ—&÷F¶"õc#3#‚öVçG'’%Ğ¢Ğ¢ÒÀ¢&gGÖF—÷F–FR#§°¢6Æ76–f–6F–öã¢$FVæöÖ–æ:|:6ò76ö6–FòfB×F&vWFVB&ö÷F÷F–2WF–FR„eEöF—÷F–FR’Â6öç7G'\:|:6òV–Ü:—&–6W‡W&–ÖVçFÂ6öÒFöÜ:Öæ–òFR†öÖ–ærRÖ÷F—fòFRBÖÖ–æü:6–F÷2âWV—fÌ:¦æ6–FWfR6W"6öæf—&ÖF÷"6W\:¦æ6–â"À¢6WVVæ6S¢$4´tu$´D>(	4t~(	4B„´Ä´Ä²(("&6öç7G'\:|:6òV&Æ–6F²òÖ÷F—fò4´tu$´D2öFRW7F"6–6ÆFò÷"öçFRF—77VÆfWFòâ6RòÆ÷FRF—fW"÷WG&6W\:¦æ6–Âì:6òFWfR6W"–FVçF–f–6Fò6öÖòÖW6ÖVçF–FFRâ"À¢ÖöÆV7VÆ#¢%&VçF–FFR&Vv—7G&F6öÖòF—÷F–FRÂòV$6†VÒ–æf÷&Ö>((((((((.((((dî((>((dş((.((…>(("RÖ76&÷†–ÖFFR"ãSSrÃ"röÖöÂâ6–6Æ—¦:|:6òÂW7FFò&VF÷‚Â6öçG&:Ööç2R6—2ÇFW&Ò6ö×÷6œ:|:6òæÌ:×F–6â"À¢÷&–v–ã¢$6öç7G'\:|:6òFW&—fFF6VÆ\:|:6ò–âf—fòFòWL:ÖFVò4´tu$´D2ÂF—&V6–öæFò:&ö–&—F–æÂÆ–vFòòÖ÷F—fòB„´Ä´Ä²((#²FW67&—FVÆòw'WòFòÔBæFW'6öâVÒ#Bâ"À¢F—66÷fW'“¢$Ö–¶†–Â¶öÆöæ–âÂ&VæF7VÆ–æ’ÂvF–‚&R6öÆ&÷&F÷&W2+rVæ—fW'6—G’öbFW†2ÒâBâæFW'6öâ6æ6W"6VçFW"+r†÷W7FöâÂW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BF—÷F–FRôeE"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóc33cc‚%ÒÀ¢²$¶öÆöæ–âWBÂâÂæGW&RÖVF–6–æRƒ#B’"Â&‡GG3¢ò÷wwrææGW&Ræ6öÒö'F–6ÆW2öæÓC‚%ÒÀ¢²$&&æ†'BWBÂâ(	B6&7FW&—¦:|:6òVÒ&–ÖF2ƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##s#c3rò%Ğ¢Ğ¢ÒÀ¢'##§°¢6Æ76–f–6F–öã¢$æöÖRÖ,:ÖwVòW6Fò&WF–FöÖ–Ü:—F–6÷2FW&—fF÷2FR4åDbRFÖ,:–Ò&VçF–FFW2ì:6ò&VÆ6–öæF2Â–æ6ÇV–æFò&÷F\:Öæ4D´ãâ:v–æì:6ò&W7VÖRVÂf&–çFRW7L:æòf–Ââ"À¢6WVVæ6S¢%V&Æ–6:|;VW2R&Vv—7G&÷26öÖW&6–—2F—7F–æwVVÒòÖ÷F—fò4åDbDttÂÂfW'<;VW2FW&Ö–æÆÖVçFRÖöF–f–6F2RVçF–FFR#6öÒvÆ–6–æFÖçF–ÆFâ6VÒ6W\:¦æ6––çFVw&ÂRÖöF–f–6:|;VW2æò6W'F–f–6FòæÌ:×F–6òÂì:6ò:’÷7<:×fVÂG&–'V—"VÖW7G'WGW&;¦æ–6ò—FVÒ(	Å#(	Òâ"À¢ÖöÆV7VÆ#¢$ì:6òŒ:l;7&×VÆ÷RÖ76;¦æ–6Æ–<:fVÂòæöÖR#âòV$6†VÒ&Vv—7G&VÖVçF–FFR2ÔDttÎ(	6vÆ–6–æFÖçF–ÆF(	4ä(("„4”BScS““S’ÂVçVçFò÷WG&2föçFW2W6Ò2ÔDttÂÔä((#²<:6ò6ö×÷7F÷2F–fW&VçFW2Rì:6òFWfVÒ6W"–çFW&6Ö&–F÷2â"À¢÷&–v–ã¢$Æ–æ†vVÒFRWF–FöÖ–Ü:—F–6÷2fö’FW6VçföÇf–F'F—"FRVÖ&Vvœ:6òF—fFòfF÷"æWW&÷G,;6f–6ò6–Æ–"„4åDb’VÒG&&Æ†÷26öæGW¦–F÷2æòæWr–÷&²7FFR–ç7F—GWFRf÷"&6–2&W6V&6‚â"À¢F—66÷fW'“¢$¶†Æ–B—&ÂÂ6†VærÕ†–âvöærR6öÆ&÷&F÷&W2+ræWr–÷&²7FFR–ç7F—GWFRf÷"&6–2&W6V&6‚–âFWfVÆ÷ÖVçFÂF—6&–Æ—F–W2+rW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BVçF–FFRFÖçF–ÆF&VÆ6–öæF#"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóScS““S%ÒÀ¢²$6†ö†âWBÂâ(	BWL:ÖFVòFW&—fFòFR4åDbƒ#’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##s#’ò%ÒÀ¢²$¶¦–ÒWBÂâ(	BW7GVFò,:’Ö6Ì:Öæ–6òFR#"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#ƒc#CC’ò%Ğ¢Ğ¢ÒÀ¢'RÓ#"Ó#‚#§°¢6Æ76–f–6F–öã¢$†WFWL:ÖFVò6–çL:—F–6òFW&—fFòFò,;2×WL:ÖFVòF6÷'F–Æ–æRW7GVFFò6öÖòì:Æövò'&Wf–FòFR7F–ââ"À¢6WVVæ6S¢%G'(	4&~(	4ÆW^(	4vÇ^(	4vÆî(	4vÇ(	5&ò…u$ÄUu’Â6÷'&W7öæFVçFR÷2&W<:ÖGV÷2#.(	3#‚Fò,;2×WL:ÖFVòFW67&—Fòæ2V&Æ–6:|;VW2FRW7G'WGW&(	6F—f–FFRâ"À¢ÖöÆV7VÆ#¢%&6FV–Æ—g&Ru$ÄUu¢>((>((”((^((„î((((ş((((+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRƒSRÃröÖöÂâ6—2RÖöF–f–6:|;VW2FW&Ö–æ—2÷77VVÒ6ö×÷6œ:|:6òF–fW&VçFRâ"À¢÷&–v–ã¢$FW6VçföÇf–Fò÷"Væ7W'FÖVçFò6—7FVÜ:F–6òFR7F–â&–FVçF–f–6"VÖ6W\:¦æ6–Ü:Öæ–Ö6öÒF—f–FFRVÒÖöFVÆ÷2Fò6æÂE$T²Ó²<:—&–RRfö’V&Æ–6FVÒ#râ"À¢F—66÷fW'“¢$¦VâÖ¦VÆÆÂ6F†W&–æR†WW'FVW‚ÂÖ÷W&B&÷'6÷GFòR6öÆ&÷&F÷&W2+r•Ô2Â4å%2õVæ—fW'6—L:’<;GFRN(	”§W"+rfÆ&öææRÂg&ì:vâ"À¢6÷W&6W3¥°¢²%fW—76œ:‡&RWBÂâ(	Bì:Æöv÷2'&Wf–F÷2FR7F–âƒ#r’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#ƒ“SS#C"ò%ÒÀ¢²$'F–vò–çFVw&Â(	Bg&öçF–W'2–â†&Ö6öÆöw’"Â&‡GG3¢òöFö’æ÷&róã33ƒ’ög†"ã#rãcC2%Ğ¢Ğ¢ÒÀ¢'–æVÆöâ#§°¢6Æ76–f–6F–öã¢%G&—WL:ÖFVò6–çL:—F–6ò7W'FòF6Æ76RF÷2WL:ÖFV÷2&VwVÆL;7&–÷2Â–FVçF–f–6FòVÆ6W\:¦æ6–TE"â"À¢6WVVæ6S¢$vÇ^(	47(	4&r„TE"’âò6Â6WFFòR÷WG&2&W6VçF:|;VW2F–6–öæÒ6öçG&:Ööç2Rì:6ò<:6òV–Ö–6ÖVçFR–L:¦çF–6÷2:6FV–Æ—g&Râ"À¢ÖöÆV7VÆ#¢$6FV–Æ—g&RTE#¢>((((T((.((dî((dş((‚+rÖ76ÖöÆV7VÆ"6Æ7VÆF¢&÷†–ÖFÖVçFRC‚ÃCRröÖöÂâòV$6†VÒ&Vv—7G&6W&FÖVçFR–æVÆöâ6WFFò6öÖò>((((t((>((î((dş((((â"À¢÷&–v–ã¢$–çFVw&çFRFò&öw&Ö'W76òFRWL:ÖFV÷2&VwVÆL;7&–÷2FR6FV–7W'FFW6VçföÇf–Fò'F—"FRW7GVF÷2FRg&:|;VW2WL:ÖF–62R&VwVÆ:|:6òFRW‡&W7<:6ò|:¦æ–6â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vò+r,;§76–â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BvÇRÔ7Ô&r"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó#s3S"%ÒÀ¢²%V$6†VÒ(	B–æVÆöâ6WFFò"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóSS“ssSC’%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BW7V—6ÖöÆV7VÆ"6öÒTE""Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó333“cCsò%Ğ¢Ğ¢ÒÀ¢'æ2Ó#r#§°¢6Æ76–f–6F–öã¢%WL:ÖFVòV–Ü:—&–6ò6–çL:—F–6òFR3"&W<:ÖGV÷26ö×÷7Fò÷"VÒ6VvÖVçFòFRS2Æ–vFòVÒWL:ÖFVòFR&W6–L:¦æ6–÷G&ç6G\:|:6òFRÖVÖ'&æâ"À¢6WVVæ6S¢%Å5UDe4DÅt´ÄÄ´µt´Õ%$åeudµe$râ÷2R&W<:ÖGV÷2â×FW&Ö–æ—26÷'&W7öæFVÒS2ƒ.(	3#b“²ò6VvÖVçFò2×FW&Ö–æÂ:’òFöÜ:Öæ–òFR&W6–L:¦æ6–FRÖVÖ'&æW6Fòæ6öç7G'\:|:6òV&Æ–6Fâ"À¢ÖöÆV7VÆ#¢$>((((((„((.((((4î((^((4ş((N((E2+rÖ76ÖöÆV7VÆ"Ü:–F–&÷†–ÖF¢Bã3ÃrröÖöÂ&6FV–Æ—g&RV&Æ–6Fâ6—2ÂÖ&6:|;VW2RFW&Ö–æ:|;VW2ÇFW&æF—f2ÇFW&ÒòfÆ÷"â"À¢÷&–v–ã¢%&ö¦WFFò'F—"FòFöÜ:Öæ–òFRÆ–v:|:6òFRS2„DÒÓ"RFRVÖ6W\:¦æ6–FR&W6–L:¦æ6–FRÖVÖ'&æ&W7GVF÷2ÖV6ì:×7F–6÷2VÒÖöFVÆ÷26VÇVÆ&W2â"À¢F—66÷fW'“¢$ÖGF†Wr–æ7W2Â¦÷6VbÖ–6†ÂR6öÆ&÷&F÷&W2+r5Tå’F÷vç7FFRõdæWr–÷&²†&&÷"R–ç7F—GVœ:|;VW26öÆ&÷&F÷&2+rW7FF÷2Væ–F÷2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	Bä2Ó#r"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóc#ssB%ÒÀ¢²$Ff—GBWBÂâ(	B6&7FW&—¦:|:6òFRä2Ó#r"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#Ss“2ò%ÒÀ¢²%6öö·&¢WBÂâ(	B–çFW&:|:6òä2Ó#~(	4„DÒÓ""Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##“c’ò%Ğ¢Ğ¢ÒÀ¢'FBÖF&Ò#§°¢6Æ76–f–6F–öã¢%WL:ÖFVò6–çL:—F–6òFRG&ç6G\:|:6ò6VÇVÆ"gVæF–FòVÒÖ÷F—fòFRÆ–v:|:6òF—6†WfVÆÆVBÂFW6VçföÇf–Fò&6ö×WF—"6öÒ–çFW&:|:6ò5…„3^(	4GfÂVÒÖöFVÆ÷2,:’Ö6Ì:Öæ–6÷2â"À¢6WVVæ6S¢$Æ—FW&GW&W‡W&–ÖVçFÂR÷2&Vv—7G&÷2\:ÖÖ–6÷2;¦&Æ–6÷2ì:6ò6öçfW&vVÒVÒVÖ;¦æ–66W\:¦æ6–6ö"òæöÖRDBÔD$ÒâòÆ÷FRFWfRFV6Æ&"6öç7G'\:|:6ò–çFVw&Ã²f&–çFW2V&Æ–6ÖVçFR&Vv—7G&F2ì:6òöFVÒ6W"G&FF26öÖòWV—fÆVçFW2Væ2VÆòæöÖRâ"À¢ÖöÆV7VÆ#¢$òV$6†VÒ&Vv—7G&6ö"DBÔD$ÒVçF–FFR>((((.((D((.((.((Tî((n((ş((.((…>(("Â6öÒÖ76&÷†–ÖFFR2ãƒ"ÃbröÖöÂÂÖ2Œ:÷WG&÷26öç7G'WF÷2DN(	4D$ÒVÒ&Vv—7G&÷2;¦&Æ–6÷2âW76RfÆ÷"<;26RÆ–6VæFò6W\:¦æ6–FòÆ÷FR6÷'&W7öæFRò&Vv—7G&ò4”BscCS3“3â"À¢÷&–v–ã¢$6öç7G'\:|:6òFW6VçföÇf–Fæò&öw&Ö7VÂÖ6÷&VæòFR–çfW7F–v:|:6òFò&VwVÆF÷"5…„3RRF–çFW&:|:6ò6öÒF—6†WfVÆÆVC²òW6òFòWL:ÖFVò6ö×WF–F÷"VÒÖöFVÆ÷2FRföÌ:Ö7VÆòRfW&–Ffö’V&Æ–6FòVÒ#râ"À¢F—66÷fW'“¢%6WVær‡—VâÆVRÂ¶ærÕ–VÆÂ6†ö’R6öÆ&÷&F÷&W2+r–öç6V’Væ—fW'6—G’+r6WVÂÂ6÷&V–Fò7VÂâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BDBÔD$Ò"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóscCS3“3%ÒÀ¢²$ÆVRWBÂâÂ¦÷W&æÂöb–çfW7F–vF—fRFW&ÖFöÆöw’ƒ#r’"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#ƒS“S““‚ò%Ğ¢Ğ¢ÒÀ¢'F–ÖÆ–æ#§°¢6Æ76–f–6F–öã¢%&W&:|:6ò&–öÌ;6v–6öÆ—WL:ÖF–6ö'F–FFRFV6–FòL:ÖÖ–6òæ–ÖÃ²G&F×6RFRVÖÖ—7GW&FR6ö×öæVçFW2Âì:6òFRVÒWL:ÖFVò6öÒ6W\:¦æ6–;¦æ–6â"À¢6WVVæ6S¢$ì:6òÆ–<:fVÂ6öÖò6FV–;¦æ–6â6ö×÷6œ:|:6ò†—7L;7&–6FRF‡–ÖÆ–âõF–ÖÆ–æ:’FVf–æ–F÷"&ö6W76òFRW‡G&:|:6òÂg&6–öæÖVçFòR6öçG&öÆRF&W&:|:6òÂRì:6ò÷"VÖ;¦æ–66W\:¦æ6–ÖöÆV7VÆ"â"À¢ÖöÆV7VÆ#¢$ì:6ò÷77V’l;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6â6Fg&:|:6òWL:ÖF–6R6F6ö×öæVçFR&W6–GVÂF&W&:|:6òFVÒ6ö×÷6œ:|:6ò,;7&–²fÆ÷&W2G&–'\:ÖF÷2VÒFWG&WL:ÖFVò—6öÆFòì:6òFW67&WfVÒÖ—7GW&–çFV—&â"À¢÷&–v–ã¢%&W&:|:6òFW6VçföÇf–FæVæœ:6ò6÷fœ:—F–6'F—"FRW‡G&F÷2FòF–ÖòRW7GVFF6öÖò'FRFò&öw&ÖFR&VwVÆF÷&W2WL:ÖF–6÷2–æ–6–FòæL:–6FFR“sâ"À¢F—66÷fW'“¢%fÆF–Ö—"Ö÷&÷¦÷bÂfÆF–Ö—"¶†f–ç6öâR6öÆ&÷&F÷&W2+r6FVÖ–Ü:–F–6Ö–Æ—F"FR¶—&÷bô–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–+rÆVæ–æw&Fòõ<:6òWFW'6'W&vòÂ,;§76–â"À¢6÷W&6W3¥°¢²$Ö÷&÷¦÷bR¶†f–ç6öâ(	BW7GVFò–æ–6–ÂFRF‡–ÖÆ–â"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bósCƒs3ò%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BWL:ÖFV÷2&VwVÆL;7&–÷2RG&ç67&œ:|:6ò"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóCccc“rò%Ğ¢Ğ¢ÒÀ¢'F÷†–æÖ&÷GVÆ–æ–6#§°¢6Æ76–f–6F–öã¢$fÜ:ÖÆ–FRæWW&÷F÷†–æ2&÷FV–62&7FW&–æ2âòæöÖRvVì:—&–6òì:6ò–FVçF–f–66÷&÷F—òÂ7V'F—òÂ6ö×ÆW†ò&÷FV–6òæVÒf÷&×VÆ:|:6òW7V<:Öf–6â"À¢6WVVæ6S¢$ì:6òW†—7FR6W\:¦æ6–;¦æ–6&(	ÇF÷†–æ&÷GVÌ:Öæ–6(	Òâ6öÖò&VfW,:¦æ6–Â&ôåBôF6W†ÆÂ:’VÒ&V7W'6÷"FRã#“bÖ–æü:6–F÷2&ö6W76FòVÒ6FV–2ÆWfRRW6FÆ–vF2÷"F—77VÆfWFó²÷WG&÷26÷&÷F—÷2R7V'F—÷2L:¦Ò6W\:¦æ6–2F–fW&VçFW2â"À¢ÖöÆV7VÆ#¢$æWW&÷F÷†–æ—6öÆF:’VÖ&÷F\:ÖæFR&÷†–ÖFÖVçFRS´FÂÖ26ö×ÆW†÷276ö6–F÷2öFVÒ&W6VçF"Ö762Ö–÷&W2Rf÷&×VÆ:|;VW26öÖW&6–—2ì:6ò<:6ò–çFW&6Ö&œ:fV—2÷"Væ–FFRâò&öGWFò&V6—6–FVçF–f–6"6÷&÷F—òÂ7V'F—òR6ö×÷6œ:|:6òçFW2FR&V6V&W"VÖl;7&×VÆW7V<:Öf–6â"À¢÷&–v–ã¢$2F÷†–æ2&÷GVÌ:Öæ–62<:6ò&öGW¦–F2÷"Æ–æ†vVç2FR6Æ÷7G&–F—VÒRf÷&ÒF–fW&Væ6–F2VÒ6÷&÷F—÷2òÆöævòFò<:–7VÆò…ƒ²6W\:¦æ6–RW7G'WGW&F&ôåBôf÷&Ò6&7FW&—¦F2÷"Ü;¦ÇF—Æ÷2w'W÷2â"À¢F—66÷fW'“¢,8–Ö–ÆRfâW&ÖVævVÒFW67&WfWRò÷&væ—6Öò76ö6–Fòò&÷GVÆ—6ÖòVÒƒ“s²6&7FW&—¦:|:6òÖöÆV7VÆ"ÖöFW&æF&ôåBôVçföÇfRw'W÷2Æ–FW&F÷2÷""â"âF4wWFÂ&–ÖöæB7FWfVç2R6öÆ&÷&F÷&W2â"À¢6÷W&6W3¥°¢²%Væ•&÷B(	BæWW&÷F÷†–æ&÷GVÌ:Öæ–6F—ò…E“’"Â&‡GG3¢ò÷wwrçVæ—&÷Bæ÷&r÷Væ—&÷F¶"õE“öVçG'’%ÒÀ¢²$Æ7’WBÂâ(	BW7G'WGW&7&—7FÆöw,:f–6F&ôåBô"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó“sƒ3sSò%ÒÀ¢²$&Æ6’WBÂâ(	B6Æ—fvVÒFR4äÓ#R÷"&ôåBô"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒ3“Rò%Ğ¢Ğ¢ÒÀ¢&FÖ‚#§°¢6Æ76–f–6F–öã¢$FW6–væ:|:6ò6öÖW&6–ÂW6F&VÒ6æF–FFòFW&—fFòFR6VÖ‚6öÒw'WòFÖçFæó²ì:6òfö’Æö6Æ—¦Fò&Vv—7G&ò\:ÖÖ–6òöf–6–ÂæVÒV&Æ–6:|:6ò&–Ü:&–VRFVf–æVÖW7G'WGW&;¦æ–66ö"òæöÖRFÖ‚â"À¢6WVVæ6S¢$FW67&œ:|;VW2;¦&Æ–62'FVÒF6FV–FR6VÖ‚ÂÖWN(	4vÇ^(	4†—>(	5†^(	5&ş(	4vÇ(	5&òÂÖ2F—fW&vVÒVçFòòw'WòFÖçFæòRòöçFòFR6öæ§Vv:|:6òâ–FVçF–FFRFòÆ÷FRFWfR6W"W7F&VÆV6–F÷"4ôÂW7V7G&öÖWG&–FRÖ762RFö7VÖVçF:|:6òW7G'WGW&ÂFòf'&–6çFRâ"À¢ÖöÆV7VÆ#¢$ì:6ò6öç6öÆ–FF&òæöÖRFÖ‚â6VÒ÷6œ:|:6òFR6öæ§Vv:|:6òÂòÆ–vçFRR÷26öçG&:Ööç2Âì:6òW†—7FRl;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6FVfVç<:fVÃ²÷2FF÷2FR6VÖ‚ì:6òöFVÒ6W"G&ç6fW&–F÷2WFöÖF–6ÖVçFRòFW&—fFòâ"À¢÷&–v–ã¢$æöÖR&V6VçFRFR6L:ÆövòFRW7V—6Â&W6VçFFò6öÖòFW&—fFòÆ—öl:ÖÆ–6òFR6VÖ‚âÆ—FW&GW&&–Ü:&–&V7WW&F6&7FW&—¦6VÖ‚ÂÖ2ì:6òfÆ–FFRf÷&Ö–æFWVæFVçFR–FVçF–FFRW7V<:Öf–6FVæöÖ–æFFÖ‚â"À¢F—66÷fW'“¢$WF÷&–R&–ÖV—&<:ÖçFW6RFRFÖ‚ì:6òW7L:6ò6öç6öÆ–FF2VÒföçFR&–Ü:&––æFW†Fâò6ö×÷7Fò&VçFÂ6VÖ‚fö’FW6VçföÇf–Fò÷"æ–¶öÆ’×–6öVF÷bÂ–v÷"6†Ö&–âR6öÆ&÷&F÷&W2æ6FVÖ–'W76FR6œ:¦æ6–2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B6VÖ‚Â6ö×÷7Fò&VçFÂ"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBõ6VÖ‚%ÒÀ¢²$FöÆ÷F÷bWBÂâ(	B6&7FW&—¦:|:6òW‡W&–ÖVçFÂFR6VÖ‚"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóCSsSs2ò%Ğ¢Ğ¢ÒÀ¢&6&F–övVâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò&–÷&VwVÆF÷"76ö6–FòæÆ—FW&GW&FR6L:Æövò:6–vÆTE#²òæöÖR6&F–övVâ&V6RVÒW7GVF÷2–æFW†F÷2ÂÖ2Æ–v:|:6òæöÖ^(	76W\:¦æ6–&WVW"6öæf—&Ö:|:6òæÌ:×F–6FòÆ÷FRâ"À¢6WVVæ6S¢$Æ(	4vÇ^(	47(	4&r„TE"’:’–FVçF–FFR\:ÖÖ–6FR&VfW,:¦æ6–Ö—2W6Fâ6öÖò÷2&W7VÖ÷2&–Ü:&–÷2W7V<:Öf–6÷2FR6&F–övVâì:6òW‡Æ–6—FÒ6W\:¦æ6–Â:v–æì:6ò&W7VÖRVRFöF&W6VçF:|:6ò6öÖW&6–ÂFVæ†W†FÖVçFRW766FV–÷RÖW6Öf÷&Ö6Æ–æâ"À¢ÖöÆV7VÆ#¢%&6FV–Æ—g&RTE"&Vv—7G&FæòV$6†VÓ¢>((((„((>((î((tş((’+r&÷†–ÖFÖVçFRCƒ’ÃC‚röÖöÂâ6—2Â†–G&F÷2RÖöF–f–6:|;VW2ÇFW&ÒW76W2fÆ÷&W3²Æ–6"6öÖVçFRVæFòò4ô6öæf—&Ö"TE"â"À¢÷&–v–ã¢$–çFVw&çFRFò&öw&ÖFRWL:ÖFV÷2&–÷&VwVÆF÷&W2W7GVFFòVÒÖöFVÆ÷2FR7VÇGW&FRFV6–Fò6&L:Ö6ò÷"w'W÷2FR<:6òWFW'6'W&vòâ"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂæFÆ–Æ–æ¶÷fR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòR–ç7F—GVœ:|;VW276ö6–F2â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÆÔvÇRÔ7Ô&rÔô‚„4”BSƒ3“ƒ’’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóSƒ3“ƒ’%ÒÀ¢²$Æ–æ¶÷fWBÂâ(	B6&F–övVâVÒ7VÇGW&FRÖ–ö<:&F–ò"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##“ò%ÒÀ¢²$æ—6–Ö÷bWBÂâ(	BW7GVFòW‡W&–ÖVçFÂ6öÒ6&F–övVâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#3“csbò%Ğ¢Ğ¢ÒÀ¢&6'FÆ‚#§°¢6Æ76–f–6F–öã¢$FW6–væ:|:6òFRWL:ÖFVò&–÷&VwVÆF÷"7W'Fò7V¦6W\:¦æ6–:’&W6VçFFFRÖöFòF—fW&vVçFRæ2föçFW2;¦&Æ–63²–FVçF–FFRFòÖFW&–ÂFWfR6W"&W6öÇf–FçFW2FRG&–'V—"W7V6–f–6:|;VW2;¦æ–62â"À¢6WVVæ6S¢$6L:Æöv÷276ö6–Ò6'FÆ‚Æ(	4vÇ^(	47(	4ÆWR„TDÂ’ÂVçVçFòV&Æ–6:|:6ò&–Ü:&–FÖW6ÖÆ–æ†FRW7V—6FW67&WfRÆ(	47(	4vÇ^(	4ÆWR„DTÂ’â<:6ò—<;FÖW&÷2FR6W\:¦æ6–F—7F–çF÷3²ò4ôRW7V7G&öÖWG&–FòÆ÷FRFWfVÒFVf–æ—"VÂW7L:&W6VçFRâ"À¢ÖöÆV7VÆ#¢$TDÂRDTÂL:¦ÒÖW6Ö6ö×÷6œ:|:6òVÆVÖVçF"Â>((((„((>((î((Dş((’ÂRÖ76&÷†–ÖFFRCsÃC‚röÖöÂæf÷&ÖÆ—g&RÂÖ2ì:6ò<:6òW7G'WGW&ÆÖVçFRWV—fÆVçFW2â6—2RÖöF–f–6:|;VW2FWfVÒ6W"–æf÷&ÖF÷26W&FÖVçFRâ"À¢÷&–v–ã¢%&VÆ6–öæFòò&öw&ÖFRWL:ÖFV÷2&–÷&VwVÆF÷&W2FR<:6òWFW'6'W&vòRW7GVF÷2FRWL:ÖFV÷27W'F÷2VÒÖöFVÆ÷2FR6'F–ÆvVÒR7&öÖF–æâ"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vó²G&–'Vœ:|:6ò6öÖW&6–ÂW†FW&ÖæV6RFWVæFVçFRFFö7VÖVçF:|:6òFòÆ÷FRâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÆÔvÇRÔ7ÔÆWRÔô‚„4”Bc“ƒc’’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóc“ƒc’%ÒÀ¢²$Ööæ6VÆ–G¦RWBÂâ(	BÆÔ7ÔvÇRÔÆWRVÒ7&öÖF–æ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#cƒSS#bò%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BF–fW&Væ6–:|:6ò6VÇVÆ"÷"WL:ÖFV÷27W'F÷2"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##ƒƒSRò%Ğ¢Ğ¢ÒÀ¢&6÷'FvVâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6òFRVG&òÖ–æü:6–F÷2Â–FVçF–f–6FòVÒV&Æ–6:|:6ò&–Ü:&–6öÖòTEâ"À¢6WVVæ6S¢$Æ(	4vÇ^(	47(	5&ò„TE’Â6öÒFW&Ö–æ—2Æ—g&W2æf÷&ÖFR&VfW,:¦æ6–â6WFF÷2Â÷WG&÷26—2÷RFW&—f:|;VW2FW&Ö–æ—2L:¦Ò6ö×÷6œ:|:6òF—7F–çFâ"À¢ÖöÆV7VÆ#¢$>((((t((.((dî((Dş((’+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢CSBÃC2röÖöÂ&‚ÔÆÔvÇRÔ7Õ&òÔô‚â"À¢÷&–v–ã¢%WL:ÖFVò7W'FòFW6VçföÇf–FòRW7GVFFòæò&öw&Ö'W76òFR&–÷&VwVÆ:|:6òWL:ÖF–6Â6öÒG&&Æ†÷2W‡W&–ÖVçF—2VÒÖöFVÆ÷26VÇVÆ&W2RFV6–GV—2â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂfÆF–Ö—"ÖÆ–æ–âR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÆÔvÇRÔ7Õ&òÔô‚„4”BƒC3“c#’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóƒC3“c#%ÒÀ¢²$¶†f–ç6öâWBÂâ(	B6W\:¦æ6–TEW‡Æ–6—FFVÒW7GVFò&–Ü:&–ò"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#C#s"ò%ÒÀ¢²$W7GVFòW‡W&–ÖVçFÂ–æFW†FòFR6÷'FvVâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóSS“c“ò%Ğ¢Ğ¢ÒÀ¢&7'—7FvVâ#§°¢6Æ76–f–6F–öã¢$FW6–væ:|:6òFRWL:ÖFVò&–÷&VwVÆF÷"7W'Fò76ö6–FW7GVF÷2FòF–Öó²W7G'WGW&6öÖW&6–ÆÖVçFRF—gVÆvFì:6òW7L:6öç6öÆ–FFVÒ&Vv—7G&ò&–Ü:&–ò–æW\:×fö6ò6ö"W76RæöÖRâ"À¢6WVVæ6S¢$föçFW26V7VæL:&–2G&–'VVÒvÇ^(	5G'(	47(	4&r„UtE"’ÂÖ2V&Æ–6:|:6ò–æFW†FW7V<:Öf–6FR7'—7FvVâ&V7WW&Fì:6òW‡Æ–6—FW766W\:¦æ6–âòÆ÷FR&V6—6FR4ôR–FVçF–f–6:|:6ò÷"W7V7G&öÖWG&–çFW2FG&–'Vœ:|:6òFVf–æ—F—fâ"À¢ÖöÆV7VÆ#¢$ì:6òG&–'\:ÖF6öÖòW7V6–f–6:|:6òFVf–æ—F—fâfÆ÷&W2;¦&Æ–6÷2&UtE"<:6ò–æ6öç6—7FVçFW2VçG&R6“²l;7&×VÆRÖ76FWfVÒ6W"FW&—fF2FW7G'WGW&VfWF—fÖVçFR6öæf—&ÖFÂ–æ6ÇV–æFòFW&Ö–æ—2Rf÷&Ö6Æ–æâ"À¢÷&–v–ã¢%&VÆ6–öæFòò&öw&ÖFRWL:ÖFV÷2&–÷&VwVÆF÷&W2FR<:6òWFW'6'W&vòRW7GVFFòVÒÖöFVÆ÷2W‡W&–ÖVçF—2FRFV6–FòW7Ì:¦æ–6òRVçfVÆ†V6–ÖVçFòâ"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂæFÆ–Æ–æ¶÷fR6öÆ&÷&F÷&W2FR–ç7F—GVœ:|;VW2'W762FR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–â"À¢6÷W&6W3¥°¢²$Æ–æ¶÷fWBÂâ(	BW7GVFò–æFW†FòW7V<:Öf–6òFR7'—7FvVâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#ƒ“scCBò%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BF–fW&Væ6–:|:6ò6VÇVÆ"÷"WL:ÖFV÷27W'F÷2"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##ƒƒSRò%Ğ¢Ğ¢ÒÀ¢&ÆVÖöâÖ&÷GFÆR#§°¢6Æ76–f–6F–öã¢$æöÖR6öÖW&6–ÂFRVÖ6öÇ\:|:6ò×VÇF–6ö×öæVçFS²ì:6ò:’VÒWL:ÖFVò—6öÆFòæVÒVÖ7V'7L:&æ6–\:ÖÖ–6;¦æ–6â"À¢6WVVæ6S¢$ì:6òÆ–<:fVÂâf÷&×VÆ:|:6òöf–6–ÂÆ—7F:wVÂW‡G&FòFR&6†’Â'&öÖVÆ:ÖæÂÆV6—F–æÂW‡G&F÷2&÷L:&æ–6÷2Â&–&öfÆf–æRW†6—–VçFW2â6F6ö×öæVçFR÷77V’–FVçF–FFR,;7&–R6ö×÷6œ:|:6òFWfR6÷'&W7öæFW"òÆ÷FRR:fW'<:6òFòf'&–6çFRâ"À¢ÖöÆV7VÆ#¢$ì:6òW†—7FRl;7&×VÆ÷RÖ76ÖöÆV7VÆ";¦æ–6&Ö—7GW&âf–6†L:–6æ–6ÂòÆ÷FRRì:Æ—6RFR6ö×÷6œ:|:6ò<:6òæV6W7<:&–÷3²fÆ÷&W2FR'&öÖVÆ:ÖæÂÆV6—F–æ÷R&–&öfÆf–æ—6öÆF2ì:6òFW67&WfVÒ6öÇ\:|:6ò6ö×ÆWFâ"À¢÷&–v–ã¢$f÷&×VÆ:|:6ò6öÖW&6–ÂF4”BÖVF–6÷2âòæöÖRÆVÖöâ&÷GFÆRFÖ,:–Ò:’W6FòVÒÆ–æ†2F–fW&VçFW2Â÷"—76òf&–çFR×÷VÆR6öÇWF–öâFWfR6W"F—7F–æwV–FFR6¶–â&ö÷7FW"Â&V&ö÷BR÷WG&2&W6VçF:|;VW2â"À¢F—66÷fW'“¢$FW6VçföÇf–ÖVçFò6öÖW&6–ÂG&–'\:ÖFò:4”BÖVF–6÷3²ì:6ò6÷'&W7öæFR:FW66ö&W'FFRVÖÖöÌ:–7VÆ;¦æ–6÷"VÒw'Wò6L:¦Ö–6òâ"À¢6÷W&6W3¥°¢²%4”BÖVF–6÷2(	B6ö×÷6œ:|:6òöf–6–ÂFÆVÖöâ&÷GFÆR×÷VÆR6öÇWF–öâ"Â&‡GG3¢ò÷wwræÆVÖöæ&÷GFÆRææWB÷&öGV7G2öÆVÖöâÖ&÷GFÆRÖfBÖF—76öÇfW"%Ğ¢Ğ¢ÒÀ¢&Æ—fvVâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6òFRVG&òÖ–æü:6–F÷2Â&Vv—7G&Fò6öÖò´TDâ"À¢6WVVæ6S¢$Ç—>(	4vÇ^(	47(	4Æ„´TD’Âæf÷&ÖFR6FV–Æ—g&RFR&VfW,:¦æ6–â6öçG&:Ööç2Â†–G&F÷2RÖöF–f–6:|;VW2FW&Ö–æ—2FWfVÒ6W"G&FF÷26öÖòf÷&Ö2F—7F–çF2â"À¢ÖöÆV7VÆ#¢$>((((„((>((î((Tş((’+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢CcÃCrröÖöÂ&‚ÔÇ—2ÔvÇRÔ7ÔÆÔô‚…V$6†VÒ4”Bƒs““cƒ2’â"À¢÷&–v–ã¢$FW6VçföÇf–Fòæò&öw&ÖFRWL:ÖFV÷2&–÷&VwVÆF÷&W2FR<:6òWFW'6'W&vòR–çfW7F–vFòVÒ7VÇGW&2FR†WL;66—F÷2RFV6–F÷2†W:F–6÷2â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂfÆF–Ö—"ÖÆ–æ–âR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÇ—2ÔvÇRÔ7ÔÆÔô‚„4”Bƒs““cƒ2’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóƒs““cƒ2%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BÆ—fvVâVÒ7VÇGW&2FR†WL;66—F÷2"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóS“#c3Bò%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BÖ÷&föÆöv–FR7VÇGW&†W:F–66öÒÆ—fvVâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#Sssc“rò%Ğ¢Ğ¢ÒÀ¢&÷fvVâ#§°¢6Æ76–f–6F–öã¢$FW6–væ:|:6ò6öÖW&6–ÂÖ,:ÖwV¢&V6RFçFò&VÒWL:ÖFVò&–÷&VwVÆF÷"7W'FòVçFò&&W&:|;VW2fWFW&–ì:&–2FRe4‚â:v–æG&F6öÖVçFR†—;7FW6RWL:ÖF–6Â6öæF–6–öæF:6öæf—&Ö:|:6òFòÆ÷FRâ"À¢6WVVæ6S¢$–FVçF–FFRWL:ÖF–6F—gVÆvF:’vÇ^(	47(	4ÆWR„TDÂ’âòæöÖR—6öÆFòì:6ò&7F&F—7F–æwV’ÖÆFR&öGWF÷2†öÜ;Fæ–Ö÷3²4ôÂf'&–6çFRRÜ:—FöFòæÌ:×F–6òFWfVÒ6öæf—&Ö"6FV–Rf÷&Ö\:ÖÖ–6â"À¢ÖöÆV7VÆ#¢%&‚ÔvÇRÔ7ÔÆWRÔôƒ¢>((((T((.((Tî((4ş((‚+r&÷†–ÖFÖVçFR3sRÃ3‚röÖöÂ…V$6†VÒ4”BCCC#‚’âW76RfÆ÷"ì:6ò6RÆ–6&W&:|;VW2†öÜ;Fæ–Ö2FRe4‚æVÒ6—2ì:6òW7V6–f–6F÷2â"À¢÷&–v–ã¢$G&–'Vœ:|:6òTDÂ–çFVw&6L:Æöv÷2FRWL:ÖFV÷2&–÷&VwVÆF÷&W2FR÷&–vVÒ'W76²ò†öÜ;Fæ–ÖòfWFW&–ì:&–ò÷77V’÷&–vVÒR6ö×÷6œ:|:6ò6ö×ÆWFÖVçFRF–fW&VçFW2â"À¢F—66÷fW'“¢$G&–'Vœ:|:6òWL:ÖF–6:’76ö6–Fò&öw&ÖFRfÆF–Ö—"¶†f–ç6öâVÒ<:6òWFW'6'W&vòÂÖ2–FVçF–FFR6öÖW&6–ÂFòÆ÷FRFWfR6W"Fö7VÖVçFF6W&FÖVçFRâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BvÇWFÖ–ÂÖ7'F–ÂÖÆWV6–æ„4”BCCC#‚’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóCCC#‚%ÒÀ¢²%V$ÖVB(	BW†V×ÆòFò†öÜ;Fæ–Öò÷fvVâ6öÖò&W&:|:6òFRe4‚"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóƒ#3Cƒ“2ò%Ğ¢Ğ¢ÒÀ¢'æ7&vVâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6òFRVG&òÖ–æü:6–F÷2Â–FVçF–f–6Fò6öÖò´TErâ"À¢6WVVæ6S¢$Ç—>(	4vÇ^(	47(	5G'„´TEr’Â6öÒFW&Ö–æ—2Æ—g&W2æf÷&ÖFR&VfW,:¦æ6–â6—2RFW&—fF÷2FWfVÒ6W"F–fW&Væ6–F÷2â"À¢ÖöÆV7VÆ#¢$>((.((d((>((dî((dş((’+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢cÃc2röÖöÂ&‚ÔÇ—2ÔvÇRÔ7ÕG'Ôô‚…V$6†VÒ4”BcƒCS#ƒsr’â"À¢÷&–v–ã¢%WL:ÖFVò7W'FòFò&öw&ÖFR&–÷&VwVÆ:|:6òFR<:6òWFW'6'W&vòÂW7GVFFòVÒÖöFVÆ÷2W‡W&–ÖVçF—2FR<:–ÇVÆ2VæL;67&–æ2æ7&\:F–62R–çFW&:|:6ò6öÒDäâ"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂ7fWFÆæF&æ÷g6¶–ÂfVÂ–·WG6Væ’R6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÇ—2ÔvÇRÔ7ÕG'Ôô‚„4”BcƒCS#ƒsr’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBócƒCS#ƒsr%ÒÀ¢²%F&æ÷g6¶–WBÂâ(	B6W\:¦æ6–´TErR–çFW&:|:6ò6öÒDä"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#CsssS’ò%ÒÀ¢²$W7GVFòW‡W&–ÖVçFÂFòFWG&WL:ÖFVòVÒ&–÷7<:ÖçFW6RFR–ç7VÆ–æ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bóccsSs’ò%Ğ¢Ğ¢ÒÀ¢'FW7FvVâ#§°¢6Æ76–f–6F–öã¢%FWG&WL:ÖFVò6–çL:—F–6òFRVG&òÖ–æü:6–F÷2Â–FVçF–f–6Fò6öÖò´TDrâ"À¢6WVVæ6S¢$Ç—>(	4vÇ^(	47(	4vÇ’„´TDr’Âæf÷&ÖÆ—g&RFR&VfW,:¦æ6–âf÷&Ö26Æ–æ2÷RÖöF–f–6F2W†–vVÒW7V6–f–6:|:6ò,;7&–â"À¢ÖöÆV7VÆ#¢$>((((t((.((”î((Tş((’+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢CCrÃCBröÖöÂ&‚ÔÇ—2ÔvÇRÔ7ÔvÇ’Ôô‚…V$6†VÒ4”B#3ƒc3s’â"À¢÷&–v–ã¢%&VÆ6–öæFòò&öw&Ö'W76òFRWL:ÖFV÷2&–÷&VwVÆF÷&W2R–çfW7F–vFòVÒÖöFVÆ÷2W‡W&–ÖVçF—2FRFV6–FòVæL;67&–æòRF–fW&Væ6–:|:6ò6VÇVÆ"â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂ&÷&—2·W¦æ–²R6öÆ&÷&F÷&W2FR–ç7F—GVœ:|;VW2'W762FR&–÷&VwVÆ:|:6òÂvW&öçFöÆöv–RW7V—6Ü:–F–6â"À¢6÷W&6W3¥°¢²%V$6†VÒ(	B‚ÔÇ—2ÔvÇRÔ7ÔvÇ’Ôô‚„4”B#3ƒc3s’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBó#3ƒc3s%ÒÀ¢²$·W¦æ–²WBÂâ(	BW7GVFòW‡W&–ÖVçFÂFR´TDr"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó###cƒS"ò%ÒÀ¢²$fVF÷&W–WfWBÂâ(	B–çFW&:|:6òFRWL:ÖFV÷27W'F÷26öÒ†—7Föæ2RDä"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#3Sƒ“ƒrò%Ğ¢Ğ¢ÒÀ¢'fW7VvVâ#§°¢6Æ76–f–6F–öã¢%G&—WL:ÖFVò6–çL:—F–6òFRG,:§2Ö–æü:6–F÷2Â76ö6–Fò:6W\:¦æ6–´TBâ"À¢6WVVæ6S¢$Ç—>(	4vÇ^(	47„´TB’Â6öÒFW&Ö–æ—2Æ—g&W2æf÷&ÖFR&VfW,:¦æ6–â76ö6–:|:6òòæöÖRfW7VvVâRf÷&Ö6Æ–æFWfVÒ6W"6öæf—&ÖF2æò4ôFòÆ÷FRâ"À¢ÖöÆV7VÆ#¢$>((((T((.((dî((Dş((‚+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢3“Ã3’röÖöÂ&6FV–Æ—g&R´TB…V$6†VÒ4”BƒsSs3c2’â"À¢÷&–v–ã¢%WL:ÖFVò7W'Fò&VÆ6–öæFòò&öw&ÖFR&–÷&VwVÆ:|:6òFR<:6òWFW'6'W&vòRW7V—626öÒF–fW&Væ6–:|:6ò6VÇVÆ"RÖöFVÆ÷2f67VÆ&W2â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂæFÆ–Æ–æ¶÷fR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÇ—2ÔvÇRÔ7„4”BƒsSs3c2’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBóƒsSs3c2%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BF–fW&Væ6–:|:6ò6VÇVÆ"÷"WL:ÖFV÷27W'F÷2"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó##ƒƒSRò%ÒÀ¢²$W7GVFò6Ì:Öæ–6ò–æFW†Fò6öÒWL:ÖFVòf6öF—fò"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#ƒ“scSBò%Ğ¢Ğ¢ÒÀ¢'f–Æöâ#§°¢6Æ76–f–6F–öã¢$F—WL:ÖFVò6–çL:—F–6ò–FVçF–f–6FòVÒV&Æ–6:|:6ò&–Ü:&–6öÖò´Râ"À¢6WVVæ6S¢$Ç—>(	4vÇR„´R’Âæf÷&ÖFR6FV–Æ—g&RFR&VfW,:¦æ6–â6—2Â†–G&F÷2R&÷F\:|;VW2FW&Ö–æ—2ÖöF–f–6Ò6ö×÷6œ:|:6òâ"À¢ÖöÆV7VÆ#¢$>((((((.((î((4ş((R+rÖ76ÖöÆV7VÆ"&÷†–ÖF¢#sRÃ3röÖöÂ&Æ—6–ÂÖvÇWFÖFò…V$6†VÒ4”BsS"’â"À¢÷&–v–ã¢%WL:ÖFVò7W'FòFò&öw&ÖFR&–÷&VwVÆ:|:6òFR<:6òWFW'6'W&vòÂ–çfW7F–vFòVÒÖöFVÆ÷26VÇVÆ&W2RFR6–æÆ—¦:|:6òL:ÖÖ–6â"À¢F—66÷fW'“¢%fÆF–Ö—"¶†f–ç6öâÂVÆVæ'–&¶–æÂfÆF–Ö—"ÖÆ–æ–âR6öÆ&÷&F÷&W2+r–ç7F—GWFòFR&–÷&VwVÆ:|:6òRvW&öçFöÆöv–FR<:6òWFW'6'W&vòâ"À¢6÷W&6W3¥°¢²%V$6†VÒ(	BÆ—6–ÂÖvÇWFÖFò„4”BsS"’"Â&‡GG3¢ò÷V&6†VÒææ6&’ææÆÒææ–‚æv÷bö6ö×÷VæBósS"%ÒÀ¢²$¶†f–ç6öâWBÂâ(	B6W\:¦æ6–´RW‡Æ–6—FF&f–Æöâ"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó#C#s"ò%ÒÀ¢²$¶†f–ç6öâWBÂâ(	BW7GVFòFRW‡&W7<:6ò|:¦æ–66öÒ´R"Â&‡GG3¢ò÷V&ÖVBææ6&’ææÆÒææ–‚æv÷bó3ssƒ#c3bò%Ğ¢Ğ¢Ğ§Ó°¦gVæ7F–öâFV6…7V72‡6ÇVr—°¢6öç7B3ÕDT4…õ5T55·6ÇVuÓ°¢–b‚2—&WGW&â"#°¢6öç7Bf–VÆG3Õ°¢²$6Æ76–f–6:|:6ò"Ç2æ6Æ76–f–6F–öåÒÀ¢²%6W\:¦æ6–òW7G'WGW&"Ç2ç6WVVæ6UÒÀ¢²$l;7&×VÆRÖ76ÖöÆV7VÆ""Ç2æÖöÆV7VÆ%ÒÀ¢²$÷&–vVÒ6–VçL:Öf–6"Ç2æ÷&–v–åÒÀ¢²$FW66ö&W'FòWV—R"Ç2æF—66÷fW'•Ğ¢Ó°¢&WGW&âÇ6V7F–öâ6Æ73Ò'FV6‚×7V72"&–ÖÆ&VÆÆVF'“Ò'FV6‚×F—FÆR#ãÇ7â6Æ73Ò&W–V'&÷r#äFF÷26–VçL:Öf–6÷2fW&–f–6F÷3Â÷7ããÆƒ"–CÒ'FV6‚×F—FÆR#äW7V6–f–6:|;VW2L:–6æ–63Âöƒ#ãÆF—b6Æ73Ò'FV6‚Öw&–B#âG¶f–VÆG2æÖ‚…¶Æ&VÂÇfÇVUÒ“ÓæÆF—b6Æ73Ò'FV6‚Öf–VÆB#ãÆƒ3âG¶Æ&VÇÓÂöƒ3ãÇâG·fÇVWÓÂ÷ãÂöF—cæ’æ¦ö–â‚""—ÓÂöF—cãÆF—b6Æ73Ò'FV6‚×6÷W&6W2#ãÆƒ3äföçFW3Âöƒ3ãÇVÃâG·2ç6÷W&6W2æÖ‚…¶Æ&VÂÇW&ÅÒ“ÓæÆÆ“ãÆ‡&VcÒ"G·W&ÇÒ"F&vWCÒ%ö&Ææ²"&VÃÒ&æö÷VæW"æ÷&VfW'&W"#âG¶Æ&VÇÓÂöãÂöÆ“æ’æ¦ö–â‚""—ÓÂ÷VÃãÇä–æf÷&Ö:|:6òFR&VfW,:¦æ6–&–FVçF–f–6:|:6òÆ&÷&F÷&–Ââì:6ò6öç7F—GV’÷&–VçF:|:6òFRW6òãÂ÷ãÂöF—cãÂ÷6V7F–öãæ°§Ğ¢òòòFöÜ:Öæ–ò6öÖW&6–Âì:6òW‡;VRò6öçF\;¦FòVGV66–öæÂâ&VÖü:|:6òVÒFV×ğ¢òòFRW†V7\:|:6òFÖ,:–ÒæWWG&Æ—¦Æ–æ·2&W6–GV—2VÒ:v–æ2W7L:F–62çF–v2à¦Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚v¶‡&Vb£Ò&&–&Æ–÷FV6%ÒÆ¶‡&Vb£Ò'&V6öç7F—GV–6ò%Òr’æf÷$V6‚†Æ–æ³ÓæÆ–æ²ç&VÖ÷fR‚’“°¦6öç7BÖöæW“ÖãÓâ%U2B"¶âçFôf—†VBƒ"“°¦gVæ7F–öâf–ÅÆ6V†öÆFW"‡—°¢6öç7B6fSÕ7G&–ær‡ææÖR’ç&WÆ6R‚õ²cÃâ"uÒörÆ3Óâ‡²"b#¢"f×²"Â#Â#¢"fÇC²"Â#â#¢"fwC²"Â%Â"#¢"gV÷C²"Â"r#¢"b33“²'Õ¶5Ò’“°¢6öç7B6†÷'C×6fRæÆVæwFƒã#S÷6fRç6Æ–6RƒÃ#B’².(
+b#§6fRÆF÷6S×æ—FV×5³Õ³Ó°¢6öç7B7fsÖÇ7fr†ÖÆç3Ò&‡GG¢ò÷wwrçs2æ÷&ró#÷7fr"f–Wt&÷ƒÒ#C#S##ãÆFVg3ãÆÆ–æV$w&F–VçB–CÒ&r"ƒÒ#"“Ò#"ƒ#Ò#"“#Ò##ãÇ7F÷7F÷Ö6öÆ÷#Ò"3f3vF"óãÇ7F÷öfg6WCÒ"ãCb"7F÷Ö6öÆ÷#Ò"3v#6fCB"óãÇ7F÷öfg6WCÒ"ãsb"7F÷Ö6öÆ÷#Ò"6Cc3s–b"óãÇ7F÷öfg6WCÒ#"7F÷Ö6öÆ÷#Ò"33VCS†""óãÂöÆ–æV$w&F–VçCãÆÆ–æV$w&F–VçB–CÒ&vÆ72"ƒÒ#"“Ò#"ƒ#Ò#"“#Ò##ãÇ7F÷7F÷Ö6öÆ÷#Ò"6F6SfVb"óãÇ7F÷öfg6WCÒ"ã‚"7F÷Ö6öÆ÷#Ò"6ffb"óãÇ7F÷öfg6WCÒ"ãƒ""7F÷Ö6öÆ÷#Ò"6ffb"óãÇ7F÷öfg6WCÒ#"7F÷Ö6öÆ÷#Ò"66&C†SB"óãÂöÆ–æV$w&F–VçCãÂöFVg3ãÆVÆÆ—6R7ƒÒ##"7“Ò#CsB"'ƒÒ##"'“Ò#‚"f–ÆÃÒ"3cCsC†""÷6—G“Ò"ã‚"óãÇ&V7BƒÒ#‚"“Ò#Cb"v–GFƒÒ#ƒB"†V–v‡CÒ#S‚"'ƒÒ#r"f–ÆÃÒ"63–CC‚"óãÇ&V7BƒÒ#3""“Ò#“""v–GFƒÒ#Sb"†V–v‡CÒ#3""'ƒÒ#‚"f–ÆÃÒ"3##s32"óãÇF‚CÒ$ÓC2fƒ3FÃ‚3gc#ƒ3#RÓ‚C2ÓC2C6‚ÓƒF2Ó#RÓC2Ó‚ÓC2ÓC5cS'¢"f–ÆÃÒ'W&Â‚6vÆ72’"7G&ö¶SÒ"6V&F6"7G&ö¶R×v–GFƒÒ#B"óãÇ&V7BƒÒ#3"“Ò##B"v–GFƒÒ#c"†V–v‡CÒ##R"'ƒÒ#r"f–ÆÃÒ"6ffb"óãÇ&V7BƒÒ#3"“Ò##B"v–GFƒÒ#c"†V–v‡CÒ#‚"f–ÆÃÒ'W&Â‚6r’"óãÇ&V7BƒÒ#3"“Ò##s‚"v–GFƒÒ#c"†V–v‡CÒ#sb"f–ÆÃÒ'W&Â‚6r’"óãÇFW‡BƒÒ##"“Ò##S‚"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×vV–v‡CÒ#ƒ"föçB×6—¦SÒ##b"f–ÆÃÒ"3s6#c‚#åWÔƒÂ÷FW‡CãÇFW‡BƒÒ##"“Ò#3r"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×vV–v‡CÒ#ƒ"föçB×6—¦SÒ"G·6†÷'BæÆVæwFƒãƒóc£—Ò"f–ÆÃÒ"6ffb#âG·6†÷'GÓÂ÷FW‡CãÇFW‡BƒÒ##"“Ò#3ƒr"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×vV–v‡CÒ#ƒ"föçB×6—¦SÒ##B"f–ÆÃÒ"333F3–"#âG¶F÷6WÓÂ÷FW‡CãÇFW‡BƒÒ##"“Ò#C#r"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×6—¦SÒ#’"f–ÆÃÒ"3CS3f#ädõ"$U4T$4‚U4RôäÅ“Â÷FW‡CãÂ÷7fsæ°¢&WGW&â&FF¦–ÖvR÷7fr·†ÖÃ¶6†'6WCÕUDbÓ‚Â"¶Væ6öFUU$”6ö×öæVçB‡7fr“°§Ğ¦gVæ7F–öâVæF–æu&öGV7D–ÖvR‡—°¢6öç7B6fSÕ7G&–ær‡ææÖR’ç&WÆ6R‚õ²cÃâ"uÒörÆ3Óâ‡²"b#¢"f×²"Â#Â#¢"fÇC²"Â#â#¢"fwC²"Â%Â"#¢"gV÷C²"Â"r#¢"b33“²'Õ¶5Ò’“°¢6öç7B7fsÖÇ7fr†ÖÆç3Ò&‡GG¢ò÷wwrçs2æ÷&ró#÷7fr"f–Wt&÷ƒÒ#C#S##ãÆFVg3ãÆÆ–æV$w&F–VçB–CÒ&r"ƒÒ#"“Ò#"ƒ#Ò#"“#Ò##ãÇ7F÷7F÷Ö6öÆ÷#Ò"3f3vF"óãÇ7F÷öfg6WCÒ"ãR"7F÷Ö6öÆ÷#Ò"3v#6fCB"óãÇ7F÷öfg6WCÒ#"7F÷Ö6öÆ÷#Ò"6Cc3s–b"óãÂöÆ–æV$w&F–VçCãÂöFVg3ãÇ&V7Bv–GFƒÒ#C#"†V–v‡CÒ#S#"'ƒÒ##B"f–ÆÃÒ"6ffb"óãÇ&V7BƒÒ#3R"“Ò#3R"v–GFƒÒ#3S"†V–v‡CÒ#CS"'ƒÒ##"f–ÆÃÒ&æöæR"7G&ö¶SÒ'W&Â‚6r’"7G&ö¶R×v–GFƒÒ#2"óãÇFW‡BƒÒ##"“Ò###"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×vV–v‡CÒ#ƒ"föçB×6—¦SÒ#3B"f–ÆÃÒ"3s6#c‚#åWÔƒÂ÷FW‡CãÇFW‡BƒÒ##"“Ò##s"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×vV–v‡CÒ#s"föçB×6—¦SÒ#‚"f–ÆÃÒ"333F3–"#âG·6fWÓÂ÷FW‡CãÇFW‡BƒÒ##"“Ò#3R"FW‡BÖæ6†÷#Ò&Ö–FFÆR"föçBÖfÖ–Ç“Ò$&–ÂÇ6ç2×6W&–b"föçB×6—¦SÒ#B"f–ÆÃÒ"3cCsC†"#ä”ÔtTÒTÒ$ôE\8|84óÂ÷FW‡CãÂ÷7fsæ°¢&WGW&â&FF¦–ÖvR÷7fr·†ÖÃ¶6†'6WCÕUDbÓ‚Â"¶Væ6öFUU$”6ö×öæVçB‡7fr“°§Ğ¦6öç7B$ôET5Eô”ÔtUõD…3Ôö&¦V7Bæg&VW¦R‡°¢&'2ÓSr#¢&'2ÓSrÖ&÷fVBçvV'"À¢&Ö÷G2Ö2#¢&Ö÷G2Ö2Ö&÷fVBçvV'"À¢'&WFG'WF–F#¢'&WFG'WF–FÖ&÷fVBçvV'"À¢'FW6Ö÷&VÆ–æ#¢'FW6Ö÷&VÆ–æÖ&÷fVB×c"çvV'"À¢'F—'¦WF–F#¢'F—'¦WF–FÖ&÷fVBçvV' §Ò“°¦6öç7B†5&öGV7D–ÖvS×Óä&ööÆVâ…$ôET5Eô”ÔtUõD…5·ç6ÇVu×ÇÇæ–ÖvR“°¦6öç7B–ÖvT76WD&6SÒ‚“ÓæFö7VÖVçBçVW'•6VÆV7F÷"‚"66FÆötw&–B"“ò"âö76WG2ö–ÖvW2ò#¢"ââö76WG2ö–ÖvW2ò#°¦6öç7B&öGV7D–ÖvS×Óå$ôET5Eô”ÔtUõD…5·ç6ÇVuÓö–ÖvT76WD&6R‚’µ$ôET5Eô”ÔtUõD…5·ç6ÇVuÓ§æ–ÖvWÇÇVæF–æu&öGV7D–ÖvR‡“°¦6öç7B&öGV7D–ÖvTÇC×Óæ†5&öGV7D–ÖvR‡“öf–ÂWÖ‚G·ææÖWÖ¦–ÖvVÒVÒ&öG\:|:6ò&G·ææÖWÖ°¦6öç7B&öGV7EW&Ã×ÓæâòG·ç6ÇVwÒö°¦6öç7B6'D¶W“Ò‡Æ—FVÒ“Óç°¢6öç7B6·SÕ7G&–ær†—FVÕ³×ÇÂ""’çG&–Ò‚“°¢&WGW&â6·Rbg6·RÓÒ.(	B#÷6·S¦G·ç6ÇVw×ÂG¶—FVÕ³×Ö°§Ó°¦gVæ7F–öâWFFTæd6'B‚—°¢ÆWB6'C×·Ó·G'—¶6'CÔ¥4ôâç'6R†Æö6Å7F÷&vRævWD—FVÒ‚'WÖ‚Ö6'B×c"—ÇÂ'·Ò"—Ö6F6‚…ò—·Ğ¢6öç7BF÷FÃÔö&¦V7BçfÇVW2†6'B’ç&VGV6R‚‡7VÒÇ“Óç7VÒ²„ÖF‚æÖ‚ƒÄÖF‚æfÆö÷"„çVÖ&W"‡’’—ÇÃ’Ã“°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚"ææbÖ6'BÖ6÷VçB"’æf÷$V6‚†VÃÓæVÂçFW‡D6öçFVçC×F÷FÂ“°§Ğ¦gVæ7F–öâ6FÆör‚—°¢WFFTæd6'B‚“°¢6öç7Bw&–CÖFö7VÖVçBçVW'•6VÆV7F÷"‚"66FÆötw&–B"’ÇÖFö7VÖVçBçVW'•6VÆV7F÷"‚"76V&6‚"“°¢6öç7BG&sÒ‚“Óç¶6öç7BFW&Ó×çfÇVRçFôÆ÷vW$66R‚“¶6öç7BÆ—7CÕ$ôET5E2æf–ÇFW"‡Óâ‡ææÖR²""·æ—FV×2æfÆB‚’æ¦ö–â‚""’’çFôÆ÷vW$66R‚’æ–æ6ÇVFW2‡FW&Ò’“°¢w&–Bæ–ææW$…DÔÃÖÆ—7BæÖ‡ÓæÆ6Æ73Ò&6&B"‡&VcÒ"G·&öGV7EW&Â‡—Ò#ãÇ7â6Æ73Ò&6FÆörÖÖVF–#ãÆ–Ör7&3Ò"G·&öGV7D–ÖvR‡—Ò"ÇCÒ"G·&öGV7D–ÖvTÇB‡—Ò"v–GFƒÒ#C#"†V–v‡CÒ#S#"ÆöF–æsÒ&Æ§’#ãÂ÷7ããÆƒ#âG·ææÖWÓÂöƒ#ãÇâG·æFW67ÓÂ÷ãÇ7â6Æ73Ò&g&öÒ#ä'F—"FRÆ#âG¶ÖöæW’„ÖF‚æÖ–â‚ââçæ—FV×2æÖ‡ƒÓç…³%Ò’’—ÓÂö#â÷"f–ÃÂ÷7ããÂöæ’æ¦ö–â‚""—ÇÆÇ6Æ73Ò&æ÷F–6R#äæVæ‡VÒ&öGWFòVæ6öçG&FòãÂ÷æÓ°¢æFDWfVçDÆ—7FVæW"‚&–çWB"ÆG&r“¶G&r‚“°§Ğ¦gVæ7F–öâFWF–Â‡6ÇVr—°¢WFFTæd6'B‚“°¢6öç7BÕ$ôET5E2æf–æB‡ƒÓç‚ç6ÇVsÓÓ×6ÇVr“¶–b‚—&WGW&ã°¢Fö7VÖVçBçF—FÆSÖG·ææÖWÒÂWÖ‚WF–FW6°¢ÆWB6VÆV7FVCÓÇG“Ó°¢6öç7BG&sÒ‚“Óç°¢6öç7Bƒ×æ—FV×5·6VÆV7FVEÓ°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"7&öGV7B"’æ–ææW$…DÔÃÖÆF—b6Æ73Ò'&öGV7BÖ6÷’#ãÇ7â6Æ73Ò&W–V'&÷r#äÖFW&–ÂFRW7V—6Â÷7ããÆƒâG·ææÖWÓÂöƒãÇ6Æ73Ò&ÆVB#âG·æFW67ÓÂ÷ãÆf–wW&R6Æ73Ò'&öGV7B×f—7VÂ#ãÆ–Ör7&3Ò"G·&öGV7D–ÖvR‡—Ò"ÇCÒ"G·&öGV7D–ÖvTÇB‡—Ò"v–GFƒÒ#Cr"†V–v‡CÒ#S""ÆöF–æsÒ&VvW"#ãÂöf–wW&SãÆF—b6Æ73Ò&f7G2#ãÆF—b6Æ73Ò&f7B#ãÆ#å;2Æ–öf–Æ—¦FóÂö#ä&W6VçF:|:6òFRW7V—6ÂöF—cãÆF—b6Æ73Ò&f7B#ãÆ#å&\:vò÷"f–ÃÂö#ä6—†¢f–Ç3ÂöF—cãÆF—b6Æ73Ò&f7B#ãÆ#åW6òVÒW7V—6Âö#äì:6òFW7F–æFòò6öç7VÖò‡VÖæóÂöF—cãÂöF—cãÂöF—cãÆ6–FR6Æ73Ò'æVÂ#ãÇ7â6Æ73Ò&W–V'&÷r#ä&W6VçF:|;VW2F—7öì:×fV—3Â÷7ããÆF—b6Æ73Ò'f&–çG2#âG·æ—FV×2æÖ‚‡bÆ’“ÓæÆÆ&VÂ6Æ73Ò'f&–çBG¶“ÓÓ×6VÆV7FVCò'6VÆV7FVB#¢"'Ò#ãÇ7ããÆ–çWBG—SÒ'&F–ò"æÖSÒ'f&–çB"fÇVSÒ"G¶—Ò"G¶“ÓÓ×6VÆV7FVCò&6†V6¶VB#¢"'ÓâÆ#âG·e³×ÓÂö#ãÆ'#ãÇ7â6Æ73Ò'6·R#å4µRG·e³×ÓÂ÷7ããÂ÷7ããÆ#âG¶ÖöæW’‡e³%Ò—ÓÂö#ãÂöÆ&VÃæ’æ¦ö–â‚""—ÓÂöF—cãÆF—b6Æ73Ò&'W’Ö6öçG&öÇ2#ãÆF—b6Æ73Ò'G’Ö6öçG&öÂ#ãÆ'WGFöâG—SÒ&'WGFöâ"FFÖÖ–çW2&–ÖÆ&VÃÒ$F–Ö–çV—"VçF–FFR#î(‰#Âö'WGFöããÆ–çWB–CÒ&FWF–ÅG’"G—SÒ&çVÖ&W""Ö–ãÒ#"fÇVSÒ"G·G—Ò"&–ÖÆ&VÃÒ%VçF–FFRFRf–Ç2#ãÆ'WGFöâG—SÒ&'WGFöâ"FF×ÇW2&–ÖÆ&VÃÒ$VÖVçF"VçF–FFR#â³Âö'WGFöããÂöF—cãÆ'WGFöâ6Æ73Ò&'Fâ"G—SÒ&'WGFöâ"FFÖ6'BÖFCä6ö×&#Âö'WGFöããÂöF—cãÇ6Æ73Ò&6'BÖ6öæf—&Ò"–CÒ&6'D6öæf—&Ò"&–ÖÆ—fSÒ'öÆ—FR#ãÂ÷ãÆ6Æ73Ò&6'BÖÆ–æ²"‡&VcÒ"ââòââò#åfW"6'&–æ†òæò6†÷(i#ÂöãÇ6Æ73Ò'6·R#å&\:v÷2VÒL;6Æ"ÖW&–6æòÂ÷"f–Ââg&WFRR–×÷7F÷2ì:6ò–æ6Ç\:ÖF÷2ãÂ÷ãÂö6–FSâG·FV6…7V72‡6ÇVr—Ö°¢Fö7VÖVçBçVW'•6VÆV7F÷$ÆÂ‚v–çWE¶æÖSÒ'f&–çB%Òr’æf÷$V6‚†VÃÓæVÂæöæ6†ævSÒ‚“Óç·6VÆV7FVCÔçVÖ&W"†VÂçfÇVR“¶G&r‚—Ò“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚%¶FFÖÖ–çW5Ò"’æöæ6Æ–6³Ò‚“Óç·G“ÔÖF‚æÖ‚ƒÇG’Ó“¶G&r‚—Ó°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚%¶FF×ÇW5Ò"’æöæ6Æ–6³Ò‚“Óç·G’³Ó¶G&r‚—Ó°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"6FWF–ÅG’"’æöæ6†ævSÖSÓç·G“ÔÖF‚æÖ‚ƒÄÖF‚æfÆö÷"„çVÖ&W"†RçF&vWBçfÇVR’—ÇÃ“¶RçF&vWBçfÇVS×G—Ó°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚%¶FFÖ6'BÖFEÒ"’æöæ6Æ–6³Ò‚“Óç°¢G“ÔÖF‚æÖ‚ƒÄÖF‚æfÆö÷"„çVÖ&W"†Fö7VÖVçBçVW'•6VÆV7F÷"‚"6FWF–ÅG’"’çfÇVR’—ÇÃ“°¢ÆWB6'C×·Ó·G'—¶6'CÔ¥4ôâç'6R†Æö6Å7F÷&vRævWD—FVÒ‚'WÖ‚Ö6'B×c"—ÇÂ'·Ò"—Ö6F6‚…ò—·Ğ¢6öç7B¶W“Ö6'D¶W’‡Ç‚“°¢6'E¶¶W•ÓÒ„çVÖ&W"†6'E¶¶W•Ò—ÇÃ’·G“¶Æö6Å7F÷&vRç6WD—FVÒ‚'WÖ‚Ö6'B×c"Ä¥4ôâç7G&–æv–g’†6'B’“·WFFTæd6'B‚“°¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"66'D6öæf—&Ò"’çFW‡D6öçFVçCÖG·G—Òf–ÂG·G“ãò'2#¢"'ÒFRG·…³×ÒF–6–öæFòG·G“ãò'2#¢"'Òò6'&–æ†òæ°¢Ó°¢Ó°¢G&r‚“°§Ğ
