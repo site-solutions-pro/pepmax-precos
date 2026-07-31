@@ -12,3 +12,4 @@ a{color:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.top{posit
 @media(max-width:760px){.tech-specs{padding:22px 18px}.tech-grid{grid-template-columns:1fr}.tech-sources ul{display:block}.tech-sources li+li{margin-top:8px}}
 .nav{align-items:center}.nav-cart{position:relative;width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;color:#fff!important;background:var(--surface)}.nav-cart:hover{border-color:var(--cyan);background:var(--surface2)}.nav-cart-count{position:absolute;right:-5px;top:-6px;min-width:19px;height:19px;padding:0 5px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--grad);color:#fff;font-size:10px;font-weight:800;line-height:1}
 .catalog-media img.final-vial,.product-visual img.final-vial{transform:scale(.93,1.07)}
+.catalog-media,.product-visual{scale:.85}
