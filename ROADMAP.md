@@ -164,7 +164,9 @@ Progresso:
 - terceiro lote científico implementado para SS-31, AOD-9604, ARA-290 e KPV;
 - quarto lote científico implementado para Ipamorelina, Semax, Epitalon e
   Timosina alfa-1;
-- total atual: 16 de 100 páginas com especificações científicas verificadas;
+- quinto lote científico implementado para Selank, Sermorelina, CJC-1295 sem
+  DAC e Melanotan I;
+- total atual: 20 de 100 páginas com especificações científicas verificadas;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
 - próximos lotes seguem a ordem de visibilidade comercial e disponibilidade de
