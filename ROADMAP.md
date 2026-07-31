@@ -205,6 +205,14 @@ Progresso:
 - Tesamorelina recebeu uma versão técnica normalizada, com canvas, proporção e
   fundo alinhados ao novo lote; total atual: 5 de 100 produtos com ativo
   fotográfico definitivo integrado;
+- nova Home institucional/comercial implementada na raiz, com os quatro ativos
+  definitivos visíveis no hero e na seleção editorial; o catálogo comercial
+  anterior foi preservado integralmente em **Shop**;
+- vials definitivos ajustados para uma presença vertical aproximadamente 7%
+  maior na Home, no Shop, no catálogo e nas páginas individuais, sem cortes e
+  com fundo branco único;
+- navegação relativa revisada entre Home, Shop, catálogo, carrinho, políticas e
+  as 100 páginas individuais; preços e apresentações permaneceram inalterados;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
 - a próxima frente é a padronização dos ativos fotográficos e a auditoria final
