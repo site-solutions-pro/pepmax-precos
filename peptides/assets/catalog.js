@@ -177,6 +177,52 @@ const TECH_SPECS={
    ["Garaci, Annals of the New York Academy of Sciences (2007)","https://pubmed.ncbi.nlm.nih.gov/17567941/"],
    ["Birr et al., International Journal of Peptide and Protein Research (1985)","https://pubmed.ncbi.nlm.nih.gov/4066151/"]
   ]
+ },
+ "selank":{
+  classification:"Heptapeptídeo sintético derivado da sequência do imunomodulador endógeno tuftsin.",
+  sequence:"Thr–Lys–Pro–Arg–Pro–Gly–Pro (TKPRPGP). A forma diacetato deve ser distinguida da cadeia livre.",
+  molecular:"C₃₃H₅₇N₁₁O₉ · massa molecular calculada: aproximadamente 751,9 g/mol para o heptapeptídeo livre; sais apresentam composição diferente.",
+  origin:"Projetado a partir do tetrapeptídeo tuftsin (Thr–Lys–Pro–Arg), prolongado pela sequência Pro–Gly–Pro.",
+  discovery:"Nikolay F. Myasoedov e colaboradores · Instituto de Genética Molecular da Academia Russa de Ciências · Moscou, Rússia · desenvolvido na década de 1990.",
+  sources:[
+   ["PubChem — Selank","https://pubchem.ncbi.nlm.nih.gov/compound/Selank"],
+   ["Shevchenko et al., Radiochemistry (2006)","https://doi.org/10.1134/S1066362206030167"]
+  ]
+ },
+ "sermorelina-acetato":{
+  classification:"Peptídeo sintético de 29 aminoácidos correspondente ao fragmento biologicamente ativo GHRH(1–29)-NH₂ humano.",
+  sequence:"Tyr–Ala–Asp–Ala–Ile–Phe–Thr–Asn–Ser–Tyr–Arg–Lys–Val–Leu–Gly–Gln–Leu–Ser–Ala–Arg–Lys–Leu–Leu–Gln–Asp–Ile–Met–Ser–Arg–NH₂.",
+  molecular:"C₁₄₉H₂₄₆N₄₄O₄₂S · massa molecular calculada: aproximadamente 3.357,9 g/mol para a base livre; o acetato acrescenta contraíons de composição variável.",
+  origin:"Derivada dos 29 resíduos N-terminais do fator liberador de hormônio do crescimento humano, região mínima que preserva atividade do peptídeo nativo.",
+  discovery:"A sequência de GRF humano foi isolada e caracterizada por equipes de Roger Guillemin e Wylie Vale no início da década de 1980; o fragmento 1–29 foi então desenvolvido como análogo sintético.",
+  sources:[
+   ["PubChem — Sermorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Sermorelin"],
+   ["Guillemin et al., Science (1982)","https://pubmed.ncbi.nlm.nih.gov/6130528/"],
+   ["Grossman et al., Pediatric Research (1984)","https://doi.org/10.1203/00006450-198411000-00250"]
+  ]
+ },
+ "cjc-1295-sem-dac":{
+  classification:"Análogo sintético de GHRH(1–29)-NH₂ com quatro substituições de aminoácidos e sem o grupo Drug Affinity Complex (DAC).",
+  sequence:"Tyr–D-Ala–Asp–Ala–Ile–Phe–Thr–Gln–Ser–Tyr–Arg–Lys–Val–Leu–Ala–Gln–Leu–Ser–Ala–Arg–Lys–Leu–Leu–Gln–Asp–Ile–Leu–Ser–Arg–NH₂.",
+  molecular:"C₁₅₂H₂₅₂N₄₄O₄₂ · massa molecular calculada: aproximadamente 3.367,9 g/mol para o peptídeo sem DAC; sais e solvatos diferem.",
+  origin:"Construído sobre o núcleo GHRH(1–29), com substituições D-Ala², Gln⁸, Ala¹⁵ e Leu²⁷. Não contém o ligante maleimida de afinidade por albumina do CJC-1295 com DAC.",
+  discovery:"A família de análogos CJC-1295 foi caracterizada por Léonce Jetté e colaboradores · ConjuChem Inc. · Montreal, Canadá · publicação de 2005; a denominação “sem DAC” descreve o núcleo peptídico não conjugado.",
+  sources:[
+   ["PubChem — CJC-1295 without DAC","https://pubchem.ncbi.nlm.nih.gov/compound/CJC1295-Without-DAC"],
+   ["Jetté et al., Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"]
+  ]
+ },
+ "melanotan-i-mt-1":{
+  classification:"Tridecapeptídeo sintético análogo da α-melanotropina (α-MSH), também denominado afamelanotida ou [Nle⁴,D-Phe⁷]-α-MSH.",
+  sequence:"Ac–Ser–Tyr–Ser–Nle–Glu–His–D-Phe–Arg–Trp–Gly–Lys–Pro–Val–NH₂; Nle indica norleucina e D-Phe, D-fenilalanina.",
+  molecular:"C₇₈H₁₁₁N₂₁O₁₉ · massa molecular calculada: aproximadamente 1.646,9 g/mol para o peptídeo livre.",
+  origin:"Projetada por substituição de Met⁴ por norleucina e Phe⁷ por D-fenilalanina na α-MSH, preservando as terminações N-acetilada e C-amidada.",
+  discovery:"Victor J. Hruby, Mac E. Hadley, Thomas K. Sawyer e colaboradores · University of Arizona · Tucson, Estados Unidos · série de análogos desenvolvida nas décadas de 1980 e 1990.",
+  sources:[
+   ["PubChem — Melanotan-I","https://pubchem.ncbi.nlm.nih.gov/compound/Melanotan-I"],
+   ["Sawyer et al., PNAS (1980s): atividade de análogos α-MSH","https://pubmed.ncbi.nlm.nih.gov/3926559/"],
+   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
+  ]
  }
 };
 function techSpecs(slug){
