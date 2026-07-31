@@ -269,6 +269,52 @@ const TECH_SPECS={
    ["Agerberth et al., Proceedings of the National Academy of Sciences (1995)","https://pubmed.ncbi.nlm.nih.gov/7629169/"],
    ["Yang et al., Journal of Experimental Medicine (2000)","https://pubmed.ncbi.nlm.nih.gov/11015447/"]
   ]
+ },
+ "melanotan-ii-mt-2":{
+  classification:"Heptapeptídeo cíclico sintético análogo da α-melanotropina (α-MSH), conhecido como Melanotan II.",
+  sequence:"Ac–Nle–ciclo[Asp–His–D-Phe–Arg–Trp–Lys]–NH₂. Nle representa norleucina; a ligação entre Asp e Lys fecha o anel lactâmico.",
+  molecular:"C₅₀H₆₉N₁₅O₉ · massa molecular calculada: aproximadamente 1.024,2 g/mol para a molécula-base; sais e solvatos apresentam composição distinta.",
+  origin:"Projetado como análogo cíclico compacto da α-MSH a partir do núcleo melanocortínico His–Phe–Arg–Trp, incorporando D-Phe e um anel lactâmico.",
+  discovery:"Victor J. Hruby, Mac E. Hadley e colaboradores · University of Arizona · Tucson, Estados Unidos · série de melanotropinas cíclicas desenvolvida no fim da década de 1980 e início da década de 1990.",
+  sources:[
+   ["PubChem — Melanotan II","https://pubchem.ncbi.nlm.nih.gov/compound/92432"],
+   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
+  ]
+ },
+ "pt-141-bremelanotida":{
+  classification:"Heptapeptídeo cíclico sintético da família dos análogos de α-MSH; também denominado bremelanotida ou PT-141.",
+  sequence:"Ac–Nle–ciclo[Asp–His–D-Phe–Arg–Trp–Lys]–OH. A cadeia possui anel lactâmico entre Asp e Lys e difere do Melanotan II na terminação C-terminal.",
+  molecular:"C₅₀H₆₈N₁₄O₁₀ · massa molecular calculada: aproximadamente 1.025,2 g/mol para a molécula-base; a forma acetato possui composição adicional variável.",
+  origin:"Derivada da família de melanotropinas cíclicas desenvolvida a partir do núcleo farmacofórico da α-MSH; estruturalmente relacionada ao Melanotan II.",
+  discovery:"Mac E. Hadley, Victor J. Hruby e colaboradores · University of Arizona · Tucson, Estados Unidos; o desenvolvimento farmacêutico posterior foi conduzido pela Palatin Technologies.",
+  sources:[
+   ["PubChem — Bremelanotide","https://pubchem.ncbi.nlm.nih.gov/compound/9941379"],
+   ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
+  ]
+ },
+ "liraglutida":{
+  classification:"Análogo sintético acilado do GLP-1 humano, com 31 aminoácidos e uma cadeia de ácido palmítico ligada por espaçador de glutamato.",
+  sequence:"Derivada de GLP-1(7–37): His–Ala–Glu–Gly–Thr–Phe–Thr–Ser–Asp–Val–Ser–Ser–Tyr–Leu–Glu–Gly–Gln–Ala–Ala–Lys–Glu–Phe–Ile–Ala–Trp–Leu–Val–Arg–Gly–Arg–Gly, com Lys³⁴ substituída por Arg e acilação em Lys²⁶ por γ-Glu–C16.",
+  molecular:"C₁₇₂H₂₆₅N₄₃O₅₁ · massa molecular calculada: aproximadamente 3.751,2 g/mol para a molécula-base.",
+  origin:"Criada por engenharia do GLP-1 humano para associação reversível à albumina, usando uma cadeia de ácido palmítico e substituição de lisina para direcionar a acilação.",
+  discovery:"Lotte Bjerre Knudsen e colaboradores · Novo Nordisk · Måløv, Dinamarca · seleção e caracterização publicadas no fim da década de 1990 e em 2000.",
+  sources:[
+   ["PubChem — Liraglutide","https://pubchem.ncbi.nlm.nih.gov/compound/16134956"],
+   ["Knudsen et al., Journal of Medicinal Chemistry (2000)","https://pubmed.ncbi.nlm.nih.gov/10794683/"],
+   ["Knudsen, ACS Pharmacology & Translational Science (2019)","https://pubmed.ncbi.nlm.nih.gov/32259078/"]
+  ]
+ },
+ "ocitocina-acetato":{
+  classification:"Nonapeptídeo cíclico natural da família oxitocina/vasopressina; a apresentação acetato corresponde a um sal da molécula peptídica.",
+  sequence:"Cys–Tyr–Ile–Gln–Asn–Cys–Pro–Leu–Gly–NH₂, com ponte dissulfeto entre Cys¹ e Cys⁶.",
+  molecular:"C₄₃H₆₆N₁₂O₁₂S₂ · massa molecular calculada: aproximadamente 1.007,2 g/mol para a oxitocina; acetato, hidratação e outros contraíons alteram a composição da apresentação.",
+  origin:"Hormônio peptídico isolado da neuro-hipófise; sua estrutura foi elucidada e depois reproduzida por síntese química total.",
+  discovery:"Vincent du Vigneaud e colaboradores · Cornell University Medical College · Nova York, Estados Unidos · estrutura e primeira síntese total concluídas na década de 1950.",
+  sources:[
+   ["PubChem — Oxytocin","https://pubchem.ncbi.nlm.nih.gov/compound/439302"],
+   ["du Vigneaud et al. — síntese de oxitocina","https://pubmed.ncbi.nlm.nih.gov/14391383/"],
+   ["Synthetic oxytocin — registro histórico","https://pubmed.ncbi.nlm.nih.gov/13316092/"]
+  ]
  }
 };
 function techSpecs(slug){
