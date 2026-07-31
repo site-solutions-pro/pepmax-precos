@@ -223,6 +223,52 @@ const TECH_SPECS={
    ["Sawyer et al., PNAS (1980s): atividade de análogos α-MSH","https://pubmed.ncbi.nlm.nih.gov/3926559/"],
    ["Hruby et al., Annals of the New York Academy of Sciences (1993)","https://pubmed.ncbi.nlm.nih.gov/8390180/"]
   ]
+ },
+ "ghrp-2-acetato":{
+  classification:"Hexapeptídeo sintético peptidomimético da família dos peptídeos liberadores de hormônio do crescimento; também denominado pralmorelina.",
+  sequence:"D-Ala–D-2-Nal–Ala–Trp–D-Phe–Lys–NH₂; 2-Nal representa 2-naftilalanina. A forma acetato deve ser distinguida da base livre e de outros sais.",
+  molecular:"C₄₅H₅₅N₉O₆ · massa molecular calculada: aproximadamente 817,99 g/mol para a base livre; acetato, cloridratos e solvatos apresentam composição distinta.",
+  origin:"Desenvolvido na série de secretagogos sintéticos derivada dos primeiros pentapeptídeos e hexapeptídeos estudados por Cyril Y. Bowers e colaboradores.",
+  discovery:"Cyril Y. Bowers e colaboradores · Tulane University School of Medicine · Nova Orleans, Estados Unidos · série caracterizada ao longo das décadas de 1970 e 1980.",
+  sources:[
+   ["PubChem — Pralmorelin / GHRP-2","https://pubchem.ncbi.nlm.nih.gov/compound/GHRP-2"],
+   ["Bowers et al., Endocrinology (1984)","https://pubmed.ncbi.nlm.nih.gov/6714155/"]
+  ]
+ },
+ "ghrp-6-acetato":{
+  classification:"Hexapeptídeo sintético peptidomimético, conhecido como growth hormone-releasing peptide-6 (GHRP-6).",
+  sequence:"His–D-Trp–Ala–Trp–D-Phe–Lys–NH₂. A designação acetato identifica o sal e não altera a ordem dos seis resíduos da cadeia.",
+  molecular:"C₄₆H₅₆N₁₂O₆ · massa molecular calculada: aproximadamente 873,0 g/mol para a base livre; o sal acetato possui composição e massa dependentes da estequiometria.",
+  origin:"Resultou da otimização de uma série de peptídeos sintéticos curtos, com aminoácidos em configuração D, investigados como secretagogos hipofisários.",
+  discovery:"Cyril Y. Bowers, Frank A. Momany e colaboradores · Tulane University School of Medicine · Nova Orleans, Estados Unidos · caracterização publicada na década de 1980.",
+  sources:[
+   ["PubChem — GHRP-6","https://pubchem.ncbi.nlm.nih.gov/compound/4345065"],
+   ["Bowers et al., Endocrinology (1984)","https://pubmed.ncbi.nlm.nih.gov/6714155/"],
+   ["Badger et al., Endocrinology (1985)","https://pubmed.ncbi.nlm.nih.gov/3918849/"]
+  ]
+ },
+ "hexarelina-acetato":{
+  classification:"Hexapeptídeo sintético peptidomimético; a molécula-base é também denominada examorelina ou hexarelina.",
+  sequence:"His–D-2-Me-Trp–Ala–Trp–D-Phe–Lys–NH₂; D-2-Me-Trp representa D-2-metiltriptofano. Acetato e outros sais devem ser tratados separadamente.",
+  molecular:"C₄₇H₅₈N₁₂O₆ · massa molecular calculada: aproximadamente 887,0 g/mol para a base livre; a forma acetato apresenta massa adicional conforme a proporção de contraíons.",
+  origin:"Criada por modificação estrutural da família GHRP, introduzindo D-2-metiltriptofano na cadeia hexapeptídica.",
+  discovery:"Equipe de Renzo Deghenghi e colaboradores · Europeptides/Europa · desenvolvimento reportado no início da década de 1990; estudos humanos publicados em 1994.",
+  sources:[
+   ["PubChem — Examorelin / Hexarelin","https://pubchem.ncbi.nlm.nih.gov/compound/Hexarelin"],
+   ["Ghigo et al., Journal of Clinical Endocrinology & Metabolism (1994)","https://pubmed.ncbi.nlm.nih.gov/7957536/"]
+  ]
+ },
+ "ll-37":{
+  classification:"Peptídeo catiônico humano de 37 aminoácidos, correspondente ao fragmento C-terminal processado da proteína catelicidina hCAP18.",
+  sequence:"Leu–Leu–Gly–Asp–Phe–Phe–Arg–Lys–Ser–Lys–Glu–Lys–Ile–Gly–Lys–Glu–Phe–Lys–Arg–Ile–Val–Gln–Arg–Ile–Lys–Asp–Phe–Leu–Arg–Asn–Leu–Val–Pro–Arg–Thr–Glu–Ser (LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES).",
+  molecular:"C₂₀₅H₃₄₀N₆₀O₅₃ · massa molecular calculada: aproximadamente 4.493,3 g/mol para a cadeia livre não modificada; sais e formas marcadas diferem.",
+  origin:"Gerado por processamento proteolítico do precursor humano hCAP18; o nome LL-37 deriva dos dois resíduos iniciais de leucina e do comprimento de 37 aminoácidos.",
+  discovery:"Birgitta Agerberth e colaboradores · Karolinska Institute · Estocolmo, Suécia · identificação do peptídeo humano na década de 1990.",
+  sources:[
+   ["PubChem — LL-37","https://pubchem.ncbi.nlm.nih.gov/compound/ll-37"],
+   ["Agerberth et al., Proceedings of the National Academy of Sciences (1995)","https://pubmed.ncbi.nlm.nih.gov/7629169/"],
+   ["Yang et al., Journal of Experimental Medicine (2000)","https://pubmed.ncbi.nlm.nih.gov/11015447/"]
+  ]
  }
 };
 function techSpecs(slug){
