@@ -898,6 +898,121 @@ const TECH_SPECS={
    ["Thevis et al. — síntese e caracterização de Ac-Tβ4(17–23)","https://pubmed.ncbi.nlm.nih.gov/22962027/"],
    ["UniProt — Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
   ]
+ },
+ "epitalon-n-acetil-amidato":{
+  classification:"Análogo sintético do tetrapeptídeo Epitalon/AEDG com modificação N-terminal acetilada e terminação C-terminal amidada, conforme a denominação comercial do item.",
+  sequence:"Ac–Ala–Glu–Asp–Gly–NH₂ (Ac-AEDG-NH₂) é a estrutura indicada pelo nome do produto. A literatura primária concentra-se no Epitalon não modificado, AEDG; a forma duplamente modificada precisa ser confirmada por certificado analítico do lote.",
+  molecular:"Não foi localizado registro químico primário consolidado para Ac-AEDG-NH₂. O registro oficial de N-acetil Epitalon sem amidamento informa C₁₆H₂₄N₄O₁₀ e 432,38 g/mol, mas não é equivalente à forma N-acetil amidada; por isso, nenhuma massa exata é atribuída aqui ao produto.",
+  origin:"Derivado comercial posterior do Epitalon, tetrapeptídeo AEDG investigado pelo programa de peptídeos regulatórios do Instituto de Bioregulação e Gerontologia de São Petersburgo.",
+  discovery:"Epitalon/AEDG: Vladimir Khavinson e colaboradores · São Petersburgo, Rússia. Não foi localizada atribuição primária independente para a criação da variante N-acetil amidada.",
+  sources:[
+   ["NCATS Inxight — N-acetil Epitalon (sem amidamento)","https://drugs.ncats.io/substance/UXR7AF6R4F"],
+   ["Khavinson et al. — pesquisa com AEDG/Epitalon","https://pubmed.ncbi.nlm.nih.gov/32019204/"]
+  ]
+ },
+ "fragmento-17-23":{
+  classification:"Denominação para o fragmento N-acetilado 17–23 da timosina β4 quando a identidade analítica é confirmada como Ac-Tβ4(17–23).",
+  sequence:"Ac–Leu–Lys–Lys–Thr–Glu–Thr–Gln (Ac-LKKTETQ). A terminação C-terminal e os contraíons precisam constar no certificado do lote.",
+  molecular:"A fórmula e a massa dependem da terminação C-terminal, do estado de protonação e do sal. O nome “Fragmento 17–23” isoladamente não permite escolher entre ácido, amida ou outra apresentação sem inferência.",
+  origin:"Corresponde aos resíduos 17–23 da timosina β4 humana. A síntese e a caracterização do fragmento N-acetilado identificado em material comercial foram publicadas em 2012.",
+  discovery:"Mario Thevis, Andreas Thomas e colaboradores · German Sport University Cologne · Colônia, Alemanha.",
+  sources:[
+   ["Thevis et al. — caracterização de Ac-Tβ4(17–23)","https://pubmed.ncbi.nlm.nih.gov/22962027/"],
+   ["UniProt — Timosina beta-4 humana","https://www.uniprot.org/uniprotkb/P62328/entry"]
+  ]
+ },
+ "ftpp-adipotide":{
+  classification:"Denominação associada ao fat-targeted proapoptotic peptide (FTPP/adipotide), construção quimérica experimental com domínio de homing e motivo de D-aminoácidos. A equivalência deve ser confirmada por sequência.",
+  sequence:"CKGGRAKDC–GG–D(KLAKLAK)₂ para a construção publicada; o motivo CKGGRAKDC pode estar ciclado por ponte dissulfeto. Se o lote tiver outra sequência, não deve ser identificado como a mesma entidade.",
+  molecular:"Para a entidade registrada como adipotide, o PubChem informa C₁₁₁H₂₀₆N₃₆O₂₈S₂ e massa aproximada de 2.557,2 g/mol. Ciclização, estado redox, contraíons e sais alteram a composição analítica.",
+  origin:"Construção derivada da seleção in vivo do peptídeo CKGGRAKDC, direcionado à proibitina, ligado ao motivo D(KLAKLAK)₂; descrita pelo grupo do MD Anderson em 2004.",
+  discovery:"Mikhail Kolonin, Renata Pasqualini, Wadih Arap e colaboradores · University of Texas M. D. Anderson Cancer Center · Houston, Estados Unidos.",
+  sources:[
+   ["PubChem — Adipotide/FTPP","https://pubchem.ncbi.nlm.nih.gov/compound/163360068"],
+   ["Kolonin et al., Nature Medicine (2004)","https://www.nature.com/articles/nm1048"],
+   ["Barnhart et al. — caracterização em primatas (2011)","https://pubmed.ncbi.nlm.nih.gov/22072637/"]
+  ]
+ },
+ "p21":{
+  classification:"Nome ambíguo usado para peptidomiméticos derivados de CNTF e também para entidades não relacionadas, incluindo a proteína CDKN1A. A página não presume qual variante está no vial.",
+  sequence:"Publicações e registros comerciais distinguem o motivo CNTF DGGL, versões terminalmente modificadas e a entidade P021 com glicina adamantilada. Sem sequência integral e modificações no certificado analítico, não é possível atribuir uma estrutura única ao item “P21”.",
+  molecular:"Não há fórmula ou massa única aplicável ao nome P21. O PubChem registra uma entidade Ac-DGGL–glicina adamantilada–NH₂ (CID 56599151), enquanto outras fontes usam Ac-DGGL-NH₂; são compostos diferentes e não devem ser intercambiados.",
+  origin:"A linhagem de peptidomiméticos foi desenvolvida a partir de uma região ativa do fator neurotrófico ciliar (CNTF) em trabalhos conduzidos no New York State Institute for Basic Research.",
+  discovery:"Khalid Iqbal, Cheng-Xin Gong e colaboradores · New York State Institute for Basic Research in Developmental Disabilities · Estados Unidos.",
+  sources:[
+   ["PubChem — entidade adamantilada relacionada a P021","https://pubchem.ncbi.nlm.nih.gov/compound/56599151"],
+   ["Chohan et al. — peptídeo derivado de CNTF (2011)","https://pubmed.ncbi.nlm.nih.gov/22000729/"],
+   ["Kazim et al. — estudo pré-clínico de P021","https://pubmed.ncbi.nlm.nih.gov/28624409/"]
+  ]
+ },
+ "pe-22-28":{
+  classification:"Heptapeptídeo sintético derivado do pró-peptídeo da sortilina e estudado como análogo abreviado de spadin.",
+  sequence:"Trp–Arg–Leu–Glu–Gln–Gly–Pro (WRLEQGP), correspondente aos resíduos 22–28 do pró-peptídeo descrito nas publicações de estrutura–atividade.",
+  molecular:"Para a cadeia livre WRLEQGP: C₃₉H₅₈N₁₀O₁₁ · massa molecular calculada: aproximadamente 855,0 g/mol. Sais e modificações terminais possuem composição diferente.",
+  origin:"Desenvolvido por encurtamento sistemático de spadin para identificar uma sequência mínima com atividade em modelos do canal TREK-1; a série PE foi publicada em 2017.",
+  discovery:"Jean Mazella, Catherine Heurteaux, Mourad Borsotto e colaboradores · IPMC, CNRS/Université Côte d’Azur · Valbonne, França.",
+  sources:[
+   ["Veyssière et al. — análogos abreviados de spadin (2017)","https://pubmed.ncbi.nlm.nih.gov/28955242/"],
+   ["Artigo integral — Frontiers in Pharmacology","https://doi.org/10.3389/fphar.2017.00643"]
+  ]
+ },
+ "pinealon":{
+  classification:"Tripeptídeo sintético curto da classe dos peptídeos regulatórios, identificado pela sequência EDR.",
+  sequence:"Glu–Asp–Arg (EDR). O sal acetato e outras apresentações adicionam contraíons e não são quimicamente idênticos à cadeia livre.",
+  molecular:"Cadeia livre EDR: C₁₅H₂₆N₆O₈ · massa molecular calculada: aproximadamente 418,45 g/mol. O PubChem registra separadamente Pinealon acetato como C₁₇H₃₀N₆O₁₀.",
+  origin:"Integrante do programa russo de peptídeos regulatórios de cadeia curta desenvolvido a partir de estudos de frações peptídicas e regulação de expressão gênica.",
+  discovery:"Vladimir Khavinson e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo · Rússia.",
+  sources:[
+   ["PubChem — Glu-Asp-Arg","https://pubchem.ncbi.nlm.nih.gov/compound/10273502"],
+   ["PubChem — Pinealon acetato","https://pubchem.ncbi.nlm.nih.gov/compound/155977549"],
+   ["Khavinson et al. — pesquisa molecular com EDR","https://pubmed.ncbi.nlm.nih.gov/33396470/"]
+  ]
+ },
+ "pnc-27":{
+  classification:"Peptídeo quimérico sintético de 32 resíduos composto por um segmento de p53 ligado a um peptídeo de residência/transdução de membrana.",
+  sequence:"PPLSQETFSDLWKLLKKWKMRRNQFWVKVQRG. Os 15 resíduos N-terminais correspondem a p53(12–26); o segmento C-terminal é o domínio de residência de membrana usado na construção publicada.",
+  molecular:"C₁₈₈H₂₉₃N₅₃O₄₄S · massa molecular média aproximada: 4.031,7 g/mol para a cadeia livre publicada. Sais, marcações e terminações alternativas alteram o valor.",
+  origin:"Projetado a partir do domínio de ligação de p53 a HDM-2 e de uma sequência de residência de membrana para estudos mecanísticos em modelos celulares.",
+  discovery:"Matthew Pincus, Josef Michl e colaboradores · SUNY Downstate/VA New York Harbor e instituições colaboradoras · Estados Unidos.",
+  sources:[
+   ["PubChem — PNC-27","https://pubchem.ncbi.nlm.nih.gov/compound/16201774"],
+   ["Davitt et al. — caracterização de PNC-27","https://pubmed.ncbi.nlm.nih.gov/25117093/"],
+   ["Sookraj et al. — interação PNC-27–HDM-2","https://pubmed.ncbi.nlm.nih.gov/20209069/"]
+  ]
+ },
+ "ptd-dbm":{
+  classification:"Peptídeo sintético de transdução celular fundido a um motivo de ligação a Dishevelled, desenvolvido para competir com a interação CXXC5–Dvl em modelos pré-clínicos.",
+  sequence:"A literatura experimental e os registros químicos públicos não convergem em uma única sequência sob o nome PTD-DBM. O lote deve declarar a construção integral; variantes publicamente registradas não podem ser tratadas como equivalentes apenas pelo nome.",
+  molecular:"O PubChem registra sob PTD-DBM a entidade C₁₂₄H₂₂₅N₆₁O₂₈S₂, com massa aproximada de 3.082,6 g/mol, mas há outros construtos PTD–DBM em registros públicos. Esse valor só se aplica quando a sequência do lote corresponde ao registro CID 176453931.",
+  origin:"Construção desenvolvida no programa sul-coreano de investigação do regulador CXXC5 e da interação com Dishevelled; o uso do peptídeo competidor em modelos de folículo e ferida foi publicado em 2017.",
+  discovery:"Seung Hyun Lee, Kang-Yell Choi e colaboradores · Yonsei University · Seul, Coreia do Sul.",
+  sources:[
+   ["PubChem — PTD-DBM","https://pubchem.ncbi.nlm.nih.gov/compound/176453931"],
+   ["Lee et al., Journal of Investigative Dermatology (2017)","https://pubmed.ncbi.nlm.nih.gov/28595998/"]
+  ]
+ },
+ "timalina":{
+  classification:"Preparação biológica polipeptídica obtida de tecido tímico animal; trata-se de uma mistura de componentes, não de um peptídeo com sequência única.",
+  sequence:"Não aplicável como cadeia única. A composição histórica de Thymalin/Timalina é definida por processo de extração, fracionamento e controle da preparação, e não por uma única sequência molecular.",
+  molecular:"Não possui fórmula ou massa molecular única. Cada fração peptídica e cada componente residual da preparação tem composição própria; valores atribuídos a um tetrapeptídeo isolado não descrevem a mistura inteira.",
+  origin:"Preparação desenvolvida na União Soviética a partir de extratos do timo e estudada como parte do programa de reguladores peptídicos iniciado na década de 1970.",
+  discovery:"Vladimir Morozov, Vladimir Khavinson e colaboradores · Academia Médica Militar de Kirov/Instituto de Bioregulação e Gerontologia · Leningrado/São Petersburgo, Rússia.",
+  sources:[
+   ["Morozov e Khavinson — estudo inicial de Thymalin","https://pubmed.ncbi.nlm.nih.gov/7048731/"],
+   ["Khavinson et al. — peptídeos regulatórios e transcrição","https://pubmed.ncbi.nlm.nih.gov/14666197/"]
+  ]
+ },
+ "toxina-botulinica":{
+  classification:"Família de neurotoxinas proteicas bacterianas. O nome genérico não identifica sorotipo, subtipo, complexo proteico nem formulação específica.",
+  sequence:"Não existe sequência única para “toxina botulínica”. Como referência, BoNT/A1 da cepa Hall é um precursor de 1.296 aminoácidos processado em cadeias leve e pesada ligadas por dissulfeto; outros sorotipos e subtipos têm sequências diferentes.",
+  molecular:"A neurotoxina isolada é uma proteína de aproximadamente 150 kDa, mas complexos associados podem apresentar massas maiores e formulações comerciais não são intercambiáveis por unidade. O produto precisa identificar sorotipo, subtipo e composição antes de receber uma fórmula específica.",
+  origin:"As toxinas botulínicas são produzidas por linhagens de Clostridium e foram diferenciadas em sorotipos ao longo do século XX; a sequência e a estrutura da BoNT/A foram caracterizadas por múltiplos grupos.",
+  discovery:"Émile van Ermengem descreveu o organismo associado ao botulismo em 1897; a caracterização molecular moderna da BoNT/A envolve grupos liderados por B. R. DasGupta, Raymond Stevens e colaboradores.",
+  sources:[
+   ["UniProt — neurotoxina botulínica tipo A (P0DPI1)","https://www.uniprot.org/uniprotkb/P0DPI1/entry"],
+   ["Lacy et al. — estrutura cristalográfica da BoNT/A","https://pubmed.ncbi.nlm.nih.gov/9783750/"],
+   ["Blasi et al. — clivagem de SNAP-25 por BoNT/A","https://pubmed.ncbi.nlm.nih.gov/8103915/"]
+  ]
  }
 };
 function techSpecs(slug){
