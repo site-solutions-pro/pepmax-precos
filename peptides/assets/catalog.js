@@ -88,6 +88,50 @@ const TECH_SPECS={
    ["Pickart e Thaler, FEBS Letters (1979)","https://pubmed.ncbi.nlm.nih.gov/556547/"],
    ["Freedman et al., Biochemical Journal (1982)","https://pubmed.ncbi.nlm.nih.gov/7340824/"]
   ]
+ },
+ "ss-31":{
+  classification:"Tetrapeptídeo sintético aromático-catiónico direcionado à membrana mitocondrial interna; também denominado elamipretida.",
+  sequence:"D-Arg–2′,6′-dimetil-Tyr–Lys–Phe–NH₂.",
+  molecular:"C₃₂H₄₉N₉O₅ · massa molecular calculada: aproximadamente 639,8 g/mol para a base livre; sais apresentam massa distinta.",
+  origin:"Identificado na família de peptídeos Szeto–Schiller durante pesquisas sobre tetrapeptídeos aromático-catiónicos permeáveis à célula.",
+  discovery:"Hazel H. Szeto, Peter W. Schiller e colaboradores · Weill Cornell Medical College e Clinical Research Institute of Montreal · Estados Unidos/Canadá · início dos anos 2000.",
+  sources:[
+   ["PubChem — Elamipretide","https://pubchem.ncbi.nlm.nih.gov/compound/Elamipretide"],
+   ["Szeto, British Journal of Pharmacology (2014)","https://pubmed.ncbi.nlm.nih.gov/24117165/"]
+  ]
+ },
+ "aod-9604":{
+  classification:"Peptídeo sintético de 16 resíduos derivado do domínio C-terminal do hormônio do crescimento humano; inclui Tyr seguido por hGH(177–191).",
+  sequence:"Tyr–Leu–Arg–Ile–Val–Gln–Cys–Arg–Ser–Val–Glu–Gly–Ser–Cys–Gly–Phe (YLRIVQCRSVEGSCGF), com ponte dissulfeto entre as duas cisteínas.",
+  molecular:"C₇₈H₁₂₃N₂₃O₂₃S₂ · massa molecular calculada: aproximadamente 1.815,1 g/mol.",
+  origin:"Desenvolvido a partir de estudos que delimitaram um domínio C-terminal sintético do hormônio do crescimento humano.",
+  discovery:"Frank M. Ng e colaboradores · Monash University · Melbourne, Austrália; estudos metabólicos publicados em 2000–2001.",
+  sources:[
+   ["PubChem — AOD-9604","https://pubchem.ncbi.nlm.nih.gov/compound/Aod-9604"],
+   ["Heffernan et al., Endocrinology (2001)","https://pubmed.ncbi.nlm.nih.gov/11146367/"]
+  ]
+ },
+ "ara-290":{
+  classification:"Peptídeo sintético de 11 resíduos derivado da superfície da hélice B da eritropoietina; também denominado cibinetida.",
+  sequence:"pGlu–Glu–Gln–Leu–Glu–Arg–Ala–Leu–Asn–Ser–Ser.",
+  molecular:"C₅₁H₈₄N₁₆O₂₁ · massa molecular calculada: aproximadamente 1.257,4 g/mol para a base livre.",
+  origin:"Projetado para reproduzir a face da hélice B da eritropoietina associada à sinalização de proteção tecidual, sem reproduzir a estrutura completa da proteína.",
+  discovery:"Michael Brines, Anthony Cerami e colaboradores · The Kenneth S. Warren Institute · Estados Unidos; descrito como peptídeo derivado da eritropoietina em 2008.",
+  sources:[
+   ["PubChem — Cibinetide","https://pubchem.ncbi.nlm.nih.gov/compound/Cibinetide"],
+   ["Brines et al., PNAS (2008)","https://pubmed.ncbi.nlm.nih.gov/18426196/"]
+  ]
+ },
+ "kpv":{
+  classification:"Tripeptídeo sintético correspondente aos três resíduos C-terminais da α-melanotropina (α-MSH).",
+  sequence:"Lys–Pro–Val (KPV).",
+  molecular:"C₁₆H₃₀N₄O₄ · massa molecular calculada: aproximadamente 342,4 g/mol para o tripeptídeo livre.",
+  origin:"Definido por estudos de relação estrutura–atividade da α-MSH que separaram regiões funcionais da sequência hormonal.",
+  discovery:"Victor J. Hruby e colaboradores · University of Arizona · Tucson, Estados Unidos; região mensageira C-terminal caracterizada na década de 1970.",
+  sources:[
+   ["PubChem — MSH(11–13) / KPV","https://pubchem.ncbi.nlm.nih.gov/compound/L-Lysyl-L-prolyl-L-valine"],
+   ["Hruby et al., Journal of Medicinal Chemistry (1978)","https://pubmed.ncbi.nlm.nih.gov/212233/"]
+  ]
  }
 };
 function techSpecs(slug){
