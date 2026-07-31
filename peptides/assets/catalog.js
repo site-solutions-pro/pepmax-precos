@@ -781,6 +781,123 @@ const TECH_SPECS={
    ["PubChem — Acetyl octapeptide-3","https://pubchem.ncbi.nlm.nih.gov/compound/71587832"],
    ["Blanes-Mira et al. — precursor conceitual derivado de SNAP-25 (2002)","https://pubmed.ncbi.nlm.nih.gov/18498523/"]
   ]
+ },
+ "cerebrolisina":{
+  classification:"Fração proteolítica complexa derivada de proteínas de cérebro suíno; mistura padronizada de peptídeos curtos e aminoácidos, não uma molécula peptídica única.",
+  sequence:"Não aplicável como sequência única. A preparação contém múltiplas espécies peptídicas de cadeia curta; a identidade analítica é definida por perfil da mistura e especificações de fabricação.",
+  molecular:"Não possui fórmula ou massa molecular única. A informação oficial descreve 215,2 mg/ml de fração peptídica proteolítica de proteína cerebral suína; cada componente da mistura possui massa própria.",
+  origin:"Preparação biotecnológica desenvolvida na Áustria e atualmente fabricada pela EVER Neuro Pharma. A autorização austríaca registrada para a formulação data de 1996.",
+  discovery:"Programa industrial da EBEWE/EVER Neuro Pharma · Unterach, Áustria. Não há um único descobridor molecular, pois se trata de uma fração biológica proprietária.",
+  sources:[
+   ["EVER Pharma — resumo oficial das características do produto","https://www.everpharma.com/aut/wp-content/uploads/sites/5/2023/01/Cere-SPC_v_ev1_AT_5.1_clean-1.pdf"],
+   ["EVER Pharma — página oficial do produto","https://www.everpharma.com/products/cerebrolysin/"]
+  ]
+ },
+ "glow-70":{
+  classification:"Blend físico de BPC-157, GHK-Cu e material comercialmente denominado TB-500. Não constitui uma nova entidade molecular.",
+  sequence:"BPC-157: GEPPPGKPADDAGLV. GHK-Cu: complexo Cu(II)–Gly–His–Lys. A identidade de TB-500 varia entre fornecedores e deve ser confirmada por sequência e certificado analítico.",
+  molecular:"Misturas não possuem fórmula ou massa molecular única. Cada componente, proporção, sal, estado de hidratação e forma do complexo de cobre devem ser caracterizados separadamente.",
+  origin:"Combinação comercial posterior de três materiais estudados de forma independente; não existe descoberta científica única para o blend GLOW.",
+  discovery:"BPC-157: grupo de Predrag Sikiric. GHK-Cu: Loren Pickart e colaboradores. Timosina β4: Allan Goldstein e colaboradores; a designação TB-500 requer confirmação por lote.",
+  sources:[
+   ["PubChem — BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
+   ["PubChem — Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
+   ["UniProt — Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
+  ]
+ },
+ "hmg":{
+  classification:"Menotropinas (gonadotrofina menopausal humana): preparação biológica urinária contendo atividades de FSH e LH/hCG, composta por glicoproteínas e outras proteínas residuais.",
+  sequence:"Não existe sequência única para HMG. FSH e LH são heterodímeros glicosilados com subunidade α comum e subunidades β distintas; preparações urinárias também podem conter atividade de hCG.",
+  molecular:"Não possui fórmula ou massa molecular única. As gonadotrofinas são misturas de glicoformas cuja massa varia com os glicanos e com a proporção de FSH, LH/hCG e proteínas acompanhantes.",
+  origin:"Desenvolvida a partir da extração e purificação de gonadotrofinas presentes na urina de mulheres pós-menopáusicas; o produto histórico Pergonal foi introduzido pela Serono no início da década de 1960.",
+  discovery:"Bruno Lunenfeld, Gemzell e colaboradores · programa internacional de gonadotrofinas menopausais ligado à Serono · Europa/Israel, final da década de 1950 e início da de 1960.",
+  sources:[
+   ["DailyMed — MENOPUR (menotropins), informação oficial","https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=22c8db95-c3db-1770-8086-31356fbabe35"],
+   ["Lunenfeld et al. — resultados históricos com HMG","https://pubmed.ncbi.nlm.nih.gov/6023499/"],
+   ["Duijkers et al. — caracterização farmacocinética de preparações HMG","https://pubmed.ncbi.nlm.nih.gov/7593498/"]
+  ]
+ },
+ "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv":{
+  classification:"Blend físico de BPC-157, GHK-Cu, material denominado TB-500 e KPV. A mistura não é uma entidade molecular covalente nova.",
+  sequence:"BPC-157: GEPPPGKPADDAGLV. GHK-Cu: Cu(II)–Gly–His–Lys. KPV: Lys–Pro–Val. TB-500 exige confirmação independente da sequência e da forma química.",
+  molecular:"Não há fórmula ou massa molecular única para o blend. Os quatro componentes, suas proporções, sais, complexação do cobre e hidratação precisam ser descritos separadamente no certificado analítico.",
+  origin:"Combinação comercial de quatro materiais de pesquisa previamente descritos de forma independente; não possui uma descoberta científica única como blend.",
+  discovery:"BPC-157: grupo de Predrag Sikiric. GHK-Cu: Loren Pickart. KPV: trabalhos de relação estrutura–atividade de α-MSH por Victor Hruby e colaboradores. TB-500: identidade dependente do lote.",
+  sources:[
+   ["PubChem — BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
+   ["PubChem — Cu-GHK","https://pubchem.ncbi.nlm.nih.gov/compound/378611"],
+   ["PubChem — KPV","https://pubchem.ncbi.nlm.nih.gov/compound/L-Lysyl-L-prolyl-L-valine"],
+   ["UniProt — Timosina beta-4 humana","https://www.uniprot.org/uniprotkb/P62328/entry"]
+  ]
+ },
+ "mgf":{
+  classification:"Designação associada ao mechano growth factor, variante de splicing IGF-1Ec e, no mercado de pesquisa, também a peptídeos sintéticos derivados de seu domínio E. Essas entidades não são equivalentes.",
+  sequence:"A proteína IGF-1Ec completa deriva de splicing alternativo do gene IGF1. Materiais vendidos como MGF podem conter apenas um peptídeo do domínio E; sem sequência e certificado analítico, não é possível atribuir uma cadeia única ao item.",
+  molecular:"Não há fórmula ou massa molecular única para a denominação MGF. A proteína precursora IGF-1Ec, peptídeos do domínio E e variantes sintéticas possuem massas e terminações diferentes.",
+  origin:"A expressão de uma variante de IGF-I sensível a carga mecânica foi descrita em estudos de músculo por Geoffrey Goldspink e colaboradores, e posteriormente denominada mechano growth factor.",
+  discovery:"Geoffrey Goldspink, Geoffrey F. McKoy, Simon Yang e colaboradores · Royal Free and University College Medical School · Londres, Reino Unido · década de 1990/início dos anos 2000.",
+  sources:[
+   ["Yang et al. — splicing de IGF-I e MGF em músculo (2003)","https://pubmed.ncbi.nlm.nih.gov/12692175/"],
+   ["Goldspink et al. — expressão de MGF e perda muscular (2006)","https://pubmed.ncbi.nlm.nih.gov/16463438/"]
+  ]
+ },
+ "peg-mgf":{
+  classification:"Denominação comercial para uma forma PEGuilada de material associado a MGF. Não existe uma entidade pública única e universalmente padronizada sob o nome PEG-MGF.",
+  sequence:"A sequência do componente peptídico, o sítio de PEGuilação, o tamanho e a distribuição do polímero precisam ser declarados pelo fabricante. Sem esses dados, uma sequência única não pode ser atribuída.",
+  molecular:"A PEGuilação produz massa dependente do polímero e, frequentemente, uma distribuição de massas. Não há fórmula ou massa molecular única sem especificar peptídeo, PEG, sítio de conjugação e grau de substituição.",
+  origin:"Construção comercial posterior aos estudos da variante IGF-1Ec/MGF, usando PEGuilação como estratégia de modificação farmacocinética; não há publicação primária que estabeleça um padrão universal para PEG-MGF comercial.",
+  discovery:"MGF: Geoffrey Goldspink e colaboradores · Londres, Reino Unido. A versão PEGuilada varia por fabricante e deve ser atribuída ao construto documentado no certificado do lote.",
+  sources:[
+   ["Yang et al. — variante IGF-I/MGF (2003)","https://pubmed.ncbi.nlm.nih.gov/12692175/"],
+   ["Goldspink et al. — MGF e splicing de IGF-I (2006)","https://pubmed.ncbi.nlm.nih.gov/16463438/"]
+  ]
+ },
+ "retatrutida-plus-cagrilintida":{
+  classification:"Blend físico experimental de retatrutida e cagrilintida, dois peptídeos sintéticos acilados distintos. Não constitui uma nova molécula única.",
+  sequence:"Cada componente preserva sua estrutura modificada e seu conjugado lipídico. Uma sequência única não descreve a mistura; identidade e proporção precisam ser verificadas separadamente.",
+  molecular:"Não há fórmula ou massa molecular única para o blend. Retatrutida: aproximadamente 4.731 g/mol; cagrilintida: aproximadamente 4.410 g/mol, antes de sais, solvatos e proporção da mistura.",
+  origin:"Combinação comercial de moléculas desenvolvidas separadamente por Eli Lilly e Novo Nordisk. Não foi localizada uma designação clínica padronizada para esse blend como nova entidade.",
+  discovery:"Retatrutida: Tamer Coskun e equipe da Eli Lilly, Estados Unidos. Cagrilintida: equipe da Novo Nordisk, Dinamarca.",
+  sources:[
+   ["PubChem — Retatrutide","https://pubchem.ncbi.nlm.nih.gov/compound/Retatrutide"],
+   ["Coskun et al. — retatrutida (2022)","https://pubmed.ncbi.nlm.nih.gov/35985340/"],
+   ["PubChem — Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"]
+  ]
+ },
+ "retatrutida-plus-tirzepatida":{
+  classification:"Blend físico experimental de retatrutida e tirzepatida, dois peptídeos sintéticos acilados distintos. Não constitui uma entidade molecular única.",
+  sequence:"Cada componente mantém cadeia, aminoácidos não codificados e conjugação lipídica próprios. Não existe sequência única aplicável ao blend.",
+  molecular:"Misturas não possuem fórmula ou massa molecular única. Retatrutida: aproximadamente 4.731 g/mol; tirzepatida: aproximadamente 4.813 g/mol, antes de considerar sais, solvatos e proporção.",
+  origin:"Combinação comercial de duas moléculas desenvolvidas separadamente pela Eli Lilly. Não foi localizada uma coformulação clínica padronizada sob esta denominação.",
+  discovery:"Equipes da Eli Lilly and Company · Indianapolis, Estados Unidos; tirzepatida descrita clinicamente em 2018 e retatrutida caracterizada em 2022.",
+  sources:[
+   ["PubChem — Retatrutide","https://pubchem.ncbi.nlm.nih.gov/compound/Retatrutide"],
+   ["PubChem — Tirzepatide","https://pubchem.ncbi.nlm.nih.gov/compound/156588324"],
+   ["Frias et al. — tirzepatida (2018)","https://pubmed.ncbi.nlm.nih.gov/30293770/"]
+  ]
+ },
+ "tb-500":{
+  classification:"Denominação comercial historicamente associada a material relacionado à timosina β4; análises publicadas também identificaram sob o nome TB-500 o fragmento N-acetilado 17–23. A identidade não deve ser presumida.",
+  sequence:"Timosina β4 humana integral possui 43 aminoácidos. O fragmento identificado em produto TB-500 é Ac–Leu–Lys–Lys–Thr–Glu–Thr–Gln (Ac-LKKTETQ). O certificado do lote deve declarar qual entidade está presente.",
+  molecular:"Não existe fórmula ou massa única para o nome TB-500 sem definição da entidade. Timosina β4 integral e fragmento Ac-LKKTETQ são compostos distintos, assim como seus sais e solvatos.",
+  origin:"A timosina β4 foi quimicamente caracterizada por grupos de Allan Goldstein no início da década de 1980; a identificação analítica do fragmento 17–23 em produto TB-500 foi publicada em 2012.",
+  discovery:"Timosina β4: Allan L. Goldstein e colaboradores · George Washington University · Estados Unidos. Fragmento em TB-500: Mario Thevis e colaboradores · German Sport University Cologne · Alemanha.",
+  sources:[
+   ["UniProt — Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"],
+   ["Hannappel et al. — caracterização química da timosina β4","https://pubmed.ncbi.nlm.nih.gov/7054160/"],
+   ["Thevis et al. — fragmento 17–23 identificado em TB-500","https://pubmed.ncbi.nlm.nih.gov/22962027/"]
+  ]
+ },
+ "tb-500-fragmento":{
+  classification:"Peptídeo sintético correspondente ao fragmento N-acetilado 17–23 da timosina β4, quando a identidade do lote é confirmada como Ac-LKKTETQ.",
+  sequence:"Ac–Leu–Lys–Lys–Thr–Glu–Thr–Gln (Ac-LKKTETQ). Terminação C-terminal e contraíons devem ser confirmados no certificado analítico.",
+  molecular:"A massa e a fórmula dependem de a terminação C-terminal ser ácido ou amida e do sal presente. Por isso, o valor exato deve ser reportado pelo lote, não inferido apenas do nome comercial.",
+  origin:"Derivado dos resíduos 17–23 da timosina β4 humana; a síntese e a caracterização do fragmento N-acetilado encontrado em produto TB-500 foram publicadas em 2012.",
+  discovery:"Mario Thevis, Andreas Thomas e colaboradores · Center for Preventive Doping Research, German Sport University Cologne · Colônia, Alemanha.",
+  sources:[
+   ["Thevis et al. — síntese e caracterização de Ac-Tβ4(17–23)","https://pubmed.ncbi.nlm.nih.gov/22962027/"],
+   ["UniProt — Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
+  ]
  }
 };
 function techSpecs(slug){
