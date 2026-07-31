@@ -132,6 +132,51 @@ const TECH_SPECS={
    ["PubChem — MSH(11–13) / KPV","https://pubchem.ncbi.nlm.nih.gov/compound/L-Lysyl-L-prolyl-L-valine"],
    ["Hruby et al., Journal of Medicinal Chemistry (1978)","https://pubmed.ncbi.nlm.nih.gov/212233/"]
   ]
+ },
+ "ipamorelina":{
+  classification:"Pentapeptídeo sintético peptidomimético, descrito como secretagogo seletivo do hormônio do crescimento.",
+  sequence:"Aib–His–D-2-Nal–D-Phe–Lys–NH₂. A estrutura inclui ácido α-aminoisobutírico (Aib), 2-naftilalanina (2-Nal) e dois resíduos em configuração D.",
+  molecular:"C₃₈H₄₉N₉O₅ · massa molecular calculada: aproximadamente 711,9 g/mol para a base livre; sais e solvatos apresentam valores diferentes.",
+  origin:"Identificada durante pesquisas com secretagogos peptídicos seletivos e apresentada na literatura científica no final da década de 1990.",
+  discovery:"Equipe de Kirsten Raun e colaboradores · Novo Nordisk A/S · Måløv, Dinamarca · publicação de caracterização em 1998.",
+  sources:[
+   ["PubChem — Ipamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Ipamorelin"],
+   ["Raun et al., European Journal of Endocrinology (1998)","https://pubmed.ncbi.nlm.nih.gov/9849822/"]
+  ]
+ },
+ "semax":{
+  classification:"Heptapeptídeo sintético derivado do fragmento ACTH(4–7), prolongado pelo tripeptídeo Pro–Gly–Pro.",
+  sequence:"Met–Glu–His–Phe–Pro–Gly–Pro (MEHFPGP). Formas N-acetiladas ou apresentadas como sais devem ser distinguidas da cadeia livre.",
+  molecular:"Para a cadeia livre MEHFPGP: C₃₇H₅₁N₉O₁₀S · massa molecular calculada: aproximadamente 813,9 g/mol; derivados e sais têm composição distinta.",
+  origin:"Projetado a partir do fragmento ACTH(4–7), com extensão Pro–Gly–Pro para aumentar a estabilidade da sequência em estudos experimentais.",
+  discovery:"Nikolay F. Myasoedov, Igor P. Ashmarin e colaboradores · instituições da Academia Russa de Ciências · Moscou, Rússia · desenvolvido e estudado a partir da década de 1980.",
+  sources:[
+   ["PubChem — Semax / ACTH(4–7)-PGP","https://pubchem.ncbi.nlm.nih.gov/compound/Semax"],
+   ["Dolotov et al., Neuroscience Letters (2001)","https://pubmed.ncbi.nlm.nih.gov/11457573/"]
+  ]
+ },
+ "epitalon":{
+  classification:"Tetrapeptídeo sintético de quatro aminoácidos, também identificado pela sigla AEDG.",
+  sequence:"Ala–Glu–Asp–Gly (AEDG). A forma trifluoroacetato possui composição e massa diferentes da cadeia livre.",
+  molecular:"C₁₄H₂₂N₄O₉ · massa molecular calculada: aproximadamente 390,35 g/mol para o tetrapeptídeo livre.",
+  origin:"Construído a partir da análise de aminoácidos de um complexo polipeptídico da glândula pineal; AEDG foi posteriormente identificado nesse complexo por espectrometria de massa e HPLC.",
+  discovery:"Vladimir Khavinson e colaboradores · Instituto de Bioregulação e Gerontologia de São Petersburgo · São Petersburgo, Rússia.",
+  sources:[
+   ["PubChem — Epitalon","https://pubchem.ncbi.nlm.nih.gov/compound/Epitalon"],
+   ["Khavinson et al., Bulletin of Experimental Biology and Medicine (2017)","https://pubmed.ncbi.nlm.nih.gov/29124531/"]
+  ]
+ },
+ "timosina-alfa-1":{
+  classification:"Peptídeo sintético de 28 aminoácidos correspondente à sequência N-terminal acetilada da prothymosin alpha; também denominado thymalfasin.",
+  sequence:"Ac–Ser–Asp–Ala–Ala–Val–Asp–Thr–Ser–Ser–Glu–Ile–Thr–Thr–Lys–Asp–Leu–Lys–Glu–Lys–Lys–Glu–Val–Val–Glu–Glu–Ala–Glu–Asn.",
+  molecular:"C₁₂₉H₂₁₅N₃₃O₅₅ · massa molecular calculada: aproximadamente 3.108,3 g/mol.",
+  origin:"Isolada originalmente de preparações de timo e caracterizada como uma fração peptídica definida na década de 1970.",
+  discovery:"Allan L. Goldstein e colaboradores · George Washington University · Washington, D.C., Estados Unidos · caracterização reportada em 1977.",
+  sources:[
+   ["PubChem — Thymalfasin","https://pubchem.ncbi.nlm.nih.gov/compound/Thymalfasin"],
+   ["Garaci, Annals of the New York Academy of Sciences (2007)","https://pubmed.ncbi.nlm.nih.gov/17567941/"],
+   ["Birr et al., International Journal of Peptide and Protein Research (1985)","https://pubmed.ncbi.nlm.nih.gov/4066151/"]
+  ]
  }
 };
 function techSpecs(slug){
