@@ -345,7 +345,7 @@ const TECH_SPECS={
   sequence:"A estrutura completa contém duas cadeias idênticas unidas por dissulfetos. Cada cadeia combina um análogo de GLP-1(7–37), um linker rico em glicina/serina e uma região Fc de IgG4; não deve ser descrita como um peptídeo linear simples.",
   molecular:"Fórmula polipeptídica teórica registrada: C₂₆₄₆H₄₀₄₄N₇₀₄O₈₃₆S₁₉ · massa calculada aproximada: 59,67 kDa. Glicosilação e heterogeneidade da proteína recombinante alteram a massa observada.",
   origin:"Desenvolvida como LY2189265 por engenharia de um análogo de GLP-1 resistente a DPP-4 e sua fusão a Fc, com caracterização publicada em 2010.",
-  discovery:"W. Glaesner e colaboradores · Eli Lilly and Company · Indianapolis, Estados Unidos.",
+  discovery:"Thomas Glaesner e equipe · Eli Lilly and Company · Indianapolis, Estados Unidos.",
   sources:[
    ["PubChem — Dulaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Dulaglutide"],
    ["Glaesner et al. — engenharia de LY2189265 (2010)","https://pubmed.ncbi.nlm.nih.gov/20503261/"]
@@ -392,7 +392,7 @@ const TECH_SPECS={
   sequence:"Tyr–Asn–Trp–Asn–Ser–Phe–Gly–Leu–Arg–Phe–NH₂ (YNWNSFGLRF–NH₂). Sais como TFA ou acetato devem ser tratados como formas distintas.",
   molecular:"C₆₃H₈₃N₁₇O₁₄ · massa molecular calculada: aproximadamente 1.302,5 g/mol para o peptídeo amidado sem contraíon.",
   origin:"A família KISS1 foi ligada ao receptor GPR54 em 2001; kisspeptina-10 é o núcleo C-terminal comum às formas humanas mais longas.",
-  discovery:"Tetsuya Ohtaki, Masahiko Fujino, Masahiko Kotani e colaboradores · Takeda Chemical Industries · Japão.",
+  discovery:"Equipes de Yoshihiro Ohtaki, Masahiko Kotani e colaboradores · Takeda Chemical Industries · Osaka, Japão.",
   sources:[
    ["PubChem — Kisspeptin-10","https://pubchem.ncbi.nlm.nih.gov/compound/25240297"],
    ["Kotani et al. — KISS1 e GPR54 (2001)","https://pubmed.ncbi.nlm.nih.gov/11457843/"],
@@ -433,6 +433,125 @@ const TECH_SPECS={
    ["PubChem — ACTH(1–39) humana","https://pubchem.ncbi.nlm.nih.gov/compound/175647749"],
    ["Li et al. — estudos estruturais de corticotropina (1956)","https://pubmed.ncbi.nlm.nih.gov/13355456/"],
    ["Processamento humano de POMC em ACTH","https://pubmed.ncbi.nlm.nih.gov/6254067/"]
+  ]
+ },
+ "orexina-a":{
+  classification:"Neuropeptídeo endógeno de 33 aminoácidos, também denominado hipocretina-1, com duas pontes dissulfeto intramoleculares.",
+  sequence:"pGlu–Pro–Leu–Pro–Asp–Cys–Cys–Arg–Gln–Lys–Thr–Cys–Ser–Cys–Arg–Leu–Tyr–Glu–Leu–Leu–His–Gly–Ala–Gly–Asn–His–Ala–Ala–Gly–Ile–Leu–Thr–Leu–NH₂; Cys⁶–Cys¹² e Cys⁷–Cys¹⁴ formam as pontes dissulfeto.",
+  molecular:"C₁₅₂H₂₄₃N₄₇O₄₄S₄ · massa molecular calculada: aproximadamente 3.561,1 g/mol para a forma ciclizada e amidada registrada.",
+  origin:"Processada proteoliticamente do precursor prepro-orexina; contém piroglutamato N-terminal, amidação C-terminal e duas pontes dissulfeto.",
+  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores · University of Texas Southwestern Medical Center · Dallas, Estados Unidos · descoberta publicada em 1998; o grupo de Luis de Lecea identificou paralelamente as hipocretinas.",
+  sources:[
+   ["PubChem — Orexin A","https://pubchem.ncbi.nlm.nih.gov/compound/56842143"],
+   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
+   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
+  ]
+ },
+ "orexina-b":{
+  classification:"Neuropeptídeo endógeno linear de 28 aminoácidos, também denominado hipocretina-2, com terminação C-terminal amidada.",
+  sequence:"Arg–Ser–Gly–Pro–Pro–Gly–Leu–Gln–Gly–Arg–Leu–Gln–Arg–Leu–Leu–Gln–Ala–Ser–Gly–Asn–His–Ala–Ala–Gly–Ile–Leu–Thr–Met–NH₂ (RSGPPGLQGRLQRLLQASGNHAAGILTM–NH₂).",
+  molecular:"C₁₂₃H₂₁₂N₄₄O₃₅S · massa molecular calculada: aproximadamente 2.899,4 g/mol para a forma amidada.",
+  origin:"Gerada a partir do mesmo precursor prepro-orexina que origina a orexina A, mas sem as pontes dissulfeto presentes na isoforma A.",
+  discovery:"Masashi Yanagisawa, Takeshi Sakurai e colaboradores · University of Texas Southwestern Medical Center · Dallas, Estados Unidos · descoberta publicada em 1998; identificada em paralelo como hipocretina-2 pelo grupo de Luis de Lecea.",
+  sources:[
+   ["PubChem — Orexin B","https://pubchem.ncbi.nlm.nih.gov/compound/44404987"],
+   ["Sakurai et al., Cell (1998)","https://pubmed.ncbi.nlm.nih.gov/9491897/"],
+   ["de Lecea et al., PNAS (1998)","https://pubmed.ncbi.nlm.nih.gov/9491892/"]
+  ]
+ },
+ "vip-aviptadil":{
+  classification:"Neuropeptídeo linear de 28 aminoácidos conhecido como peptídeo intestinal vasoativo (VIP); aviptadil é a forma sintética correspondente.",
+  sequence:"His–Ser–Asp–Ala–Val–Phe–Thr–Asp–Asn–Tyr–Thr–Arg–Leu–Arg–Lys–Gln–Met–Ala–Val–Lys–Lys–Tyr–Leu–Asn–Ser–Ile–Leu–Asn–NH₂ (HSDAVFTDNYTRLRKQMAVKKYLNSILN–NH₂).",
+  molecular:"C₁₄₇H₂₃₇N₄₃O₄₃S · massa molecular calculada: aproximadamente 3.326,8 g/mol para o peptídeo amidado.",
+  origin:"Isolado inicialmente de tecido intestinal e posteriormente identificado como um peptídeo de 28 resíduos com terminação amidada.",
+  discovery:"Sami I. Said e Viktor Mutt · Medical College of Virginia e Karolinska Institutet · Estados Unidos e Suécia · isolamento descrito em 1970.",
+  sources:[
+   ["PubChem — Aviptadil","https://pubchem.ncbi.nlm.nih.gov/compound/16132300"],
+   ["Said e Mutt, Science (1970)","https://pubmed.ncbi.nlm.nih.gov/5450698/"]
+  ]
+ },
+ "alprostadil":{
+  classification:"Eicosanoide sintético idêntico à prostaglandina E1 (PGE1); pequena molécula lipídica, não peptídica.",
+  sequence:"Não se aplica sequência de aminoácidos. A estrutura contém um anel ciclopentanona, duas cadeias alifáticas, grupos hidroxila e ácido carboxílico; sais devem ser identificados separadamente.",
+  molecular:"C₂₀H₃₄O₅ · massa molecular calculada: aproximadamente 354,49 g/mol para o ácido livre.",
+  origin:"Corresponde à prostaglandina E1 isolada em trabalhos sobre prostaglandinas e posteriormente reproduzida por síntese química total na década de 1960.",
+  discovery:"Sune Bergström e colaboradores · Karolinska Institutet · Estocolmo, Suécia; síntese total por equipes de química orgânica publicada em 1969.",
+  sources:[
+   ["PubChem — Alprostadil / PGE1","https://pubchem.ncbi.nlm.nih.gov/compound/5280723"],
+   ["Síntese de prostaglandina E1 (1969)","https://pubmed.ncbi.nlm.nih.gov/5802929/"],
+   ["Bergström et al. — estudos históricos de PGE1","https://pubmed.ncbi.nlm.nih.gov/5853023/"]
+  ]
+ },
+ "melatonina":{
+  classification:"Indolamina natural, N-acetil-5-metoxitriptamina; pequena molécula derivada do triptofano, não peptídica.",
+  sequence:"Não se aplica sequência de aminoácidos. A estrutura combina um núcleo indólico 5-metoxilado com uma cadeia N-acetiletilamina.",
+  molecular:"C₁₃H₁₆N₂O₂ · massa molecular calculada: aproximadamente 232,28 g/mol.",
+  origin:"Isolada de glândulas pineais bovinas e nomeada melatonina em 1958; a estrutura química foi elucidada logo depois.",
+  discovery:"Aaron B. Lerner, James D. Case e colaboradores · Yale University School of Medicine · New Haven, Estados Unidos.",
+  sources:[
+   ["PubChem — Melatonin","https://pubchem.ncbi.nlm.nih.gov/compound/896"],
+   ["Histórico dos 40 anos da descoberta","https://pubmed.ncbi.nlm.nih.gov/11462112/"],
+   ["Aaron Lerner e a descoberta da melatonina","https://pubmed.ncbi.nlm.nih.gov/17614843/"]
+  ]
+ },
+ "l-carnitina":{
+  classification:"Composto zwitteriônico quaternário, (R)-3-hidroxi-4-(trimetilazânio)buta-noato; não é aminoácido proteico nem peptídeo.",
+  sequence:"Não se aplica sequência de aminoácidos. A entrada corresponde ao enantiômero L/(R); D-carnitina, acetil-L-carnitina, tartarato e outros sais são entidades diferentes.",
+  molecular:"C₇H₁₅NO₃ · massa molecular calculada: aproximadamente 161,20 g/mol para L-carnitina livre.",
+  origin:"Isolada de extratos musculares no início do século XX; mais tarde foi reconhecida como o fator de crescimento denominado vitamina BT em estudos com insetos.",
+  discovery:"Vladimir Gulewitsch e Roman Krimberg · Universidade de Moscou · Rússia · isolamento reportado em 1905; caracterização como vitamina BT por Herbert E. Carter e colaboradores em 1952.",
+  sources:[
+   ["PubChem — L-Carnitine","https://pubchem.ncbi.nlm.nih.gov/compound/10917"],
+   ["Histórico da identificação de vitamina BT como carnitina","https://pubmed.ncbi.nlm.nih.gov/7031524/"],
+   ["Revisão histórica de carnitina","https://pubmed.ncbi.nlm.nih.gov/2103685/"]
+  ]
+ },
+ "acido-hialuronico":{
+  classification:"Glicosaminoglicano linear não sulfatado, também denominado hialuronano; polímero de unidades dissacarídicas repetidas.",
+  sequence:"[→4)-β-D-GlcA-(1→3)-β-D-GlcNAc-(1→]ₙ. Não existe uma cadeia única: o número de repetições e a distribuição de massas devem constar do certificado analítico.",
+  molecular:"Unidade repetitiva: (C₁₄H₂₁NO₁₁)ₙ · aproximadamente 379,32 g/mol por unidade. A massa do polímero varia amplamente com n; hialuronato de sódio possui composição distinta.",
+  origin:"Isolado do humor vítreo bovino e nomeado a partir de hyaloid e ácido urônico em 1934; sua constituição dissacarídica foi estabelecida em trabalhos posteriores.",
+  discovery:"Karl Meyer e John W. Palmer · Columbia University · Nova York, Estados Unidos.",
+  sources:[
+   ["PubChem — Hyaluronic Acid","https://pubchem.ncbi.nlm.nih.gov/compound/Hyaluronic-acid"],
+   ["Constituição do ácido hialurônico","https://pubmed.ncbi.nlm.nih.gov/15421326/"],
+   ["Hyaluronan: fontes, estrutura e características","https://pubmed.ncbi.nlm.nih.gov/38338483/"]
+  ]
+ },
+ "humanina":{
+  classification:"Peptídeo de 24 aminoácidos identificado a partir de uma ORF curta associada ao genoma mitocondrial; a origem translacional exata possui variantes na literatura.",
+  sequence:"Met–Ala–Pro–Arg–Gly–Phe–Ser–Cys–Leu–Leu–Leu–Leu–Thr–Ser–Glu–Ile–Asp–Leu–Pro–Val–Lys–Arg–Arg–Ala (MAPRGFSCLLLLTSEIDLPVKRRA).",
+  molecular:"C₁₁₉H₂₀₄N₃₄O₃₂S₂ · massa molecular calculada: aproximadamente 2.687,3 g/mol para a sequência sintética canônica; variantes e sais diferem.",
+  origin:"Identificada em 2001 por triagem de uma biblioteca de cDNA de tecido cerebral; o nome Humanin foi atribuído ao peptídeo de resgate isolado.",
+  discovery:"Yasuo Hashimoto, Yuko Niikura e colaboradores · Keio University · Tóquio, Japão.",
+  sources:[
+   ["PubChem — Humanin","https://pubchem.ncbi.nlm.nih.gov/compound/16131438"],
+   ["Hashimoto et al. — descoberta de Humanin (2001)","https://pmc.ncbi.nlm.nih.gov/articles/PMC33469/"],
+   ["Caracterização mecanística inicial","https://pubmed.ncbi.nlm.nih.gov/11327724/"]
+  ]
+ },
+ "dsip":{
+  classification:"Nonapeptídeo sintético correspondente ao delta sleep-inducing peptide (DSIP), descrito originalmente como fator peptídico isolado em coelhos.",
+  sequence:"Trp–Ala–Gly–Gly–Asp–Ala–Ser–Gly–Glu (WAGGDASGE).",
+  molecular:"C₃₅H₄₈N₁₀O₁₅ · massa molecular calculada: aproximadamente 848,82 g/mol para a cadeia livre.",
+  origin:"A atividade denominada fator delta foi isolada no início da década de 1970; a sequência nonapeptídica DSIP foi caracterizada e sintetizada posteriormente.",
+  discovery:"Marcel Monnier, G. A. Schoenenberger e colaboradores · University of Basel · Basileia, Suíça.",
+  sources:[
+   ["PubChem — Delta Sleep-Inducing Peptide","https://pubchem.ncbi.nlm.nih.gov/compound/68816"],
+   ["Isolamento do fator delta (1972)","https://pubmed.ncbi.nlm.nih.gov/5076324/"],
+   ["DSIP: revisão das incertezas experimentais","https://pubmed.ncbi.nlm.nih.gov/16539679/"]
+  ]
+ },
+ "dermorfina":{
+  classification:"Heptapeptídeo amidado natural de pele de anfíbio, contendo D-alanina na segunda posição.",
+  sequence:"Tyr–D-Ala–Phe–Gly–Tyr–Pro–Ser–NH₂. A configuração D de Ala² é parte essencial da identidade química e não deve ser substituída por L-Ala.",
+  molecular:"C₄₀H₅₀N₈O₁₀ · massa molecular calculada: aproximadamente 802,89 g/mol para o peptídeo amidado sem sal.",
+  origin:"Isolada da pele da rã Phyllomedusa sauvagei e reconhecida como um dos primeiros peptídeos naturais contendo D-aminoácido.",
+  discovery:"Vittorio Erspamer, Paolo Montecucchi e colaboradores · Sapienza Università di Roma · Roma, Itália · sequência publicada em 1981.",
+  sources:[
+   ["PubChem — Dermorphin","https://pubchem.ncbi.nlm.nih.gov/compound/5485199"],
+   ["Montecucchi et al. — composição e sequência (1981)","https://pubmed.ncbi.nlm.nih.gov/7287299/"],
+   ["Farmacologia inicial das dermorfinas","https://pmc.ncbi.nlm.nih.gov/articles/PMC2071698/"]
   ]
  }
 };
