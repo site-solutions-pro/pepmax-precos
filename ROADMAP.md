@@ -166,7 +166,11 @@ Progresso:
   Timosina alfa-1;
 - quinto lote científico implementado para Selank, Sermorelina, CJC-1295 sem
   DAC e Melanotan I;
-- total atual: 20 de 100 páginas com especificações científicas verificadas;
+- sexto lote científico implementado para GHRP-2, GHRP-6, Hexarelina e LL-37;
+- total atual: 24 de 100 páginas com especificações científicas verificadas;
+- auditoria visual-base concluída: Tesamorelina é o único produto com ativo
+  fotográfico definitivo aprovado; os outros 99 permanecem identificados como
+  **Imagem em produção**, sem uso indevido de placeholders como imagem final;
 - seção posicionada abaixo da ação comercial, com classificação, estrutura ou
   sequência, fórmula e massa molecular, origem, equipe e fontes externas;
 - próximos lotes seguem a ordem de visibilidade comercial e disponibilidade de
