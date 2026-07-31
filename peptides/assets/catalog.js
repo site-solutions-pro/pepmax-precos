@@ -669,6 +669,118 @@ const TECH_SPECS={
    ["PubChem — Triptorelin acetate","https://pubchem.ncbi.nlm.nih.gov/compound/25080282"],
    ["Estudo inicial de [D-Trp⁶]-LH-RH (1977)","https://pubmed.ncbi.nlm.nih.gov/20415/"]
   ]
+ },
+ "ace-031":{
+  classification:"Proteína de fusão recombinante experimental: domínio extracelular do receptor humano de activina tipo IIB (ActRIIB/ACVR2B) ligado à região Fc de IgG1 humana.",
+  sequence:"ACE-031 é uma glicoproteína dimérica, não um peptídeo linear curto. A identidade depende da sequência do construto ActRIIB-Fc, das pontes dissulfeto, da glicosilação e do sistema de expressão; a sequência integral deve ser confirmada no certificado analítico da preparação.",
+  molecular:"A massa aparente é dependente da glicosilação e do estado dimérico, aproximadamente 100–130 kDa segundo a preparação. Não existe fórmula molecular única aplicável a todas as glicoformas.",
+  origin:"Desenvolvida pela Acceleron Pharma como receptor-solúvel de captura para ligantes da superfamília TGF-β, incluindo miostatina e activinas; estudos pré-clínicos foram publicados em 2010 e o estudo de dose única em 2013.",
+  discovery:"Kenneth Attie, Jas Seehra, Matthew Sherman e colaboradores · Acceleron Pharma · Cambridge, Massachusetts, Estados Unidos.",
+  sources:[
+   ["Lach-Trifilieff et al. — caracterização pré-clínica do ActRIIB solúvel (2010)","https://pubmed.ncbi.nlm.nih.gov/20466801/"],
+   ["Attie et al. — estudo de dose única de ACE-031 (2013)","https://pubmed.ncbi.nlm.nih.gov/23169607/"]
+  ]
+ },
+ "adipotide":{
+  classification:"Peptídeo quimérico experimental direcionado à vasculatura do tecido adiposo, composto por um motivo de homing ligado a uma sequência pró-apoptótica de D-aminoácidos.",
+  sequence:"CKGGRAKDC–GG–D(KLAKLAK)₂. O motivo CKGGRAKDC pode ser apresentado ciclado por ponte dissulfeto; a notação D indica a construção pró-apoptótica com aminoácidos de configuração D.",
+  molecular:"O registro PubChem da forma molecular informa C₁₁₁H₂₀₆N₃₆O₂₈S₂, com massa aproximada de 2.557,2 g/mol. A forma oxidada/cíclica, contraíons e sais apresentam composição diferente.",
+  origin:"Derivado de seleção de peptídeos que reconhecem proibitina na vasculatura do tecido adiposo, acoplados ao motivo mitocondriotóxico D(KLAKLAK)₂; a construção foi descrita em 2004.",
+  discovery:"Mikhail Kolonin, Renata Pasqualini, Wadih Arap e colaboradores · University of Texas M. D. Anderson Cancer Center · Houston, Estados Unidos.",
+  sources:[
+   ["PubChem — Adipotide","https://pubchem.ncbi.nlm.nih.gov/compound/163360068"],
+   ["Kolonin et al., Nature Medicine (2004)","https://www.nature.com/articles/nm1048"]
+  ]
+ },
+ "bpc-157-plus-tb-500":{
+  classification:"Blend físico de dois materiais de pesquisa: BPC-157 e material comercialmente denominado TB-500. Não constitui uma nova entidade molecular.",
+  sequence:"O BPC-157 possui a sequência GEPPPGKPADDAGLV. A denominação TB-500 é usada de modo inconsistente para timosina β4 integral e para fragmentos relacionados; a identidade do segundo componente deve ser confirmada por sequência e certificado analítico.",
+  molecular:"Misturas não possuem fórmula ou massa molecular única. Cada componente deve ser caracterizado separadamente; proporção, sais, hidratação e identidade exata do material TB-500 alteram a composição do vial.",
+  origin:"Combinação comercial posterior de dois materiais estudados separadamente. Não há descoberta científica única atribuível ao blend como molécula.",
+  discovery:"BPC-157: grupo de Predrag Sikiric, Universidade de Zagreb. Timosina β4: isolada e caracterizada por grupos liderados por Allan Goldstein; a designação comercial TB-500 requer confirmação por lote.",
+  sources:[
+   ["PubChem — BPC-157","https://pubchem.ncbi.nlm.nih.gov/compound/Bpc-157"],
+   ["UniProt — Timosina beta-4 humana (P62328)","https://www.uniprot.org/uniprotkb/P62328/entry"]
+  ]
+ },
+ "cagrilintida-plus-semaglutida":{
+  classification:"Blend físico de cagrilintida e semaglutida, dois peptídeos sintéticos acilados distintos. A mistura não forma uma entidade molecular única.",
+  sequence:"Cada componente mantém sua própria estrutura modificada, acilação e perfil analítico. Uma sequência única não descreve o blend; identidade e proporção devem ser verificadas separadamente.",
+  molecular:"Não há fórmula ou massa molecular única para a mistura. Semaglutida: aproximadamente 4.113,6 g/mol; cagrilintida: aproximadamente 4.410 g/mol, antes de considerar sais, solvatos e proporção do blend.",
+  origin:"Combinação investigacional conhecida como CagriSema foi desenvolvida pela Novo Nordisk a partir de duas moléculas previamente caracterizadas e estudadas separadamente.",
+  discovery:"Equipes de pesquisa da Novo Nordisk A/S · Dinamarca. A combinação é uma estratégia de coformulação, não a descoberta de uma nova cadeia peptídica.",
+  sources:[
+   ["PubChem — Cagrilintide","https://pubchem.ncbi.nlm.nih.gov/compound/Cagrilintide"],
+   ["PubChem — Semaglutide","https://pubchem.ncbi.nlm.nih.gov/compound/Semaglutide"],
+   ["Lau et al. — cagrilintida, The Lancet (2021)","https://pubmed.ncbi.nlm.nih.gov/34798059/"]
+  ]
+ },
+ "cjc-1295-ipamorelina":{
+  classification:"Blend físico de um análogo de GHRH da família CJC-1295 e ipamorelina. A mistura não constitui uma molécula covalente nova.",
+  sequence:"A identidade do componente CJC-1295 deve especificar com ou sem DAC. Ipamorelina: Aib–His–D-2-Nal–D-Phe–Lys–NH₂. Não existe sequência única para o blend.",
+  molecular:"Misturas não possuem fórmula ou massa molecular única. O valor depende da variante de CJC-1295, da proporção entre componentes, dos sais e dos solvatos presentes.",
+  origin:"Combinação comercial de dois secretagogos pesquisados separadamente; a família CJC-1295 foi desenvolvida pela ConjuChem e a ipamorelina, pela Novo Nordisk.",
+  discovery:"CJC-1295: Léonce Jetté e colaboradores · ConjuChem, Montreal, Canadá. Ipamorelina: Kirsten Raun e colaboradores · Novo Nordisk, Dinamarca.",
+  sources:[
+   ["Jetté et al. — CJC-1295, Endocrinology (2005)","https://pubmed.ncbi.nlm.nih.gov/15907583/"],
+   ["PubChem — Ipamorelin","https://pubchem.ncbi.nlm.nih.gov/compound/Ipamorelin"],
+   ["Raun et al. — ipamorelina (1998)","https://pubmed.ncbi.nlm.nih.gov/9849822/"]
+  ]
+ },
+ "foxo4-dri":{
+  classification:"Peptídeo experimental D-retro-inverso desenhado para interferir na interação proteína-proteína entre FOXO4 e p53 em células senescentes.",
+  sequence:"Construção composta por D-aminoácidos em ordem retro-inversa em relação a uma região de interação de FOXO4. A publicação primária descreve o princípio e o construto experimental, mas fontes secundárias divergem quanto à sequência comercial integral; o lote deve ser confirmado por certificado analítico.",
+  molecular:"Não foi atribuída aqui fórmula ou massa única porque a sequência integral e as terminações das preparações comerciais não estão consolidadas em registro químico primário. Esses campos exigem confirmação específica do lote.",
+  origin:"Projetado no Erasmus University Medical Center e descrito em 2017 como ferramenta experimental para romper a interação FOXO4–p53 em modelos celulares e animais de senescência.",
+  discovery:"M. P. Baar, R. M. C. Brandt, D. A. Putavet, Peter L. J. de Keizer e colaboradores · Erasmus MC · Rotterdam, Países Baixos.",
+  sources:[
+   ["Baar et al., Cell (2017)","https://pubmed.ncbi.nlm.nih.gov/28340339/"]
+  ]
+ },
+ "igf-1-des":{
+  classification:"Proteína truncada de 67 aminoácidos derivada do IGF-1 humano, também denominada des(1–3)IGF-I, por ausência dos três resíduos N-terminais da cadeia madura.",
+  sequence:"Thr–Leu–Cys–Gly–Ala–Glu–Leu–Val–Asp–Ala–Leu–Gln–Phe–Val–Cys–Gly–Asp–Arg–Gly–Phe–Tyr–Phe–Asn–Lys–Pro–Thr–Gly–Tyr–Gly–Ser–Ser–Ser–Arg–Arg–Ala–Pro–Gln–Thr–Gly–Ile–Val–Asp–Glu–Cys–Cys–Phe–Arg–Ser–Cys–Asp–Leu–Arg–Arg–Leu–Glu–Met–Tyr–Cys–Ala–Pro–Leu–Lys–Pro–Ala–Lys–Ser–Ala.",
+  molecular:"Polipeptídeo de 67 resíduos e três pontes dissulfeto, com massa aproximada de 7,37 kDa. A massa exata depende do estado redox, das terminações e de eventuais modificações da preparação.",
+  origin:"Forma truncada produzida por remoção proteolítica dos três resíduos N-terminais do IGF-1; sua geração em soro por uma protease ácida foi descrita em 1994.",
+  discovery:"Francis J. Ballard e colaboradores · CSIRO Division of Human Nutrition · Adelaide, Austrália · caracterização funcional publicada em 1989; a geração proteolítica foi detalhada por grupos japoneses em 1994.",
+  sources:[
+   ["UniProt — IGF-1 humano (P05019)","https://www.uniprot.org/uniprotkb/P05019/entry"],
+   ["Yamamoto et al. — geração de des(1–3)IGF-I (1994)","https://pubmed.ncbi.nlm.nih.gov/7988428/"],
+   ["Ballard et al. — papel do N-terminal de IGF-I (1989)","https://pubmed.ncbi.nlm.nih.gov/2730580/"]
+  ]
+ },
+ "matrixyl":{
+  classification:"Designação comercial historicamente associada ao palmitoil pentapeptídeo-4 (Pal-KTTKS), um lipopeptídeo cosmético. Produtos chamados Matrixyl podem conter outros complexos e exigem confirmação do ativo.",
+  sequence:"Palmitoil–Lys–Thr–Thr–Lys–Ser (Pal-KTTKS). A cadeia C16 está ligada ao grupo amino N-terminal do pentapeptídeo.",
+  molecular:"Palmitoil pentapeptídeo-4: C₃₉H₇₅N₇O₁₀ · massa molecular calculada: aproximadamente 802,1 g/mol. Esta identificação só se aplica quando o certificado confirma Pal-KTTKS.",
+  origin:"O pentapeptídeo KTTKS foi derivado de uma sequência de procolágeno e posteriormente palmitoilado para uso cosmético; o ingrediente Matrixyl foi introduzido pela Sederma por volta de 2000.",
+  discovery:"Equipe de pesquisa da Sederma/Croda · França; estudos clínicos e instrumentais do palmitoil pentapeptídeo foram publicados na década de 2000.",
+  sources:[
+   ["PubChem — Palmitoyl pentapeptide-4","https://pubchem.ncbi.nlm.nih.gov/compound/9897237"],
+   ["Robinson et al. — estudo clínico do palmitoil pentapeptídeo","https://pubmed.ncbi.nlm.nih.gov/18492182/"]
+  ]
+ },
+ "slu-pp-332":{
+  classification:"Pequena molécula sintética experimental; agonista pan dos receptores nucleares relacionados ao estrogênio ERRα, ERRβ e ERRγ, com maior potência reportada para ERRα.",
+  sequence:"Não aplicável: SLU-PP-332 não é peptídeo nem proteína, portanto não possui sequência de aminoácidos.",
+  molecular:"C₁₈H₁₄N₂O₂ · massa molecular calculada: aproximadamente 290,32 g/mol.",
+  origin:"Identificada como ferramenta química durante um programa de desenvolvimento de agonistas sintéticos de ERR com atividade in vivo; a caracterização principal foi publicada em 2023.",
+  discovery:"Cyrielle Billon, Sadichha Sitaula, Bahaa Elgendy, Thomas Burris e colaboradores · Saint Louis University e instituições colaboradoras · Estados Unidos.",
+  sources:[
+   ["PubChem — SLU-PP-332","https://pubchem.ncbi.nlm.nih.gov/compound/5338394"],
+   ["Billon et al., ACS Chemical Biology (2023)","https://pubmed.ncbi.nlm.nih.gov/36988910/"]
+  ]
+ },
+ "snap-8":{
+  classification:"Octapeptídeo sintético acetilado, também denominado acetyl octapeptide-3, desenvolvido no contexto de peptídeos cosméticos derivados de regiões de SNAP-25.",
+  sequence:"Ac–Glu–Glu–Met–Gln–Arg–Arg–Ala–Asp–NH₂ (Ac-EEMQRRAD-NH₂) para a forma amidada usualmente associada a SNAP-8. Registros químicos também incluem variantes terminais distintas.",
+  molecular:"Para o registro PubChem CID 71587832: C₄₂H₇₂N₁₆O₁₅S · massa monoisotópica aproximada de 1.072,51 Da e massa molecular média próxima de 1.073,2 g/mol. Outra terminação gera composição diferente.",
+  origin:"Desenvolvido como extensão do conceito de peptídeos derivados de SNAP-25 investigados pela Lipotec; a literatura independente específica de SNAP-8 é limitada e a identificação deve ser confirmada por sequência.",
+  discovery:"Equipe de pesquisa da Lipotec, Barcelona, Espanha · desenvolvimento comercial posterior ao trabalho com acetyl hexapeptide-8 publicado por Clara Blanes-Mira e colaboradores em 2002.",
+  sources:[
+   ["PubChem — Acetyl octapeptide-3","https://pubchem.ncbi.nlm.nih.gov/compound/71587832"],
+   ["Blanes-Mira et al. — precursor conceitual derivado de SNAP-25 (2002)","https://pubmed.ncbi.nlm.nih.gov/18498523/"]
+  ]
  }
 };
 function techSpecs(slug){
