@@ -1201,7 +1201,10 @@ const productImageMarkup=(p,item=p.items[0],loading="lazy",index=0)=>{
  const lengthClass=item[1].length>7?" dose-xlong":item[1].length>5?" dose-long":"";
  return `<span class="vial-visual ${final?"has-final-vial":"has-generated-vial"}" style="--dose-color:${color}"><img class="${final?"final-vial":"generated-vial"}" src="${productImage(p,item,index)}" alt="${productImageAlt(p,item)}" width="1047" height="1502" loading="${loading}">${final?`<span class="vial-dose${lengthClass}" aria-hidden="true">${item[1]}</span>`:""}</span>`;
 };
-const productUrl=p=>`./${p.slug}/`;
+const productUrl=(p,item=p.items[0])=>{
+ const sku=String(item?.[0]||"").trim();
+ return `./${p.slug}/${sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?dose=${encodeURIComponent(item?.[1]||"")}`}`;
+};
 const cartKey=(p,item)=>{
  const sku=String(item[0]||"").trim();
  return sku&&sku!=="—"?sku:`${p.slug}|${item[1]}`;
@@ -1214,19 +1217,40 @@ function updateNavCart(){
 function catalog(){
  updateNavCart();
  const grid=document.querySelector("#catalogGrid"),q=document.querySelector("#search");
- const draw=()=>{const term=q.value.toLowerCase();const list=PRODUCTS.filter(p=>(p.name+" "+p.items.flat().join(" ")).toLowerCase().includes(term));
- grid.innerHTML=list.map(p=>`<a class="card" href="${productUrl(p)}"><span class="catalog-media">${productImageMarkup(p,p.items[0])}</span><h2>${p.name}</h2><p>${p.desc}</p><span class="from">A partir de <b>${money(Math.min(...p.items.map(x=>x[2])))}</b> por vial</span></a>`).join("")||`<p class="notice">Nenhum produto encontrado.</p>`};
+ const matchesProduct=(p,term)=>{
+  if(!term)return true;
+  const haystack=(p.name+" "+p.items.flat().join(" ")).toLowerCase();
+  const compact=haystack.replace(/\s+/g,"");
+  return term.split(/\s+/).filter(Boolean).every(token=>haystack.includes(token)||compact.includes(token.replace(/\s+/g,"")));
+ };
+ const matchedItem=(p,term)=>{
+  const compact=term.replace(/\s+/g,"");
+  if(!compact)return {item:p.items[0],index:0};
+  const index=p.items.findIndex(item=>{
+   const sku=String(item[0]||"").toLowerCase().replace(/\s+/g,"");
+   const dose=String(item[1]||"").toLowerCase().replace(/\s+/g,"");
+   return (sku&&sku!=="—"&&compact.includes(sku))||(dose&&compact.includes(dose));
+  });
+  const safeIndex=index<0?0:index;
+  return {item:p.items[safeIndex],index:safeIndex};
+ };
+ const draw=()=>{const term=q.value.trim().toLowerCase();const list=PRODUCTS.filter(p=>matchesProduct(p,term));
+ grid.innerHTML=list.map(p=>{const {item,index}=matchedItem(p,term);return `<a class="card" href="${productUrl(p,item)}"><span class="catalog-media">${productImageMarkup(p,item,"lazy",index)}</span><h2>${p.name}</h2><p>${p.desc}</p><span class="from">${term?`Apresentação ${item[1]}`:"A partir de"}<b>${money(term?item[2]:Math.min(...p.items.map(x=>x[2])))}</b> por vial</span><span class="product-destination">Ver detalhes e comprar →</span></a>`}).join("")||`<p class="notice">Nenhum produto encontrado.</p>`};
  q.addEventListener("input",draw);draw();
 }
 function detail(slug){
  updateNavCart();
  const p=PRODUCTS.find(x=>x.slug===slug);if(!p)return;
- document.title=`${p.name} | PepMax Peptides`;
- let selected=0,qty=1;
+ document.title=`Comprar ${p.name} | PepMax`;
+ const params=new URLSearchParams(location.search);
+ const requestedSku=(params.get("sku")||"").trim().toLowerCase();
+ const requestedDose=(params.get("dose")||"").trim().toLowerCase();
+ const requestedIndex=p.items.findIndex(item=>(requestedSku&&String(item[0]).trim().toLowerCase()===requestedSku)||(requestedDose&&String(item[1]).trim().toLowerCase()===requestedDose));
+ let selected=requestedIndex>=0?requestedIndex:0,qty=1;
  const draw=()=>{
   const x=p.items[selected];
-  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">Material de pesquisa</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual">${productImageMarkup(p,x,"eager",selected)}</figure><div class="facts"><div class="fact"><b>Pó liofilizado</b>Apresentação de pesquisa</div><div class="fact"><b>Preço por vial</b>Caixa: 10 vials</div><div class="fact"><b>Uso em pesquisa</b>Não destinado ao consumo humano</div></div></div><aside class="panel"><span class="eyebrow">Apresentações disponíveis</span><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Comprar</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../shop/">Ver carrinho no Shop →</a><p class="sku">Preços em dólar americano, por vial. Frete e impostos não incluídos.</p></aside>${techSpecs(slug)}`;
-  document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);draw()});
+  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">Produto para pesquisa</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual">${productImageMarkup(p,x,"eager",selected)}</figure><div class="facts"><div class="fact"><b>Pó liofilizado</b>Apresentação de pesquisa</div><div class="fact"><b>Imagem por dose</b>Rótulo: ${x[1]}</div><div class="fact"><b>Uso em pesquisa</b>Não destinado ao consumo humano</div></div></div><aside class="panel purchase-panel"><span class="eyebrow">Comprar ${p.name}</span><div class="purchase-summary"><span>Apresentação selecionada</span><b>${x[1]}</b><strong>${money(x[2])} <small>por vial</small></strong></div><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Comprar</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../shop/#checkout">Abrir carrinho e finalizar →</a><p class="sku">Preços em dólar americano, por vial. Frete e impostos não incluídos.</p></aside>${techSpecs(slug)}`;
+  document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);const item=p.items[selected];const sku=String(item[0]||"").trim();history.replaceState(null,"",sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?dose=${encodeURIComponent(item[1])}`);draw()});
   document.querySelector("[data-minus]").onclick=()=>{qty=Math.max(1,qty-1);draw()};
   document.querySelector("[data-plus]").onclick=()=>{qty+=1;draw()};
   document.querySelector("#detailQty").onchange=e=>{qty=Math.max(1,Math.floor(Number(e.target.value))||1);e.target.value=qty};

@@ -791,6 +791,12 @@ const cartKey = (p,a) => {
   const sku = String(a.k || "").trim();
   return sku && sku !== "—" ? sku : `${PRODUCT_PAGES[p.n] || p.n}|${a.d}`;
 };
+const productPageUrl = (p,a) => {
+  const slug = PRODUCT_PAGES[p.n];
+  if(!slug) return "#";
+  const sku = String(a.k || "").trim();
+  return `../peptides/${slug}/${sku && sku !== "—" ? `?sku=${encodeURIComponent(sku)}` : `?dose=${encodeURIComponent(a.d)}`}`;
+};
 
 function render(){
   const todos = lista();
@@ -824,7 +830,7 @@ function render(){
       ? p.p.map((x,j)=>`<button class="dose" data-dose="${p.n}|${j}" aria-pressed="${j===i}">${x.d}</button>`).join("")
       : `<span class="solo">${p.p[0].d} · caixa com ${p.p[0].v} vials</span>`;
     return `<article class="card">
-      <a class="product-thumb" href="../peptides/${PRODUCT_PAGES[p.n]}/" aria-label="Ver ${p.n}">
+      <a class="product-thumb" href="${productPageUrl(p,a)}" aria-label="Ver detalhes e comprar ${p.n} ${a.d}">
         ${productImageMarkup(p,a,i)}
       </a>
       <div class="card-top">
@@ -849,7 +855,7 @@ function render(){
         </div>
         <button class="btn" data-add="${key}">Adicionar ao carrinho</button>
       </div>
-      ${PRODUCT_PAGES[p.n] ? `<a class="product-page-link" href="../peptides/${PRODUCT_PAGES[p.n]}/" aria-label="Ver página de ${p.n}">Ver produto →</a>` : ""}
+      ${PRODUCT_PAGES[p.n] ? `<a class="product-page-link" href="${productPageUrl(p,a)}" aria-label="Ver detalhes e comprar ${p.n} ${a.d}">Ver detalhes e comprar →</a>` : ""}
     </article>`;
   }).join("");
 }
