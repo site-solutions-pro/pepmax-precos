@@ -360,10 +360,11 @@ body:not(.travado) .gate{display:none}
 .gate-card.recusado .gate-recusa{display:block}
 @media (max-width:520px){.gate-card{padding:26px 22px 22px}.gate-acoes .btn{width:100%;justify-content:center}}
 @media (max-width:700px){.topbar .toplink{display:none}}
-.featured img{transform:scale(.8649,1.07)}
+.featured img{transform:scale(.804357,1.07)}
 .vial-visual{position:relative;display:block;height:100%;max-width:100%;aspect-ratio:1047/1502;background:#fff;transform:none;transform-origin:center}
-.vial-visual img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;transform:scale(.8649,1.07)!important;transform-origin:center}
-.vial-dose{position:absolute;left:33%;right:33%;top:70.8%;height:10.2%;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--dose-color,#174d9a);font:900 18px/1 Arial,sans-serif;letter-spacing:-.045em;white-space:nowrap}
+.vial-visual img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;transform:none!important;transform-origin:center}
+.vial-visual.has-final-vial img{transform:scale(.804357,1.07)!important}
+.vial-dose{position:absolute;left:33%;right:33%;top:70.8%;height:10.2%;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--dose-color,#174d9a);font:900 18px/1 Arial,sans-serif;letter-spacing:-.045em;white-space:nowrap;transform:scaleX(.804357);transform-origin:center}
 .vial-dose.dose-long{font-size:14px}.vial-dose.dose-xlong{font-size:12px}
 </style>
 </head>
@@ -586,7 +587,7 @@ function vialPlaceholder(name,dose,index=0){
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520">
     <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".46" stop-color="#7b3fd4"/><stop offset=".76" stop-color="#d6379f"/><stop offset="1" stop-color="#35d58b"/></linearGradient>
     <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#dce6ef"/><stop offset=".18" stop-color="#fff"/><stop offset=".82" stop-color="#fff"/><stop offset="1" stop-color="#cbd8e4"/></linearGradient></defs>
-    <ellipse cx="210" cy="474" rx="120" ry="18" fill="#64748b" opacity=".18"/>
+    <g transform="translate(41.08503 -18.2) scale(.804357 1.07)"><ellipse cx="210" cy="474" rx="120" ry="18" fill="#64748b" opacity=".18"/>
     <rect x="118" y="46" width="184" height="58" rx="17" fill="#c9d0d8"/><rect x="132" y="92" width="156" height="32" rx="8" fill="#202733"/>
     <path d="M143 116h134l18 36v281c0 25-18 43-43 43h-84c-25 0-43-18-43-43V152z" fill="url(#glass)" stroke="#aebdca" stroke-width="4"/>
     <rect x="130" y="204" width="160" height="205" rx="7" fill="#fff"/>
@@ -594,7 +595,7 @@ function vialPlaceholder(name,dose,index=0){
     <text x="210" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="26" fill="#173b68">PepMAX</text>
     <text x="210" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${short.length>18?16:19}" fill="#fff">${short}</text>
     <text x="210" y="387" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${dose.length>7?18:dose.length>5?21:24}" fill="${doseColor(dose,index)}">${dose}</text>
-    <text x="210" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#41536a">FOR RESEARCH USE ONLY</text>
+    <text x="210" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#41536a">FOR RESEARCH USE ONLY</text></g>
   </svg>`;
   return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
 }
