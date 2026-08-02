@@ -1,0 +1,44 @@
+name: Generate PepMAX vials
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generate 95 vial images and apply catalog mapping
+        run: node tools/generate-vials.mjs
+
+      - name: Validate generated image count
+        run: |
+          test "$(find peptides/assets/images/generated -maxdepth 1 -name '*.svg' | wc -l)" -eq 95
+          node -e "const m=require('./peptides/assets/images/generated/manifest.json'); if(m.count!==95) process.exit(1)"
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shop/index.html peptides/assets/images/generated
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Gera e aplica 95 imagens padronizadas de vials"
+            git push origin main
+          fi
