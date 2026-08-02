@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/home.css?v=20260801-vial2">
+  <link rel="stylesheet" href="./assets/home.css?v=20260802-carousel15">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -91,19 +91,24 @@
         </div>
       </div>
 
-      <div class="hero-stage" aria-label="Produtos PepMax em destaque">
-        <div class="stage-glow"></div>
-        <a class="stage-card stage-card-main" href="./peptides/retatrutida/" aria-label="Ver Retatrutida">
-          <span class="stage-label">Em destaque <b>Retatrutida</b></span>
-          <img class="vial-image" src="./peptides/assets/images/retatrutida-approved.webp" alt="Vial PepMax Retatrutida" width="1047" height="1502">
+      <div class="hero-stage hero-carousel" id="heroCarousel" role="region" aria-roledescription="carrossel" aria-label="15 peptídeos em destaque">
+        <div class="carousel-glow" aria-hidden="true"></div>
+        <div class="carousel-counter" aria-hidden="true"><b id="carouselCurrent">01</b><span>/ 15</span></div>
+        <a class="carousel-slide" id="carouselSlide" href="./peptides/retatrutida/?sku=RT5" aria-label="Ver Retatrutida 5 mg">
+          <div class="carousel-media">
+            <span class="carousel-rank" aria-hidden="true">01</span>
+            <img class="carousel-vial final-vial" id="carouselImage" src="./peptides/assets/images/retatrutida-approved.webp" alt="Vial PepMax Retatrutida, 5 mg" width="1047" height="1502">
+          </div>
+          <div class="carousel-info">
+            <span id="carouselCategory">Agonista peptídico multirreceptor</span>
+            <h2 id="carouselName">Retatrutida</h2>
+            <div><strong id="carouselDose">5 mg</strong><span>Ver produto e comprar <b aria-hidden="true">↗</b></span></div>
+          </div>
         </a>
-        <a class="stage-card stage-card-left" href="./peptides/bpc-157/" aria-label="Ver BPC-157">
-          <img class="vial-image" src="./peptides/assets/images/bpc-157-approved.webp" alt="Vial PepMax BPC-157" width="1047" height="1502">
-        </a>
-        <a class="stage-card stage-card-right" href="./peptides/tirzepatida/" aria-label="Ver Tirzepatida">
-          <img class="vial-image" src="./peptides/assets/images/tirzepatida-approved.webp" alt="Vial PepMax Tirzepatida" width="1047" height="1502">
-        </a>
-        <div class="stage-note"><span></span> Imagens individuais · padrão PepMax</div>
+        <button class="carousel-arrow carousel-prev" id="carouselPrev" type="button" aria-label="Produto anterior">←</button>
+        <button class="carousel-arrow carousel-next" id="carouselNext" type="button" aria-label="Próximo produto">→</button>
+        <div class="carousel-dots" id="carouselDots" aria-label="Selecionar produto do carrossel"></div>
+        <p class="carousel-note" id="carouselStatus" aria-live="polite">Retatrutida, slide 1 de 15</p>
       </div>
     </section>
 
@@ -179,6 +184,6 @@
     <div class="shell footer-legal"><span>© 2026 PepMax.</span><p>Produtos exclusivamente para pesquisa laboratorial. Disponibilidade sujeita à verificação regulatória e ao cadastro do comprador.</p><a href="#topo">Voltar ao topo ↑</a></div>
   </footer>
 
-  <script src="./assets/home.js?v=20260801-vial2"></script>
+  <script src="./assets/home.js?v=20260802-carousel15"></script>
 </body>
 </html>
