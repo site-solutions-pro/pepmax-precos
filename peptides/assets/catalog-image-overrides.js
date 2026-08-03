@@ -42,7 +42,8 @@
         media.classList.add("pmx-direct-image");
         media.querySelector(".pmx-fixed-label")?.remove();
         media.querySelector(".vial-dose")?.remove();
-        img.src=`./assets/images/${directImages[directSlug]}?v=20260803-fix2`;
+        const src=`./assets/images/${directImages[directSlug]}?v=20260803-search-fix1`;
+        if(img.getAttribute("src")!==src)img.src=src;
         img.alt="Vial PepMAX 5-Amino-1MQ, 5 mg";
         return;
       }
@@ -51,19 +52,33 @@
       if(!slug)return;
       const data=products[slug];
       media.classList.add("pmx-standard-image");
-      img.src="./assets/images/retatrutida-approved.webp";
+      const src="./assets/images/retatrutida-approved.webp";
+      if(img.getAttribute("src")!==src)img.src=src;
       img.alt=`Vial PepMAX ${data.name}, ${data.dose}`;
-      media.querySelector(".pmx-fixed-label")?.remove();
-      const label=document.createElement("span");
-      label.className="pmx-fixed-label";
-      label.innerHTML=`<span class="pmx-name">${data.name}${data.subtitle?`<small class="pmx-subtitle">${data.subtitle}</small>`:""}</span><span class="pmx-dose">${data.dose}</span>`;
-      media.appendChild(label);
+
+      let label=media.querySelector(".pmx-fixed-label");
+      if(!label){
+        label=document.createElement("span");
+        label.className="pmx-fixed-label";
+        media.appendChild(label);
+      }
+      const markup=`<span class="pmx-name">${data.name}${data.subtitle?`<small class="pmx-subtitle">${data.subtitle}</small>`:""}</span><span class="pmx-dose">${data.dose}</span>`;
+      if(label.innerHTML!==markup)label.innerHTML=markup;
     });
   }
 
   const grid=document.querySelector("#catalogGrid");
   if(grid){
+    let scheduled=false;
+    const scheduleApply=()=>{
+      if(scheduled)return;
+      scheduled=true;
+      requestAnimationFrame(()=>{
+        scheduled=false;
+        apply();
+      });
+    };
     apply();
-    new MutationObserver(apply).observe(grid,{childList:true,subtree:true});
+    new MutationObserver(scheduleApply).observe(grid,{childList:true});
   }
 })();
