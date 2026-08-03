@@ -1,9 +1,11 @@
 (()=>{
+  const getProducts=()=>typeof PRODUCTS!=='undefined'&&Array.isArray(PRODUCTS)?PRODUCTS:null;
   const getProduct=()=>{
-    if(!Array.isArray(window.PRODUCTS)) return null;
+    const products=getProducts();
+    if(!products) return null;
     const parts=location.pathname.split('/').filter(Boolean);
     const slug=parts[parts.length-1]||parts[parts.length-2];
-    return PRODUCTS.find(p=>p.slug===slug)||null;
+    return products.find(p=>p.slug===slug)||null;
   };
 
   let busy=false;
@@ -18,6 +20,7 @@
     const item=product.items?.[index];
     if(!item) return;
     const dose=item[1];
+    if(img.dataset.renderedDose===dose) return;
 
     if(!img.dataset.baseSrc) img.dataset.baseSrc=img.currentSrc||img.src;
     const baseSrc=img.dataset.baseSrc;
