@@ -1,4 +1,8 @@
 (()=>{
+  const productRoot=document.querySelector('#product');
+  if(!productRoot) return;
+  if(location.pathname.replace(/\/+$/,'')==='/pepmax-precos/peptides') return;
+
   const getProducts=()=>typeof PRODUCTS!=='undefined'&&Array.isArray(PRODUCTS)?PRODUCTS:null;
   const getProduct=()=>{
     const products=getProducts();
@@ -61,13 +65,7 @@
     if(e.target?.matches('input[name="variant"]')) requestAnimationFrame(render);
   });
 
-  const start=()=>{
-    const root=document.querySelector('#product');
-    if(!root) return;
-    new MutationObserver(()=>requestAnimationFrame(render)).observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['class','checked']});
-    requestAnimationFrame(render);
-  };
-
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start);
+  const start=()=>requestAnimationFrame(render);
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true});
   else start();
 })();
