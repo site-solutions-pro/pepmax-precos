@@ -1,1 +1,29 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="description" content="5-Amino-1MQ PepMax: apresentações e preços para pesquisa laboratorial."><title>5-Amino-1MQ | PepMax Peptides</title><link rel="stylesheet" href="../assets/styles.css?v=20260803-dose-sync1"><style>.product-visual .vial-visual.has-final-vial img{object-fit:contain!important;transform:none!important}.product-visual .vial-visual.has-final-vial .vial-dose{display:flex!important;left:34.5%;right:34.5%;top:72.2%;height:8.4%;background:#fff;color:#174d9a;font-size:34px;transform:none!important;border-radius:0}.product-visual .vial-visual.has-final-vial .vial-dose.dose-long{font-size:28px}.product-visual .vial-visual.has-final-vial .vial-dose.dose-xlong{font-size:23px}@media(max-width:760px){.product-visual .vial-visual.has-final-vial .vial-dose{font-size:28px}.product-visual .vial-visual.has-final-vial .vial-dose.dose-long{font-size:23px}.product-visual .vial-visual.has-final-vial .vial-dose.dose-xlong{font-size:20px}}</style></head><body><header class="top"><div class="wrap"><a class="logo" href="../../">Pep<span>Max</span></a><nav class="nav"><a href="../">Peptides</a><a href="../../shop/">Shop</a><a class="nav-cart" href="../../shop/#checkout" aria-label="Abrir carrinho e finalizar pedido"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6"/></svg><span class="nav-cart-count">0</span></a></nav></div></header><div class="wrap crumbs"><a href="../">Peptides</a> / 5-Amino-1MQ</div><main class="wrap product" id="product"></main><footer class="legal"><div class="wrap"><b>Uso exclusivo em pesquisa.</b> Não destinado ao consumo humano, veterinário ou alimentício.</div></footer><script src="../assets/catalog.js?v=20260803-dose-sync1"></script><script>const product5Amino=PRODUCTS.find(p=>p.slug==="5-amino-1mq");if(product5Amino)product5Amino.image="https://site-solutions-pro.github.io/pepmax-precos/peptides/assets/images/5-amino-1mq-approved.webp?v=20260803-dose-sync1";detail("5-amino-1mq")</script></body></html>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="description" content="5-Amino-1MQ PepMax: apresentações e preços para pesquisa laboratorial."><title>5-Amino-1MQ | PepMax Peptides</title><link rel="stylesheet" href="../assets/styles.css?v=20260803-dose-canvas1"><style>.product-visual .vial-dose{display:none!important}.product-visual .vial-visual.has-final-vial img{object-fit:contain!important;transform:none!important}</style></head><body><header class="top"><div class="wrap"><a class="logo" href="../../">Pep<span>Max</span></a><nav class="nav"><a href="../">Peptides</a><a href="../../shop/">Shop</a><a class="nav-cart" href="../../shop/#checkout" aria-label="Abrir carrinho e finalizar pedido"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6"/></svg><span class="nav-cart-count">0</span></a></nav></div></header><div class="wrap crumbs"><a href="../">Peptides</a> / 5-Amino-1MQ</div><main class="wrap product" id="product"></main><footer class="legal"><div class="wrap"><b>Uso exclusivo em pesquisa.</b> Não destinado ao consumo humano, veterinário ou alimentício.</div></footer><script src="../assets/catalog.js?v=20260803-dose-canvas1"></script><script>
+const baseImage="https://site-solutions-pro.github.io/pepmax-precos/peptides/assets/images/5-amino-1mq-approved.webp?v=20260803-dose-canvas1";
+const product5Amino=PRODUCTS.find(p=>p.slug==="5-amino-1mq");
+if(product5Amino)product5Amino.image=baseImage;
+detail("5-amino-1mq");
+let renderingDose=false;
+function renderDoseImage(){
+ if(renderingDose)return;
+ const target=document.querySelector(".product-visual img.final-vial");
+ const checked=document.querySelector('input[name="variant"]:checked');
+ if(!target||!checked)return;
+ const dose=PRODUCTS.find(p=>p.slug==="5-amino-1mq").items[Number(checked.value)][1];
+ renderingDose=true;
+ const source=new Image();source.crossOrigin="anonymous";
+ source.onload=()=>{
+  const canvas=document.createElement("canvas");canvas.width=source.naturalWidth;canvas.height=source.naturalHeight;
+  const ctx=canvas.getContext("2d");ctx.drawImage(source,0,0);
+  const x=canvas.width*.32,y=canvas.height*.70,w=canvas.width*.36,h=canvas.height*.115;
+  ctx.fillStyle="#fff";ctx.fillRect(x,y,w,h);
+  ctx.fillStyle="#174d9a";ctx.textAlign="center";ctx.textBaseline="middle";ctx.font=`900 ${Math.round(canvas.width*.105)}px Arial`;
+  ctx.fillText(dose,x+w/2,y+h/2);
+  target.src=canvas.toDataURL("image/webp",.94);target.alt=`Vial PepMAX 5-Amino-1MQ, ${dose}`;renderingDose=false;
+ };
+ source.onerror=()=>{renderingDose=false};source.src=baseImage;
+}
+const productRoot=document.querySelector("#product");
+new MutationObserver(()=>requestAnimationFrame(renderDoseImage)).observe(productRoot,{childList:true,subtree:true});
+requestAnimationFrame(renderDoseImage);
+</script></body></html>
