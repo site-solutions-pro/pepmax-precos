@@ -27,10 +27,12 @@
   `;
   document.head.appendChild(style);
 
+  const matchesSlug=(href,key)=>href.includes(`${key}/`)||href.includes(`/${key}`);
+
   function apply(){
     document.querySelectorAll("#catalogGrid .card").forEach(card=>{
       const href=card.getAttribute("href")||"";
-      const directSlug=Object.keys(directImages).find(key=>href.includes(`/${key}/`));
+      const directSlug=Object.keys(directImages).find(key=>matchesSlug(href,key));
       const media=card.querySelector(".catalog-media");
       const img=media?.querySelector("img");
       if(!media||!img)return;
@@ -40,12 +42,12 @@
         media.classList.add("pmx-direct-image");
         media.querySelector(".pmx-fixed-label")?.remove();
         media.querySelector(".vial-dose")?.remove();
-        img.src=`./assets/images/${directImages[directSlug]}`;
+        img.src=`./assets/images/${directImages[directSlug]}?v=20260803-fix2`;
         img.alt="Vial PepMAX 5-Amino-1MQ, 5 mg";
         return;
       }
 
-      const slug=Object.keys(products).find(key=>href.includes(`/${key}/`));
+      const slug=Object.keys(products).find(key=>matchesSlug(href,key));
       if(!slug)return;
       const data=products[slug];
       media.classList.add("pmx-standard-image");
