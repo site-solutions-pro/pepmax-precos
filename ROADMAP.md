@@ -196,15 +196,16 @@ Progresso:
   misturas e divergências de sequência permanecem explicitamente identificados
   e condicionados à confirmação analítica do lote;
 - auditoria visual-base anterior registrava Tesamorelina como único ativo
-  fotográfico definitivo; após o primeiro lote visual, os outros 95 produtos
-  permanecem identificados como **Imagem em produção**, sem uso indevido de
-  placeholders como imagem final;
+  fotográfico definitivo; após o primeiro lote visual e a integração do ativo
+  ACE-031, os outros 94 produtos permanecem identificados como **Imagem em
+  produção**, sem uso indevido de placeholders como imagem final;
 - primeiro lote visual definitivo implementado para Retatrutida, Tirzepatida,
   BPC-157 e MOTS-c; os quatro destaques da Home agora usam vials fotográficos
   individuais, com fundo branco normalizado e a mesma geometria aprovada;
 - Tesamorelina recebeu uma versão técnica normalizada, com canvas, proporção e
-  fundo alinhados ao novo lote; total atual: 5 de 100 produtos com ativo
-  fotográfico definitivo integrado;
+  fundo alinhados ao novo lote; ACE-031 também foi integrado ao catálogo e à
+  página individual; total atual: 6 de 100 produtos com ativo fotográfico
+  definitivo integrado;
 - nova Home institucional/comercial implementada na raiz, com os quatro ativos
   definitivos visíveis no hero e na seleção editorial; o catálogo comercial
   anterior foi preservado integralmente em **Shop**;
