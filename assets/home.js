@@ -103,3 +103,46 @@ try{
   const count=Object.values(cart).reduce((sum,value)=>sum+(Math.max(0,Math.floor(Number(value)))||0),0);
   document.getElementById("cartCount").textContent=count;
 }catch(_){document.getElementById("cartCount").textContent="0"}
+
+// CTA editorial: dossie cientifico de retatrutida
+const marketSection=document.querySelector(".market.shell");
+if(marketSection&&!document.querySelector(".retatrutida-dossie-cta")){
+  const style=document.createElement("style");
+  style.textContent=`
+    .retatrutida-dossie-cta{margin:28px auto 70px;padding:32px;border:1px solid rgba(70,211,255,.22);border-radius:28px;background:radial-gradient(circle at 82% 12%,rgba(77,212,255,.13),transparent 32%),linear-gradient(135deg,#0a1425,#101b31);display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center;overflow:hidden;position:relative}
+    .retatrutida-dossie-cta:after{content:"GLP-1  •  GIP  •  GCG";position:absolute;right:28px;bottom:18px;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.13em;color:rgba(135,218,255,.32)}
+    .retatrutida-dossie-cta .cta-kicker{display:inline-flex;gap:8px;align-items:center;color:#63ddff;font:600 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
+    .retatrutida-dossie-cta .cta-kicker i{width:7px;height:7px;background:#43d9ff;border-radius:50%;box-shadow:0 0 15px #43d9ff}
+    .retatrutida-dossie-cta h2{font:700 clamp(30px,4vw,50px)/1.04 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:15px 0 14px;max-width:780px}
+    .retatrutida-dossie-cta p{color:#c2d0e3;font-size:17px;line-height:1.7;margin:0;max-width:770px}
+    .retatrutida-dossie-cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .retatrutida-dossie-cta .cta-link{display:inline-flex;align-items:center;gap:10px;padding:13px 17px;border-radius:12px;background:linear-gradient(135deg,#3bd8ff,#34e0b8);color:#06101a;text-decoration:none;font-weight:700}
+    .retatrutida-dossie-cta .cta-secondary{background:transparent;color:#e7f3ff;border:1px solid rgba(255,255,255,.16)}
+    .retatrutida-dossie-cta .cta-data{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .retatrutida-dossie-cta .cta-data div{min-height:112px;padding:18px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}
+    .retatrutida-dossie-cta .cta-data b{display:block;font:800 28px "Bricolage Grotesque",sans-serif;color:#fff}
+    .retatrutida-dossie-cta .cta-data span{display:block;color:#91a8c2;font-size:12px;line-height:1.45;margin-top:7px}
+    @media(max-width:800px){.retatrutida-dossie-cta{grid-template-columns:1fr;padding:24px;margin-bottom:48px}.retatrutida-dossie-cta .cta-data{grid-template-columns:1fr 1fr}.retatrutida-dossie-cta:after{display:none}}
+  `;
+  document.head.appendChild(style);
+  const cta=document.createElement("section");
+  cta.className="retatrutida-dossie-cta shell";
+  cta.setAttribute("aria-labelledby","retatrutidaDossieTitle");
+  cta.innerHTML=`
+    <div>
+      <span class="cta-kicker"><i></i>Novo dossiê científico</span>
+      <h2 id="retatrutidaDossieTitle">Retatrutida: triplo agonismo explicado com evidência.</h2>
+      <p>Um artigo técnico sobre mecanismo GLP-1R/GIPR/GCGR, estudos TRIUMPH, segurança, amplitude metabólica, comparação com tirzepatida e status regulatório — sem transformar resultado clínico em protocolo de uso.</p>
+      <div class="cta-actions">
+        <a class="cta-link" href="./biblioteca/retatrutida-ciencia/">Ler o artigo completo <span aria-hidden="true">→</span></a>
+        <a class="cta-link cta-secondary" href="./peptides/retatrutida/">Ver ficha da molécula</a>
+      </div>
+    </div>
+    <div class="cta-data" aria-label="Destaques do dossiê">
+      <div><b>28,3%</b><span>perda média em 80 semanas no TRIUMPH-1, 12 mg</span></div>
+      <div><b>5</b><span>readouts positivos de Fase 3 consolidados no dossiê</span></div>
+      <div><b>3</b><span>receptores-alvo: GLP-1R, GIPR e GCGR</span></div>
+      <div><b>Q1 2027</b><span>BLA planejado; submissão não equivale a aprovação</span></div>
+    </div>`;
+  marketSection.insertAdjacentElement("afterend",cta);
+}
