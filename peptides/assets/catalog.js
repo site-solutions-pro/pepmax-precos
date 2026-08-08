@@ -1185,7 +1185,7 @@ function pendingProductImage(p){
  return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
 }
 const PRODUCT_IMAGE_PATHS=Object.freeze({
- "ace-031":"ace-031.webp",
+ "ace-031":"ace-031-approved.webp",
  "bpc-157":"bpc-157-approved.webp",
  "mots-c":"mots-c-approved.webp",
  "retatrutida":"retatrutida-approved.webp",
