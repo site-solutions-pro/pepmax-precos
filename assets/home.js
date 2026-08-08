@@ -1,5 +1,6 @@
 const menu=document.getElementById("mobileMenu");
 const toggle=document.getElementById("menuToggle");
+const t=(key,vars)=>window.PepMaxI18n?window.PepMaxI18n.t(key,vars):key;
 const openMenu=()=>{menu.classList.add("open");menu.setAttribute("aria-hidden","false");toggle.setAttribute("aria-expanded","true");document.body.style.overflow="hidden"};
 const closeMenu=()=>{menu.classList.remove("open");menu.setAttribute("aria-hidden","true");toggle.setAttribute("aria-expanded","false");document.body.style.overflow=""};
 toggle.addEventListener("click",openMenu);
@@ -7,21 +8,21 @@ document.querySelectorAll("[data-menu-close]").forEach(el=>el.addEventListener("
 document.addEventListener("keydown",event=>{if(event.key==="Escape")closeMenu()});
 
 const carouselProducts=[
-  {name:"Retatrutida",slug:"retatrutida",sku:"RT5",dose:"5 mg",category:"Agonista peptídico multirreceptor",image:"retatrutida-approved.webp"},
-  {name:"Tirzepatida",slug:"tirzepatida",sku:"TR5",dose:"5 mg",category:"Peptídeo sintético de referência",image:"tirzepatida-approved.webp"},
-  {name:"Semaglutida",slug:"semaglutida",sku:"SM5",dose:"5 mg",category:"Análogo peptídico catalogado"},
-  {name:"BPC-157",slug:"bpc-157",sku:"BC5",dose:"5 mg",category:"Pentadecapeptídeo sintético",image:"bpc-157-approved.webp"},
-  {name:"TB-500",slug:"tb-500",sku:"TB5",dose:"5 mg",category:"Fragmento peptídico de referência"},
-  {name:"GHK-Cu",slug:"ghk-cu",sku:"CU50",dose:"50 mg",category:"Tripeptídeo de cobre"},
-  {name:"CJC-1295 + Ipamorelina",label:"CJC-1295 + IPA",slug:"cjc-1295-ipamorelina",sku:"CP10",dose:"10 mg",category:"Blend peptídico catalogado"},
-  {name:"Tesamorelina",slug:"tesamorelina",sku:"TSM10",dose:"10 mg",category:"Análogo peptídico de GHRH",image:"tesamorelina-approved-v2.webp"},
-  {name:"Ipamorelina",slug:"ipamorelina",sku:"IP5",dose:"5 mg",category:"Pentapeptídeo sintético"},
-  {name:"AOD-9604",slug:"aod-9604",sku:"5AD",dose:"5 mg",category:"Fragmento peptídico catalogado"},
-  {name:"MOTS-c",slug:"mots-c",sku:"MS10",dose:"10 mg",category:"Peptídeo mitocondrial",image:"mots-c-approved.webp"},
-  {name:"PT-141 (bremelanotida)",label:"PT-141",slug:"pt-141-bremelanotida",sku:"P41",dose:"10 mg",category:"Peptídeo sintético cíclico"},
-  {name:"Melanotan II (MT-2)",label:"Melanotan II",slug:"melanotan-ii-mt-2",sku:"ML10",dose:"10 mg",category:"Heptapeptídeo cíclico"},
-  {name:"Epitalon",slug:"epitalon",sku:"ET10",dose:"10 mg",category:"Tetrapeptídeo sintético"},
-  {name:"Semax",slug:"semax",sku:"XA11",dose:"11 mg",category:"Heptapeptídeo sintético"}
+  {name:"Retatrutida",slug:"retatrutida",sku:"RT5",dose:"5 mg",image:"retatrutida-approved.webp"},
+  {name:"Tirzepatida",slug:"tirzepatida",sku:"TR5",dose:"5 mg",image:"tirzepatida-approved.webp"},
+  {name:"Semaglutida",slug:"semaglutida",sku:"SM5",dose:"5 mg"},
+  {name:"BPC-157",slug:"bpc-157",sku:"BC5",dose:"5 mg",image:"bpc-157-approved.webp"},
+  {name:"TB-500",slug:"tb-500",sku:"TB5",dose:"5 mg"},
+  {name:"GHK-Cu",slug:"ghk-cu",sku:"CU50",dose:"50 mg"},
+  {name:"CJC-1295 + Ipamorelina",label:"CJC-1295 + IPA",slug:"cjc-1295-ipamorelina",sku:"CP10",dose:"10 mg"},
+  {name:"Tesamorelina",slug:"tesamorelina",sku:"TSM10",dose:"10 mg",image:"tesamorelina-approved-v2.webp"},
+  {name:"Ipamorelina",slug:"ipamorelina",sku:"IP5",dose:"5 mg"},
+  {name:"AOD-9604",slug:"aod-9604",sku:"5AD",dose:"5 mg"},
+  {name:"MOTS-c",slug:"mots-c",sku:"MS10",dose:"10 mg",image:"mots-c-approved.webp"},
+  {name:"PT-141 (bremelanotida)",label:"PT-141",slug:"pt-141-bremelanotida",sku:"P41",dose:"10 mg"},
+  {name:"Melanotan II (MT-2)",label:"Melanotan II",slug:"melanotan-ii-mt-2",sku:"ML10",dose:"10 mg"},
+  {name:"Epitalon",slug:"epitalon",sku:"ET10",dose:"10 mg"},
+  {name:"Semax",slug:"semax",sku:"XA11",dose:"11 mg"}
 ];
 
 const carousel=document.getElementById("heroCarousel");
@@ -47,7 +48,7 @@ if(carousel){
   let index=0;
   let timer;
   let touchStart=0;
-  dots.innerHTML=carouselProducts.map((product,position)=>`<button type="button" aria-label="Mostrar ${product.name}" data-carousel-index="${position}"></button>`).join("");
+  dots.innerHTML=carouselProducts.map((product,position)=>`<button type="button" aria-label="${product.name}" data-carousel-index="${position}"></button>`).join("");
   const dotButtons=[...dots.querySelectorAll("button")];
   const restart=()=>{
     window.clearInterval(timer);
@@ -57,16 +58,16 @@ if(carousel){
     const product=carouselProducts[index];
     const ordinal=String(index+1).padStart(2,"0");
     slide.href=`./peptides/${product.slug}/?sku=${encodeURIComponent(product.sku)}`;
-    slide.setAttribute("aria-label",`Ver ${product.name}, ${product.dose}`);
+    slide.setAttribute("aria-label",`${product.name}, ${product.dose}`);
     image.src=product.image?`./peptides/assets/images/${product.image}`:vialPlaceholder(product);
-    image.alt=`Vial PepMax ${product.name}, ${product.dose}`;
+    image.alt=`PepMax ${product.name} reference vial, ${product.dose}`;
     image.className=`carousel-vial${product.image?" final-vial":" generated-vial"}`;
     name.textContent=product.name;
-    category.textContent=product.category;
+    category.textContent=t("home.carousel");
     dose.textContent=product.dose;
     current.textContent=ordinal;
     carousel.querySelector(".carousel-rank").textContent=ordinal;
-    status.textContent=`${product.name}, slide ${index+1} de ${carouselProducts.length}`;
+    status.textContent=`${product.name}, ${index+1}/${carouselProducts.length}`;
     dotButtons.forEach((button,position)=>{
       button.classList.toggle("active",position===index);
       button.setAttribute("aria-current",position===index?"true":"false");
@@ -103,46 +104,3 @@ try{
   const count=Object.values(cart).reduce((sum,value)=>sum+(Math.max(0,Math.floor(Number(value)))||0),0);
   document.getElementById("cartCount").textContent=count;
 }catch(_){document.getElementById("cartCount").textContent="0"}
-
-// CTA editorial: dossie cientifico de retatrutida
-const marketSection=document.querySelector(".market.shell");
-if(marketSection&&!document.querySelector(".retatrutida-dossie-cta")){
-  const style=document.createElement("style");
-  style.textContent=`
-    .retatrutida-dossie-cta{margin:28px auto 70px;padding:32px;border:1px solid rgba(70,211,255,.22);border-radius:28px;background:radial-gradient(circle at 82% 12%,rgba(77,212,255,.13),transparent 32%),linear-gradient(135deg,#0a1425,#101b31);display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center;overflow:hidden;position:relative}
-    .retatrutida-dossie-cta:after{content:"GLP-1  •  GIP  •  GCG";position:absolute;right:28px;bottom:18px;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.13em;color:rgba(135,218,255,.32)}
-    .retatrutida-dossie-cta .cta-kicker{display:inline-flex;gap:8px;align-items:center;color:#63ddff;font:600 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
-    .retatrutida-dossie-cta .cta-kicker i{width:7px;height:7px;background:#43d9ff;border-radius:50%;box-shadow:0 0 15px #43d9ff}
-    .retatrutida-dossie-cta h2{font:700 clamp(30px,4vw,50px)/1.04 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:15px 0 14px;max-width:780px}
-    .retatrutida-dossie-cta p{color:#c2d0e3;font-size:17px;line-height:1.7;margin:0;max-width:770px}
-    .retatrutida-dossie-cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-    .retatrutida-dossie-cta .cta-link{display:inline-flex;align-items:center;gap:10px;padding:13px 17px;border-radius:12px;background:linear-gradient(135deg,#3bd8ff,#34e0b8);color:#06101a;text-decoration:none;font-weight:700}
-    .retatrutida-dossie-cta .cta-secondary{background:transparent;color:#e7f3ff;border:1px solid rgba(255,255,255,.16)}
-    .retatrutida-dossie-cta .cta-data{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .retatrutida-dossie-cta .cta-data div{min-height:112px;padding:18px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}
-    .retatrutida-dossie-cta .cta-data b{display:block;font:800 28px "Bricolage Grotesque",sans-serif;color:#fff}
-    .retatrutida-dossie-cta .cta-data span{display:block;color:#91a8c2;font-size:12px;line-height:1.45;margin-top:7px}
-    @media(max-width:800px){.retatrutida-dossie-cta{grid-template-columns:1fr;padding:24px;margin-bottom:48px}.retatrutida-dossie-cta .cta-data{grid-template-columns:1fr 1fr}.retatrutida-dossie-cta:after{display:none}}
-  `;
-  document.head.appendChild(style);
-  const cta=document.createElement("section");
-  cta.className="retatrutida-dossie-cta shell";
-  cta.setAttribute("aria-labelledby","retatrutidaDossieTitle");
-  cta.innerHTML=`
-    <div>
-      <span class="cta-kicker"><i></i>Novo dossiê científico</span>
-      <h2 id="retatrutidaDossieTitle">Retatrutida: triplo agonismo explicado com evidência.</h2>
-      <p>Um artigo técnico sobre mecanismo GLP-1R/GIPR/GCGR, estudos TRIUMPH, segurança, amplitude metabólica, comparação com tirzepatida e status regulatório — sem transformar resultado clínico em protocolo de uso.</p>
-      <div class="cta-actions">
-        <a class="cta-link" href="./biblioteca/retatrutida-ciencia/">Ler o artigo completo <span aria-hidden="true">→</span></a>
-        <a class="cta-link cta-secondary" href="./peptides/retatrutida/">Ver ficha da molécula</a>
-      </div>
-    </div>
-    <div class="cta-data" aria-label="Destaques do dossiê">
-      <div><b>28,3%</b><span>perda média em 80 semanas no TRIUMPH-1, 12 mg</span></div>
-      <div><b>5</b><span>readouts positivos de Fase 3 consolidados no dossiê</span></div>
-      <div><b>3</b><span>receptores-alvo: GLP-1R, GIPR e GCGR</span></div>
-      <div><b>Q1 2027</b><span>BLA planejado; submissão não equivale a aprovação</span></div>
-    </div>`;
-  marketSection.insertAdjacentElement("afterend",cta);
-}
