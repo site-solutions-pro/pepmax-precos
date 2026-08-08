@@ -1154,17 +1154,76 @@ const TECH_SPECS={
   ]
  }
 };
+const i18n=()=>window.PepMaxI18n||{lang:"pt",t:key=>key,apply:()=>{}};
+const t=(key,vars)=>i18n().t(key,vars);
+const cleanScientificText=value=>String(value||"")
+ .replace(/\bresultados? clínicos?\b/gi,"resultados publicados")
+ .replace(/\bestudos? clínicos?\b/gi,"estudos publicados")
+ .replace(/\bensaio clínico\b/gi,"estudo publicado")
+ .replace(/\bseres humanos\b/gi,"sistemas biológicos")
+ .replace(/\bhumano(s)?\b/gi,"biológico$1")
+ .replace(/\bhumana(s)?\b/gi,"biológica$1")
+ .replace(/\bpacientes?\b/gi,"participantes")
+ .replace(/\buso terapêutico\b/gi,"aplicação terapêutica")
+ .replace(/\borientação de uso\b/gi,"instrução operacional");
+const specKind=s=>{
+ const text=(s.classification||"").toLowerCase();
+ if(/blend|mistura|formula[cç][aã]o|composi[cç][aã]o multicomponente/.test(text))return t("tech.blend");
+ if(/prote[ií]na|glicoprote[ií]na|horm[oô]nio/.test(text))return t("tech.protein");
+ if(/pept[ií]deo|oligopept[ií]deo/.test(text))return t("tech.peptide");
+ if(/mol[eé]cula pequena|pequena mol[eé]cula|amino[aá]cido|metab[oó]lito/.test(text))return t("tech.small");
+ return t("tech.genericClass");
+};
+const localizedStructure=(s,p)=>{
+ if(i18n().lang==="pt")return cleanScientificText(s.sequence);
+ const chain=String(s.sequence||"").match(/(?:[A-Z][a-z]{2})(?:[–-][A-Z][a-z]{2}){1,}/)?.[0];
+ const oneLetter=String(s.sequence||"").match(/\(([A-Z]{3,})\)/)?.[1];
+ if(chain)return `${chain}${oneLetter?` (${oneLetter})`:""}. ${t("tech.structureSource")}`;
+ if(p.name.includes("+"))return `${p.name}. ${t("tech.structureSource")}`;
+ return t("tech.structureSource");
+};
+const localizedMolecular=s=>{
+ const value=cleanScientificText(s.molecular);
+ if(i18n().lang==="pt")return value;
+ const formulaPart=value.match(/^([^·.;]+)(?=\s*·)/)?.[1]?.trim();
+ const formula=formulaPart?.includes(":")?formulaPart.split(":").at(-1).trim():formulaPart;
+ const mass=value.match(/([\d.]+(?:,\d+)?)\s*g\/mol/i)?.[1];
+ const localizedMass=i18n().lang==="en"?mass?.replace(",", "."):mass;
+ if(localizedMass)return `${formula?`${formula} · `:""}${t(value.toLowerCase().includes("aproxim")?"tech.approxMass":"tech.calculatedMass")}: ${localizedMass} g/mol.`;
+ return formula||t("tech.structureSource");
+};
+const scientificIdentifiers=s=>{
+ const joined=`${s.origin||""} ${s.discovery||""}`;
+ return [...new Set(joined.match(/\b(?:[A-Z]{2,}[A-Z0-9-]*\d[A-Z0-9-]*|(?:18|19|20)\d{2})\b/g)||[])].slice(0,6);
+};
+const localizedOrigin=s=>{
+ if(i18n().lang==="pt")return cleanScientificText(s.origin);
+ const ids=scientificIdentifiers(s);
+ return `${t("tech.originSource")}${ids.length?` ${ids.join(" · ")}.`:""}`;
+};
+const localizedDiscovery=s=>{
+ const value=cleanScientificText(s.discovery);
+ if(i18n().lang==="pt")return value;
+ const ids=scientificIdentifiers(s).filter(id=>/^\d{4}$/.test(id));
+ return `${t("tech.discoverySource")}${ids.length?` ${ids.join(" · ")}.`:""}`;
+};
 function techSpecs(slug){
- const s=TECH_SPECS[slug];
- if(!s)return "";
- const fields=[
-  ["Classificação",s.classification],
-  ["Sequência / estrutura",s.sequence],
-  ["Fórmula e massa molecular",s.molecular],
-  ["Origem científica",s.origin],
-  ["Descoberta / equipe",s.discovery]
+ const s=TECH_SPECS[slug],p=PRODUCTS.find(product=>product.slug===slug);
+ if(!s||!p)return "";
+ const fields=i18n().lang==="pt"?[
+  [t("tech.classification"),cleanScientificText(s.classification)],
+  [t("tech.structure"),localizedStructure(s,p)],
+  [t("tech.molecular"),localizedMolecular(s)],
+  [t("tech.origin"),localizedOrigin(s)],
+  [t("tech.discovery"),localizedDiscovery(s)]
+ ]:[
+  [t("tech.classification"),specKind(s)],
+  [t("tech.structure"),localizedStructure(s,p)],
+  [t("tech.molecular"),localizedMolecular(s)],
+  [t("tech.origin"),localizedOrigin(s)],
+  [t("tech.discovery"),localizedDiscovery(s)]
  ];
- return `<section class="tech-specs" aria-labelledby="tech-title"><span class="eyebrow">Dados científicos verificados</span><h2 id="tech-title">Especificações técnicas</h2><div class="tech-grid">${fields.map(([label,value])=>`<div class="tech-field"><h3>${label}</h3><p>${value}</p></div>`).join("")}</div><div class="tech-sources"><h3>Fontes</h3><ul>${s.sources.map(([label,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a></li>`).join("")}</ul><p>Informação de referência para identificação laboratorial. Não constitui orientação de uso.</p></div></section>`;
+ return `<section class="tech-specs" aria-labelledby="tech-title"><span class="eyebrow">${t("tech.kicker")}</span><h2 id="tech-title">${t("tech.title")}</h2><div class="tech-grid">${fields.map(([label,value])=>`<div class="tech-field"><h3>${label}</h3><p>${value}</p></div>`).join("")}</div><div class="tech-reading"><article><h3>${t("tech.readingTitle")}</h3><p>${t("tech.readingText")}</p></article><article><h3>${t("tech.qualityTitle")}</h3><p>${t("tech.qualityText")}</p></article></div><div class="tech-sources"><h3>${t("tech.sources")}</h3><ul>${s.sources.map(([label,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">${cleanScientificText(label)}</a></li>`).join("")}</ul><p>${t("tech.note")}</p></div></section>`;
 }
 // O domínio comercial não expõe o conteúdo educacional. A remoção em tempo
 // de execução também neutraliza links residuais em páginas estáticas antigas.
@@ -1181,7 +1240,7 @@ function vialPlaceholder(p,item=p.items[0],index=0){
 }
 function pendingProductImage(p){
  const safe=String(p.name).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".5" stop-color="#7b3fd4"/><stop offset="1" stop-color="#d6379f"/></linearGradient></defs><rect width="420" height="520" rx="24" fill="#fff"/><rect x="35" y="35" width="350" height="450" rx="20" fill="none" stroke="url(#g)" stroke-width="3"/><text x="210" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#173b68">PepMAX</text><text x="210" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#334c9b">${safe}</text><text x="210" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#64748b">IMAGEM EM PRODUÇÃO</text></svg>`;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".5" stop-color="#7b3fd4"/><stop offset="1" stop-color="#d6379f"/></linearGradient></defs><rect width="420" height="520" rx="24" fill="#fff"/><rect x="35" y="35" width="350" height="450" rx="20" fill="none" stroke="url(#g)" stroke-width="3"/><text x="210" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#173b68">PepMAX</text><text x="210" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#334c9b">${safe}</text><text x="210" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#64748b">REFERENCE RECORD</text></svg>`;
  return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
 }
 const PRODUCT_IMAGE_PATHS=Object.freeze({
@@ -1193,9 +1252,9 @@ const PRODUCT_IMAGE_PATHS=Object.freeze({
  "tirzepatida":"tirzepatida-approved.webp"
 });
 const hasProductImage=p=>Boolean(PRODUCT_IMAGE_PATHS[p.slug]||p.image);
-const imageAssetBase=()=>document.querySelector("#catalogGrid")?"./assets/images/":"../assets/images/";
+const imageAssetBase=()=>document.body.dataset.section==="shop"?"../peptides/assets/images/":document.body.dataset.section==="catalog"?"./assets/images/":"../assets/images/";
 const productImage=(p,item=p.items[0],index=0)=>PRODUCT_IMAGE_PATHS[p.slug]?imageAssetBase()+PRODUCT_IMAGE_PATHS[p.slug]:p.image||vialPlaceholder(p,item,index);
-const productImageAlt=(p,item=p.items[0])=>`Vial PepMax ${p.name}, ${item[1]}`;
+const productImageAlt=(p,item=p.items[0])=>`PepMax ${p.name} reference vial, ${item[1]}`;
 const productImageMarkup=(p,item=p.items[0],loading="lazy",index=0)=>{
  const final=hasProductImage(p);
  const color=doseColor(item[1],index);
@@ -1204,7 +1263,8 @@ const productImageMarkup=(p,item=p.items[0],loading="lazy",index=0)=>{
 };
 const productUrl=(p,item=p.items[0])=>{
  const sku=String(item?.[0]||"").trim();
- return `./${p.slug}/${sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?dose=${encodeURIComponent(item?.[1]||"")}`}`;
+ const base=document.body.dataset.section==="shop"?"../peptides/":"./";
+ return `${base}${p.slug}/${sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?presentation=${encodeURIComponent(item?.[1]||"")}`}`;
 };
 const cartKey=(p,item)=>{
  const sku=String(item[0]||"").trim();
@@ -1236,22 +1296,51 @@ function catalog(){
   return {item:p.items[safeIndex],index:safeIndex};
  };
  const draw=()=>{const term=q.value.trim().toLowerCase();const list=PRODUCTS.filter(p=>matchesProduct(p,term));
- grid.innerHTML=list.map(p=>{const {item,index}=matchedItem(p,term);return `<a class="card" href="${productUrl(p,item)}"><span class="catalog-media">${productImageMarkup(p,item,"lazy",index)}</span><h2>${p.name}</h2><p>${p.desc}</p><span class="from">${term?`Apresentação ${item[1]}`:"A partir de"}<b>${money(term?item[2]:Math.min(...p.items.map(x=>x[2])))}</b> por vial</span><span class="product-destination">Ver detalhes e comprar →</span></a>`}).join("")||`<p class="notice">Nenhum produto encontrado.</p>`};
+ grid.innerHTML=list.map(p=>{const {item,index}=matchedItem(p,term);return `<a class="card" href="${productUrl(p,item)}"><span class="catalog-media">${productImageMarkup(p,item,"lazy",index)}</span><h2>${p.name}</h2><p>${t("product.desc")}</p><span class="from">${term?`${t("catalog.presentation")} ${item[1]}`:t("catalog.from")}<b>${money(term?item[2]:Math.min(...p.items.map(x=>x[2])))}</b> ${t("catalog.perVial")}</span><span class="product-destination">${t("catalog.open")}</span></a>`}).join("")||`<p class="notice">${t("catalog.none")}</p>`};
  q.addEventListener("input",draw);draw();
 }
+const readCart=()=>{try{return JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){return {}}};
+const saveCart=cart=>{localStorage.setItem("pepmax-cart-v1",JSON.stringify(cart));updateNavCart()};
+const cartRecord=key=>{
+ for(const product of PRODUCTS){
+  for(let index=0;index<product.items.length;index++)if(cartKey(product,product.items[index])===key)return {product,item:product.items[index],index};
+ }
+ return null;
+};
+const validCartRows=()=>Object.entries(readCart()).map(([key,value])=>{
+ const record=cartRecord(key),qty=Math.max(0,Math.floor(Number(value)))||0;
+ return record&&qty?{key,qty,...record}:null;
+}).filter(Boolean);
+const couponActive=()=>{try{return localStorage.getItem("pepmax-coupon-v1")==="WELCOME5"}catch(_){return false}};
+function renderShopCart(message=""){
+ const panel=document.querySelector("#cartPanel");if(!panel)return;
+ const rows=validCartRows();
+ if(!rows.length){panel.innerHTML=`<div class="cart-empty"><p>${t("shop.cartEmpty")}</p><small>${t("shop.cartHint")}</small></div>`;updateNavCart();return}
+ const subtotal=rows.reduce((sum,row)=>sum+row.item[2]*row.qty,0),discount=couponActive()?subtotal*.05:0,total=subtotal-discount;
+ const quoteLines=rows.map(row=>`• ${row.product.name} — ${row.item[1]} — SKU ${row.item[0]} — ${row.qty} × ${money(row.item[2])}`).join("\n");
+ const quoteTitle=i18n().lang==="en"?"PepMax quote request":i18n().lang==="es"?"Solicitud de cotización PepMax":"Solicitação de orçamento PepMax";
+ const quote=`${quoteTitle}\n\n${quoteLines}\n\n${t("shop.subtotal")}: ${money(subtotal)}${discount?`\n${t("shop.discount")}: -${money(discount)}`:""}\n${t("shop.total")}: ${money(total)}\n\n${t("shop.terms")}`;
+ panel.innerHTML=`<div class="cart-list">${rows.map(row=>`<article class="cart-item"><div><h3><a href="${productUrl(row.product,row.item)}">${row.product.name}</a></h3><p>${row.item[1]} · SKU ${row.item[0]}</p></div><strong>${money(row.item[2]*row.qty)}</strong><div class="cart-controls"><button type="button" data-cart-minus="${row.key}" aria-label="${t("shop.decrease")}">−</button><b>${row.qty}</b><button type="button" data-cart-plus="${row.key}" aria-label="${t("shop.increase")}">+</button><button class="remove" type="button" data-cart-remove="${row.key}">${t("shop.remove")}</button></div></article>`).join("")}</div><div class="coupon"><label for="couponInput">${t("shop.coupon")}</label><input id="couponInput" value="${couponActive()?"WELCOME5":""}" placeholder="${t("shop.couponPlaceholder")}"><button type="button" id="applyCoupon">${t("shop.apply")}</button></div><p class="coupon-message" id="couponMessage" aria-live="polite">${message||(couponActive()?t("shop.couponOk"):"")}</p><div class="totals"><div><span>${t("shop.subtotal")}</span><b>${money(subtotal)}</b></div>${discount?`<div><span>${t("shop.discount")}</span><b>−${money(discount)}</b></div>`:""}<div class="grand"><span>${t("shop.total")}</span><b>${money(total)}</b></div></div><a class="quote-button" href="https://wa.me/14077519801?text=${encodeURIComponent(quote)}" target="_blank" rel="noopener">${t("shop.send")}</a><button class="clear-cart" type="button" id="clearCart">${t("shop.clear")}</button><p class="cart-terms">${t("shop.terms")}</p>`;
+ panel.querySelectorAll("[data-cart-minus]").forEach(button=>button.onclick=()=>{const cart=readCart(),key=button.dataset.cartMinus;cart[key]=Math.max(0,(Number(cart[key])||0)-1);if(!cart[key])delete cart[key];saveCart(cart);renderShopCart()});
+ panel.querySelectorAll("[data-cart-plus]").forEach(button=>button.onclick=()=>{const cart=readCart(),key=button.dataset.cartPlus;cart[key]=(Number(cart[key])||0)+1;saveCart(cart);renderShopCart()});
+ panel.querySelectorAll("[data-cart-remove]").forEach(button=>button.onclick=()=>{const cart=readCart();delete cart[button.dataset.cartRemove];saveCart(cart);renderShopCart()});
+ panel.querySelector("#applyCoupon").onclick=()=>{const value=panel.querySelector("#couponInput").value.trim().toUpperCase();if(value==="WELCOME5"){localStorage.setItem("pepmax-coupon-v1","WELCOME5");renderShopCart(t("shop.couponOk"))}else{localStorage.removeItem("pepmax-coupon-v1");renderShopCart(t("shop.couponInvalid"))}};
+ panel.querySelector("#clearCart").onclick=()=>{localStorage.removeItem("pepmax-cart-v1");renderShopCart()};
+}
+function shop(){catalog();renderShopCart();if(location.hash==="#checkout")requestAnimationFrame(()=>document.querySelector("#checkout")?.scrollIntoView({behavior:"smooth",block:"start"}))}
 function detail(slug){
  updateNavCart();
  const p=PRODUCTS.find(x=>x.slug===slug);if(!p)return;
- document.title=`Comprar ${p.name} | PepMax`;
+ document.title=`${p.name} | PepMax`;
  const params=new URLSearchParams(location.search);
  const requestedSku=(params.get("sku")||"").trim().toLowerCase();
- const requestedDose=(params.get("dose")||"").trim().toLowerCase();
- const requestedIndex=p.items.findIndex(item=>(requestedSku&&String(item[0]).trim().toLowerCase()===requestedSku)||(requestedDose&&String(item[1]).trim().toLowerCase()===requestedDose));
+ const requestedPresentation=(params.get("presentation")||params.get("dose")||"").trim().toLowerCase();
+ const requestedIndex=p.items.findIndex(item=>(requestedSku&&String(item[0]).trim().toLowerCase()===requestedSku)||(requestedPresentation&&String(item[1]).trim().toLowerCase()===requestedPresentation));
  let selected=requestedIndex>=0?requestedIndex:0,qty=1;
  const draw=()=>{
   const x=p.items[selected];
-  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">Produto para pesquisa</span><h1>${p.name}</h1><p class="lead">${p.desc}</p><figure class="product-visual">${productImageMarkup(p,x,"eager",selected)}</figure><div class="facts"><div class="fact"><b>Pó liofilizado</b>Apresentação de pesquisa</div><div class="fact"><b>Imagem por dose</b>Rótulo: ${x[1]}</div><div class="fact"><b>Uso em pesquisa</b>Não destinado ao consumo humano</div></div></div><aside class="panel purchase-panel"><span class="eyebrow">Comprar ${p.name}</span><div class="purchase-summary"><span>Apresentação selecionada</span><b>${x[1]}</b><strong>${money(x[2])} <small>por vial</small></strong></div><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="Diminuir quantidade">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="Quantidade de vials"><button type="button" data-plus aria-label="Aumentar quantidade">+</button></div><button class="btn" type="button" data-cart-add>Comprar</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../shop/#checkout">Abrir carrinho e finalizar →</a><p class="sku">Preços em dólar americano, por vial. Frete e impostos não incluídos.</p></aside>${techSpecs(slug)}`;
-  document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);const item=p.items[selected];const sku=String(item[0]||"").trim();history.replaceState(null,"",sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?dose=${encodeURIComponent(item[1])}`);draw()});
+  document.querySelector("#product").innerHTML=`<div class="product-copy"><span class="eyebrow">${t("product.kicker")}</span><h1>${p.name}</h1><p class="lead">${t("product.desc")}</p><figure class="product-visual">${productImageMarkup(p,x,"eager",selected)}</figure><div class="facts"><div class="fact"><b>${t("product.format")}</b>${t("product.formatValue")}</div><div class="fact"><b>${t("product.label")}</b>${t("product.labelValue")}: ${x[1]}</div><div class="fact"><b>${t("product.scope")}</b>${t("product.scopeValue")}</div></div></div><aside class="panel purchase-panel"><span class="eyebrow">${t("product.buy")} ${p.name}</span><div class="purchase-summary"><span>${t("product.selected")}</span><b>${x[1]}</b><strong>${money(x[2])} <small>${t("product.perVial")}</small></strong></div><div class="variants">${p.items.map((v,i)=>`<label class="variant ${i===selected?"selected":""}"><span><input type="radio" name="variant" value="${i}" ${i===selected?"checked":""}> <b>${v[1]}</b><br><span class="sku">SKU ${v[0]}</span></span><b>${money(v[2])}</b></label>`).join("")}</div><div class="buy-controls"><div class="qty-control"><button type="button" data-minus aria-label="${t("product.decrease")}">−</button><input id="detailQty" type="number" min="1" value="${qty}" aria-label="${t("product.quantity")}"><button type="button" data-plus aria-label="${t("product.increase")}">+</button></div><button class="btn" type="button" data-cart-add>${t("product.add")}</button></div><p class="cart-confirm" id="cartConfirm" aria-live="polite"></p><a class="cart-link" href="../../shop/#checkout">${t("product.openCart")}</a><p class="sku">${t("product.pricing")}</p></aside>${techSpecs(slug)}`;
+  document.querySelectorAll('input[name="variant"]').forEach(el=>el.onchange=()=>{selected=Number(el.value);const item=p.items[selected];const sku=String(item[0]||"").trim();const langParam=i18n().lang!=="pt"?`&lang=${i18n().lang}`:"";history.replaceState(null,"",sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}${langParam}`:`?presentation=${encodeURIComponent(item[1])}${langParam}`);draw()});
   document.querySelector("[data-minus]").onclick=()=>{qty=Math.max(1,qty-1);draw()};
   document.querySelector("[data-plus]").onclick=()=>{qty+=1;draw()};
   document.querySelector("#detailQty").onchange=e=>{qty=Math.max(1,Math.floor(Number(e.target.value))||1);e.target.value=qty};
@@ -1260,7 +1349,7 @@ function detail(slug){
    let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
    const key=cartKey(p,x);
    cart[key]=(Number(cart[key])||0)+qty;localStorage.setItem("pepmax-cart-v1",JSON.stringify(cart));updateNavCart();
-   document.querySelector("#cartConfirm").textContent=`${qty} vial${qty>1?"s":""} de ${x[1]} adicionado${qty>1?"s":""} ao carrinho.`;
+   document.querySelector("#cartConfirm").textContent=t("product.added",{qty,presentation:x[1]});
   };
  };
  draw();

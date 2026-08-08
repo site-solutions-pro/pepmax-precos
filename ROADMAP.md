@@ -1,5 +1,35 @@
 # Roadmap PepMax
 
+## Prioridade editorial — 08/08/2026
+
+A geração de novos ativos fotográficos está pausada. A frente ativa passa a ser
+conteúdo, arquitetura de informação e internacionalização do domínio comercial.
+
+Entregas desta etapa:
+
+- Home revisada para destacar a biblioteca de 100 registros moleculares, o
+  modelo editorial e os limites do conteúdo;
+- Shop reorganizado como página própria, com busca, catálogo, carrinho,
+  WELCOME5, totalização e orçamento por WhatsApp;
+- política comercial ampliada para confirmação, cancelamento, avaria,
+  divergência, atraso de expedição, armazenamento e direitos obrigatórios;
+- nova página de FAQs;
+- interface PT/EN/ES com seletor persistente no cabeçalho;
+- 100 páginas individuais regeneradas em um único template compartilhado;
+- fichas enriquecidas com orientação de leitura, status documental e ressalvas
+  para sais, hidratos, modificações terminais, blends e nomes comerciais;
+- remoção do dossiê promocional de Retatrutida do fluxo público e neutralização
+  da URL antiga por redirecionamento para a ficha molecular;
+- preservação integral de produtos, apresentações, SKUs, preços, cupom, chave
+  de carrinho e canal comercial.
+
+Próximos lotes editoriais:
+
+1. revisão linguística aprofundada dos textos científicos em inglês e espanhol;
+2. revisão técnica por amostragem e reconciliação das fontes primárias;
+3. auditoria final de acessibilidade, SEO internacional e metadados;
+4. retomada de imagens somente após autorização expressa.
+
 ## Status do projeto
 
 ### Fase 1 — concluída em 30/07/2026

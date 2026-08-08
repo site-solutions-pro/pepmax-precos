@@ -6,184 +6,91 @@
   <meta name="theme-color" content="#070b17">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index,follow">
-  <meta name="description" content="PepMax: catálogo profissional de compostos destinados exclusivamente à pesquisa laboratorial, com apresentações transparentes e fichas técnicas verificadas.">
+  <meta name="description" data-i18n-content="home.meta" content="PepMax: catálogo profissional de materiais de referência para pesquisa laboratorial, com 100 fichas científicas, apresentações transparentes e fontes verificáveis.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="PepMax">
   <meta property="og:title" content="PepMax — Research compounds with precision">
-  <meta property="og:description" content="Compostos para pesquisa laboratorial com catálogo organizado, apresentações claras e documentação técnica.">
+  <meta property="og:description" content="100 molecular records, transparent presentations and traceable scientific sources.">
   <meta name="twitter:card" content="summary_large_image">
   <title>PepMax — Research compounds with precision</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/home.css?v=20260802-carousel15">
+  <link rel="stylesheet" href="./assets/home.css?v=20260808-trilingual1">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-
-  <div class="research-bar">
-    <div class="shell">
-      <span class="research-dot" aria-hidden="true"></span>
-      <strong>Exclusivamente para pesquisa laboratorial</strong>
-      <span>Não destinado ao consumo humano, veterinário ou alimentício.</span>
-    </div>
-  </div>
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <div class="research-bar"><div class="shell"><span class="research-dot" aria-hidden="true"></span><strong data-i18n="global.research">Exclusivamente para pesquisa laboratorial e uso analítico.</strong><span data-i18n="global.scope">Materiais de referência; não destinados a aplicações clínicas, diagnósticas, veterinárias ou alimentícias.</span></div></div>
 
   <header class="site-header" id="topo">
     <div class="shell header-inner">
-      <a class="brand" href="./" aria-label="PepMax — página inicial">
-        <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
-        <span>Pep<span>MAX</span></span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Navegação principal">
-        <a class="active" href="./">Home</a>
-        <a href="./shop/">Shop</a>
-        <a href="./peptides/">Peptides</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="https://wa.me/14077519801" target="_blank" rel="noopener">Contato</a>
+      <a class="brand" href="./" aria-label="PepMax"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Pep<span>MAX</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="active" href="./" data-i18n="nav.home">Home</a>
+        <a href="./shop/" data-i18n="nav.shop">Shop</a>
+        <a href="./peptides/" data-i18n="nav.molecules">Moléculas</a>
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="./faqs/" data-i18n="nav.faq">FAQs</a>
+        <a href="./politicas/" data-i18n="nav.policies">Políticas</a>
       </nav>
-
-      <a class="header-shop" href="./shop/#checkout" aria-label="Abrir carrinho no Shop">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6"/></svg>
-        <span>Shop</span><b id="cartCount">0</b>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+      <label class="language-control"><span data-i18n="lang.label">Idioma</span><select data-language-select><option value="pt">PT</option><option value="en">EN</option><option value="es">ES</option></select></label>
+      <a class="header-shop" href="./shop/#checkout" data-i18n-aria-label="nav.cart"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6"/></svg><b id="cartCount">0</b></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-panel">
-      <div class="mobile-menu-head">
-        <span class="brand"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Pep<span>MAX</span></span></span>
-        <button type="button" data-menu-close aria-label="Fechar menu">×</button>
-      </div>
-      <nav aria-label="Navegação móvel">
-        <a href="./" data-menu-close>Home</a>
-        <a href="./shop/" data-menu-close>Shop</a>
-        <a href="./peptides/" data-menu-close>Peptides</a>
-        <a href="#sobre" data-menu-close>Sobre nós</a>
-        <a href="https://wa.me/14077519801" target="_blank" rel="noopener">Contato</a>
-      </nav>
-      <p>Compostos destinados exclusivamente a pesquisa laboratorial.</p>
-    </div>
-    <button class="mobile-menu-veil" data-menu-close aria-label="Fechar menu"></button>
+      <div class="mobile-menu-head"><span class="brand"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Pep<span>MAX</span></span></span><button type="button" data-menu-close aria-label="Close menu">×</button></div>
+      <nav aria-label="Mobile navigation"><a href="./" data-menu-close data-i18n="nav.home">Home</a><a href="./shop/" data-menu-close data-i18n="nav.shop">Shop</a><a href="./peptides/" data-menu-close data-i18n="nav.molecules">Moléculas</a><a href="#sobre" data-menu-close data-i18n="nav.about">Sobre</a><a href="./faqs/" data-menu-close data-i18n="nav.faq">FAQs</a><a href="./politicas/" data-menu-close data-i18n="nav.policies">Políticas</a></nav>
+      <p data-i18n="global.research">Exclusivamente para pesquisa laboratorial e uso analítico.</p>
+    </div><button class="mobile-menu-veil" data-menu-close aria-label="Close menu"></button>
   </aside>
 
   <main id="conteudo">
     <section class="hero shell">
       <div class="hero-copy">
-        <span class="eyebrow"><i></i> PepMax research compounds</span>
-        <h1>Pesquisa exige <span>precisão.</span><br>Sua fonte também.</h1>
-        <p>Um catálogo profissional de compostos para pesquisa laboratorial, com apresentações transparentes, documentação técnica e compra assistida.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="./shop/">Explorar o Shop <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="#sobre">Conhecer a PepMax</a>
-        </div>
-        <div class="hero-proof" aria-label="Diferenciais PepMax">
-          <div><b>100</b><span>produtos catalogados</span></div>
-          <div><b>100</b><span>fichas técnicas</span></div>
-          <div><b>1:1</b><span>compra assistida</span></div>
-        </div>
+        <span class="eyebrow"><i></i><span data-i18n="home.eyebrow">Biblioteca molecular PepMax</span></span>
+        <h1 data-i18n="home.title">Precisão para pesquisar. Clareza para comparar.</h1>
+        <p data-i18n="home.lead">Explore 100 registros moleculares com identidade, estrutura, dados físico-químicos, contexto histórico e fontes rastreáveis — conectados a um Shop organizado por apresentação e SKU.</p>
+        <div class="hero-actions"><a class="button primary" href="./shop/" data-i18n="home.primary">Explorar o Shop ↗</a><a class="button secondary" href="./peptides/" data-i18n="home.secondary">Conhecer a biblioteca</a></div>
+        <div class="hero-proof"><div><b>100</b><span data-i18n="home.proof1">moléculas catalogadas</span></div><div><b>100</b><span data-i18n="home.proof2">fichas científicas</span></div><div><b>3</b><span data-i18n="home.proof3">idiomas disponíveis</span></div></div>
       </div>
 
-      <div class="hero-stage hero-carousel" id="heroCarousel" role="region" aria-roledescription="carrossel" aria-label="15 peptídeos em destaque">
-        <div class="carousel-glow" aria-hidden="true"></div>
-        <div class="carousel-counter" aria-hidden="true"><b id="carouselCurrent">01</b><span>/ 15</span></div>
-        <a class="carousel-slide" id="carouselSlide" href="./peptides/retatrutida/?sku=RT5" aria-label="Ver Retatrutida 5 mg">
-          <div class="carousel-media">
-            <span class="carousel-rank" aria-hidden="true">01</span>
-            <img class="carousel-vial final-vial" id="carouselImage" src="./peptides/assets/images/retatrutida-approved.webp" alt="Vial PepMax Retatrutida, 5 mg" width="1047" height="1502">
-          </div>
-          <div class="carousel-info">
-            <span id="carouselCategory">Agonista peptídico multirreceptor</span>
-            <h2 id="carouselName">Retatrutida</h2>
-            <div><strong id="carouselDose">5 mg</strong><span>Ver produto e comprar <b aria-hidden="true">↗</b></span></div>
-          </div>
+      <div class="hero-stage hero-carousel" id="heroCarousel" role="region" aria-roledescription="carousel" aria-label="Featured molecular records">
+        <div class="carousel-glow" aria-hidden="true"></div><div class="carousel-counter" aria-hidden="true"><b id="carouselCurrent">01</b><span>/ 15</span></div>
+        <a class="carousel-slide" id="carouselSlide" href="./peptides/retatrutida/?sku=RT5">
+          <div class="carousel-media"><span class="carousel-rank" aria-hidden="true">01</span><img class="carousel-vial final-vial" id="carouselImage" src="./peptides/assets/images/retatrutida-approved.webp" alt="PepMax Retatrutida reference vial, 5 mg" width="1047" height="1502"></div>
+          <div class="carousel-info"><span id="carouselCategory" data-i18n="home.carousel">Registros em destaque</span><h2 id="carouselName">Retatrutida</h2><div><strong id="carouselDose">5 mg</strong><span data-i18n="home.carouselAction">Abrir ficha técnica ↗</span></div></div>
         </a>
-        <button class="carousel-arrow carousel-prev" id="carouselPrev" type="button" aria-label="Produto anterior">←</button>
-        <button class="carousel-arrow carousel-next" id="carouselNext" type="button" aria-label="Próximo produto">→</button>
-        <div class="carousel-dots" id="carouselDots" aria-label="Selecionar produto do carrossel"></div>
-        <p class="carousel-note" id="carouselStatus" aria-live="polite">Retatrutida, slide 1 de 15</p>
+        <button class="carousel-arrow carousel-prev" id="carouselPrev" type="button" aria-label="Previous record">←</button><button class="carousel-arrow carousel-next" id="carouselNext" type="button" aria-label="Next record">→</button><div class="carousel-dots" id="carouselDots" aria-label="Select carousel record"></div><p class="carousel-note" id="carouselStatus" aria-live="polite"></p>
       </div>
     </section>
 
     <section class="market shell" aria-labelledby="marketTitle">
-      <div class="section-heading">
-        <div><span class="eyebrow"><i></i> Em evidência</span><h2 id="marketTitle">Compostos em destaque na pesquisa contemporânea.</h2></div>
-        <p>Seleção editorial baseada em visibilidade científica e interesse de catálogo — sem alegações terapêuticas ou indicação de uso.</p>
-      </div>
-
+      <div class="section-heading"><div><span class="eyebrow"><i></i><span data-i18n="home.marketKicker">Biblioteca técnica</span></span><h2 id="marketTitle" data-i18n="home.marketTitle">Informação molecular organizada para leitura crítica.</h2></div><p data-i18n="home.marketLead">Cada registro separa identidade química, estrutura, dados moleculares, proveniência científica e referências. Incertezas e nomes comerciais ambíguos permanecem explicitamente sinalizados.</p></div>
       <div class="product-grid">
-        <a class="product-card" href="./peptides/retatrutida/">
-          <div class="product-media"><img class="vial-image" src="./peptides/assets/images/retatrutida-approved.webp" alt="Vial PepMax Retatrutida" width="1047" height="1502" loading="lazy"></div>
-          <div class="product-meta"><span>Pesquisa metabólica</span><b>Retatrutida</b><i>Ver ficha <em>↗</em></i></div>
-        </a>
-        <a class="product-card" href="./peptides/tirzepatida/">
-          <div class="product-media"><img class="vial-image" src="./peptides/assets/images/tirzepatida-approved.webp" alt="Vial PepMax Tirzepatida" width="1047" height="1502" loading="lazy"></div>
-          <div class="product-meta"><span>Pesquisa metabólica</span><b>Tirzepatida</b><i>Ver ficha <em>↗</em></i></div>
-        </a>
-        <a class="product-card" href="./peptides/bpc-157/">
-          <div class="product-media"><img class="vial-image" src="./peptides/assets/images/bpc-157-approved.webp" alt="Vial PepMax BPC-157" width="1047" height="1502" loading="lazy"></div>
-          <div class="product-meta"><span>Pesquisa peptídica</span><b>BPC‑157</b><i>Ver ficha <em>↗</em></i></div>
-        </a>
-        <a class="product-card" href="./peptides/mots-c/">
-          <div class="product-media"><img class="vial-image" src="./peptides/assets/images/mots-c-approved.webp" alt="Vial PepMax MOTS-c" width="1047" height="1502" loading="lazy"></div>
-          <div class="product-meta"><span>Pesquisa mitocondrial</span><b>MOTS‑c</b><i>Ver ficha <em>↗</em></i></div>
-        </a>
-      </div>
-      <div class="section-action"><a href="./shop/">Ver catálogo e apresentações <span>→</span></a></div>
+        <a class="product-card" href="./peptides/retatrutida/"><div class="product-media"><img class="vial-image" src="./peptides/assets/images/retatrutida-approved.webp" alt="PepMax Retatrutida reference vial" width="1047" height="1502" loading="lazy"></div><div class="product-meta"><span data-i18n="home.cardResearch">Registro molecular</span><b>Retatrutida</b><i data-i18n="home.cardOpen">Ver ficha ↗</i></div></a>
+        <a class="product-card" href="./peptides/tirzepatida/"><div class="product-media"><img class="vial-image" src="./peptides/assets/images/tirzepatida-approved.webp" alt="PepMax Tirzepatida reference vial" width="1047" height="1502" loading="lazy"></div><div class="product-meta"><span data-i18n="home.cardResearch">Registro molecular</span><b>Tirzepatida</b><i data-i18n="home.cardOpen">Ver ficha ↗</i></div></a>
+        <a class="product-card" href="./peptides/bpc-157/"><div class="product-media"><img class="vial-image" src="./peptides/assets/images/bpc-157-approved.webp" alt="PepMax BPC-157 reference vial" width="1047" height="1502" loading="lazy"></div><div class="product-meta"><span data-i18n="home.cardResearch">Registro molecular</span><b>BPC-157</b><i data-i18n="home.cardOpen">Ver ficha ↗</i></div></a>
+        <a class="product-card" href="./peptides/mots-c/"><div class="product-media"><img class="vial-image" src="./peptides/assets/images/mots-c-approved.webp" alt="PepMax MOTS-c reference vial" width="1047" height="1502" loading="lazy"></div><div class="product-meta"><span data-i18n="home.cardResearch">Registro molecular</span><b>MOTS-c</b><i data-i18n="home.cardOpen">Ver ficha ↗</i></div></a>
+      </div><div class="section-action"><a href="./peptides/" data-i18n="home.marketAction">Ver as 100 moléculas →</a></div>
     </section>
 
     <section class="about shell" id="sobre">
-      <div class="about-visual" aria-hidden="true">
-        <div class="molecule-orbit orbit-one"><i></i><i></i><i></i></div>
-        <div class="molecule-orbit orbit-two"><i></i><i></i></div>
-        <span class="about-mark">P<span>M</span></span>
-        <small>PRECISION / RESEARCH / CLARITY</small>
-      </div>
-      <div class="about-copy">
-        <span class="eyebrow"><i></i> Sobre a PepMax</span>
-        <h2>Clareza comercial.<br><span>Rigor informacional.</span></h2>
-        <p>A PepMax organiza compostos para pesquisa em uma experiência objetiva: produtos identificados com consistência, apresentações claras e acesso direto à documentação técnica disponível.</p>
-        <p>Conteúdo científico e operação comercial permanecem separados. Materiais experimentais são apresentados como insumos de pesquisa — nunca como medicamentos ou recomendação de uso.</p>
-        <a class="text-link" href="./peptides/">Explorar a biblioteca de produtos <span>↗</span></a>
-      </div>
+      <div class="about-visual" aria-hidden="true"><div class="molecule-orbit orbit-one"><i></i><i></i><i></i></div><div class="molecule-orbit orbit-two"><i></i><i></i></div><span class="about-mark">P<span>M</span></span><small>IDENTITY / SOURCES / CLARITY</small></div>
+      <div class="about-copy"><span class="eyebrow"><i></i><span data-i18n="home.aboutKicker">Sobre a PepMax</span></span><h2 data-i18n="home.aboutTitle">Clareza comercial. Rigor informacional.</h2><p data-i18n="home.aboutP1">A PepMax reúne catálogo e documentação em uma experiência objetiva.</p><p data-i18n="home.aboutP2">O conteúdo técnico permanece separado da operação comercial.</p><a class="text-link" href="./peptides/" data-i18n="home.aboutLink">Explorar a biblioteca molecular ↗</a></div>
     </section>
 
-    <section class="standards shell" aria-labelledby="standardsTitle">
-      <div class="standards-intro"><span class="eyebrow"><i></i> Padrão PepMax</span><h2 id="standardsTitle">Uma experiência construída para decidir com informação.</h2></div>
-      <div class="standards-grid">
-        <article><span>01</span><h3>Catálogo transparente</h3><p>Dosagens, apresentações, códigos e preços por vial organizados para comparação rápida.</p></article>
-        <article><span>02</span><h3>Documentação técnica</h3><p>Identidade molecular, origem e fontes científicas apresentadas com ressalvas quando necessárias.</p></article>
-        <article><span>03</span><h3>Orçamento assistido</h3><p>Selecione apresentação e quantidade, monte o pedido e envie o orçamento diretamente para atendimento.</p></article>
-      </div>
-    </section>
+    <section class="standards shell" aria-labelledby="standardsTitle"><div class="standards-intro"><span class="eyebrow"><i></i><span data-i18n="home.standardKicker">Padrão editorial</span></span><h2 id="standardsTitle" data-i18n="home.standardTitle">Uma ficha útil precisa mostrar fatos e limites.</h2></div><div class="standards-grid"><article><span>01</span><h3 data-i18n="home.standard1Title">Identidade verificável</h3><p data-i18n="home.standard1Text">Nome, classe, estrutura ou composição e identificadores apresentados sem preencher lacunas por suposição.</p></article><article><span>02</span><h3 data-i18n="home.standard2Title">Contexto científico</h3><p data-i18n="home.standard2Text">Origem, atribuição histórica, nomenclatura e limitações documentais reunidas em uma leitura consistente.</p></article><article><span>03</span><h3 data-i18n="home.standard3Title">Fontes rastreáveis</h3><p data-i18n="home.standard3Text">Referências externas ligadas ao registro, com pontos de atenção para variantes, sais, blends e nomes comerciais.</p></article></div></section>
 
-    <section class="compliance shell">
-      <div><span class="eyebrow"><i></i> Research use only</span><h2>Pesquisa responsável começa com limites claros.</h2></div>
-      <p>Os produtos exibidos neste site destinam-se exclusivamente a pesquisa laboratorial. Não são medicamentos e não se destinam ao consumo humano, veterinário ou alimentício.</p>
-    </section>
-
-    <section class="contact shell">
-      <div class="contact-copy"><span class="eyebrow"><i></i> Atendimento comercial</span><h2>Pronto para estruturar seu pedido?</h2><p>Consulte as apresentações no Shop ou fale diretamente com a equipe PepMax.</p></div>
-      <div class="contact-actions"><a class="button primary" href="./shop/">Acessar o Shop</a><a class="button secondary" href="https://wa.me/14077519801" target="_blank" rel="noopener">Falar no WhatsApp <span>↗</span></a></div>
-    </section>
+    <section class="compliance shell"><div><span class="eyebrow"><i></i><span data-i18n="home.complianceKicker">Escopo responsável</span></span><h2 data-i18n="home.complianceTitle">Pesquisa responsável começa com limites claros.</h2></div><p data-i18n="home.complianceText">O site não publica protocolos, instruções de preparação, recomendações individualizadas ou alegações de prevenção, tratamento ou cura.</p></section>
+    <section class="contact shell"><div class="contact-copy"><span class="eyebrow"><i></i><span data-i18n="home.contactKicker">Atendimento comercial</span></span><h2 data-i18n="home.contactTitle">Pronto para estruturar seu pedido?</h2><p data-i18n="home.contactText">Compare apresentações no Shop ou fale diretamente com a equipe PepMax.</p></div><div class="contact-actions"><a class="button primary" href="./shop/" data-i18n="home.contactShop">Acessar o Shop</a><a class="button secondary" href="https://wa.me/14077519801" target="_blank" rel="noopener" data-i18n="home.contactWhats">Falar no WhatsApp ↗</a></div></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div><a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Pep<span>MAX</span></span></a><p>Research compounds with precision.</p></div>
-      <nav aria-label="Links do rodapé"><a href="./shop/">Shop</a><a href="./peptides/">Peptides</a><a href="#sobre">Sobre nós</a><a href="./politicas/">Políticas</a></nav>
-      <div class="footer-contact"><span>Contato comercial</span><a href="https://wa.me/14077519801" target="_blank" rel="noopener">+1 407 751 9801</a></div>
-    </div>
-    <div class="shell footer-legal"><span>© 2026 PepMax.</span><p>Produtos exclusivamente para pesquisa laboratorial. Disponibilidade sujeita à verificação regulatória e ao cadastro do comprador.</p><a href="#topo">Voltar ao topo ↑</a></div>
-  </footer>
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Pep<span>MAX</span></span></a><p data-i18n="footer.tagline">Research compounds with precision.</p></div><nav aria-label="Footer links"><a href="./shop/" data-i18n="nav.shop">Shop</a><a href="./peptides/" data-i18n="nav.molecules">Moléculas</a><a href="./faqs/" data-i18n="nav.faq">FAQs</a><a href="./politicas/" data-i18n="nav.policies">Políticas</a></nav><div class="footer-contact"><span data-i18n="nav.contact">Contato</span><a href="https://wa.me/14077519801" target="_blank" rel="noopener">+1 407 751 9801</a></div></div><div class="shell footer-legal"><span>© 2026 PepMax.</span><p data-i18n="footer.legal">Materiais exclusivamente para pesquisa laboratorial.</p><a href="#topo" data-i18n="footer.top">Voltar ao topo ↑</a></div></footer>
 
-  <script src="./assets/home.js?v=20260802-carousel15"></script>
+  <script src="./assets/site-i18n.js?v=20260808-trilingual1"></script>
+  <script src="./assets/home.js?v=20260808-content1"></script>
 </body>
 </html>
