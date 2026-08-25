@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "project": "PepMax Commerce Core",
+  "goal": "Transform PepMax into a production-ready eShop through governed multi-agent execution.",
+  "branch_policy": {
+    "default_base": "main",
+    "direct_writes_to_main": false,
+    "require_pr": true,
+    "require_qa_gate": true
+  },
+  "agents": [
+    {
+      "id": "A0",
+      "name": "orchestrator",
+      "owns": ["planning", "task decomposition", "dependencies", "assignment", "PR coordination", "handoff"],
+      "inputs": ["ROADMAP.md", "AGENTS.md", "commerce-core/**", "open PR state"],
+      "outputs": ["execution plan", "task routing", "acceptance criteria", "release candidate handoff"],
+      "can_write": true,
+      "can_release": false
+    },
+    {
+      "id": "A1",
+      "name": "commerce-data",
+      "owns": ["products", "variants", "SKU", "prices", "inventory", "catalog snapshots", "legacy data migration"],
+      "inputs": ["legacy storefront data", "product.schema.json"],
+      "outputs": ["canonical catalog", "public catalog snapshot", "validation report"],
+      "can_write": true,
+      "can_release": false
+    },
+    {
+      "id": "A2",
+      "name": "storefront",
+      "owns": ["home", "shop", "product pages", "cart UX", "responsive", "accessibility"],
+      "inputs": ["public catalog snapshot", "design assets"],
+      "outputs": ["storefront changes", "UI parity report"],
+      "can_write": true,
+      "can_release": false
+    },
+    {
+      "id": "A3",
+      "name": "checkout-orders",
+      "owns": ["cart persistence", "checkout", "orders", "payments abstraction", "shipping interface", "tax interface", "fulfillment"],
+      "inputs": ["order.schema.json", "canonical variants"],
+      "outputs": ["checkout contracts", "order state implementation", "integration tests"],
+      "can_write": true,
+      "can_release": false
+    },
+    {
+      "id": "A4",
+      "name": "content-seo",
+      "owns": ["biblioteca", "technical copy", "metadata", "internal links", "multilingual consistency"],
+      "inputs": ["approved scientific sources", "canonical product identity"],
+      "outputs": ["reviewable content changes", "SEO checks"],
+      "can_write": true,
+      "can_release": false
+    },
+    {
+      "id": "A5",
+      "name": "qa-compliance",
+      "owns": ["schema validation", "SKU parity", "price parity", "link checks", "mobile checks", "accessibility", "public-private boundary", "content compliance"],
+      "inputs": ["candidate diff", "schemas", "public snapshot", "AGENTS.md"],
+      "outputs": ["blocking findings", "non-blocking findings", "pass/fail gate"],
+      "can_write": false,
+      "can_release": false
+    },
+    {
+      "id": "A6",
+      "name": "release",
+      "owns": ["release readiness", "CI review", "deployment checklist", "rollback", "smoke checks"],
+      "inputs": ["A5 pass", "candidate PR", "deployment configuration"],
+      "outputs": ["release report", "deployment decision", "post-deploy verification"],
+      "can_write": true,
+      "can_release": true
+    }
+  ],
+  "execution_graph": {
+    "start": "A0",
+    "parallel_workers": ["A1", "A2", "A3", "A4"],
+    "quality_gate": "A5",
+    "release_gate": "A6"
+  }
+}
