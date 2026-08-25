@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pepmax.example/schemas/public-catalog.schema.json",
+  "title": "PepMax Public Catalog",
+  "type": "object",
+  "required": ["version", "generatedAt", "products"],
+  "properties": {
+    "version": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "slug", "name", "researchOnly", "variants"],
+        "properties": {
+          "id": { "type": "string" },
+          "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": ["string", "null"] },
+          "brand": { "type": "string" },
+          "productType": { "type": ["string", "null"] },
+          "researchOnly": { "const": true },
+          "seo": {
+            "type": "object",
+            "properties": {
+              "title": { "type": ["string", "null"] },
+              "description": { "type": ["string", "null"] }
+            },
+            "additionalProperties": false
+          },
+          "variants": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "sku", "presentation", "price", "currency", "available"],
+              "properties": {
+                "id": { "type": "string" },
+                "sku": { "type": "string", "minLength": 1 },
+                "presentation": { "type": "string", "minLength": 1 },
+                "price": { "type": "number", "minimum": 0 },
+                "compareAtPrice": { "type": ["number", "null"], "minimum": 0 },
+                "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+                "available": { "type": "boolean" },
+                "imageUrl": { "type": ["string", "null"] },
+                "weight": { "type": ["number", "null"], "minimum": 0 }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
