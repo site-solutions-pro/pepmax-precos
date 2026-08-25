@@ -1,0 +1,84 @@
+name: Commerce Core Quality
+
+on:
+  pull_request:
+    paths:
+      - 'commerce-core/**'
+      - 'AGENTS.md'
+      - '.github/workflows/commerce-core-quality.yml'
+  push:
+    branches:
+      - 'feat/commerce-core-v1'
+    paths:
+      - 'commerce-core/**'
+      - 'AGENTS.md'
+      - '.github/workflows/commerce-core-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool commerce-core/schemas/product.schema.json >/dev/null
+          python -m json.tool commerce-core/schemas/order.schema.json >/dev/null
+          python -m json.tool commerce-core/agents/manifest.json >/dev/null
+
+      - name: Validate required agent roles
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('commerce-core/agents/manifest.json').read_text())
+          ids={a['id'] for a in data['agents']}
+          expected={f'A{i}' for i in range(7)}
+          missing=expected-ids
+          if missing:
+              raise SystemExit(f'Missing agents: {sorted(missing)}')
+          if data['branch_policy'].get('direct_writes_to_main') is not False:
+              raise SystemExit('direct_writes_to_main must remain false')
+          if data['branch_policy'].get('require_qa_gate') is not True:
+              raise SystemExit('require_qa_gate must remain true')
+          print('Agent manifest OK')
+          PY
+
+      - name: Guard public/private boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          public_roots=[Path('index.html'), Path('assets'), Path('shop'), Path('peptides'), Path('biblioteca'), Path('politicas')]
+          patterns=[
+              re.compile(r'\bsupplier_cost\b', re.I),
+              re.compile(r'\bsupplier_id\b', re.I),
+              re.compile(r'\bprivate_margin\b', re.I),
+          ]
+          hits=[]
+          for root in public_roots:
+              paths=[root] if root.is_file() else (root.rglob('*') if root.exists() else [])
+              for path in paths:
+                  if not path.is_file() or path.suffix.lower() in {'.webp','.png','.jpg','.jpeg','.gif','.ico','.woff','.woff2'}:
+                      continue
+                  try:
+                      text=path.read_text(errors='ignore')
+                  except Exception:
+                      continue
+                  for pattern in patterns:
+                      if pattern.search(text):
+                          hits.append(f'{path}: {pattern.pattern}')
+          if hits:
+              raise SystemExit('Private commerce field leaked to public tree:\n'+'\n'.join(hits))
+          print('Public/private boundary OK')
+          PY
