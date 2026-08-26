@@ -5,6 +5,9 @@ on:
     paths:
       - 'commerce-core/**'
       - 'peptides/assets/catalog.js'
+      - 'assets/home.js'
+      - 'assets/commerce-home-bridge.js'
+      - 'index.html'
       - 'AGENTS.md'
       - '.github/workflows/commerce-core-quality.yml'
   push:
@@ -13,6 +16,9 @@ on:
     paths:
       - 'commerce-core/**'
       - 'peptides/assets/catalog.js'
+      - 'assets/home.js'
+      - 'assets/commerce-home-bridge.js'
+      - 'index.html'
       - 'AGENTS.md'
       - '.github/workflows/commerce-core-quality.yml'
 
@@ -51,19 +57,14 @@ jobs:
           ids={a['id'] for a in data['agents']}
           expected_agents={f'A{i}' for i in range(7)}
           missing_agents=expected_agents-ids
-          if missing_agents:
-              raise SystemExit(f'Missing agents: {sorted(missing_agents)}')
+          if missing_agents: raise SystemExit(f'Missing agents: {sorted(missing_agents)}')
           orchestrator_ids={o['id'] for o in data.get('orchestrators', [])}
           expected_orchestrators={f'O{i}' for i in range(4)}
           missing_orchestrators=expected_orchestrators-orchestrator_ids
-          if missing_orchestrators:
-              raise SystemExit(f'Missing orchestrators: {sorted(missing_orchestrators)}')
-          if any(o.get('can_bypass_qa') for o in data['orchestrators']):
-              raise SystemExit('No orchestrator may bypass QA')
-          if data['branch_policy'].get('direct_writes_to_main') is not False:
-              raise SystemExit('direct_writes_to_main must remain false')
-          if data['branch_policy'].get('require_qa_gate') is not True:
-              raise SystemExit('require_qa_gate must remain true')
+          if missing_orchestrators: raise SystemExit(f'Missing orchestrators: {sorted(missing_orchestrators)}')
+          if any(o.get('can_bypass_qa') for o in data['orchestrators']): raise SystemExit('No orchestrator may bypass QA')
+          if data['branch_policy'].get('direct_writes_to_main') is not False: raise SystemExit('direct_writes_to_main must remain false')
+          if data['branch_policy'].get('require_qa_gate') is not True: raise SystemExit('require_qa_gate must remain true')
           print('Agent + orchestrator manifest OK')
           PY
 
@@ -75,16 +76,11 @@ jobs:
           import json
           from pathlib import Path
           run=json.loads(Path('commerce-core/agents/ACTIVE_RUN.json').read_text())
-          if run.get('program_orchestrator') != 'O0':
-              raise SystemExit('O0 must remain the program orchestrator')
-          if run.get('primary_pr') != 13:
-              raise SystemExit('CC-V1.2 must remain linked to PR #13 until explicitly advanced')
-          if run.get('rules', {}).get('direct_main_writes') is not False:
-              raise SystemExit('Active run cannot allow direct writes to main')
-          if run.get('rules', {}).get('qa_required') is not True:
-              raise SystemExit('Active run must require QA')
-          if run.get('rules', {}).get('activate_real_payment_provider') is not False:
-              raise SystemExit('Real payment provider activation is not approved')
+          if run.get('program_orchestrator') != 'O0': raise SystemExit('O0 must remain the program orchestrator')
+          if run.get('primary_pr') != 13: raise SystemExit('CC-V1.2 must remain linked to PR #13 until explicitly advanced')
+          if run.get('rules', {}).get('direct_main_writes') is not False: raise SystemExit('Active run cannot allow direct writes to main')
+          if run.get('rules', {}).get('qa_required') is not True: raise SystemExit('Active run must require QA')
+          if run.get('rules', {}).get('activate_real_payment_provider') is not False: raise SystemExit('Real payment provider activation is not approved')
           print('Active multi-agent run OK')
           PY
 
@@ -110,10 +106,8 @@ jobs:
           import json
           from pathlib import Path
           audit=json.loads(Path('/tmp/catalog-audit.json').read_text())
-          if audit['products'] != 100:
-              raise SystemExit(f"Expected 100 products, found {audit['products']}")
-          if audit['blockingIssues']:
-              raise SystemExit(f"Blocking catalog findings: {audit['blockingIssues']}")
+          if audit['products'] != 100: raise SystemExit(f"Expected 100 products, found {audit['products']}")
+          if audit['blockingIssues']: raise SystemExit(f"Blocking catalog findings: {audit['blockingIssues']}")
           print(f"Independent audit OK: {audit['products']} products / {audit['variants']} variants")
           print(f"Named SKUs: {audit['namedSkus']} | pending SKU normalization: {audit['unassignedSkus']}")
           PY
@@ -128,23 +122,26 @@ jobs:
           from pathlib import Path
           canonical=json.loads(Path('/tmp/pepmax-products.json').read_text())
           public=json.loads(Path('/tmp/public-catalog.json').read_text())
-          if public['productCount'] != canonical['audit']['productCount']:
-              raise SystemExit('Public snapshot product parity failure')
-          if public['variantCount'] != canonical['audit']['variantCount']:
-              raise SystemExit('Public snapshot variant parity failure')
+          if public['productCount'] != canonical['audit']['productCount']: raise SystemExit('Public snapshot product parity failure')
+          if public['variantCount'] != canonical['audit']['variantCount']: raise SystemExit('Public snapshot variant parity failure')
           forbidden={'private','supplier','supplierSku','cost','costCurrency','margin','notes','supplier_cost','supplier_id','private_margin'}
           def walk(value):
               if isinstance(value, dict):
                   for key, child in value.items():
-                      if key in forbidden:
-                          raise SystemExit(f'Private field leaked into public snapshot: {key}')
+                      if key in forbidden: raise SystemExit(f'Private field leaked into public snapshot: {key}')
                       walk(child)
               elif isinstance(value, list):
-                  for child in value:
-                      walk(child)
+                  for child in value: walk(child)
           walk(public)
           print(f"Public snapshot parity OK: {public['productCount']} products / {public['variantCount']} variants")
           PY
+
+      - name: A5 validate Home carousel parity
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp /tmp/public-catalog.json commerce-core/catalog/public.generated.json
+          node commerce-core/scripts/validate-home-parity.mjs
 
       - name: Materialize validated catalog on feature branch
         if: github.event_name == 'push' && github.ref == 'refs/heads/feat/commerce-core-v1'
@@ -183,25 +180,16 @@ jobs:
           from pathlib import Path
           import re
           public_roots=[Path('index.html'), Path('assets'), Path('shop'), Path('peptides'), Path('biblioteca'), Path('politicas')]
-          patterns=[
-              re.compile(r'\bsupplier_cost\b', re.I),
-              re.compile(r'\bsupplier_id\b', re.I),
-              re.compile(r'\bprivate_margin\b', re.I),
-          ]
+          patterns=[re.compile(r'\bsupplier_cost\b', re.I),re.compile(r'\bsupplier_id\b', re.I),re.compile(r'\bprivate_margin\b', re.I)]
           hits=[]
           for root in public_roots:
               paths=[root] if root.is_file() else (root.rglob('*') if root.exists() else [])
               for path in paths:
-                  if not path.is_file() or path.suffix.lower() in {'.webp','.png','.jpg','.jpeg','.gif','.ico','.woff','.woff2'}:
-                      continue
-                  try:
-                      text=path.read_text(errors='ignore')
-                  except Exception:
-                      continue
+                  if not path.is_file() or path.suffix.lower() in {'.webp','.png','.jpg','.jpeg','.gif','.ico','.woff','.woff2'}: continue
+                  try: text=path.read_text(errors='ignore')
+                  except Exception: continue
                   for pattern in patterns:
-                      if pattern.search(text):
-                          hits.append(f'{path}: {pattern.pattern}')
-          if hits:
-              raise SystemExit('Private commerce field leaked to public tree:\n'+'\n'.join(hits))
+                      if pattern.search(text): hits.append(f'{path}: {pattern.pattern}')
+          if hits: raise SystemExit('Private commerce field leaked to public tree:\n'+'\n'.join(hits))
           print('Public/private boundary OK')
           PY
