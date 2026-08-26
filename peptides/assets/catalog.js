@@ -1192,24 +1192,46 @@ const PRODUCT_IMAGE_PATHS=Object.freeze({
  "tesamorelina":"tesamorelina-approved-v2.webp",
  "tirzepatida":"tirzepatida-approved.webp"
 });
-const hasProductImage=p=>Boolean(PRODUCT_IMAGE_PATHS[p.slug]||p.image);
+const htmlEscape=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+const isAssignedSku=value=>{
+ const sku=String(value||"").trim();
+ return Boolean(sku&&sku!=="-"&&sku!=="\u2014");
+};
+const presentationToken=value=>String(value)
+ .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+ .toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const variantToken=item=>isAssignedSku(item?.[0])?String(item[0]).trim().toLowerCase():presentationToken(item?.[1]||"");
+const hasProductImage=p=>Boolean(PRODUCT_IMAGE_PATHS[p.slug]);
 const imageAssetBase=()=>document.querySelector("#catalogGrid")?"./assets/images/":"../assets/images/";
-const productImage=(p,item=p.items[0],index=0)=>PRODUCT_IMAGE_PATHS[p.slug]?imageAssetBase()+PRODUCT_IMAGE_PATHS[p.slug]:p.image||vialPlaceholder(p,item,index);
-const productImageAlt=(p,item=p.items[0])=>`Vial PepMax ${p.name}, ${item[1]}`;
+const productImage=(p,item=p.items[0])=>hasProductImage(p)?`${imageAssetBase()}variants/${p.slug}/${variantToken(item)}.webp`:null;
+const productImageAlt=(p,item=p.items[0])=>`${hasProductImage(p)?"Fotografia":"Imagem em produ\u00e7\u00e3o"} PepMAX ${p.name}, apresenta\u00e7\u00e3o ${item[1]}`;
 const productImageMarkup=(p,item=p.items[0],loading="lazy",index=0)=>{
  const final=hasProductImage(p);
  const color=doseColor(item[1],index);
  const lengthClass=item[1].length>7?" dose-xlong":item[1].length>5?" dose-long":"";
- return `<span class="vial-visual ${final?"has-final-vial":"has-generated-vial"}" style="--dose-color:${color}"><img class="${final?"final-vial":"generated-vial"}" src="${productImage(p,item,index)}" alt="${productImageAlt(p,item)}" width="1047" height="1502" loading="${loading}">${final?`<span class="vial-dose${lengthClass}" aria-hidden="true">${item[1]}</span>`:""}</span>`;
+ const identity=`data-variant-token="${htmlEscape(variantToken(item))}" data-sku="${isAssignedSku(item[0])?htmlEscape(String(item[0]).trim()):""}" data-presentation="${htmlEscape(item[1])}"`;
+ if(!final)return `<span class="vial-visual photography-pending" role="img" aria-label="${htmlEscape(productImageAlt(p,item))}" ${identity}><span class="pending-brand">PepMAX</span><span class="pending-title">Imagem em produ\u00e7\u00e3o</span><span class="pending-presentation">${htmlEscape(item[1])}</span></span>`;
+ return `<span class="vial-visual has-final-vial" style="--dose-color:${color}" ${identity}><img class="final-vial" src="${productImage(p,item)}" alt="${htmlEscape(productImageAlt(p,item))}" width="1047" height="1502" loading="${loading}"><span class="vial-dose${lengthClass}" aria-hidden="true">${htmlEscape(item[1])}</span></span>`;
 };
+const variantQuery=item=>isAssignedSku(item?.[0])?`?sku=${encodeURIComponent(String(item[0]).trim())}`:`?dose=${encodeURIComponent(item?.[1]||"")}`;
 const productUrl=(p,item=p.items[0])=>{
- const sku=String(item?.[0]||"").trim();
- return `./${p.slug}/${sku&&sku!=="—"?`?sku=${encodeURIComponent(sku)}`:`?dose=${encodeURIComponent(item?.[1]||"")}`}`;
+ return `./${p.slug}/${variantQuery(item)}`;
 };
 const cartKey=(p,item)=>{
- const sku=String(item[0]||"").trim();
- return sku&&sku!=="—"?sku:`${p.slug}|${item[1]}`;
+ const sku=String(item?.[0]||"").trim();
+ return isAssignedSku(sku)?sku:`${p.slug}|${item[1]}`;
 };
+const variantViewModel=(p,item=p.items[0],index=0)=>Object.freeze({
+ sku:isAssignedSku(item?.[0])?String(item[0]).trim():null,
+ presentation:item?.[1],
+ price:item?.[2],
+ query:variantQuery(item),
+ url:productUrl(p,item),
+ cartKey:cartKey(p,item),
+ image:productImage(p,item),
+ imageAlt:productImageAlt(p,item),
+ imageMarkup:productImageMarkup(p,item,"lazy",index)
+});
 function updateNavCart(){
  let cart={};try{cart=JSON.parse(localStorage.getItem("pepmax-cart-v1")||"{}")}catch(_){}
  const total=Object.values(cart).reduce((sum,q)=>sum+(Math.max(0,Math.floor(Number(q)))||0),0);
