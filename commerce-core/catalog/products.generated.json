@@ -4710,7 +4710,6 @@
     }
   ],
   "audit": {
-    "generatedAt": "2026-08-26T01:25:28.636Z",
     "source": "peptides/assets/catalog.js",
     "productCount": 100,
     "variantCount": 179,
