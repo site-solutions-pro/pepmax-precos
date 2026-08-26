@@ -17,7 +17,7 @@ on:
       - '.github/workflows/commerce-core-quality.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   contracts:
@@ -93,6 +93,7 @@ jobs:
         run: |
           set -euo pipefail
           node --check commerce-core/storefront/catalog-adapter.js
+          if [ -f assets/commerce-home-bridge.js ]; then node --check assets/commerce-home-bridge.js; fi
 
       - name: Extract canonical catalog
         shell: bash
@@ -144,6 +145,25 @@ jobs:
           walk(public)
           print(f"Public snapshot parity OK: {public['productCount']} products / {public['variantCount']} variants")
           PY
+
+      - name: Materialize validated catalog on feature branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/feat/commerce-core-v1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p commerce-core/catalog
+          cp /tmp/pepmax-products.json commerce-core/catalog/products.generated.json
+          cp /tmp/public-catalog.json commerce-core/catalog/public.generated.json
+          cp /tmp/catalog-audit.json commerce-core/catalog/audit.generated.json
+          git config user.name 'pepmax-commerce-bot'
+          git config user.email 'pepmax-commerce-bot@users.noreply.github.com'
+          git add commerce-core/catalog/products.generated.json commerce-core/catalog/public.generated.json commerce-core/catalog/audit.generated.json
+          if git diff --cached --quiet; then
+            echo 'Generated catalog already materialized.'
+          else
+            git commit -m 'chore: materialize validated commerce catalog snapshots'
+            git push origin HEAD:feat/commerce-core-v1
+          fi
 
       - name: Upload generated catalog artifacts
         uses: actions/upload-artifact@v4
