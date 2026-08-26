@@ -84,7 +84,6 @@ const products = legacy.map((product) => {
 });
 
 const report = {
-  generatedAt: new Date().toISOString(),
   source: sourcePath,
   productCount: products.length,
   variantCount: products.reduce((sum, product) => sum + product.variants.length, 0),
