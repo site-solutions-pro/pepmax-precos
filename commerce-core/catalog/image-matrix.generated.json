@@ -40,7 +40,7 @@
       "price": 28,
       "approvedBaseImage": "ace-031-approved.webp",
       "targetImage": "peptides/assets/images/variants/ace-031/ae1.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "ACTH 1-39",
@@ -200,7 +200,7 @@
       "price": 25,
       "approvedBaseImage": "bpc-157-approved.webp",
       "targetImage": "peptides/assets/images/variants/bpc-157/bc5.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "BPC-157",
@@ -210,7 +210,7 @@
       "price": 32,
       "approvedBaseImage": "bpc-157-approved.webp",
       "targetImage": "peptides/assets/images/variants/bpc-157/bc10.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "BPC-157",
@@ -220,7 +220,7 @@
       "price": 42,
       "approvedBaseImage": "bpc-157-approved.webp",
       "targetImage": "peptides/assets/images/variants/bpc-157/bc20.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "BPC-157 + TB-500",
@@ -1000,7 +1000,7 @@
       "price": 31,
       "approvedBaseImage": "mots-c-approved.webp",
       "targetImage": "peptides/assets/images/variants/mots-c/ms10.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "MOTS-c",
@@ -1010,7 +1010,7 @@
       "price": 47,
       "approvedBaseImage": "mots-c-approved.webp",
       "targetImage": "peptides/assets/images/variants/mots-c/ms40.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "NAD+",
@@ -1240,7 +1240,7 @@
       "price": 30,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt5.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1250,7 +1250,7 @@
       "price": 37,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt10.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1260,7 +1260,7 @@
       "price": 43,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt15.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1270,7 +1270,7 @@
       "price": 48,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt20.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1280,7 +1280,7 @@
       "price": 54,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt30.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1290,7 +1290,7 @@
       "price": 66,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt40.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1300,7 +1300,7 @@
       "price": 79,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt50.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida",
@@ -1310,7 +1310,7 @@
       "price": 90,
       "approvedBaseImage": "retatrutida-approved.webp",
       "targetImage": "peptides/assets/images/variants/retatrutida/rt60.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Retatrutida + Cagrilintida",
@@ -1560,7 +1560,7 @@
       "price": 30,
       "approvedBaseImage": "tesamorelina-approved-v2.webp",
       "targetImage": "peptides/assets/images/variants/tesamorelina/tsm5.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tesamorelina",
@@ -1570,7 +1570,7 @@
       "price": 48,
       "approvedBaseImage": "tesamorelina-approved-v2.webp",
       "targetImage": "peptides/assets/images/variants/tesamorelina/tsm10.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tesamorelina",
@@ -1580,7 +1580,7 @@
       "price": 77,
       "approvedBaseImage": "tesamorelina-approved-v2.webp",
       "targetImage": "peptides/assets/images/variants/tesamorelina/tsm20.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Testagen",
@@ -1630,7 +1630,7 @@
       "price": 25,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr5.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1640,7 +1640,7 @@
       "price": 28,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr10.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1650,7 +1650,7 @@
       "price": 31,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr15.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1660,7 +1660,7 @@
       "price": 33,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr20.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1670,7 +1670,7 @@
       "price": 38,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr30.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1680,7 +1680,7 @@
       "price": 44,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr40.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1690,7 +1690,7 @@
       "price": 49,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr50.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1700,7 +1700,7 @@
       "price": 45,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr60.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1710,7 +1710,7 @@
       "price": 84,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr80.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Tirzepatida",
@@ -1720,7 +1720,7 @@
       "price": 94,
       "approvedBaseImage": "tirzepatida-approved.webp",
       "targetImage": "peptides/assets/images/variants/tirzepatida/tr100.webp",
-      "status": "base-photo-approved-variant-pending"
+      "status": "variant-ready"
     },
     {
       "product": "Toxina botulínica",
@@ -1795,7 +1795,7 @@
   ],
   "summary": {
     "photography-pending": 152,
-    "base-photo-approved-variant-pending": 27
+    "variant-ready": 27
   },
   "rules": {
     "finalAssetFormat": "webp",
