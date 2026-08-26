@@ -39,7 +39,7 @@ jobs:
           python -m json.tool commerce-core/schemas/order.schema.json >/dev/null
           python -m json.tool commerce-core/agents/manifest.json >/dev/null
 
-      - name: Validate required agent roles
+      - name: Validate agent and orchestrator roles
         shell: bash
         run: |
           set -euo pipefail
@@ -48,34 +48,84 @@ jobs:
           from pathlib import Path
           data=json.loads(Path('commerce-core/agents/manifest.json').read_text())
           ids={a['id'] for a in data['agents']}
-          expected={f'A{i}' for i in range(7)}
-          missing=expected-ids
-          if missing:
-              raise SystemExit(f'Missing agents: {sorted(missing)}')
+          expected_agents={f'A{i}' for i in range(7)}
+          missing_agents=expected_agents-ids
+          if missing_agents:
+              raise SystemExit(f'Missing agents: {sorted(missing_agents)}')
+          orchestrator_ids={o['id'] for o in data.get('orchestrators', [])}
+          expected_orchestrators={f'O{i}' for i in range(4)}
+          missing_orchestrators=expected_orchestrators-orchestrator_ids
+          if missing_orchestrators:
+              raise SystemExit(f'Missing orchestrators: {sorted(missing_orchestrators)}')
+          if any(o.get('can_bypass_qa') for o in data['orchestrators']):
+              raise SystemExit('No orchestrator may bypass QA')
           if data['branch_policy'].get('direct_writes_to_main') is not False:
               raise SystemExit('direct_writes_to_main must remain false')
           if data['branch_policy'].get('require_qa_gate') is not True:
               raise SystemExit('require_qa_gate must remain true')
-          print('Agent manifest OK')
+          print('Agent + orchestrator manifest OK')
           PY
 
-      - name: Extract and audit legacy catalog
+      - name: Extract canonical catalog
         shell: bash
         run: |
           set -euo pipefail
           node commerce-core/scripts/extract-legacy-catalog.mjs peptides/assets/catalog.js /tmp/pepmax-products.json
+
+      - name: Independent catalog audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          node commerce-core/scripts/catalog-audit.mjs peptides/assets/catalog.js --json > /tmp/catalog-audit.json
           python - <<'PY'
           import json
           from pathlib import Path
-          data=json.loads(Path('/tmp/pepmax-products.json').read_text())
-          audit=data['audit']
-          if audit['productCount'] != 100:
-              raise SystemExit(f"Expected 100 products, found {audit['productCount']}")
-          if audit['duplicateSku']:
-              raise SystemExit(f"Duplicate SKU findings: {audit['duplicateSku']}")
-          print(f"Catalog OK: {audit['productCount']} products / {audit['variantCount']} variants")
-          print(f"Variants pending SKU normalization: {len(audit['missingSku'])}")
+          audit=json.loads(Path('/tmp/catalog-audit.json').read_text())
+          if audit['products'] != 100:
+              raise SystemExit(f"Expected 100 products, found {audit['products']}")
+          if audit['blockingIssues']:
+              raise SystemExit(f"Blocking catalog findings: {audit['blockingIssues']}")
+          print(f"Independent audit OK: {audit['products']} products / {audit['variants']} variants")
+          print(f"Named SKUs: {audit['namedSkus']} | pending SKU normalization: {audit['unassignedSkus']}")
           PY
+
+      - name: Generate sanitized public snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          node commerce-core/scripts/generate-public-snapshot.mjs /tmp/pepmax-products.json /tmp/public-catalog.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          canonical=json.loads(Path('/tmp/pepmax-products.json').read_text())
+          public=json.loads(Path('/tmp/public-catalog.json').read_text())
+          if public['productCount'] != canonical['audit']['productCount']:
+              raise SystemExit('Public snapshot product parity failure')
+          if public['variantCount'] != canonical['audit']['variantCount']:
+              raise SystemExit('Public snapshot variant parity failure')
+          forbidden={'private','supplier','supplierSku','cost','costCurrency','margin','notes','supplier_cost','supplier_id','private_margin'}
+          def walk(value):
+              if isinstance(value, dict):
+                  for key, child in value.items():
+                      if key in forbidden:
+                          raise SystemExit(f'Private field leaked into public snapshot: {key}')
+                      walk(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      walk(child)
+          walk(public)
+          print(f"Public snapshot parity OK: {public['productCount']} products / {public['variantCount']} variants")
+          PY
+
+      - name: Upload generated catalog artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: commerce-core-catalog-preview
+          path: |
+            /tmp/pepmax-products.json
+            /tmp/public-catalog.json
+            /tmp/catalog-audit.json
+          retention-days: 7
 
       - name: Guard public/private boundary
         shell: bash
