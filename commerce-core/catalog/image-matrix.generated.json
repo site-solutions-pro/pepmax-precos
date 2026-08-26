@@ -1,0 +1,1807 @@
+{
+  "schemaVersion": 1,
+  "products": 100,
+  "variants": [
+    {
+      "product": "5-Amino-1MQ",
+      "slug": "5-amino-1mq",
+      "sku": "5AM",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/5-amino-1mq/5am.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "5-Amino-1MQ",
+      "slug": "5-amino-1mq",
+      "sku": "10AM",
+      "presentation": "10 mg",
+      "price": 38,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/5-amino-1mq/10am.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "5-Amino-1MQ",
+      "slug": "5-amino-1mq",
+      "sku": "50AM",
+      "presentation": "50 mg",
+      "price": 48,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/5-amino-1mq/50am.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "ACE-031",
+      "slug": "ace-031",
+      "sku": "AE1",
+      "presentation": "1 mg",
+      "price": 28,
+      "approvedBaseImage": "ace-031-approved.webp",
+      "targetImage": "peptides/assets/images/variants/ace-031/ae1.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "ACTH 1-39",
+      "slug": "acth-1-39",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 35,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/acth-1-39/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Adamax",
+      "slug": "adamax",
+      "sku": "AD5",
+      "presentation": "5 mg",
+      "price": 43,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/adamax/ad5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Adipotide",
+      "slug": "adipotide",
+      "sku": "AP2",
+      "presentation": "2 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/adipotide/ap2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Adipotide",
+      "slug": "adipotide",
+      "sku": "AP5",
+      "presentation": "5 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/adipotide/ap5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Adipotide",
+      "slug": "adipotide",
+      "sku": "AP10",
+      "presentation": "10 mg",
+      "price": 79,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/adipotide/ap10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AHK-Cu",
+      "slug": "ahk-cu",
+      "sku": "AU50",
+      "presentation": "50 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ahk-cu/au50.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AHK-Cu",
+      "slug": "ahk-cu",
+      "sku": "AU100",
+      "presentation": "100 mg",
+      "price": 55,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ahk-cu/au100.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AICAR",
+      "slug": "aicar",
+      "sku": "AR50",
+      "presentation": "50 mg",
+      "price": 29,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/aicar/ar50.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AICAR",
+      "slug": "aicar",
+      "sku": "AR100",
+      "presentation": "100 mg",
+      "price": 39,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/aicar/ar100.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Alprostadil",
+      "slug": "alprostadil",
+      "sku": "PRO20",
+      "presentation": "20 mcg",
+      "price": 66,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/alprostadil/pro20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AOD-9604",
+      "slug": "aod-9604",
+      "sku": "5AD",
+      "presentation": "5 mg",
+      "price": 39,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/aod-9604/5ad.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "AOD-9604",
+      "slug": "aod-9604",
+      "sku": "10AD",
+      "presentation": "10 mg",
+      "price": 50,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/aod-9604/10ad.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ara-290",
+      "slug": "ara-290",
+      "sku": "RA10",
+      "presentation": "10 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ara-290/ra10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "B7-33",
+      "slug": "b7-33",
+      "sku": null,
+      "presentation": "2 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/b7-33/2-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "B7-33",
+      "slug": "b7-33",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 58,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/b7-33/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "BPC-157",
+      "slug": "bpc-157",
+      "sku": "BC5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": "bpc-157-approved.webp",
+      "targetImage": "peptides/assets/images/variants/bpc-157/bc5.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "BPC-157",
+      "slug": "bpc-157",
+      "sku": "BC10",
+      "presentation": "10 mg",
+      "price": 32,
+      "approvedBaseImage": "bpc-157-approved.webp",
+      "targetImage": "peptides/assets/images/variants/bpc-157/bc10.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "BPC-157",
+      "slug": "bpc-157",
+      "sku": "BC20",
+      "presentation": "20 mg",
+      "price": 42,
+      "approvedBaseImage": "bpc-157-approved.webp",
+      "targetImage": "peptides/assets/images/variants/bpc-157/bc20.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "BPC-157 + TB-500",
+      "slug": "bpc-157-plus-tb-500",
+      "sku": "BB10",
+      "presentation": "10 mg",
+      "price": 36,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/bpc-157-plus-tb-500/bb10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "BPC-157 + TB-500",
+      "slug": "bpc-157-plus-tb-500",
+      "sku": "BB20",
+      "presentation": "20 mg",
+      "price": 41,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/bpc-157-plus-tb-500/bb20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cagrilintida",
+      "slug": "cagrilintida",
+      "sku": "CGL5",
+      "presentation": "5 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cagrilintida/cgl5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cagrilintida",
+      "slug": "cagrilintida",
+      "sku": "CGL10",
+      "presentation": "10 mg",
+      "price": 44,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cagrilintida/cgl10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cagrilintida + Semaglutida",
+      "slug": "cagrilintida-plus-semaglutida",
+      "sku": "CS5",
+      "presentation": "5 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cagrilintida-plus-semaglutida/cs5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cagrilintida + Semaglutida",
+      "slug": "cagrilintida-plus-semaglutida",
+      "sku": "CS10",
+      "presentation": "10 mg",
+      "price": 44,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cagrilintida-plus-semaglutida/cs10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cardiogen",
+      "slug": "cardiogen",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cardiogen/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cartalax",
+      "slug": "cartalax",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cartalax/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cerebrolisina",
+      "slug": "cerebrolisina",
+      "sku": "CBL60",
+      "presentation": "60 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cerebrolisina/cbl60.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "CJC-1295 + Ipamorelina",
+      "slug": "cjc-1295-ipamorelina",
+      "sku": "CP10",
+      "presentation": "10 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cjc-1295-ipamorelina/cp10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "CJC-1295 com DAC",
+      "slug": "cjc-1295-com-dac",
+      "sku": "CD5",
+      "presentation": "5 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cjc-1295-com-dac/cd5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "CJC-1295 sem DAC",
+      "slug": "cjc-1295-sem-dac",
+      "sku": "CND5",
+      "presentation": "5 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cjc-1295-sem-dac/cnd5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "CJC-1295 sem DAC",
+      "slug": "cjc-1295-sem-dac",
+      "sku": "CND10",
+      "presentation": "10 mg",
+      "price": 43,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cjc-1295-sem-dac/cnd10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Cortagen",
+      "slug": "cortagen",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/cortagen/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Crystagen",
+      "slug": "crystagen",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/crystagen/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Dermorfina",
+      "slug": "dermorfina",
+      "sku": "DR5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dermorfina/dr5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "DSIP",
+      "slug": "dsip",
+      "sku": "DS5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dsip/ds5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "DSIP",
+      "slug": "dsip",
+      "sku": "DS10",
+      "presentation": "10 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dsip/ds10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "DSIP",
+      "slug": "dsip",
+      "sku": "DS15",
+      "presentation": "15 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dsip/ds15.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Dulaglutida",
+      "slug": "dulaglutida",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 44,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dulaglutida/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Dulaglutida",
+      "slug": "dulaglutida",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 87,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/dulaglutida/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Epitalon",
+      "slug": "epitalon",
+      "sku": "ET10",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/epitalon/et10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Epitalon",
+      "slug": "epitalon",
+      "sku": "ET50",
+      "presentation": "50 mg",
+      "price": 44,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/epitalon/et50.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Epitalon N-acetil amidato",
+      "slug": "epitalon-n-acetil-amidato",
+      "sku": "NET5",
+      "presentation": "5 mg",
+      "price": 41,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/epitalon-n-acetil-amidato/net5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "EPO (eritropoetina)",
+      "slug": "epo-eritropoetina",
+      "sku": "E3K",
+      "presentation": "3000 iu",
+      "price": 54,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/epo-eritropoetina/e3k.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "FOXO4-DRI",
+      "slug": "foxo4-dri",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 94,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/foxo4-dri/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Fragmento 17-23",
+      "slug": "fragmento-17-23",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/fragmento-17-23/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "FTPP Adipotide",
+      "slug": "ftpp-adipotide",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ftpp-adipotide/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GDF-8 (miostatina)",
+      "slug": "gdf-8-miostatina",
+      "sku": null,
+      "presentation": "1 mg",
+      "price": 54,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/gdf-8-miostatina/1-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHK-Cu",
+      "slug": "ghk-cu",
+      "sku": "CU50",
+      "presentation": "50 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghk-cu/cu50.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHK-Cu",
+      "slug": "ghk-cu",
+      "sku": "CU100",
+      "presentation": "100 mg",
+      "price": 55,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghk-cu/cu100.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHRP-2 (acetato)",
+      "slug": "ghrp-2-acetato",
+      "sku": "G25",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghrp-2-acetato/g25.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHRP-2 (acetato)",
+      "slug": "ghrp-2-acetato",
+      "sku": "G210",
+      "presentation": "10 mg",
+      "price": 29,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghrp-2-acetato/g210.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHRP-6 (acetato)",
+      "slug": "ghrp-6-acetato",
+      "sku": "G65",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghrp-6-acetato/g65.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GHRP-6 (acetato)",
+      "slug": "ghrp-6-acetato",
+      "sku": "G610",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ghrp-6-acetato/g610.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "GLOW (BPC-157 + GHK-Cu + TB-500)",
+      "slug": "glow-70",
+      "sku": "BBG70",
+      "presentation": "70 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/glow-70/bbg70.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Glutationa",
+      "slug": "glutationa",
+      "sku": "GTT",
+      "presentation": "1500 mg",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/glutationa/gtt.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HCG",
+      "slug": "hcg",
+      "sku": "G5K",
+      "presentation": "5000 iu",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hcg/g5k.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HCG",
+      "slug": "hcg",
+      "sku": "G10K",
+      "presentation": "10000 iu",
+      "price": 48,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hcg/g10k.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Hexarelina (acetato)",
+      "slug": "hexarelina-acetato",
+      "sku": "HX2",
+      "presentation": "2 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hexarelina-acetato/hx2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Hexarelina (acetato)",
+      "slug": "hexarelina-acetato",
+      "sku": "HX5",
+      "presentation": "5 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hexarelina-acetato/hx5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH 191AA (somatropina)",
+      "slug": "hgh-191aa-somatropina",
+      "sku": "H10",
+      "presentation": "10 iu",
+      "price": 29,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-191aa-somatropina/h10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH 191AA (somatropina)",
+      "slug": "hgh-191aa-somatropina",
+      "sku": "H24",
+      "presentation": "24 iu",
+      "price": 46,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-191aa-somatropina/h24.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH 191AA (somatropina)",
+      "slug": "hgh-191aa-somatropina",
+      "sku": "H36",
+      "presentation": "36 iu",
+      "price": 49,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-191aa-somatropina/h36.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH 191AA (somatropina)",
+      "slug": "hgh-191aa-somatropina",
+      "sku": "H40",
+      "presentation": "40 iu",
+      "price": 58,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-191aa-somatropina/h40.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH Fragmento 176-191",
+      "slug": "hgh-fragmento-176-191",
+      "sku": "FR2",
+      "presentation": "2 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-fragmento-176-191/fr2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH Fragmento 176-191",
+      "slug": "hgh-fragmento-176-191",
+      "sku": "FR5",
+      "presentation": "5 mg",
+      "price": 36,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-fragmento-176-191/fr5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH Fragmento 176-191",
+      "slug": "hgh-fragmento-176-191",
+      "sku": "FR10",
+      "presentation": "10 mg",
+      "price": 42,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-fragmento-176-191/fr10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH Fragmento 176-191",
+      "slug": "hgh-fragmento-176-191",
+      "sku": "FR12",
+      "presentation": "12 mg",
+      "price": 49,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-fragmento-176-191/fr12.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HGH Fragmento 176-191",
+      "slug": "hgh-fragmento-176-191",
+      "sku": "FR15",
+      "presentation": "15 mg",
+      "price": 60,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hgh-fragmento-176-191/fr15.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "HMG",
+      "slug": "hmg",
+      "sku": "G75",
+      "presentation": "75 iu",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/hmg/g75.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Humanina",
+      "slug": "humanina",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 81,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/humanina/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "IGF-1 DES",
+      "slug": "igf-1-des",
+      "sku": "IGD",
+      "presentation": "2 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/igf-1-des/igd.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "IGF-1 LR3",
+      "slug": "igf-1-lr3",
+      "sku": "IG01",
+      "presentation": "0.1 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/igf-1-lr3/ig01.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "IGF-1 LR3",
+      "slug": "igf-1-lr3",
+      "sku": "IG1",
+      "presentation": "1 mg",
+      "price": 52,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/igf-1-lr3/ig1.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ipamorelina",
+      "slug": "ipamorelina",
+      "sku": "IP5",
+      "presentation": "5 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ipamorelina/ip5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ipamorelina",
+      "slug": "ipamorelina",
+      "sku": "IP10",
+      "presentation": "10 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ipamorelina/ip10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Kisspeptina-10",
+      "slug": "kisspeptina-10",
+      "sku": "KS5",
+      "presentation": "5 mg",
+      "price": 29,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/kisspeptina-10/ks5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Kisspeptina-10",
+      "slug": "kisspeptina-10",
+      "sku": "KS10",
+      "presentation": "10 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/kisspeptina-10/ks10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "KLOW (BPC-157 + GHK-Cu + TB-500 + KPV)",
+      "slug": "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv",
+      "sku": "KL80",
+      "presentation": "80 mg",
+      "price": 49,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv/kl80.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "KPV",
+      "slug": "kpv",
+      "sku": "KPV5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/kpv/kpv5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "KPV",
+      "slug": "kpv",
+      "sku": "KPV10",
+      "presentation": "10 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/kpv/kpv10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "L-carnitina",
+      "slug": "l-carnitina",
+      "sku": null,
+      "presentation": "600 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/l-carnitina/600-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "L-carnitina",
+      "slug": "l-carnitina",
+      "sku": null,
+      "presentation": "1200 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/l-carnitina/1200-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Lemon Bottle",
+      "slug": "lemon-bottle",
+      "sku": "柠檬瓶",
+      "presentation": "10 ml",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/lemon-bottle/柠檬瓶.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Liraglutida",
+      "slug": "liraglutida",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 36,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/liraglutida/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Liraglutida",
+      "slug": "liraglutida",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 43,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/liraglutida/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Liraglutida",
+      "slug": "liraglutida",
+      "sku": null,
+      "presentation": "30 mg",
+      "price": 120,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/liraglutida/30-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Livagen",
+      "slug": "livagen",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 41,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/livagen/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "LL-37",
+      "slug": "ll-37",
+      "sku": "375",
+      "presentation": "5 mg",
+      "price": 35,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ll-37/375.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Matrixyl",
+      "slug": "matrixyl",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/matrixyl/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Mazdutida",
+      "slug": "mazdutida",
+      "sku": "MDT5",
+      "presentation": "5 mg",
+      "price": 39,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/mazdutida/mdt5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Mazdutida",
+      "slug": "mazdutida",
+      "sku": "MDT",
+      "presentation": "10 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/mazdutida/mdt.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Melanotan I (MT-1)",
+      "slug": "melanotan-i-mt-1",
+      "sku": "MT1",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/melanotan-i-mt-1/mt1.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Melanotan II (MT-2)",
+      "slug": "melanotan-ii-mt-2",
+      "sku": "ML10",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/melanotan-ii-mt-2/ml10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Melatonina",
+      "slug": "melatonina",
+      "sku": "MT10",
+      "presentation": "10 mg",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/melatonina/mt10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "MGF",
+      "slug": "mgf",
+      "sku": "FM2",
+      "presentation": "2 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/mgf/fm2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "MOTS-c",
+      "slug": "mots-c",
+      "sku": "MS10",
+      "presentation": "10 mg",
+      "price": 31,
+      "approvedBaseImage": "mots-c-approved.webp",
+      "targetImage": "peptides/assets/images/variants/mots-c/ms10.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "MOTS-c",
+      "slug": "mots-c",
+      "sku": "MS40",
+      "presentation": "40 mg",
+      "price": 47,
+      "approvedBaseImage": "mots-c-approved.webp",
+      "targetImage": "peptides/assets/images/variants/mots-c/ms40.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "NAD+",
+      "slug": "nad-plus",
+      "sku": "NJ100",
+      "presentation": "100 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/nad-plus/nj100.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "NAD+",
+      "slug": "nad-plus",
+      "sku": "NJ500",
+      "presentation": "500 mg",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/nad-plus/nj500.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "NAD+",
+      "slug": "nad-plus",
+      "sku": "NJ1000",
+      "presentation": "1000 mg",
+      "price": 35,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/nad-plus/nj1000.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ocitocina (acetato)",
+      "slug": "ocitocina-acetato",
+      "sku": "OT2",
+      "presentation": "2 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ocitocina-acetato/ot2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ocitocina (acetato)",
+      "slug": "ocitocina-acetato",
+      "sku": "OT5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ocitocina-acetato/ot5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ocitocina (acetato)",
+      "slug": "ocitocina-acetato",
+      "sku": "OT10",
+      "presentation": "10 mg",
+      "price": 32,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ocitocina-acetato/ot10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Orexina A",
+      "slug": "orexina-a",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 167,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/orexina-a/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Orexina B",
+      "slug": "orexina-b",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 48,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/orexina-b/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Orexina B",
+      "slug": "orexina-b",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 73,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/orexina-b/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ovagen",
+      "slug": "ovagen",
+      "sku": "OV20",
+      "presentation": "20 mg",
+      "price": 42,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ovagen/ov20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "P21",
+      "slug": "p21",
+      "sku": "P210",
+      "presentation": "10 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/p21/p210.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Pancragen",
+      "slug": "pancragen",
+      "sku": null,
+      "presentation": "20 mg",
+      "price": 41,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pancragen/20-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PE-22-28",
+      "slug": "pe-22-28",
+      "sku": "PE5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pe-22-28/pe5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PE-22-28",
+      "slug": "pe-22-28",
+      "sku": "PE10",
+      "presentation": "10 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pe-22-28/pe10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PEG-MGF",
+      "slug": "peg-mgf",
+      "sku": "FMP2",
+      "presentation": "2 mg",
+      "price": 41,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/peg-mgf/fmp2.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Pinealon",
+      "slug": "pinealon",
+      "sku": "PI5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pinealon/pi5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Pinealon",
+      "slug": "pinealon",
+      "sku": "PI10",
+      "presentation": "10 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pinealon/pi10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Pinealon",
+      "slug": "pinealon",
+      "sku": "PI20",
+      "presentation": "20 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pinealon/pi20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PNC-27",
+      "slug": "pnc-27",
+      "sku": "PN5",
+      "presentation": "5 mg",
+      "price": 37,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pnc-27/pn5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PNC-27",
+      "slug": "pnc-27",
+      "sku": "PN10",
+      "presentation": "10 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pnc-27/pn10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PT-141 (bremelanotida)",
+      "slug": "pt-141-bremelanotida",
+      "sku": "P41",
+      "presentation": "10 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/pt-141-bremelanotida/p41.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "PTD-DBM",
+      "slug": "ptd-dbm",
+      "sku": null,
+      "presentation": "5 mg",
+      "price": 68,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ptd-dbm/5-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT5",
+      "presentation": "5 mg",
+      "price": 30,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt5.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT10",
+      "presentation": "10 mg",
+      "price": 37,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt10.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT15",
+      "presentation": "15 mg",
+      "price": 43,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt15.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT20",
+      "presentation": "20 mg",
+      "price": 48,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt20.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT30",
+      "presentation": "30 mg",
+      "price": 54,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt30.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT40",
+      "presentation": "40 mg",
+      "price": 66,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt40.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT50",
+      "presentation": "50 mg",
+      "price": 79,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt50.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida",
+      "slug": "retatrutida",
+      "sku": "RT60",
+      "presentation": "60 mg",
+      "price": 90,
+      "approvedBaseImage": "retatrutida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/retatrutida/rt60.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Retatrutida + Cagrilintida",
+      "slug": "retatrutida-plus-cagrilintida",
+      "sku": "RC10",
+      "presentation": "10 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/retatrutida-plus-cagrilintida/rc10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Retatrutida + Tirzepatida",
+      "slug": "retatrutida-plus-tirzepatida",
+      "sku": null,
+      "presentation": "60 mg",
+      "price": 96,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/retatrutida-plus-tirzepatida/60-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Selank",
+      "slug": "selank",
+      "sku": "SK5",
+      "presentation": "5 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/selank/sk5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Selank",
+      "slug": "selank",
+      "sku": "SK11",
+      "presentation": "11 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/selank/sk11.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Selank",
+      "slug": "selank",
+      "sku": "SK30",
+      "presentation": "30 mg",
+      "price": 43,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/selank/sk30.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semaglutida",
+      "slug": "semaglutida",
+      "sku": "SM5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semaglutida/sm5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semaglutida",
+      "slug": "semaglutida",
+      "sku": "SM10",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semaglutida/sm10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semaglutida",
+      "slug": "semaglutida",
+      "sku": "SM15",
+      "presentation": "15 mg",
+      "price": 31,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semaglutida/sm15.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semaglutida",
+      "slug": "semaglutida",
+      "sku": "SM20",
+      "presentation": "20 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semaglutida/sm20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semaglutida",
+      "slug": "semaglutida",
+      "sku": "SM30",
+      "presentation": "30 mg",
+      "price": 38,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semaglutida/sm30.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semax",
+      "slug": "semax",
+      "sku": "XA5",
+      "presentation": "5 mg",
+      "price": 29,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semax/xa5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semax",
+      "slug": "semax",
+      "sku": "XA11",
+      "presentation": "11 mg",
+      "price": 35,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semax/xa11.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Semax",
+      "slug": "semax",
+      "sku": "XA30",
+      "presentation": "30 mg",
+      "price": 60,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/semax/xa30.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Sermorelina (acetato)",
+      "slug": "sermorelina-acetato",
+      "sku": "SMO5",
+      "presentation": "5 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/sermorelina-acetato/smo5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Sermorelina (acetato)",
+      "slug": "sermorelina-acetato",
+      "sku": "SMO10",
+      "presentation": "10 mg",
+      "price": 39,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/sermorelina-acetato/smo10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "SLU-PP-332",
+      "slug": "slu-pp-332",
+      "sku": "322",
+      "presentation": "5 mg",
+      "price": 42,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/slu-pp-332/322.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "SNAP-8",
+      "slug": "snap-8",
+      "sku": "NP810",
+      "presentation": "10 mg",
+      "price": 25,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/snap-8/np810.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "SS-31 (elamipretida)",
+      "slug": "ss-31",
+      "sku": "2S10",
+      "presentation": "10 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ss-31/2s10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "SS-31 (elamipretida)",
+      "slug": "ss-31",
+      "sku": "2S50",
+      "presentation": "50 mg",
+      "price": 80,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/ss-31/2s50.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Survodutida",
+      "slug": "survodutida",
+      "sku": "SUR10",
+      "presentation": "10 mg",
+      "price": 91,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/survodutida/sur10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "TB-500",
+      "slug": "tb-500",
+      "sku": "TB5",
+      "presentation": "5 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/tb-500/tb5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "TB-500",
+      "slug": "tb-500",
+      "sku": "TB10",
+      "presentation": "10 mg",
+      "price": 42,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/tb-500/tb10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "TB-500 (fragmento)",
+      "slug": "tb-500-fragmento",
+      "sku": "B10F",
+      "presentation": "10 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/tb-500-fragmento/b10f.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Teriparatida",
+      "slug": "teriparatida",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 51,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/teriparatida/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Tesamorelina",
+      "slug": "tesamorelina",
+      "sku": "TSM5",
+      "presentation": "5 mg",
+      "price": 30,
+      "approvedBaseImage": "tesamorelina-approved-v2.webp",
+      "targetImage": "peptides/assets/images/variants/tesamorelina/tsm5.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tesamorelina",
+      "slug": "tesamorelina",
+      "sku": "TSM10",
+      "presentation": "10 mg",
+      "price": 48,
+      "approvedBaseImage": "tesamorelina-approved-v2.webp",
+      "targetImage": "peptides/assets/images/variants/tesamorelina/tsm10.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tesamorelina",
+      "slug": "tesamorelina",
+      "sku": "TSM20",
+      "presentation": "20 mg",
+      "price": 77,
+      "approvedBaseImage": "tesamorelina-approved-v2.webp",
+      "targetImage": "peptides/assets/images/variants/tesamorelina/tsm20.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Testagen",
+      "slug": "testagen",
+      "sku": "TG20",
+      "presentation": "20 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/testagen/tg20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Timalina",
+      "slug": "timalina",
+      "sku": "TY10",
+      "presentation": "10 mg",
+      "price": 30,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/timalina/ty10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Timosina alfa-1",
+      "slug": "timosina-alfa-1",
+      "sku": "TA5",
+      "presentation": "5 mg",
+      "price": 35,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/timosina-alfa-1/ta5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Timosina alfa-1",
+      "slug": "timosina-alfa-1",
+      "sku": "TA10",
+      "presentation": "10 mg",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/timosina-alfa-1/ta10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR5",
+      "presentation": "5 mg",
+      "price": 25,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr5.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR10",
+      "presentation": "10 mg",
+      "price": 28,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr10.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR15",
+      "presentation": "15 mg",
+      "price": 31,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr15.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR20",
+      "presentation": "20 mg",
+      "price": 33,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr20.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR30",
+      "presentation": "30 mg",
+      "price": 38,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr30.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR40",
+      "presentation": "40 mg",
+      "price": 44,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr40.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR50",
+      "presentation": "50 mg",
+      "price": 49,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr50.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR60",
+      "presentation": "60 mg",
+      "price": 45,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr60.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR80",
+      "presentation": "80 mg",
+      "price": 84,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr80.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Tirzepatida",
+      "slug": "tirzepatida",
+      "sku": "TR100",
+      "presentation": "100 mg",
+      "price": 94,
+      "approvedBaseImage": "tirzepatida-approved.webp",
+      "targetImage": "peptides/assets/images/variants/tirzepatida/tr100.webp",
+      "status": "base-photo-approved-variant-pending"
+    },
+    {
+      "product": "Toxina botulínica",
+      "slug": "toxina-botulinica",
+      "sku": "XT100",
+      "presentation": "100 iu",
+      "price": 40,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/toxina-botulinica/xt100.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Triptorrelina (acetato)",
+      "slug": "triptorrelina-acetato",
+      "sku": null,
+      "presentation": "2 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/triptorrelina-acetato/2-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Vesugen",
+      "slug": "vesugen",
+      "sku": null,
+      "presentation": "10 mg",
+      "price": 33,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/vesugen/10-mg.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Vilon",
+      "slug": "vilon",
+      "sku": "VI20",
+      "presentation": "20 mg",
+      "price": 42,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/vilon/vi20.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "VIP (aviptadil)",
+      "slug": "vip-aviptadil",
+      "sku": "VIP5",
+      "presentation": "5 mg",
+      "price": 34,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/vip-aviptadil/vip5.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "VIP (aviptadil)",
+      "slug": "vip-aviptadil",
+      "sku": "VIP10",
+      "presentation": "10 mg",
+      "price": 47,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/vip-aviptadil/vip10.webp",
+      "status": "photography-pending"
+    },
+    {
+      "product": "Ácido hialurônico",
+      "slug": "acido-hialuronico",
+      "sku": "HA5",
+      "presentation": "5 mg",
+      "price": 50,
+      "approvedBaseImage": null,
+      "targetImage": "peptides/assets/images/variants/acido-hialuronico/ha5.webp",
+      "status": "photography-pending"
+    }
+  ],
+  "summary": {
+    "photography-pending": 152,
+    "base-photo-approved-variant-pending": 27
+  },
+  "rules": {
+    "finalAssetFormat": "webp",
+    "sourceOfTruth": "variant/SKU",
+    "noSyntheticFinalPhotography": true,
+    "preserveApprovedBaseGeometry": true,
+    "missingSkuPolicy": "use presentation token until commercial SKU is approved; do not invent SKU"
+  }
+}
