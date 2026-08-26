@@ -39,7 +39,6 @@ const snapshot = {
   schemaVersion: 1,
   catalogVersion: input.version ?? 1,
   currency: input.currency || 'USD',
-  generatedAt: new Date().toISOString(),
   productCount: products.length,
   variantCount: products.reduce((sum, product) => sum + product.variants.length, 0),
   products
