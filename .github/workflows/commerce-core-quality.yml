@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'commerce-core/**'
+      - 'peptides/assets/catalog.js'
       - 'AGENTS.md'
       - '.github/workflows/commerce-core-quality.yml'
   push:
@@ -11,6 +12,7 @@ on:
       - 'feat/commerce-core-v1'
     paths:
       - 'commerce-core/**'
+      - 'peptides/assets/catalog.js'
       - 'AGENTS.md'
       - '.github/workflows/commerce-core-quality.yml'
 
@@ -23,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Validate JSON contracts
         shell: bash
@@ -50,6 +57,24 @@ jobs:
           if data['branch_policy'].get('require_qa_gate') is not True:
               raise SystemExit('require_qa_gate must remain true')
           print('Agent manifest OK')
+          PY
+
+      - name: Extract and audit legacy catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          node commerce-core/scripts/extract-legacy-catalog.mjs peptides/assets/catalog.js /tmp/pepmax-products.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('/tmp/pepmax-products.json').read_text())
+          audit=data['audit']
+          if audit['productCount'] != 100:
+              raise SystemExit(f"Expected 100 products, found {audit['productCount']}")
+          if audit['duplicateSku']:
+              raise SystemExit(f"Duplicate SKU findings: {audit['duplicateSku']}")
+          print(f"Catalog OK: {audit['productCount']} products / {audit['variantCount']} variants")
+          print(f"Variants pending SKU normalization: {len(audit['missingSku'])}")
           PY
 
       - name: Guard public/private boundary
