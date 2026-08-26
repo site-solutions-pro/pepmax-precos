@@ -7,18 +7,20 @@
     {
       "orchestrator": "O1",
       "issue": 14,
-      "status": "in_progress",
+      "status": "qa_ready",
       "agents": ["A1", "A5"],
       "tasks": [21, 18],
+      "completed": ["canonical extraction", "public snapshot generation", "snapshot materialization", "duplicate SKU gate"],
       "next_gate": "catalog_parity"
     },
     {
       "orchestrator": "O2",
       "issue": 15,
-      "status": "in_progress",
+      "status": "home_read_only_integrated",
       "agents": ["A2", "A4", "A5"],
       "tasks": [20, 23, 18],
-      "next_gate": "home_read_only_adapter"
+      "completed": ["storefront adapter", "Home read-only bridge with legacy fallback"],
+      "next_gate": "home_parity_validation"
     },
     {
       "orchestrator": "O3",
@@ -37,6 +39,16 @@
       "next_gate": "checkout_contract_review"
     }
   ],
+  "quality": {
+    "catalog": {
+      "products": 100,
+      "variants": 179,
+      "namedSkus": 149,
+      "unassignedSkus": 30,
+      "duplicateSkus": 0,
+      "blockingFindings": 0
+    }
+  },
   "rules": {
     "direct_main_writes": false,
     "qa_required": true,
