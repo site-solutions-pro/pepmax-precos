@@ -1,0 +1,60 @@
+name: Visual Asset Matrix
+
+on:
+  push:
+    branches:
+      - 'feat/commerce-core-v1'
+    paths:
+      - 'tools/build-image-matrix.mjs'
+      - 'peptides/assets/images/**'
+      - 'peptides/assets/catalog.js'
+      - '.github/workflows/visual-asset-matrix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/commerce-core-v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build image matrix
+        run: node tools/build-image-matrix.mjs
+
+      - name: Validate image matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('commerce-core/catalog/image-matrix.generated.json').read_text())
+          assert data['products'] == 100, data['products']
+          assert len(data['variants']) == 179, len(data['variants'])
+          assert data['rules']['noSyntheticFinalPhotography'] is True
+          print(data['summary'])
+          PY
+
+      - name: Commit image matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'pepmax-visual-bot'
+          git config user.email 'pepmax-visual-bot@users.noreply.github.com'
+          git add commerce-core/catalog/image-matrix.generated.json
+          if git diff --cached --quiet; then
+            echo 'Image matrix already current.'
+          else
+            git commit -m 'chore: materialize visual asset matrix'
+            git push origin HEAD:feat/commerce-core-v1
+          fi

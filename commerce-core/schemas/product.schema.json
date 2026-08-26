@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pepmax.example/schemas/product.schema.json",
+  "title": "PepMax Commerce Product",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "slug", "name", "status", "variants", "publication"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "name": {"type": "string", "minLength": 1},
+    "status": {"enum": ["draft", "review", "approved", "archived"]},
+    "productType": {"enum": ["compound", "peptide", "protein", "small-molecule", "blend", "other"]},
+    "public": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "shortDescription": {"type": "string"},
+        "image": {"type": ["string", "null"]},
+        "altText": {"type": ["string", "null"]},
+        "featured": {"type": "boolean"},
+        "searchTerms": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "private": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "supplier": {"type": ["string", "null"]},
+        "supplierSku": {"type": ["string", "null"]},
+        "costCurrency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+        "cost": {"type": ["number", "null"], "minimum": 0},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "sku", "label", "price", "currency", "inventory"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "sku": {"type": ["string", "null"], "minLength": 1},
+          "label": {"type": "string", "minLength": 1},
+          "price": {"type": "number", "minimum": 0},
+          "currency": {"type": "string", "pattern": "^[A-Z]{3}$"},
+          "compareAtPrice": {"type": ["number", "null"], "minimum": 0},
+          "active": {"type": "boolean", "default": true},
+          "inventory": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["policy", "available"],
+            "properties": {
+              "policy": {"enum": ["tracked", "untracked", "preorder", "backorder"]},
+              "available": {"type": "integer", "minimum": 0},
+              "reserved": {"type": "integer", "minimum": 0, "default": 0},
+              "reorderPoint": {"type": ["integer", "null"], "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["private", "preview", "published"]},
+        "approvedBy": {"type": ["string", "null"]},
+        "approvedAt": {"type": ["string", "null"], "format": "date-time"},
+        "version": {"type": "integer", "minimum": 1, "default": 1}
+      }
+    }
+  }
+}

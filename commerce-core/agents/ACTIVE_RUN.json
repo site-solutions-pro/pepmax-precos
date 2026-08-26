@@ -1,0 +1,58 @@
+{
+  "run": "CC-V1.2",
+  "status": "in_progress",
+  "program_orchestrator": "O0",
+  "primary_pr": 13,
+  "workstreams": [
+    {
+      "orchestrator": "O1",
+      "issue": 14,
+      "status": "qa_ready",
+      "agents": ["A1", "A5"],
+      "tasks": [21, 18],
+      "completed": ["canonical extraction", "public snapshot generation", "snapshot materialization", "duplicate SKU gate"],
+      "next_gate": "catalog_parity"
+    },
+    {
+      "orchestrator": "O2",
+      "issue": 15,
+      "status": "home_read_only_integrated",
+      "agents": ["A2", "A4", "A5"],
+      "tasks": [20, 23, 18],
+      "completed": ["storefront adapter", "Home read-only bridge with legacy fallback"],
+      "next_gate": "home_parity_validation"
+    },
+    {
+      "orchestrator": "O3",
+      "issue": 16,
+      "status": "blocked_by_qa",
+      "agents": ["A0", "A5", "A6"],
+      "tasks": [24, 18, 19],
+      "next_gate": "release_readiness"
+    },
+    {
+      "orchestrator": "O1",
+      "issue": 14,
+      "status": "parallel_design",
+      "agents": ["A3"],
+      "tasks": [22],
+      "next_gate": "checkout_contract_review"
+    }
+  ],
+  "quality": {
+    "catalog": {
+      "products": 100,
+      "variants": 179,
+      "namedSkus": 149,
+      "unassignedSkus": 30,
+      "duplicateSkus": 0,
+      "blockingFindings": 0
+    }
+  },
+  "rules": {
+    "direct_main_writes": false,
+    "qa_required": true,
+    "remove_legacy_fallback_before_qa": false,
+    "activate_real_payment_provider": false
+  }
+}

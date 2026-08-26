@@ -1,0 +1,4870 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "products": [
+    {
+      "id": "5-amino-1mq",
+      "slug": "5-amino-1mq",
+      "name": "5-Amino-1MQ",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "5-amino-1mq-1",
+          "sku": "5AM",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "5-amino-1mq-2",
+          "sku": "10AM",
+          "label": "10 mg",
+          "price": 38,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "5-amino-1mq-3",
+          "sku": "50AM",
+          "label": "50 mg",
+          "price": 48,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ace-031",
+      "slug": "ace-031",
+      "name": "ACE-031",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ace-031-1",
+          "sku": "AE1",
+          "label": "1 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "acth-1-39",
+      "slug": "acth-1-39",
+      "name": "ACTH 1-39",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "acth-1-39-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 35,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "adamax",
+      "slug": "adamax",
+      "name": "Adamax",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "adamax-1",
+          "sku": "AD5",
+          "label": "5 mg",
+          "price": 43,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "adipotide",
+      "slug": "adipotide",
+      "name": "Adipotide",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "adipotide-1",
+          "sku": "AP2",
+          "label": "2 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "adipotide-2",
+          "sku": "AP5",
+          "label": "5 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "adipotide-3",
+          "sku": "AP10",
+          "label": "10 mg",
+          "price": 79,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ahk-cu",
+      "slug": "ahk-cu",
+      "name": "AHK-Cu",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ahk-cu-1",
+          "sku": "AU50",
+          "label": "50 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ahk-cu-2",
+          "sku": "AU100",
+          "label": "100 mg",
+          "price": 55,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "aicar",
+      "slug": "aicar",
+      "name": "AICAR",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "aicar-1",
+          "sku": "AR50",
+          "label": "50 mg",
+          "price": 29,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "aicar-2",
+          "sku": "AR100",
+          "label": "100 mg",
+          "price": 39,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "alprostadil",
+      "slug": "alprostadil",
+      "name": "Alprostadil",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "alprostadil-1",
+          "sku": "PRO20",
+          "label": "20 mcg",
+          "price": 66,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "aod-9604",
+      "slug": "aod-9604",
+      "name": "AOD-9604",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "aod-9604-1",
+          "sku": "5AD",
+          "label": "5 mg",
+          "price": 39,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "aod-9604-2",
+          "sku": "10AD",
+          "label": "10 mg",
+          "price": 50,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ara-290",
+      "slug": "ara-290",
+      "name": "Ara-290",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ara-290-1",
+          "sku": "RA10",
+          "label": "10 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "b7-33",
+      "slug": "b7-33",
+      "name": "B7-33",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "b7-33-1",
+          "sku": null,
+          "label": "2 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "b7-33-2",
+          "sku": null,
+          "label": "10 mg",
+          "price": 58,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "bpc-157",
+      "slug": "bpc-157",
+      "name": "BPC-157",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "bpc-157-1",
+          "sku": "BC5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "bpc-157-2",
+          "sku": "BC10",
+          "label": "10 mg",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "bpc-157-3",
+          "sku": "BC20",
+          "label": "20 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "bpc-157-plus-tb-500",
+      "slug": "bpc-157-plus-tb-500",
+      "name": "BPC-157 + TB-500",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "bpc-157-plus-tb-500-1",
+          "sku": "BB10",
+          "label": "10 mg",
+          "price": 36,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "bpc-157-plus-tb-500-2",
+          "sku": "BB20",
+          "label": "20 mg",
+          "price": 41,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cagrilintida",
+      "slug": "cagrilintida",
+      "name": "Cagrilintida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cagrilintida-1",
+          "sku": "CGL5",
+          "label": "5 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "cagrilintida-2",
+          "sku": "CGL10",
+          "label": "10 mg",
+          "price": 44,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cagrilintida-plus-semaglutida",
+      "slug": "cagrilintida-plus-semaglutida",
+      "name": "Cagrilintida + Semaglutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cagrilintida-plus-semaglutida-1",
+          "sku": "CS5",
+          "label": "5 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "cagrilintida-plus-semaglutida-2",
+          "sku": "CS10",
+          "label": "10 mg",
+          "price": 44,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cardiogen",
+      "slug": "cardiogen",
+      "name": "Cardiogen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cardiogen-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cartalax",
+      "slug": "cartalax",
+      "name": "Cartalax",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cartalax-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cerebrolisina",
+      "slug": "cerebrolisina",
+      "name": "Cerebrolisina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cerebrolisina-1",
+          "sku": "CBL60",
+          "label": "60 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cjc-1295-ipamorelina",
+      "slug": "cjc-1295-ipamorelina",
+      "name": "CJC-1295 + Ipamorelina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cjc-1295-ipamorelina-1",
+          "sku": "CP10",
+          "label": "10 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cjc-1295-com-dac",
+      "slug": "cjc-1295-com-dac",
+      "name": "CJC-1295 com DAC",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cjc-1295-com-dac-1",
+          "sku": "CD5",
+          "label": "5 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cjc-1295-sem-dac",
+      "slug": "cjc-1295-sem-dac",
+      "name": "CJC-1295 sem DAC",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cjc-1295-sem-dac-1",
+          "sku": "CND5",
+          "label": "5 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "cjc-1295-sem-dac-2",
+          "sku": "CND10",
+          "label": "10 mg",
+          "price": 43,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "cortagen",
+      "slug": "cortagen",
+      "name": "Cortagen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "cortagen-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "crystagen",
+      "slug": "crystagen",
+      "name": "Crystagen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "crystagen-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "dermorfina",
+      "slug": "dermorfina",
+      "name": "Dermorfina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "dermorfina-1",
+          "sku": "DR5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "dsip",
+      "slug": "dsip",
+      "name": "DSIP",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "dsip-1",
+          "sku": "DS5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "dsip-2",
+          "sku": "DS10",
+          "label": "10 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "dsip-3",
+          "sku": "DS15",
+          "label": "15 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "dulaglutida",
+      "slug": "dulaglutida",
+      "name": "Dulaglutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "dulaglutida-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 44,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "dulaglutida-2",
+          "sku": null,
+          "label": "10 mg",
+          "price": 87,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "epitalon",
+      "slug": "epitalon",
+      "name": "Epitalon",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "epitalon-1",
+          "sku": "ET10",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "epitalon-2",
+          "sku": "ET50",
+          "label": "50 mg",
+          "price": 44,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "epitalon-n-acetil-amidato",
+      "slug": "epitalon-n-acetil-amidato",
+      "name": "Epitalon N-acetil amidato",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "epitalon-n-acetil-amidato-1",
+          "sku": "NET5",
+          "label": "5 mg",
+          "price": 41,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "epo-eritropoetina",
+      "slug": "epo-eritropoetina",
+      "name": "EPO (eritropoetina)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "epo-eritropoetina-1",
+          "sku": "E3K",
+          "label": "3000 iu",
+          "price": 54,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "foxo4-dri",
+      "slug": "foxo4-dri",
+      "name": "FOXO4-DRI",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "foxo4-dri-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 94,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "fragmento-17-23",
+      "slug": "fragmento-17-23",
+      "name": "Fragmento 17-23",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "fragmento-17-23-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ftpp-adipotide",
+      "slug": "ftpp-adipotide",
+      "name": "FTPP Adipotide",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ftpp-adipotide-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "gdf-8-miostatina",
+      "slug": "gdf-8-miostatina",
+      "name": "GDF-8 (miostatina)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "gdf-8-miostatina-1",
+          "sku": null,
+          "label": "1 mg",
+          "price": 54,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ghk-cu",
+      "slug": "ghk-cu",
+      "name": "GHK-Cu",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ghk-cu-1",
+          "sku": "CU50",
+          "label": "50 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ghk-cu-2",
+          "sku": "CU100",
+          "label": "100 mg",
+          "price": 55,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ghrp-2-acetato",
+      "slug": "ghrp-2-acetato",
+      "name": "GHRP-2 (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ghrp-2-acetato-1",
+          "sku": "G25",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ghrp-2-acetato-2",
+          "sku": "G210",
+          "label": "10 mg",
+          "price": 29,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ghrp-6-acetato",
+      "slug": "ghrp-6-acetato",
+      "name": "GHRP-6 (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ghrp-6-acetato-1",
+          "sku": "G65",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ghrp-6-acetato-2",
+          "sku": "G610",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "glow-70",
+      "slug": "glow-70",
+      "name": "GLOW (BPC-157 + GHK-Cu + TB-500)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "glow-70-1",
+          "sku": "BBG70",
+          "label": "70 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "glutationa",
+      "slug": "glutationa",
+      "name": "Glutationa",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "glutationa-1",
+          "sku": "GTT",
+          "label": "1500 mg",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "hcg",
+      "slug": "hcg",
+      "name": "HCG",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "hcg-1",
+          "sku": "G5K",
+          "label": "5000 iu",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hcg-2",
+          "sku": "G10K",
+          "label": "10000 iu",
+          "price": 48,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "hexarelina-acetato",
+      "slug": "hexarelina-acetato",
+      "name": "Hexarelina (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "hexarelina-acetato-1",
+          "sku": "HX2",
+          "label": "2 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hexarelina-acetato-2",
+          "sku": "HX5",
+          "label": "5 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "hgh-191aa-somatropina",
+      "slug": "hgh-191aa-somatropina",
+      "name": "HGH 191AA (somatropina)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "hgh-191aa-somatropina-1",
+          "sku": "H10",
+          "label": "10 iu",
+          "price": 29,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-191aa-somatropina-2",
+          "sku": "H24",
+          "label": "24 iu",
+          "price": 46,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-191aa-somatropina-3",
+          "sku": "H36",
+          "label": "36 iu",
+          "price": 49,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-191aa-somatropina-4",
+          "sku": "H40",
+          "label": "40 iu",
+          "price": 58,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "hgh-fragmento-176-191",
+      "slug": "hgh-fragmento-176-191",
+      "name": "HGH Fragmento 176-191",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "hgh-fragmento-176-191-1",
+          "sku": "FR2",
+          "label": "2 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-fragmento-176-191-2",
+          "sku": "FR5",
+          "label": "5 mg",
+          "price": 36,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-fragmento-176-191-3",
+          "sku": "FR10",
+          "label": "10 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-fragmento-176-191-4",
+          "sku": "FR12",
+          "label": "12 mg",
+          "price": 49,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "hgh-fragmento-176-191-5",
+          "sku": "FR15",
+          "label": "15 mg",
+          "price": 60,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "hmg",
+      "slug": "hmg",
+      "name": "HMG",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "hmg-1",
+          "sku": "G75",
+          "label": "75 iu",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "humanina",
+      "slug": "humanina",
+      "name": "Humanina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "humanina-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 81,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "igf-1-des",
+      "slug": "igf-1-des",
+      "name": "IGF-1 DES",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "igf-1-des-1",
+          "sku": "IGD",
+          "label": "2 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "igf-1-lr3",
+      "slug": "igf-1-lr3",
+      "name": "IGF-1 LR3",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "igf-1-lr3-1",
+          "sku": "IG01",
+          "label": "0.1 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "igf-1-lr3-2",
+          "sku": "IG1",
+          "label": "1 mg",
+          "price": 52,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ipamorelina",
+      "slug": "ipamorelina",
+      "name": "Ipamorelina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ipamorelina-1",
+          "sku": "IP5",
+          "label": "5 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ipamorelina-2",
+          "sku": "IP10",
+          "label": "10 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "kisspeptina-10",
+      "slug": "kisspeptina-10",
+      "name": "Kisspeptina-10",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "kisspeptina-10-1",
+          "sku": "KS5",
+          "label": "5 mg",
+          "price": 29,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "kisspeptina-10-2",
+          "sku": "KS10",
+          "label": "10 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv",
+      "slug": "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv",
+      "name": "KLOW (BPC-157 + GHK-Cu + TB-500 + KPV)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "klow-bpc-157-plus-ghk-cu-plus-tb-500-plus-kpv-1",
+          "sku": "KL80",
+          "label": "80 mg",
+          "price": 49,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "kpv",
+      "slug": "kpv",
+      "name": "KPV",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "kpv-1",
+          "sku": "KPV5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "kpv-2",
+          "sku": "KPV10",
+          "label": "10 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "l-carnitina",
+      "slug": "l-carnitina",
+      "name": "L-carnitina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "l-carnitina-1",
+          "sku": null,
+          "label": "600 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "l-carnitina-2",
+          "sku": null,
+          "label": "1200 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "lemon-bottle",
+      "slug": "lemon-bottle",
+      "name": "Lemon Bottle",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "lemon-bottle-1",
+          "sku": "柠檬瓶",
+          "label": "10 ml",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "liraglutida",
+      "slug": "liraglutida",
+      "name": "Liraglutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "liraglutida-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 36,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "liraglutida-2",
+          "sku": null,
+          "label": "10 mg",
+          "price": 43,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "liraglutida-3",
+          "sku": null,
+          "label": "30 mg",
+          "price": 120,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "livagen",
+      "slug": "livagen",
+      "name": "Livagen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "livagen-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 41,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ll-37",
+      "slug": "ll-37",
+      "name": "LL-37",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ll-37-1",
+          "sku": "375",
+          "label": "5 mg",
+          "price": 35,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "matrixyl",
+      "slug": "matrixyl",
+      "name": "Matrixyl",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "matrixyl-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "mazdutida",
+      "slug": "mazdutida",
+      "name": "Mazdutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "mazdutida-1",
+          "sku": "MDT5",
+          "label": "5 mg",
+          "price": 39,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "mazdutida-2",
+          "sku": "MDT",
+          "label": "10 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "melanotan-i-mt-1",
+      "slug": "melanotan-i-mt-1",
+      "name": "Melanotan I (MT-1)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "melanotan-i-mt-1-1",
+          "sku": "MT1",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "melanotan-ii-mt-2",
+      "slug": "melanotan-ii-mt-2",
+      "name": "Melanotan II (MT-2)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "melanotan-ii-mt-2-1",
+          "sku": "ML10",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "melatonina",
+      "slug": "melatonina",
+      "name": "Melatonina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "melatonina-1",
+          "sku": "MT10",
+          "label": "10 mg",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "mgf",
+      "slug": "mgf",
+      "name": "MGF",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "mgf-1",
+          "sku": "FM2",
+          "label": "2 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "mots-c",
+      "slug": "mots-c",
+      "name": "MOTS-c",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "mots-c-1",
+          "sku": "MS10",
+          "label": "10 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "mots-c-2",
+          "sku": "MS40",
+          "label": "40 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "nad-plus",
+      "slug": "nad-plus",
+      "name": "NAD+",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "nad-plus-1",
+          "sku": "NJ100",
+          "label": "100 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "nad-plus-2",
+          "sku": "NJ500",
+          "label": "500 mg",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "nad-plus-3",
+          "sku": "NJ1000",
+          "label": "1000 mg",
+          "price": 35,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ocitocina-acetato",
+      "slug": "ocitocina-acetato",
+      "name": "Ocitocina (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ocitocina-acetato-1",
+          "sku": "OT2",
+          "label": "2 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ocitocina-acetato-2",
+          "sku": "OT5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ocitocina-acetato-3",
+          "sku": "OT10",
+          "label": "10 mg",
+          "price": 32,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "orexina-a",
+      "slug": "orexina-a",
+      "name": "Orexina A",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "orexina-a-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 167,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "orexina-b",
+      "slug": "orexina-b",
+      "name": "Orexina B",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "orexina-b-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 48,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "orexina-b-2",
+          "sku": null,
+          "label": "10 mg",
+          "price": 73,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ovagen",
+      "slug": "ovagen",
+      "name": "Ovagen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ovagen-1",
+          "sku": "OV20",
+          "label": "20 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "p21",
+      "slug": "p21",
+      "name": "P21",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "p21-1",
+          "sku": "P210",
+          "label": "10 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "pancragen",
+      "slug": "pancragen",
+      "name": "Pancragen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "pancragen-1",
+          "sku": null,
+          "label": "20 mg",
+          "price": 41,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "pe-22-28",
+      "slug": "pe-22-28",
+      "name": "PE-22-28",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "pe-22-28-1",
+          "sku": "PE5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "pe-22-28-2",
+          "sku": "PE10",
+          "label": "10 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "peg-mgf",
+      "slug": "peg-mgf",
+      "name": "PEG-MGF",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "peg-mgf-1",
+          "sku": "FMP2",
+          "label": "2 mg",
+          "price": 41,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "pinealon",
+      "slug": "pinealon",
+      "name": "Pinealon",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "pinealon-1",
+          "sku": "PI5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "pinealon-2",
+          "sku": "PI10",
+          "label": "10 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "pinealon-3",
+          "sku": "PI20",
+          "label": "20 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "pnc-27",
+      "slug": "pnc-27",
+      "name": "PNC-27",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "pnc-27-1",
+          "sku": "PN5",
+          "label": "5 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "pnc-27-2",
+          "sku": "PN10",
+          "label": "10 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "pt-141-bremelanotida",
+      "slug": "pt-141-bremelanotida",
+      "name": "PT-141 (bremelanotida)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "pt-141-bremelanotida-1",
+          "sku": "P41",
+          "label": "10 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ptd-dbm",
+      "slug": "ptd-dbm",
+      "name": "PTD-DBM",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ptd-dbm-1",
+          "sku": null,
+          "label": "5 mg",
+          "price": 68,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "retatrutida",
+      "slug": "retatrutida",
+      "name": "Retatrutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "retatrutida-1",
+          "sku": "RT5",
+          "label": "5 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-2",
+          "sku": "RT10",
+          "label": "10 mg",
+          "price": 37,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-3",
+          "sku": "RT15",
+          "label": "15 mg",
+          "price": 43,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-4",
+          "sku": "RT20",
+          "label": "20 mg",
+          "price": 48,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-5",
+          "sku": "RT30",
+          "label": "30 mg",
+          "price": 54,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-6",
+          "sku": "RT40",
+          "label": "40 mg",
+          "price": 66,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-7",
+          "sku": "RT50",
+          "label": "50 mg",
+          "price": 79,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "retatrutida-8",
+          "sku": "RT60",
+          "label": "60 mg",
+          "price": 90,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "retatrutida-plus-cagrilintida",
+      "slug": "retatrutida-plus-cagrilintida",
+      "name": "Retatrutida + Cagrilintida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "retatrutida-plus-cagrilintida-1",
+          "sku": "RC10",
+          "label": "10 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "retatrutida-plus-tirzepatida",
+      "slug": "retatrutida-plus-tirzepatida",
+      "name": "Retatrutida + Tirzepatida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "retatrutida-plus-tirzepatida-1",
+          "sku": null,
+          "label": "60 mg",
+          "price": 96,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "selank",
+      "slug": "selank",
+      "name": "Selank",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "selank-1",
+          "sku": "SK5",
+          "label": "5 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "selank-2",
+          "sku": "SK11",
+          "label": "11 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "selank-3",
+          "sku": "SK30",
+          "label": "30 mg",
+          "price": 43,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "semaglutida",
+      "slug": "semaglutida",
+      "name": "Semaglutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "semaglutida-1",
+          "sku": "SM5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semaglutida-2",
+          "sku": "SM10",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semaglutida-3",
+          "sku": "SM15",
+          "label": "15 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semaglutida-4",
+          "sku": "SM20",
+          "label": "20 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semaglutida-5",
+          "sku": "SM30",
+          "label": "30 mg",
+          "price": 38,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "semax",
+      "slug": "semax",
+      "name": "Semax",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "semax-1",
+          "sku": "XA5",
+          "label": "5 mg",
+          "price": 29,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semax-2",
+          "sku": "XA11",
+          "label": "11 mg",
+          "price": 35,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "semax-3",
+          "sku": "XA30",
+          "label": "30 mg",
+          "price": 60,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "sermorelina-acetato",
+      "slug": "sermorelina-acetato",
+      "name": "Sermorelina (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "sermorelina-acetato-1",
+          "sku": "SMO5",
+          "label": "5 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "sermorelina-acetato-2",
+          "sku": "SMO10",
+          "label": "10 mg",
+          "price": 39,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "slu-pp-332",
+      "slug": "slu-pp-332",
+      "name": "SLU-PP-332",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "slu-pp-332-1",
+          "sku": "322",
+          "label": "5 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "snap-8",
+      "slug": "snap-8",
+      "name": "SNAP-8",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "snap-8-1",
+          "sku": "NP810",
+          "label": "10 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "ss-31",
+      "slug": "ss-31",
+      "name": "SS-31 (elamipretida)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "ss-31-1",
+          "sku": "2S10",
+          "label": "10 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "ss-31-2",
+          "sku": "2S50",
+          "label": "50 mg",
+          "price": 80,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "survodutida",
+      "slug": "survodutida",
+      "name": "Survodutida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "survodutida-1",
+          "sku": "SUR10",
+          "label": "10 mg",
+          "price": 91,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "tb-500",
+      "slug": "tb-500",
+      "name": "TB-500",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "tb-500-1",
+          "sku": "TB5",
+          "label": "5 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tb-500-2",
+          "sku": "TB10",
+          "label": "10 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "tb-500-fragmento",
+      "slug": "tb-500-fragmento",
+      "name": "TB-500 (fragmento)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "tb-500-fragmento-1",
+          "sku": "B10F",
+          "label": "10 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "teriparatida",
+      "slug": "teriparatida",
+      "name": "Teriparatida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "teriparatida-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 51,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "tesamorelina",
+      "slug": "tesamorelina",
+      "name": "Tesamorelina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "tesamorelina-1",
+          "sku": "TSM5",
+          "label": "5 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tesamorelina-2",
+          "sku": "TSM10",
+          "label": "10 mg",
+          "price": 48,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tesamorelina-3",
+          "sku": "TSM20",
+          "label": "20 mg",
+          "price": 77,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "testagen",
+      "slug": "testagen",
+      "name": "Testagen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "testagen-1",
+          "sku": "TG20",
+          "label": "20 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "timalina",
+      "slug": "timalina",
+      "name": "Timalina",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "timalina-1",
+          "sku": "TY10",
+          "label": "10 mg",
+          "price": 30,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "timosina-alfa-1",
+      "slug": "timosina-alfa-1",
+      "name": "Timosina alfa-1",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "timosina-alfa-1-1",
+          "sku": "TA5",
+          "label": "5 mg",
+          "price": 35,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "timosina-alfa-1-2",
+          "sku": "TA10",
+          "label": "10 mg",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "tirzepatida",
+      "slug": "tirzepatida",
+      "name": "Tirzepatida",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "tirzepatida-1",
+          "sku": "TR5",
+          "label": "5 mg",
+          "price": 25,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-2",
+          "sku": "TR10",
+          "label": "10 mg",
+          "price": 28,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-3",
+          "sku": "TR15",
+          "label": "15 mg",
+          "price": 31,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-4",
+          "sku": "TR20",
+          "label": "20 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-5",
+          "sku": "TR30",
+          "label": "30 mg",
+          "price": 38,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-6",
+          "sku": "TR40",
+          "label": "40 mg",
+          "price": 44,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-7",
+          "sku": "TR50",
+          "label": "50 mg",
+          "price": 49,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-8",
+          "sku": "TR60",
+          "label": "60 mg",
+          "price": 45,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-9",
+          "sku": "TR80",
+          "label": "80 mg",
+          "price": 84,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "tirzepatida-10",
+          "sku": "TR100",
+          "label": "100 mg",
+          "price": 94,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "toxina-botulinica",
+      "slug": "toxina-botulinica",
+      "name": "Toxina botulínica",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "toxina-botulinica-1",
+          "sku": "XT100",
+          "label": "100 iu",
+          "price": 40,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "triptorrelina-acetato",
+      "slug": "triptorrelina-acetato",
+      "name": "Triptorrelina (acetato)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "triptorrelina-acetato-1",
+          "sku": null,
+          "label": "2 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "vesugen",
+      "slug": "vesugen",
+      "name": "Vesugen",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "vesugen-1",
+          "sku": null,
+          "label": "10 mg",
+          "price": 33,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "vilon",
+      "slug": "vilon",
+      "name": "Vilon",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "vilon-1",
+          "sku": "VI20",
+          "label": "20 mg",
+          "price": 42,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "vip-aviptadil",
+      "slug": "vip-aviptadil",
+      "name": "VIP (aviptadil)",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "vip-aviptadil-1",
+          "sku": "VIP5",
+          "label": "5 mg",
+          "price": 34,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        },
+        {
+          "id": "vip-aviptadil-2",
+          "sku": "VIP10",
+          "label": "10 mg",
+          "price": 47,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    },
+    {
+      "id": "acido-hialuronico",
+      "slug": "acido-hialuronico",
+      "name": "Ácido hialurônico",
+      "status": "review",
+      "productType": "other",
+      "public": {
+        "shortDescription": "Material de referência catalogado para pesquisa laboratorial.",
+        "image": null,
+        "altText": null,
+        "featured": false,
+        "searchTerms": []
+      },
+      "variants": [
+        {
+          "id": "acido-hialuronico-1",
+          "sku": "HA5",
+          "label": "5 mg",
+          "price": 50,
+          "currency": "USD",
+          "active": true,
+          "inventory": {
+            "policy": "untracked",
+            "available": 0,
+            "reserved": 0,
+            "reorderPoint": null
+          }
+        }
+      ],
+      "publication": {
+        "state": "preview",
+        "approvedBy": null,
+        "approvedAt": null,
+        "version": 1
+      }
+    }
+  ],
+  "audit": {
+    "source": "peptides/assets/catalog.js",
+    "productCount": 100,
+    "variantCount": 179,
+    "missingSku": [
+      {
+        "slug": "acth-1-39",
+        "variantId": "acth-1-39-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "b7-33",
+        "variantId": "b7-33-1",
+        "label": "2 mg"
+      },
+      {
+        "slug": "b7-33",
+        "variantId": "b7-33-2",
+        "label": "10 mg"
+      },
+      {
+        "slug": "cardiogen",
+        "variantId": "cardiogen-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "cartalax",
+        "variantId": "cartalax-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "cortagen",
+        "variantId": "cortagen-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "crystagen",
+        "variantId": "crystagen-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "dulaglutida",
+        "variantId": "dulaglutida-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "dulaglutida",
+        "variantId": "dulaglutida-2",
+        "label": "10 mg"
+      },
+      {
+        "slug": "foxo4-dri",
+        "variantId": "foxo4-dri-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "fragmento-17-23",
+        "variantId": "fragmento-17-23-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "ftpp-adipotide",
+        "variantId": "ftpp-adipotide-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "gdf-8-miostatina",
+        "variantId": "gdf-8-miostatina-1",
+        "label": "1 mg"
+      },
+      {
+        "slug": "humanina",
+        "variantId": "humanina-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "l-carnitina",
+        "variantId": "l-carnitina-1",
+        "label": "600 mg"
+      },
+      {
+        "slug": "l-carnitina",
+        "variantId": "l-carnitina-2",
+        "label": "1200 mg"
+      },
+      {
+        "slug": "liraglutida",
+        "variantId": "liraglutida-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "liraglutida",
+        "variantId": "liraglutida-2",
+        "label": "10 mg"
+      },
+      {
+        "slug": "liraglutida",
+        "variantId": "liraglutida-3",
+        "label": "30 mg"
+      },
+      {
+        "slug": "livagen",
+        "variantId": "livagen-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "matrixyl",
+        "variantId": "matrixyl-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "orexina-a",
+        "variantId": "orexina-a-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "orexina-b",
+        "variantId": "orexina-b-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "orexina-b",
+        "variantId": "orexina-b-2",
+        "label": "10 mg"
+      },
+      {
+        "slug": "pancragen",
+        "variantId": "pancragen-1",
+        "label": "20 mg"
+      },
+      {
+        "slug": "ptd-dbm",
+        "variantId": "ptd-dbm-1",
+        "label": "5 mg"
+      },
+      {
+        "slug": "retatrutida-plus-tirzepatida",
+        "variantId": "retatrutida-plus-tirzepatida-1",
+        "label": "60 mg"
+      },
+      {
+        "slug": "teriparatida",
+        "variantId": "teriparatida-1",
+        "label": "10 mg"
+      },
+      {
+        "slug": "triptorrelina-acetato",
+        "variantId": "triptorrelina-acetato-1",
+        "label": "2 mg"
+      },
+      {
+        "slug": "vesugen",
+        "variantId": "vesugen-1",
+        "label": "10 mg"
+      }
+    ],
+    "duplicateSku": []
+  }
+}

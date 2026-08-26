@@ -1,0 +1,56 @@
+name: Normalize Product Pages
+
+on:
+  push:
+    branches:
+      - 'feat/commerce-core-v1'
+    paths:
+      - 'tools/normalize-product-pages.mjs'
+      - '.github/workflows/normalize-product-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/commerce-core-v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Normalize 100 product pages
+        run: node tools/normalize-product-pages.mjs
+
+      - name: Validate normalized pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          count=$(find peptides -mindepth 2 -maxdepth 2 -name index.html | wc -l | tr -d ' ')
+          test "$count" = "100"
+          missing_css=$(grep -L 'catalog-image-standard.css?v=20260826-vial-standard4' peptides/*/index.html || true)
+          missing_sync=$(grep -L 'variant-vial-sync.js?v=20260826-vial-standard4' peptides/*/index.html || true)
+          if [ -n "$missing_css" ]; then echo "Missing visual standard CSS:"; echo "$missing_css"; exit 1; fi
+          if [ -n "$missing_sync" ]; then echo "Missing variant sync JS:"; echo "$missing_sync"; exit 1; fi
+          node --check peptides/assets/variant-vial-sync.js
+
+      - name: Commit normalized pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'pepmax-storefront-bot'
+          git config user.email 'pepmax-storefront-bot@users.noreply.github.com'
+          git add peptides/*/index.html
+          if git diff --cached --quiet; then
+            echo 'All product pages already normalized.'
+          else
+            git commit -m 'fix: normalize vial variant sync across 100 product pages'
+            git push origin HEAD:feat/commerce-core-v1
+          fi

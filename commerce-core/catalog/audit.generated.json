@@ -1,0 +1,221 @@
+{
+  "source": "peptides/assets/catalog.js",
+  "products": 100,
+  "variants": 179,
+  "namedSkus": 149,
+  "unassignedSkus": 30,
+  "blockingIssues": 0,
+  "warnings": 30,
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "acth-1-39",
+      "label": "5 mg",
+      "where": "product[2].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "b7-33",
+      "label": "2 mg",
+      "where": "product[10].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "b7-33",
+      "label": "10 mg",
+      "where": "product[10].items[1]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "cardiogen",
+      "label": "20 mg",
+      "where": "product[15].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "cartalax",
+      "label": "20 mg",
+      "where": "product[16].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "cortagen",
+      "label": "20 mg",
+      "where": "product[21].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "crystagen",
+      "label": "20 mg",
+      "where": "product[22].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "dulaglutida",
+      "label": "5 mg",
+      "where": "product[25].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "dulaglutida",
+      "label": "10 mg",
+      "where": "product[25].items[1]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "foxo4-dri",
+      "label": "10 mg",
+      "where": "product[29].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "fragmento-17-23",
+      "label": "10 mg",
+      "where": "product[30].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "ftpp-adipotide",
+      "label": "5 mg",
+      "where": "product[31].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "gdf-8-miostatina",
+      "label": "1 mg",
+      "where": "product[32].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "humanina",
+      "label": "10 mg",
+      "where": "product[43].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "l-carnitina",
+      "label": "600 mg",
+      "where": "product[50].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "l-carnitina",
+      "label": "1200 mg",
+      "where": "product[50].items[1]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "liraglutida",
+      "label": "5 mg",
+      "where": "product[52].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "liraglutida",
+      "label": "10 mg",
+      "where": "product[52].items[1]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "liraglutida",
+      "label": "30 mg",
+      "where": "product[52].items[2]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "livagen",
+      "label": "20 mg",
+      "where": "product[53].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "matrixyl",
+      "label": "10 mg",
+      "where": "product[55].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "orexina-a",
+      "label": "10 mg",
+      "where": "product[64].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "orexina-b",
+      "label": "5 mg",
+      "where": "product[65].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "orexina-b",
+      "label": "10 mg",
+      "where": "product[65].items[1]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "pancragen",
+      "label": "20 mg",
+      "where": "product[68].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "ptd-dbm",
+      "label": "5 mg",
+      "where": "product[74].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "retatrutida-plus-tirzepatida",
+      "label": "60 mg",
+      "where": "product[77].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "teriparatida",
+      "label": "10 mg",
+      "where": "product[88].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "triptorrelina-acetato",
+      "label": "2 mg",
+      "where": "product[95].items[0]"
+    },
+    {
+      "severity": "warning",
+      "code": "UNASSIGNED_SKU",
+      "slug": "vesugen",
+      "label": "10 mg",
+      "where": "product[96].items[0]"
+    }
+  ]
+}
