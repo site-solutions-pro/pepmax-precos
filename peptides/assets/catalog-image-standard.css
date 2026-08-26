@@ -1,7 +1,21 @@
 .catalog-media{position:relative;width:100%;height:auto!important;aspect-ratio:1047/1502;margin:0 0 8px!important;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:22px!important;background:#fff;box-shadow:0 18px 42px rgba(0,0,0,.24)}
 .catalog-media::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:var(--grad);opacity:.62;pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
 .catalog-media img,.catalog-media img.final-vial{display:block;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center!important;background:#fff;transform:none!important}
-.card{padding:18px;border-radius:18px}
-.grid{gap:18px}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:10px;border-radius:14px}.catalog-media{border-radius:16px!important}.card h2{font-size:17px}}
+.card{padding:18px;border-radius:18px}.grid{gap:18px}
+
+/* Approved photography keeps its native geometry. Presentation is a DOM label
+   tied to the selected variant; the underlying WebP remains byte-preserved. */
+.vial-visual{position:relative;overflow:hidden;background:#fff}
+.vial-visual.has-final-vial img,.product-visual img.final-vial,.catalog-media img.final-vial{transform:none!important;object-fit:contain!important;object-position:center!important}
+.vial-visual.has-final-vial .vial-dose{display:flex!important;left:31.5%!important;right:31.5%!important;top:70.2%!important;height:11%!important;transform:none!important;background:#fff!important;color:var(--dose-color,#174d9a)!important;border:1px solid rgba(39,135,167,.5);font-size:clamp(12px,2vw,34px)!important;letter-spacing:-.035em!important;z-index:2}
+.catalog-media .vial-visual.has-final-vial .vial-dose{font-size:clamp(11px,1.2vw,18px)!important}
+
+/* Honest neutral state for products awaiting approved photography. It is HTML
+   and CSS only: no generated vial, cartoon, or pretend final-photo asset. */
+.vial-visual.photography-pending{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:12%;text-align:center;color:#173b68;background:linear-gradient(145deg,#fff,#f5f8fc)}
+.photography-pending .pending-brand{font:800 clamp(24px,4vw,48px)/1 Arial,sans-serif}
+.photography-pending .pending-title{color:#64748b;font:700 clamp(11px,1.5vw,17px)/1.2 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.photography-pending .pending-presentation{padding:7px 12px;border:1px solid rgba(39,135,167,.35);border-radius:999px;color:#174d9a;font:800 clamp(12px,1.7vw,20px)/1 Arial,sans-serif;background:#fff}
+
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:10px;border-radius:14px}.catalog-media{border-radius:16px!important}.card h2{font-size:17px}.vial-visual.has-final-vial .vial-dose{font-size:clamp(13px,5vw,28px)!important}.catalog-media .vial-visual.has-final-vial .vial-dose{font-size:clamp(10px,3.2vw,16px)!important}.vial-visual.photography-pending{gap:9px;padding:10%}}
 @media(max-width:420px){.grid{grid-template-columns:1fr}.card{padding:14px}.catalog-media{border-radius:18px!important}}
