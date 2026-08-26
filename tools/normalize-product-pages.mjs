@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const peptidesDir = path.join(root, 'peptides');
-const version = '20260826-vial-standard4';
+const version = '20260826-image-mass-swap1';
 
 const dirs = fs.readdirSync(peptidesDir, { withFileTypes: true })
   .filter((entry) => entry.isDirectory() && entry.name !== 'assets')
