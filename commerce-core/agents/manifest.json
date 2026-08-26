@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "project": "PepMax Commerce Core",
   "goal": "Transform PepMax into a production-ready eShop through governed multi-agent execution.",
   "branch_policy": {
@@ -8,6 +8,40 @@
     "require_pr": true,
     "require_qa_gate": true
   },
+  "orchestrators": [
+    {
+      "id": "O0",
+      "name": "program-orchestrator",
+      "owns": ["program roadmap", "dependency graph", "cross-PR coordination", "assignment", "human approval escalation"],
+      "coordinates": ["O1", "O2", "O3", "A0"],
+      "can_bypass_qa": false,
+      "can_release": false
+    },
+    {
+      "id": "O1",
+      "name": "commerce-workstream-orchestrator",
+      "owns": ["canonical catalog sequencing", "SKU normalization sequencing", "inventory foundation", "checkout dependencies", "transactional contracts"],
+      "coordinates": ["A1", "A3", "A5"],
+      "can_bypass_qa": false,
+      "can_release": false
+    },
+    {
+      "id": "O2",
+      "name": "experience-content-orchestrator",
+      "owns": ["storefront migration sequencing", "content integration", "multilingual consistency", "accessibility and route preservation"],
+      "coordinates": ["A2", "A4", "A5"],
+      "can_bypass_qa": false,
+      "can_release": false
+    },
+    {
+      "id": "O3",
+      "name": "integration-release-orchestrator",
+      "owns": ["integration order", "release candidate assembly", "CI readiness", "rollback coordination", "final approval checkpoint"],
+      "coordinates": ["A0", "A5", "A6"],
+      "can_bypass_qa": false,
+      "can_release": false
+    }
+  ],
   "agents": [
     {
       "id": "A0",
@@ -74,7 +108,10 @@
     }
   ],
   "execution_graph": {
-    "start": "A0",
+    "program_start": "O0",
+    "workstream_orchestrators": ["O1", "O2"],
+    "integration_orchestrator": "O3",
+    "specialist_start": "A0",
     "parallel_workers": ["A1", "A2", "A3", "A4"],
     "quality_gate": "A5",
     "release_gate": "A6"
