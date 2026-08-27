@@ -1173,7 +1173,17 @@ const money=n=>"US$ "+n.toFixed(2);
 /* Only assets whose physical vial label was verified against the SKU belong here.
    Other variants deliberately render the neutral pending-photography state. */
 const APPROVED_VARIANT_IMAGES=Object.freeze({
+ "5-amino-1mq":Object.freeze({"5AM":"generated/5-amino-1mq/5am.png","10AM":"generated/5-amino-1mq/10am.png","50AM":"generated/5-amino-1mq/50am.png"}),
  "ace-031":Object.freeze({AE1:"variants/ace-031/ae1.png"}),
+ "acth-1-39":Object.freeze({"5-mg":"generated/acth-1-39/5-mg.png"}),
+ "adamax":Object.freeze({AD5:"generated/adamax/ad5.png"}),
+ "adipotide":Object.freeze({AP2:"generated/adipotide/ap2.png",AP5:"generated/adipotide/ap5.png",AP10:"generated/adipotide/ap10.png"}),
+ "ahk-cu":Object.freeze({AU50:"generated/ahk-cu/au50.png",AU100:"generated/ahk-cu/au100.png"}),
+ "aicar":Object.freeze({AR50:"generated/aicar/ar50.png",AR100:"generated/aicar/ar100.png"}),
+ "alprostadil":Object.freeze({PRO20:"generated/alprostadil/pro20.png"}),
+ "aod-9604":Object.freeze({"5AD":"generated/aod-9604/5ad.png","10AD":"generated/aod-9604/10ad.png"}),
+ "ara-290":Object.freeze({RA10:"generated/ara-290/ra10.png"}),
+ "b7-33":Object.freeze({"2-mg":"generated/b7-33/2-mg.png","10-mg":"generated/b7-33/10-mg.png"}),
  "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"}),
  "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp",MS40:"variants/mots-c/ms40-generated.png"}),
  "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp",RT10:"variants/retatrutida/rt10-generated.png",RT15:"variants/retatrutida/rt15-generated.png",RT20:"variants/retatrutida/rt20-generated.png",RT30:"variants/retatrutida/rt30-generated.png",RT40:"variants/retatrutida/rt40-generated.png",RT50:"variants/retatrutida/rt50-generated.png",RT60:"variants/retatrutida/rt60-generated.png"}),
@@ -1191,8 +1201,8 @@ const presentationToken=value=>String(value)
 const variantToken=item=>isAssignedSku(item?.[0])?String(item[0]).trim().toLowerCase():presentationToken(item?.[1]||"");
 const imageAssetBase=()=>document.querySelector("#catalogGrid")?"./assets/images/":"../assets/images/";
 const approvedVariantImage=(p,item=p.items[0])=>{
- const sku=isAssignedSku(item?.[0])?String(item[0]).trim():null;
- return sku?APPROVED_VARIANT_IMAGES[p.slug]?.[sku]||null:null;
+ const key=isAssignedSku(item?.[0])?String(item[0]).trim():variantToken(item);
+ return APPROVED_VARIANT_IMAGES[p.slug]?.[key]||null;
 };
 const hasApprovedVariantImage=(p,item=p.items[0])=>Boolean(approvedVariantImage(p,item));
 const productImage=(p,item=p.items[0])=>{
