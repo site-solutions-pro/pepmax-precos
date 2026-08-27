@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "mode": "delegated_low_risk_release",
+  "baseBranch": "main",
+  "sameRepositoryOnly": true,
+  "allowedHeadPrefixes": ["agent/", "hotfix/", "release/"],
+  "maxChangedFiles": 200,
+  "autoMergeMethod": "merge",
+  "allowedPublicPaths": [
+    "index.html",
+    "shop/**",
+    "peptides/**",
+    "assets/**"
+  ],
+  "blockedPaths": [
+    ".github/**",
+    "commerce-core/**",
+    "commerce/**",
+    "docs/**",
+    "tools/**",
+    "politicas/**",
+    "AGENTS.md",
+    "ROADMAP.md"
+  ],
+  "requiredInvariants": {
+    "catalogProductCount": 100,
+    "catalogVariantCount": 179,
+    "priceParityWithBase": true,
+    "skuParityWithBase": true,
+    "presentationParityWithBase": true,
+    "noDuplicateAssignedSku": true,
+    "noPrivateCommerceFields": true,
+    "noFileDeletion": true,
+    "javascriptSyntaxValid": true
+  },
+  "humanApprovalAlwaysRequiredFor": [
+    "public price change",
+    "SKU creation, deletion or reassignment",
+    "real payment provider activation or credential change",
+    "tax, shipping or checkout financial rule change",
+    "legal/policy/terms/privacy/refund change",
+    "destructive migration or deletion",
+    "private supplier/cost/margin data",
+    "workflow, permissions or security policy change",
+    "QA bypass or release with known blocker"
+  ]
+}
