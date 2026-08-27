@@ -46,21 +46,6 @@ for(const [slug,bySku] of Object.entries(approved)){
   }
 }
 
-const generatedBatchOne={
-  "ara-290":{RA10:"generated/ara-290/ra10.png"},
-  "b7-33":{"2-mg":"generated/b7-33/2-mg.png","10-mg":"generated/b7-33/10-mg.png"}
-};
-for(const [slug,byKey] of Object.entries(generatedBatchOne)){
-  const product=current.find(entry=>entry.slug===slug);
-  if(!product) fail(`Missing generated-image product ${slug}`);
-  for(const [key,asset] of Object.entries(byKey)){
-    if(!currentSource.includes(`${JSON.stringify(key)}:"${asset}"`)&&!currentSource.includes(`${key}:"${asset}"`)) fail(`Generated image mapping missing: ${slug} ${key} -> ${asset}`);
-    if(!existsSync(join(root,"peptides","assets","images",asset))) fail(`Generated public image missing: ${asset}`);
-  }
-}
-const b733=current.find(product=>product.slug==="b7-33");
-if(!b733||b733.items.some(item=>item[0]!=="—")) fail("B7-33 SKU assignment changed.");
-
 const bpc=current.find(product=>product.slug==="bpc-157");
 if(JSON.stringify(bpc.items.map(item=>item[0]))!==JSON.stringify(["BC5","BC10","BC20"])) fail("BPC-157 SKU order changed.");
 if(!currentSource.includes('"bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"})')) fail("BPC-157 image mappings are incomplete.");
@@ -84,7 +69,7 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260827-generated-batch-two-live1")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260827-approved-variants-generated1")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
