@@ -50,11 +50,12 @@ if(JSON.stringify(bpc.items.map(item=>item[0]))!==JSON.stringify(["BC5","BC10","
 if(!currentSource.includes('"bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp"})')) fail("BPC-157 must expose only verified BC5 photography.");
 if(currentSource.includes('BC10:"variants/bpc-157/')||currentSource.includes('BC20:"variants/bpc-157/')) fail("BPC-157 unverified image is marked final.");
 
-for(const forbidden of ["<span class=\"vial-dose","vial-dose{","scaleY(","scaleX(","scale(.804357"]){
+for(const forbidden of ["<span class=\"vial-dose","vial-dose{","scaleX(","scale(.804357"]){
   for(const file of [catalogPath,join(root,"peptides","assets","catalog-image-standard.css"),join(root,"peptides","assets","styles.css")]){
     if(read(file).includes(forbidden)) fail(`Forbidden overlay or distortion token ${forbidden} in ${file}`);
   }
 }
+if(!read(join(root,"peptides","assets","catalog-image-standard.css")).includes("transform:scaleY(1.2)!important")) fail("The requested 20% vertical vial adjustment is missing.");
 if(!currentSource.includes('data-image-status="pending"')||!currentSource.includes("Imagem em produ")) fail("Neutral pending-photography fallback is missing.");
 for(const requiredContract of [
   'const cartKey=(p,item)=>{',
@@ -68,7 +69,7 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260827-real-vial-sku1")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260827-real-vial-sku2")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
