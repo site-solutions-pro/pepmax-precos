@@ -1170,27 +1170,15 @@ function techSpecs(slug){
 // de execução também neutraliza links residuais em páginas estáticas antigas.
 document.querySelectorAll('a[href*="biblioteca"],a[href*="reconstituicao"]').forEach(link=>link.remove());
 const money=n=>"US$ "+n.toFixed(2);
-const DOSE_COLORS=Object.freeze({"5 mg":"#1556a3","10 mg":"#6f42c1","15 mg":"#b32975","20 mg":"#16805d","30 mg":"#b85c00","40 mg":"#b12e3b","50 mg":"#00788a","60 mg":"#4f46b5","80 mg":"#8a4b12","100 mg":"#233f7a"});
-const DOSE_PALETTE=Object.freeze(["#1556a3","#6f42c1","#b32975","#16805d","#b85c00","#b12e3b","#00788a","#4f46b5","#8a4b12","#233f7a","#7b4a00","#355f2e"]);
-const doseColor=(dose,index=0)=>DOSE_COLORS[dose]||DOSE_PALETTE[index%DOSE_PALETTE.length];
-function vialPlaceholder(p,item=p.items[0],index=0){
- const safe=String(p.name).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
- const short=safe.length>25?safe.slice(0,24)+"…":safe,dose=item[1],color=doseColor(dose,index),doseSize=dose.length>7?18:dose.length>5?21:24;
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".46" stop-color="#7b3fd4"/><stop offset=".76" stop-color="#d6379f"/><stop offset="1" stop-color="#35d58b"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#dce6ef"/><stop offset=".18" stop-color="#fff"/><stop offset=".82" stop-color="#fff"/><stop offset="1" stop-color="#cbd8e4"/></linearGradient></defs><g transform="translate(41.08503 -18.2) scale(.804357 1.07)"><ellipse cx="210" cy="474" rx="120" ry="18" fill="#64748b" opacity=".18"/><rect x="118" y="46" width="184" height="58" rx="17" fill="#c9d0d8"/><rect x="132" y="92" width="156" height="32" rx="8" fill="#202733"/><path d="M143 116h134l18 36v281c0 25-18 43-43 43h-84c-25 0-43-18-43-43V152z" fill="url(#glass)" stroke="#aebdca" stroke-width="4"/><rect x="130" y="204" width="160" height="205" rx="7" fill="#fff"/><rect x="130" y="204" width="160" height="18" fill="url(#g)"/><rect x="130" y="278" width="160" height="76" fill="url(#g)"/><text x="210" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="26" fill="#173b68">PepMAX</text><text x="210" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${short.length>18?16:19}" fill="#fff">${short}</text><text x="210" y="387" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="${doseSize}" fill="${color}">${dose}</text><text x="210" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#41536a">FOR RESEARCH USE ONLY</text></g></svg>`;
- return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
-}
-function pendingProductImage(p){
- const safe=String(p.name).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fc7da"/><stop offset=".5" stop-color="#7b3fd4"/><stop offset="1" stop-color="#d6379f"/></linearGradient></defs><rect width="420" height="520" rx="24" fill="#fff"/><rect x="35" y="35" width="350" height="450" rx="20" fill="none" stroke="url(#g)" stroke-width="3"/><text x="210" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#173b68">PepMAX</text><text x="210" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#334c9b">${safe}</text><text x="210" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#64748b">IMAGEM EM PRODUÇÃO</text></svg>`;
- return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
-}
-const PRODUCT_IMAGE_PATHS=Object.freeze({
- "ace-031":"ace-031-approved.webp",
- "bpc-157":"bpc-157-approved.webp",
- "mots-c":"mots-c-approved.webp",
- "retatrutida":"retatrutida-approved.webp",
- "tesamorelina":"tesamorelina-approved-v2.webp",
- "tirzepatida":"tirzepatida-approved.webp"
+/* Only assets whose physical vial label was verified against the SKU belong here.
+   Other variants deliberately render the neutral pending-photography state. */
+const APPROVED_VARIANT_IMAGES=Object.freeze({
+ "ace-031":Object.freeze({AE1:"variants/ace-031/ae1.webp"}),
+ "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp"}),
+ "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp"}),
+ "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp"}),
+ "tesamorelina":Object.freeze({TSM10:"variants/tesamorelina/tsm10.webp"}),
+ "tirzepatida":Object.freeze({TR5:"variants/tirzepatida/tr5.webp"})
 });
 const htmlEscape=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const isAssignedSku=value=>{
@@ -1201,17 +1189,22 @@ const presentationToken=value=>String(value)
  .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
  .toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const variantToken=item=>isAssignedSku(item?.[0])?String(item[0]).trim().toLowerCase():presentationToken(item?.[1]||"");
-const hasProductImage=p=>Boolean(PRODUCT_IMAGE_PATHS[p.slug]);
 const imageAssetBase=()=>document.querySelector("#catalogGrid")?"./assets/images/":"../assets/images/";
-const productImage=(p,item=p.items[0])=>hasProductImage(p)?`${imageAssetBase()}variants/${p.slug}/${variantToken(item)}.webp`:null;
-const productImageAlt=(p,item=p.items[0])=>`${hasProductImage(p)?"Fotografia":"Imagem em produ\u00e7\u00e3o"} PepMAX ${p.name}, apresenta\u00e7\u00e3o ${item[1]}`;
+const approvedVariantImage=(p,item=p.items[0])=>{
+ const sku=isAssignedSku(item?.[0])?String(item[0]).trim():null;
+ return sku?APPROVED_VARIANT_IMAGES[p.slug]?.[sku]||null:null;
+};
+const hasApprovedVariantImage=(p,item=p.items[0])=>Boolean(approvedVariantImage(p,item));
+const productImage=(p,item=p.items[0])=>{
+ const asset=approvedVariantImage(p,item);
+ return asset?`${imageAssetBase()}${asset}`:null;
+};
+const productImageAlt=(p,item=p.items[0])=>`${hasApprovedVariantImage(p,item)?"Fotografia":"Imagem em produ\u00e7\u00e3o"} PepMAX ${p.name}, apresenta\u00e7\u00e3o ${item[1]}`;
 const productImageMarkup=(p,item=p.items[0],loading="lazy",index=0)=>{
- const final=hasProductImage(p);
- const color=doseColor(item[1],index);
- const lengthClass=item[1].length>7?" dose-xlong":item[1].length>5?" dose-long":"";
+ const final=hasApprovedVariantImage(p,item);
  const identity=`data-variant-token="${htmlEscape(variantToken(item))}" data-sku="${isAssignedSku(item[0])?htmlEscape(String(item[0]).trim()):""}" data-presentation="${htmlEscape(item[1])}"`;
- if(!final)return `<span class="vial-visual photography-pending" role="img" aria-label="${htmlEscape(productImageAlt(p,item))}" ${identity}><span class="pending-brand">PepMAX</span><span class="pending-title">Imagem em produ\u00e7\u00e3o</span><span class="pending-presentation">${htmlEscape(item[1])}</span></span>`;
- return `<span class="vial-visual has-final-vial" style="--dose-color:${color}" ${identity}><img class="final-vial" src="${productImage(p,item)}" alt="${htmlEscape(productImageAlt(p,item))}" width="1047" height="1502" loading="${loading}"><span class="vial-dose${lengthClass}" aria-hidden="true">${htmlEscape(item[1])}</span></span>`;
+ if(!final)return `<span class="vial-visual photography-pending" data-image-status="pending" role="img" aria-label="${htmlEscape(productImageAlt(p,item))}" ${identity}><span class="pending-brand">PepMAX</span><span class="pending-title">Imagem em produ\u00e7\u00e3o</span><span class="pending-presentation">${htmlEscape(item[1])}</span></span>`;
+ return `<span class="vial-visual has-final-vial" data-image-status="approved" ${identity}><img class="final-vial" src="${productImage(p,item)}" alt="${htmlEscape(productImageAlt(p,item))}" width="1047" height="1502" loading="${loading}"></span>`;
 };
 const variantQuery=item=>isAssignedSku(item?.[0])?`?sku=${encodeURIComponent(String(item[0]).trim())}`:`?dose=${encodeURIComponent(item?.[1]||"")}`;
 const productUrl=(p,item=p.items[0])=>{
