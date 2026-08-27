@@ -1175,10 +1175,10 @@ const money=n=>"US$ "+n.toFixed(2);
 const APPROVED_VARIANT_IMAGES=Object.freeze({
  "ace-031":Object.freeze({AE1:"variants/ace-031/ae1.png"}),
  "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"}),
- "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp"}),
- "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp"}),
- "tesamorelina":Object.freeze({TSM10:"variants/tesamorelina/tsm10.webp"}),
- "tirzepatida":Object.freeze({TR5:"variants/tirzepatida/tr5.webp"})
+ "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp",MS40:"variants/mots-c/ms40-generated.png"}),
+ "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp",RT10:"variants/retatrutida/rt10-generated.png",RT15:"variants/retatrutida/rt15-generated.png",RT20:"variants/retatrutida/rt20-generated.png",RT30:"variants/retatrutida/rt30-generated.png",RT40:"variants/retatrutida/rt40-generated.png",RT50:"variants/retatrutida/rt50-generated.png",RT60:"variants/retatrutida/rt60-generated.png"}),
+ "tesamorelina":Object.freeze({TSM5:"variants/tesamorelina/tsm5-generated.png",TSM10:"variants/tesamorelina/tsm10.webp",TSM20:"variants/tesamorelina/tsm20-generated.png"}),
+ "tirzepatida":Object.freeze({TR5:"variants/tirzepatida/tr5.webp",TR10:"variants/tirzepatida/tr10-generated.png",TR15:"variants/tirzepatida/tr15-generated.png",TR20:"variants/tirzepatida/tr20-generated.png",TR30:"variants/tirzepatida/tr30-generated.png",TR40:"variants/tirzepatida/tr40-generated.png",TR50:"variants/tirzepatida/tr50-generated.png",TR60:"variants/tirzepatida/tr60-generated.png",TR80:"variants/tirzepatida/tr80-generated.png",TR100:"variants/tirzepatida/tr100-generated.png"})
 });
 const htmlEscape=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const isAssignedSku=value=>{

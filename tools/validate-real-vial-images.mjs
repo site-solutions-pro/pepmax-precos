@@ -30,14 +30,15 @@ if(duplicate.length) fail(`Duplicate assigned SKU(s): ${duplicate.map(([sku])=>s
 const approved={
   "ace-031":{AE1:"variants/ace-031/ae1.png"},
   "bpc-157":{BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"},
-  "mots-c":{MS10:"variants/mots-c/ms10.webp"},
-  "retatrutida":{RT5:"variants/retatrutida/rt5.webp"},
-  "tesamorelina":{TSM10:"variants/tesamorelina/tsm10.webp"},
-  "tirzepatida":{TR5:"variants/tirzepatida/tr5.webp"}
+  "mots-c":{MS10:"variants/mots-c/ms10.webp",MS40:"variants/mots-c/ms40-generated.png"},
+  "retatrutida":{RT5:"variants/retatrutida/rt5.webp",RT10:"variants/retatrutida/rt10-generated.png",RT15:"variants/retatrutida/rt15-generated.png",RT20:"variants/retatrutida/rt20-generated.png",RT30:"variants/retatrutida/rt30-generated.png",RT40:"variants/retatrutida/rt40-generated.png",RT50:"variants/retatrutida/rt50-generated.png",RT60:"variants/retatrutida/rt60-generated.png"},
+  "tesamorelina":{TSM5:"variants/tesamorelina/tsm5-generated.png",TSM10:"variants/tesamorelina/tsm10.webp",TSM20:"variants/tesamorelina/tsm20-generated.png"},
+  "tirzepatida":{TR5:"variants/tirzepatida/tr5.webp",TR10:"variants/tirzepatida/tr10-generated.png",TR15:"variants/tirzepatida/tr15-generated.png",TR20:"variants/tirzepatida/tr20-generated.png",TR30:"variants/tirzepatida/tr30-generated.png",TR40:"variants/tirzepatida/tr40-generated.png",TR50:"variants/tirzepatida/tr50-generated.png",TR60:"variants/tirzepatida/tr60-generated.png",TR80:"variants/tirzepatida/tr80-generated.png",TR100:"variants/tirzepatida/tr100-generated.png"}
 };
 for(const [slug,bySku] of Object.entries(approved)){
   const product=current.find(entry=>entry.slug===slug);
   if(!product) fail(`Missing approved product ${slug}`);
+  if(product.items.length!==Object.keys(bySku).length) fail(`Approved product ${slug} does not map every catalog variant to an image asset.`);
   for(const [sku,asset] of Object.entries(bySku)){
     if(!product.items.some(item=>item[0]===sku)) fail(`Approved SKU ${sku} is absent from ${slug}`);
     if(!currentSource.includes(`${sku}:"${asset}"`)) fail(`Approved SKU to image mapping missing: ${sku} -> ${asset}`);
@@ -68,7 +69,7 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260827-bpc-generated-labels1")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260827-approved-variants-generated1")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
