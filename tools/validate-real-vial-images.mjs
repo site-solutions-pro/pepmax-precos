@@ -28,7 +28,7 @@ const duplicate=[...skuCounts].filter(([,count])=>count>1);
 if(duplicate.length) fail(`Duplicate assigned SKU(s): ${duplicate.map(([sku])=>sku).join(", ")}`);
 
 const approved={
-  "ace-031":{AE1:"variants/ace-031/ae1.webp"},
+  "ace-031":{AE1:"variants/ace-031/ae1.png"},
   "bpc-157":{BC5:"variants/bpc-157/bc5.webp"},
   "mots-c":{MS10:"variants/mots-c/ms10.webp"},
   "retatrutida":{RT5:"variants/retatrutida/rt5.webp"},
@@ -69,7 +69,7 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260827-real-vial-sku2")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260827-ace-real-source1")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
