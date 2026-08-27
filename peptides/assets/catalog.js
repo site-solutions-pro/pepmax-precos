@@ -1182,6 +1182,8 @@ const APPROVED_VARIANT_IMAGES=Object.freeze({
  "aicar":Object.freeze({AR50:"generated/aicar/ar50.png",AR100:"generated/aicar/ar100.png"}),
  "alprostadil":Object.freeze({PRO20:"generated/alprostadil/pro20.png"}),
  "aod-9604":Object.freeze({"5AD":"generated/aod-9604/5ad.png","10AD":"generated/aod-9604/10ad.png"}),
+ "ara-290":Object.freeze({RA10:"generated/ara-290/ra10.png"}),
+ "b7-33":Object.freeze({"2-mg":"generated/b7-33/2-mg.png","10-mg":"generated/b7-33/10-mg.png"}),
  "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"}),
  "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp",MS40:"variants/mots-c/ms40-generated.png"}),
  "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp",RT10:"variants/retatrutida/rt10-generated.png",RT15:"variants/retatrutida/rt15-generated.png",RT20:"variants/retatrutida/rt20-generated.png",RT30:"variants/retatrutida/rt30-generated.png",RT40:"variants/retatrutida/rt40-generated.png",RT50:"variants/retatrutida/rt50-generated.png",RT60:"variants/retatrutida/rt60-generated.png"}),
