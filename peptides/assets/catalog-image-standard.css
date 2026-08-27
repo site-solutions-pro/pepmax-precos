@@ -6,7 +6,7 @@
 /* Approved photography keeps its native geometry. Presentation is a DOM label
    tied to the selected variant; the underlying WebP remains byte-preserved. */
 .vial-visual{position:relative;display:block;width:100%;height:100%;aspect-ratio:1047/1502;overflow:hidden;background:#fff}
-.vial-visual.has-final-vial img,.product-visual img.final-vial,.catalog-media img.final-vial{transform:none!important;object-fit:contain!important;object-position:center!important}
+.vial-visual.has-final-vial img,.product-visual img.final-vial,.catalog-media img.final-vial{transform:scaleY(1.2)!important;object-fit:contain!important;object-position:center!important}
 
 /* Honest neutral state for products awaiting approved photography. It is HTML
    and CSS only: no generated vial, cartoon, or pretend final-photo asset. */

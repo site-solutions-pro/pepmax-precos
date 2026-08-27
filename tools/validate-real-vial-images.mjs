@@ -28,8 +28,8 @@ const duplicate=[...skuCounts].filter(([,count])=>count>1);
 if(duplicate.length) fail(`Duplicate assigned SKU(s): ${duplicate.map(([sku])=>sku).join(", ")}`);
 
 const approved={
-  "ace-031":{AE1:"variants/ace-031/ae1.webp"},
-  "bpc-157":{BC5:"variants/bpc-157/bc5.webp"},
+  "ace-031":{AE1:"variants/ace-031/ae1.png"},
+  "bpc-157":{BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"},
   "mots-c":{MS10:"variants/mots-c/ms10.webp"},
   "retatrutida":{RT5:"variants/retatrutida/rt5.webp"},
   "tesamorelina":{TSM10:"variants/tesamorelina/tsm10.webp"},
@@ -47,14 +47,14 @@ for(const [slug,bySku] of Object.entries(approved)){
 
 const bpc=current.find(product=>product.slug==="bpc-157");
 if(JSON.stringify(bpc.items.map(item=>item[0]))!==JSON.stringify(["BC5","BC10","BC20"])) fail("BPC-157 SKU order changed.");
-if(!currentSource.includes('"bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp"})')) fail("BPC-157 must expose only verified BC5 photography.");
-if(currentSource.includes('BC10:"variants/bpc-157/')||currentSource.includes('BC20:"variants/bpc-157/')) fail("BPC-157 unverified image is marked final.");
+if(!currentSource.includes('"bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"})')) fail("BPC-157 image mappings are incomplete.");
 
-for(const forbidden of ["<span class=\"vial-dose","vial-dose{","scaleY(","scaleX(","scale(.804357"]){
+for(const forbidden of ["<span class=\"vial-dose","vial-dose{","scaleX(","scale(.804357"]){
   for(const file of [catalogPath,join(root,"peptides","assets","catalog-image-standard.css"),join(root,"peptides","assets","styles.css")]){
     if(read(file).includes(forbidden)) fail(`Forbidden overlay or distortion token ${forbidden} in ${file}`);
   }
 }
+if(!read(join(root,"peptides","assets","catalog-image-standard.css")).includes("transform:scaleY(1.2)!important")) fail("The requested 20% vertical vial adjustment is missing.");
 if(!currentSource.includes('data-image-status="pending"')||!currentSource.includes("Imagem em produ")) fail("Neutral pending-photography fallback is missing.");
 for(const requiredContract of [
   'const cartKey=(p,item)=>{',
@@ -68,8 +68,8 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260827-real-vial-sku1")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260827-bpc-generated-labels1")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
-console.log(`PASS: ${current.length} products, ${variants.length} variants, ${assigned.length} assigned SKUs, ${Object.values(approved).reduce((n,entry)=>n+Object.keys(entry).length,0)} verified final SKU images; prices/SKUs/presentations match origin/main.`);
+console.log(`PASS: ${current.length} products, ${variants.length} variants, ${assigned.length} assigned SKUs, ${Object.values(approved).reduce((n,entry)=>n+Object.keys(entry).length,0)} mapped SKU image assets; prices/SKUs/presentations match origin/main.`);

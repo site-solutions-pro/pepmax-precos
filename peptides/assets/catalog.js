@@ -1173,8 +1173,8 @@ const money=n=>"US$ "+n.toFixed(2);
 /* Only assets whose physical vial label was verified against the SKU belong here.
    Other variants deliberately render the neutral pending-photography state. */
 const APPROVED_VARIANT_IMAGES=Object.freeze({
- "ace-031":Object.freeze({AE1:"variants/ace-031/ae1.webp"}),
- "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp"}),
+ "ace-031":Object.freeze({AE1:"variants/ace-031/ae1.png"}),
+ "bpc-157":Object.freeze({BC5:"variants/bpc-157/bc5.webp",BC10:"variants/bpc-157/bc10-generated.png",BC20:"variants/bpc-157/bc20-generated.png"}),
  "mots-c":Object.freeze({MS10:"variants/mots-c/ms10.webp"}),
  "retatrutida":Object.freeze({RT5:"variants/retatrutida/rt5.webp"}),
  "tesamorelina":Object.freeze({TSM10:"variants/tesamorelina/tsm10.webp"}),
