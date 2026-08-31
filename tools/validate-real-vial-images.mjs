@@ -84,7 +84,7 @@ for(const requiredContract of [
 const pages=[join(root,"peptides","index.html"),...readdirSync(join(root,"peptides"),{withFileTypes:true}).filter(entry=>entry.isDirectory()&&existsSync(join(root,"peptides",entry.name,"index.html"))).map(entry=>join(root,"peptides",entry.name,"index.html"))];
 if(pages.length!==101) fail(`Expected 101 public index pages, got ${pages.length}`);
 for(const page of pages){
-  if(!existsSync(page)||!read(page).includes("20260828-generated-catalog-batch-4")) fail(`Missing hotfix cache revision: ${page}`);
+  if(!existsSync(page)||!read(page).includes("20260831-generated-catalog-batch-5")) fail(`Missing hotfix cache revision: ${page}`);
 }
 const publicText=pages.map(read).join("\n")+currentSource;
 if(/(?:sk_live_|whsec_|PRIVATE_KEY|BEGIN (?:RSA )?PRIVATE KEY)/i.test(publicText)) fail("Private credential-like value found in public files.");
