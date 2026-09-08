@@ -16,21 +16,21 @@ const ui={
 const category=(es,pt,en)=>({es,pt,en}[locale]);
 
 const carouselProducts=[
-  {name:"Retatrutida",slug:"retatrutida",sku:"RT5",dose:"5 mg",category:category("Agonista peptídico multirreceptor","Agonista peptídico multirreceptor","Multi-receptor peptide agonist"),image:"retatrutida-approved.webp"},
-  {name:"Tirzepatida",slug:"tirzepatida",sku:"TR5",dose:"5 mg",category:category("Péptido sintético de referencia","Peptídeo sintético de referência","Synthetic reference peptide"),image:"tirzepatida-approved.webp"},
-  {name:"Semaglutida",slug:"semaglutida",sku:"SM5",dose:"5 mg",category:category("Análogo peptídico catalogado","Análogo peptídico catalogado","Cataloged peptide analogue")},
-  {name:"BPC-157",slug:"bpc-157",sku:"BC5",dose:"5 mg",category:category("Pentadecapéptido sintético","Pentadecapeptídeo sintético","Synthetic pentadecapeptide"),image:"bpc-157-approved.webp"},
-  {name:"TB-500",slug:"tb-500",sku:"TB5",dose:"5 mg",category:category("Fragmento peptídico de referencia","Fragmento peptídico de referência","Reference peptide fragment")},
-  {name:"GHK-Cu",slug:"ghk-cu",sku:"CU50",dose:"50 mg",category:category("Tripéptido de cobre","Tripeptídeo de cobre","Copper tripeptide")},
-  {name:"CJC-1295 + Ipamorelina",label:"CJC-1295 + IPA",slug:"cjc-1295-ipamorelina",sku:"CP10",dose:"10 mg",category:category("Mezcla peptídica catalogada","Blend peptídico catalogado","Cataloged peptide blend")},
-  {name:"Tesamorelina",slug:"tesamorelina",sku:"TSM10",dose:"10 mg",category:category("Análogo peptídico de GHRH","Análogo peptídico de GHRH","GHRH peptide analogue"),image:"tesamorelina-approved-v2.webp"},
-  {name:"Ipamorelina",slug:"ipamorelina",sku:"IP5",dose:"5 mg",category:category("Pentapéptido sintético","Pentapeptídeo sintético","Synthetic pentapeptide")},
-  {name:"AOD-9604",slug:"aod-9604",sku:"5AD",dose:"5 mg",category:category("Fragmento peptídico catalogado","Fragmento peptídico catalogado","Cataloged peptide fragment")},
-  {name:"MOTS-c",slug:"mots-c",sku:"MS10",dose:"10 mg",category:category("Péptido mitocondrial","Peptídeo mitocondrial","Mitochondrial peptide"),image:"mots-c-approved.webp"},
-  {name:"PT-141 (bremelanotida)",label:"PT-141",slug:"pt-141-bremelanotida",sku:"P41",dose:"10 mg",category:category("Péptido sintético cíclico","Peptídeo sintético cíclico","Cyclic synthetic peptide")},
-  {name:"Melanotan II (MT-2)",label:"Melanotan II",slug:"melanotan-ii-mt-2",sku:"ML10",dose:"10 mg",category:category("Heptapéptido cíclico","Heptapeptídeo cíclico","Cyclic heptapeptide")},
-  {name:"Epitalon",slug:"epitalon",sku:"ET10",dose:"10 mg",category:category("Tetrapéptido sintético","Tetrapeptídeo sintético","Synthetic tetrapeptide")},
-  {name:"Semax",slug:"semax",sku:"XA11",dose:"11 mg",category:category("Heptapéptido sintético","Heptapeptídeo sintético","Synthetic heptapeptide")}
+  {name:"Retatrutida",slug:"retatrutida",sku:"RT10",dose:"10 mg",category:category("Agonista peptídico multirreceptor","Agonista peptídico multirreceptor","Multi-receptor peptide agonist"),image:"variants/retatrutida/rt10-generated.png"},
+  {name:"Tirzepatida",slug:"tirzepatida",sku:"TR10",dose:"10 mg",category:category("Péptido sintético de referencia","Peptídeo sintético de referência","Synthetic reference peptide"),image:"variants/tirzepatida/tr10-generated.png"},
+  {name:"Semaglutida",slug:"semaglutida",sku:"SM5",dose:"5 mg",category:category("Análogo peptídico catalogado","Análogo peptídico catalogado","Cataloged peptide analogue"),image:"generated/semaglutida/sm5.png"},
+  {name:"BPC-157",slug:"bpc-157",sku:"BC10",dose:"10 mg",category:category("Pentadecapéptido sintético","Pentadecapeptídeo sintético","Synthetic pentadecapeptide"),image:"variants/bpc-157/bc10-generated.png"},
+  {name:"TB-500",slug:"tb-500",sku:"TB5",dose:"5 mg",category:category("Fragmento peptídico de referencia","Fragmento peptídico de referência","Reference peptide fragment"),image:"generated/tb-500/tb5.png"},
+  {name:"GHK-Cu",slug:"ghk-cu",sku:"CU50",dose:"50 mg",category:category("Tripéptido de cobre","Tripeptídeo de cobre","Copper tripeptide"),image:"generated/ghk-cu/cu50.png"},
+  {name:"CJC-1295 + Ipamorelina",label:"CJC-1295 + IPA",slug:"cjc-1295-ipamorelina",sku:"CP10",dose:"10 mg",category:category("Mezcla peptídica catalogada","Blend peptídico catalogado","Cataloged peptide blend"),image:"generated/cjc-1295-ipamorelina/cp10.png"},
+  {name:"Tesamorelina",slug:"tesamorelina",sku:"TSM20",dose:"20 mg",category:category("Análogo peptídico de GHRH","Análogo peptídico de GHRH","GHRH peptide analogue"),image:"variants/tesamorelina/tsm20-generated.png"},
+  {name:"Ipamorelina",slug:"ipamorelina",sku:"IP5",dose:"5 mg",category:category("Pentapéptido sintético","Pentapeptídeo sintético","Synthetic pentapeptide"),image:"generated/ipamorelina/ip5.png"},
+  {name:"AOD-9604",slug:"aod-9604",sku:"5AD",dose:"5 mg",category:category("Fragmento peptídico catalogado","Fragmento peptídico catalogado","Cataloged peptide fragment"),image:"generated/aod-9604/5ad.png"},
+  {name:"MOTS-c",slug:"mots-c",sku:"MS40",dose:"40 mg",category:category("Péptido mitocondrial","Peptídeo mitocondrial","Mitochondrial peptide"),image:"variants/mots-c/ms40-generated.png"},
+  {name:"PT-141 (bremelanotida)",label:"PT-141",slug:"pt-141-bremelanotida",sku:"P41",dose:"10 mg",category:category("Péptido sintético cíclico","Peptídeo sintético cíclico","Cyclic synthetic peptide"),image:"generated/pt-141-bremelanotida/p41.png"},
+  {name:"Melanotan II (MT-2)",label:"Melanotan II",slug:"melanotan-ii-mt-2",sku:"ML10",dose:"10 mg",category:category("Heptapéptido cíclico","Heptapeptídeo cíclico","Cyclic heptapeptide"),image:"generated/melanotan-ii-mt-2/ml10.png"},
+  {name:"Epitalon",slug:"epitalon",sku:"ET10",dose:"10 mg",category:category("Tetrapéptido sintético","Tetrapeptídeo sintético","Synthetic tetrapeptide"),image:"generated/epitalon/et10.png"},
+  {name:"Semax",slug:"semax",sku:"XA11",dose:"11 mg",category:category("Heptapéptido sintético","Heptapeptídeo sintético","Synthetic heptapeptide"),image:"generated/semax/xa11.png"}
 ];
 
 const carousel=document.getElementById("heroCarousel");
