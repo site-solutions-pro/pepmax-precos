@@ -1,4 +1,10 @@
 (()=>{
+  const style=document.createElement('link');
+  style.rel='stylesheet';
+  const depth=location.pathname.includes('/pt/peptides/')||location.pathname.includes('/en/peptides/')||location.pathname.includes('/es/peptides/')?'../../../':'../../';
+  style.href=`${depth}assets/brand-system.css?v=20260909-cyan-poppins`;
+  document.head.appendChild(style);
+
   const productRoot=document.querySelector('#product');
   if(!productRoot) return;
   if(location.pathname.replace(/\/+$/,'')==='/pepmax-precos/peptides') return;
@@ -27,6 +33,12 @@
     if(image){
       image.src=productImage(selected.product,selected.item);
       image.alt=productImageAlt(selected.product,selected.item);
+      image.style.width='auto';
+      image.style.height='auto';
+      image.style.maxWidth='100%';
+      image.style.maxHeight='100%';
+      image.style.objectFit='contain';
+      image.style.transform='none';
     }
   };
 

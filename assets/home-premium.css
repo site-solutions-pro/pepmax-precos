@@ -1,1 +1,2 @@
-/* Retired. The PepMAX home now uses a single consolidated visual system in assets/home.css. */
+@import url("./home-v3.css?v=20260909-cyan2");
+@import url("./brand-system.css?v=20260909-cyan-poppins");
