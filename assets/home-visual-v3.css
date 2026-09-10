@@ -78,9 +78,13 @@
   text-shadow:0 2px 18px #000;
 }
 .hero-approved .scene-copy i{width:52px;margin-top:16px}
+.vial-label{position:absolute;z-index:2;width:11.6%;min-height:31%;padding:1.35% 1.15%;background:rgba(5,10,12,.86);color:#f6fbfc;display:flex;flex-direction:column;align-items:flex-start;font-family:Inter,Poppins,sans-serif;box-shadow:inset 0 0 0 1px rgba(148,224,234,.08)}
+.vial-label b{font-size:clamp(13px,1.25vw,24px);line-height:.95;letter-spacing:-.07em;font-weight:600}.vial-label b span{color:#20dff7}.vial-label em{margin-top:14%;font-style:normal;font-size:clamp(4px,.34vw,7px);letter-spacing:.18em;color:#b8c5c9}.vial-label strong{margin-top:10%;font-size:clamp(8px,.78vw,15px);line-height:1.1;font-weight:500}.vial-label small{margin-top:auto;font-size:clamp(4px,.31vw,6px);letter-spacing:.13em;color:#b8c5c9;white-space:nowrap}.vial-label i{display:block;width:32%;height:2px;margin-top:12%;background:#20dff7}
+.vial-label-main{left:68.8%;top:40.5%}.vial-label-rear{left:82.1%;top:44.5%;width:8.2%;min-height:23%;padding:.9%}.vial-label-rear b{font-size:clamp(10px,.85vw,16px)}.vial-label-rear em{margin-top:13%;font-size:clamp(3px,.23vw,5px)}
 @media(max-width:980px){
   .hero-approved{background-position:62% center}
   .hero-approved .hero-copy{max-width:62%;padding-top:86px}
+  .vial-label-main{left:62%;top:41%}.vial-label-rear{left:77%;top:45%}
 }
 @media(max-width:640px){
   .hero-approved{background-position:68% center}
@@ -88,4 +92,5 @@
   .hero-approved .hero-copy{max-width:100%;padding:70px 0 38px;justify-content:flex-start}
   .hero-approved .hero-copy>p:not(.eyebrow){max-width:85%;font-size:13px}
   .hero-approved .scene-copy{display:none}
+  .vial-label{display:none}
 }
