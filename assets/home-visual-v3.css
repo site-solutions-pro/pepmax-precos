@@ -19,6 +19,73 @@
 .home-variant{height:38px;border:1px solid #314852;background:#03090c;color:#fff;padding:0 11px;font:500 11px Inter,Poppins,sans-serif;outline:none}
 .home-variant:focus{border-color:var(--approved-cyan)}
 .home-add{height:41px;border:1px solid var(--approved-cyan);background:var(--approved-cyan);color:#021014;font:600 11px Inter,Poppins,sans-serif;cursor:pointer}.home-add:hover{background:#78efff}.home-add:active{transform:translateY(1px)}
-.visual-categories{gap:13px}.visual-categories .category-card{padding:0!important;min-height:235px!important;position:relative;overflow:hidden;display:grid!important;grid-template-rows:1fr auto;background:#061014!important}.category-card .category-visual{position:absolute;inset:0 0 62px 0;display:block;background:#07141a}.category-card>div{position:relative;z-index:2;padding:14px 16px;background:linear-gradient(180deg,rgba(3,8,10,.84),#04090b);border-top:1px solid #233942}.category-card>div h3{margin:0 0 4px;font:500 16px Inter,Poppins,sans-serif}.category-card>div p{margin:0;color:#20dff7;font-size:8px;letter-spacing:.17em}.category-card>b{position:absolute;right:15px;bottom:18px;z-index:3;color:#20dff7;font-size:19px;font-weight:400}.category-peptides .category-visual{background:radial-gradient(circle at 22% 38%,#24e9ff 0 8px,#0a6675 9px 13px,transparent 14px),radial-gradient(circle at 42% 54%,#24e9ff 0 10px,#0a6675 11px 15px,transparent 16px),radial-gradient(circle at 64% 30%,#24e9ff 0 8px,#0a6675 9px 13px,transparent 14px),radial-gradient(circle at 78% 58%,#24e9ff 0 10px,#0a6675 11px 15px,transparent 16px),linear-gradient(135deg,#061117,#08252e)}.category-peptides .category-visual:after{content:"";position:absolute;left:20%;right:20%;top:48%;height:2px;background:linear-gradient(90deg,transparent,#21dff7,#21dff7,transparent);transform:rotate(7deg);box-shadow:35px -24px 0 -1px #21dff7,70px 18px 0 -1px #21dff7}.category-chemicals .category-visual{background:radial-gradient(circle at 28% 42%,rgba(255,42,168,.9) 0 10px,rgba(255,42,168,.15) 11px 24px,transparent 25px),radial-gradient(circle at 53% 35%,rgba(32,223,247,.95) 0 8px,rgba(32,223,247,.13) 9px 22px,transparent 23px),radial-gradient(circle at 70% 58%,rgba(255,42,168,.8) 0 9px,rgba(255,42,168,.12) 10px 23px,transparent 24px),linear-gradient(135deg,#10101b,#07141a)}.category-supplies .category-visual{background:linear-gradient(90deg,transparent 10%,rgba(32,223,247,.18) 10% 11%,transparent 11% 32%,rgba(32,223,247,.3) 32% 34%,transparent 34% 58%,rgba(255,255,255,.18) 58% 61%,transparent 61%),radial-gradient(ellipse at 67% 74%,rgba(32,223,247,.38),transparent 27%),linear-gradient(#071218,#081c24)}.category-supplies .category-visual:after{content:"";position:absolute;width:54px;height:82px;border:2px solid rgba(223,248,255,.65);border-top-width:1px;border-radius:6px 6px 24px 24px;left:55%;top:26%;transform:translateX(-50%);box-shadow:-82px 21px 0 -16px rgba(223,248,255,.55),75px 30px 0 -20px rgba(223,248,255,.45)}.category-bundles .category-visual{background:radial-gradient(circle at 50% 75%,rgba(32,223,247,.22),transparent 28%),linear-gradient(135deg,#071116,#091b22)}.category-bundles .category-visual:after{content:"";position:absolute;left:20%;right:20%;bottom:20px;height:95px;background:linear-gradient(90deg,transparent 0 5%,#111 5% 22%,transparent 22% 27%,#111 27% 48%,transparent 48% 53%,#111 53% 74%,transparent 74% 79%,#111 79% 96%,transparent 96%);border-bottom:3px solid rgba(32,223,247,.35);filter:drop-shadow(0 12px 14px #000)}
+.visual-categories{gap:13px}.visual-categories .category-card{padding:0!important;min-height:235px!important;position:relative;overflow:hidden;display:grid!important;grid-template-rows:1fr auto;background:#061014!important}.category-card .category-visual{position:absolute;inset:0 0 62px;display:block;background:#07141a center/cover no-repeat}.category-card .category-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(2,6,7,.45))}.category-card>div{position:relative;z-index:2;padding:14px 16px;background:linear-gradient(180deg,rgba(3,8,10,.84),#04090b);border-top:1px solid #233942}.category-card>div h3{margin:0 0 4px;font:500 16px Inter,Poppins,sans-serif}.category-card>div p{margin:0;color:#20dff7;font-size:8px;letter-spacing:.17em}.category-card>b{position:absolute;right:15px;bottom:18px;z-index:3;color:#20dff7;font-size:19px;font-weight:400}.category-peptides .category-visual{background-image:url("images/home/category-peptides.jpg")}.category-chemicals .category-visual{background-image:url("images/home/category-research-chemicals.jpg")}.category-supplies .category-visual{background-image:url("images/home/category-lab-supplies.jpg")}.category-bundles .category-visual{background-image:url("images/home/category-bundles.jpg")}
 @media(max-width:980px){.hero-approved .hero-grid{grid-template-columns:1fr}.hero-photo{min-height:420px}.arrival-media{height:360px!important}}
 @media(max-width:640px){.hero-approved .hero-copy h1{font-size:clamp(2.8rem,12.5vw,4rem)}.hero-photo{min-height:335px;background-position:57% center}.arrival-media{height:350px!important}.visual-categories .category-card{min-height:220px!important}}
+
+/* Approved art direction: one photographic laboratory scene, not a split layout. */
+.hero-approved{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#020607 url("images/home/pepmax-cinematic-lab-hero-v1.webp") center center/cover no-repeat;
+}
+.hero-approved:before{
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(2,6,7,.18) 0%,rgba(2,6,7,.05) 48%,rgba(2,6,7,.08) 100%);
+}
+.hero-approved .hero-grid{
+  position:relative;
+  z-index:1;
+  display:block;
+  min-height:clamp(540px,43vw,690px);
+}
+.hero-approved .hero-copy{
+  min-height:clamp(540px,43vw,690px);
+  max-width:55%;
+  padding:clamp(74px,8vw,138px) 0 56px;
+}
+.hero-approved .hero-copy h1{
+  max-width:690px;
+  font-size:clamp(3.35rem,5.3vw,6.25rem);
+  color:#f8fbfc;
+  text-shadow:0 8px 30px rgba(0,0,0,.38);
+}
+.hero-approved .hero-copy>p:not(.eyebrow){
+  max-width:650px;
+  font-size:clamp(13px,1.1vw,17px);
+  color:#d1d9dc;
+}
+.hero-approved .eyebrow,.hero-approved .research-only{color:#c5d0d4}
+.hero-approved .hero-photo{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  min-height:0;
+  overflow:visible;
+  background:none!important;
+  box-shadow:none;
+}
+.hero-approved .hero-photo:after{display:none}
+.hero-approved .scene-copy{
+  position:absolute;
+  right:0;
+  top:clamp(112px,15vw,195px);
+  color:#e2ebee;
+  font-size:9px;
+  line-height:2.45;
+  letter-spacing:.31em;
+  text-shadow:0 2px 18px #000;
+}
+.hero-approved .scene-copy i{width:52px;margin-top:16px}
+@media(max-width:980px){
+  .hero-approved{background-position:62% center}
+  .hero-approved .hero-copy{max-width:62%;padding-top:86px}
+}
+@media(max-width:640px){
+  .hero-approved{background-position:68% center}
+  .hero-approved .hero-grid,.hero-approved .hero-copy{min-height:590px}
+  .hero-approved .hero-copy{max-width:100%;padding:70px 0 38px;justify-content:flex-start}
+  .hero-approved .hero-copy>p:not(.eyebrow){max-width:85%;font-size:13px}
+  .hero-approved .scene-copy{display:none}
+}
